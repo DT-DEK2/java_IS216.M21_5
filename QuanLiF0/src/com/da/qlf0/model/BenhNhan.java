@@ -11,7 +11,7 @@ import java.util.Date;
  * @author Minh Cuong
  */
 public class BenhNhan {
-    private String MaBenNhan;
+    private String MaBenhNhan;
     private String Hoten;
     private Date NgaySinh;
     private String GioiTinh;
@@ -32,13 +32,13 @@ public class BenhNhan {
     private String KQXN_TestNhanh;
     private short TestRT_PCR;
     private Date NgayTestRT_PCR;
-    private short KQXN_RT_PCR;
+    private String KQXN_RT_PCR;
 
     public BenhNhan() {
     }
 
-    public BenhNhan(String MaBenNhan, String Hoten, Date NgaySinh, String GioiTinh, String CMND_CCCD, String NoiOHienTai, String Tinh_ThanhPho, String Quan_Huyen, String Phuong_Xa, String NgheNghiep, String NoiLamViec, String SoDienThoai, Date NgayTiepNhan, Date NgayXHTCDauTien, short TunglaF0, int SoNgayLaF0, short TestNhanh, Date NgayTestNhanh, String KQXN_TestNhanh, short TestRT_PCR, Date NgayTestRT_PCR, short KQXN_RT_PCR) {
-        this.MaBenNhan = MaBenNhan;
+    public BenhNhan(String MaBenNhan, String Hoten, Date NgaySinh, String GioiTinh, String CMND_CCCD, String NoiOHienTai, String Tinh_ThanhPho, String Quan_Huyen, String Phuong_Xa, String NgheNghiep, String NoiLamViec, String SoDienThoai, Date NgayTiepNhan, Date NgayXHTCDauTien, short TunglaF0, int SoNgayLaF0, short TestNhanh, Date NgayTestNhanh, String KQXN_TestNhanh, short TestRT_PCR, Date NgayTestRT_PCR, String KQXN_RT_PCR) {
+        this.MaBenhNhan = MaBenNhan;
         this.Hoten = Hoten;
         this.NgaySinh = NgaySinh;
         this.GioiTinh = GioiTinh;
@@ -63,12 +63,12 @@ public class BenhNhan {
     }
     
 
-    public String getMaBenNhan() {
-        return MaBenNhan;
+    public String getMaBenhNhan() {
+        return MaBenhNhan;
     }
 
-    public void setMaBenNhan(String MaBenNhan) {
-        this.MaBenNhan = MaBenNhan;
+    public void setMaBenhNhan(String MaBenNhan) {
+        this.MaBenhNhan = MaBenNhan;
     }
 
     public String getHoten() {
@@ -231,11 +231,11 @@ public class BenhNhan {
         this.NgayTestRT_PCR = NgayTestRT_PCR;
     }
 
-    public short getKQXN_RT_PCR() {
+    public String getKQXN_RT_PCR() {
         return KQXN_RT_PCR;
     }
 
-    public void setKQXN_RT_PCR(short KQXN_RT_PCR) {
+    public void setKQXN_RT_PCR(String KQXN_RT_PCR) {
         this.KQXN_RT_PCR = KQXN_RT_PCR;
     }
     
