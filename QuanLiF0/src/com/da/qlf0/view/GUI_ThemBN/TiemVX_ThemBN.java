@@ -46,10 +46,10 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jSeparator6 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
@@ -75,7 +75,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel12.setText(" Tình trạng tiêm Vắc xin :");
+        jLabel12.setText(" Tình trạng tiêm Vắc xin:");
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         btnG_MuiTiem.add(jRadioButton2);
@@ -121,7 +121,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel1.setText("Thời gian tiêm : *");
+        jLabel1.setText("Thời gian tiêm: *");
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -141,52 +141,58 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
 
         jSeparator7.setBackground(new java.awt.Color(166, 166, 166));
 
+        jSeparator4.setBackground(new java.awt.Color(166, 166, 166));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel12)
-                        .addGap(75, 75, 75)
-                        .addComponent(jRadioButton2)
-                        .addGap(60, 60, 60)
-                        .addComponent(jRadioButton10)
-                        .addGap(83, 83, 83)
-                        .addComponent(jRadioButton12)
-                        .addGap(73, 73, 73)
-                        .addComponent(jRadioButton11)
-                        .addGap(60, 60, 60)
-                        .addComponent(jRadioButton13))
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(jLabel9))
-                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel2)
-                        .addGap(93, 93, 93)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(170, 170, 170)
-                        .addComponent(jLabel1)
-                        .addGap(119, 119, 119)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(jLabel11)))
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator4)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel12)
+                            .addGap(75, 75, 75)
+                            .addComponent(jRadioButton2)
+                            .addGap(60, 60, 60)
+                            .addComponent(jRadioButton10)
+                            .addGap(83, 83, 83)
+                            .addComponent(jRadioButton12)
+                            .addGap(73, 73, 73)
+                            .addComponent(jRadioButton11)
+                            .addGap(60, 60, 60)
+                            .addComponent(jRadioButton13))
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(73, 73, 73)
+                            .addComponent(jLabel9))
+                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(98, 98, 98)
+                            .addComponent(jLabel2)
+                            .addGap(93, 93, 93)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(170, 170, 170)
+                            .addComponent(jLabel1)
+                            .addGap(119, 119, 119)
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(72, 72, 72)
+                            .addComponent(jLabel11))))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(jRadioButton2)
@@ -207,7 +213,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel1))
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
@@ -229,7 +235,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(696, 696, 696)
                 .addComponent(jLabel7)
-                .addContainerGap(865, Short.MAX_VALUE))
+                .addContainerGap(922, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,8 +249,6 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(0, 41, 102));
         jLabel8.setText("TIÊM VẮC XIN PHÒNG COVID-19");
 
-        jSeparator4.setBackground(new java.awt.Color(166, 166, 166));
-
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(20, 20, 20));
@@ -257,7 +261,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel4.setText("Thời gian tiêm : *");
+        jLabel4.setText("Thời gian tiêm: *");
 
         jDateChooser2.setBackground(new java.awt.Color(255, 255, 255));
         jDateChooser2.setForeground(new java.awt.Color(20, 20, 20));
@@ -294,18 +298,6 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSeparator8)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jSeparator4, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))))
-                            .addComponent(jSeparator9, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
@@ -331,12 +323,19 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                                 .addComponent(jLabel6)
                                 .addGap(128, 128, 128)
                                 .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 83, Short.MAX_VALUE))
+                            .addComponent(jSeparator8))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,9 +344,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -355,9 +352,9 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4))
                     .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGap(59, 59, 59)
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
