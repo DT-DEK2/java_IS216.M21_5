@@ -28,9 +28,12 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
     public QuanLiBnPanel() {
         initComponents();
         
-         QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
-                jPanel1, btnAdd, jtfSearch);
-        controller.setDataToTable();
+//         QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
+//                jPanel1, btnAdd, jtfSearch);
+//        controller.setDataToTable();
+            QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
+                jPanel1);
+            controller.setDataToPanel();
         
          
     }
@@ -81,16 +84,16 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(25, Short.MAX_VALUE))
+                        .addGap(40, 40, 40))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(117, 117, 117))))
+                        .addComponent(btnAdd)
+                        .addGap(91, 91, 91))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
