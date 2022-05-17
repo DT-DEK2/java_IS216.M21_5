@@ -26,6 +26,19 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnG_Sot = new javax.swing.ButtonGroup();
+        btnG_DauHong = new javax.swing.ButtonGroup();
+        btnG_NoiHach = new javax.swing.ButtonGroup();
+        btnG_MatKG = new javax.swing.ButtonGroup();
+        btnG_CoGiat = new javax.swing.ButtonGroup();
+        btnG_XuatHuyet = new javax.swing.ButtonGroup();
+        btnG_DauCo = new javax.swing.ButtonGroup();
+        btnG_DauKhop = new javax.swing.ButtonGroup();
+        btnG_DauBung = new javax.swing.ButtonGroup();
+        btnG_MatVG = new javax.swing.ButtonGroup();
+        btnG_BuonNon = new javax.swing.ButtonGroup();
+        btnG_TTkhac = new javax.swing.ButtonGroup();
+        btnG_DuDKCL = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -145,6 +158,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Sot.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton2.setText("Có");
@@ -155,8 +169,10 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Sot.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton3.setSelected(true);
         jRadioButton3.setText("Không");
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
@@ -296,6 +312,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         jLabel24.setText("Co giật:");
 
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauHong.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton4.setText("Có");
@@ -306,11 +323,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauHong.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton5.setSelected(true);
         jRadioButton5.setText("Không");
 
         jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_NoiHach.add(jRadioButton6);
         jRadioButton6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton6.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton6.setText("Có");
@@ -321,11 +341,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_NoiHach.add(jRadioButton7);
         jRadioButton7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton7.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton7.setSelected(true);
         jRadioButton7.setText("Không");
 
         jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatKG.add(jRadioButton8);
         jRadioButton8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton8.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton8.setText("Có");
@@ -336,11 +359,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatKG.add(jRadioButton9);
         jRadioButton9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton9.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton9.setSelected(true);
         jRadioButton9.setText("Không");
 
         jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CoGiat.add(jRadioButton10);
         jRadioButton10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton10.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton10.setText("Có");
@@ -351,8 +377,10 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CoGiat.add(jRadioButton11);
         jRadioButton11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton11.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton11.setSelected(true);
         jRadioButton11.setText("Không");
 
         jLabel25.setBackground(new java.awt.Color(255, 255, 255));
@@ -391,6 +419,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         jLabel31.setText("Triệu chứng khác:");
 
         jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauCo.add(jRadioButton12);
         jRadioButton12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton12.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton12.setText("Có");
@@ -401,11 +430,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton13.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauCo.add(jRadioButton13);
         jRadioButton13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton13.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton13.setSelected(true);
         jRadioButton13.setText("Không");
 
         jRadioButton14.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauKhop.add(jRadioButton14);
         jRadioButton14.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton14.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton14.setText("Có");
@@ -416,11 +448,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton15.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauKhop.add(jRadioButton15);
         jRadioButton15.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton15.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton15.setSelected(true);
         jRadioButton15.setText("Không");
 
         jRadioButton16.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauBung.add(jRadioButton16);
         jRadioButton16.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton16.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton16.setText("Có");
@@ -431,11 +466,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton17.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauBung.add(jRadioButton17);
         jRadioButton17.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton17.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton17.setSelected(true);
         jRadioButton17.setText("Không");
 
         jRadioButton18.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatVG.add(jRadioButton18);
         jRadioButton18.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton18.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton18.setText("Có");
@@ -446,11 +484,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton19.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatVG.add(jRadioButton19);
         jRadioButton19.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton19.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton19.setSelected(true);
         jRadioButton19.setText("Không");
 
         jRadioButton20.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BuonNon.add(jRadioButton20);
         jRadioButton20.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton20.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton20.setText("Có");
@@ -461,11 +502,14 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton21.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BuonNon.add(jRadioButton21);
         jRadioButton21.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton21.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton21.setSelected(true);
         jRadioButton21.setText("Không");
 
         jRadioButton22.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TTkhac.add(jRadioButton22);
         jRadioButton22.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton22.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton22.setText("Có");
@@ -476,8 +520,10 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton23.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TTkhac.add(jRadioButton23);
         jRadioButton23.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton23.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton23.setSelected(true);
         jRadioButton23.setText("Không");
 
         jLabel32.setBackground(new java.awt.Color(255, 255, 255));
@@ -496,6 +542,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton24.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_XuatHuyet.add(jRadioButton24);
         jRadioButton24.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton24.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton24.setText("Có");
@@ -506,8 +553,10 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton25.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_XuatHuyet.add(jRadioButton25);
         jRadioButton25.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton25.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton25.setSelected(true);
         jRadioButton25.setText("Không");
 
         jLabel11.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
@@ -546,8 +595,10 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         jLabel35.setText("Đánh giá đủ điều kiện cách ly tại nhà:");
 
         jRadioButton26.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DuDKCL.add(jRadioButton26);
         jRadioButton26.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton26.setForeground(new java.awt.Color(20, 20, 20));
+        jRadioButton26.setSelected(true);
         jRadioButton26.setText("Có");
         jRadioButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -556,6 +607,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton27.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DuDKCL.add(jRadioButton27);
         jRadioButton27.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton27.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton27.setText("Không");
@@ -920,6 +972,19 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btnG_BuonNon;
+    private javax.swing.ButtonGroup btnG_CoGiat;
+    private javax.swing.ButtonGroup btnG_DauBung;
+    private javax.swing.ButtonGroup btnG_DauCo;
+    private javax.swing.ButtonGroup btnG_DauHong;
+    private javax.swing.ButtonGroup btnG_DauKhop;
+    private javax.swing.ButtonGroup btnG_DuDKCL;
+    private javax.swing.ButtonGroup btnG_MatKG;
+    private javax.swing.ButtonGroup btnG_MatVG;
+    private javax.swing.ButtonGroup btnG_NoiHach;
+    private javax.swing.ButtonGroup btnG_Sot;
+    private javax.swing.ButtonGroup btnG_TTkhac;
+    private javax.swing.ButtonGroup btnG_XuatHuyet;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

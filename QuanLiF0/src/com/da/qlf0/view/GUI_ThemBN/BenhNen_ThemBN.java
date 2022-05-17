@@ -39,8 +39,19 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         btnG_BeoPhi = new javax.swing.ButtonGroup();
         btnG_THMD = new javax.swing.ButtonGroup();
         btnG_PhoiMT = new javax.swing.ButtonGroup();
-        buttonGroup4 = new javax.swing.ButtonGroup();
-        buttonGroup5 = new javax.swing.ButtonGroup();
+        btnG_UngThu = new javax.swing.ButtonGroup();
+        btn_GHIV = new javax.swing.ButtonGroup();
+        btnG_BenhGan = new javax.swing.ButtonGroup();
+        btnG_HCDown = new javax.swing.ButtonGroup();
+        btn_GRLCGN = new javax.swing.ButtonGroup();
+        btnG_Ghep = new javax.swing.ButtonGroup();
+        btnG_CacLBHT = new javax.swing.ButtonGroup();
+        btnG_TKMT = new javax.swing.ButtonGroup();
+        btnG_Steroid = new javax.swing.ButtonGroup();
+        btnG_ThuocMD = new javax.swing.ButtonGroup();
+        btnG_ThuocCovid = new javax.swing.ButtonGroup();
+        btnG_KhangSinh = new javax.swing.ButtonGroup();
+        btnG_KhangVirus = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -559,6 +570,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel26.setText("Ung thư:");
 
         jRadioButton29.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_UngThu.add(jRadioButton29);
         jRadioButton29.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton29.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton29.setText("Có");
@@ -569,6 +581,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton30.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_UngThu.add(jRadioButton30);
         jRadioButton30.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton30.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton30.setSelected(true);
@@ -585,6 +598,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel27.setText("AIDS/HIV:");
 
         jRadioButton31.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GHIV.add(jRadioButton31);
         jRadioButton31.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton31.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton31.setText("Có");
@@ -595,6 +609,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton32.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GHIV.add(jRadioButton32);
         jRadioButton32.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton32.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton32.setSelected(true);
@@ -611,6 +626,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel28.setText("Bệnh gan:");
 
         jRadioButton33.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BenhGan.add(jRadioButton33);
         jRadioButton33.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton33.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton33.setText("Có");
@@ -621,6 +637,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton34.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BenhGan.add(jRadioButton34);
         jRadioButton34.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton34.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton34.setSelected(true);
@@ -637,6 +654,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel29.setText("Hội chứng down:");
 
         jRadioButton35.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HCDown.add(jRadioButton35);
         jRadioButton35.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton35.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton35.setText("Có");
@@ -647,6 +665,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton36.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HCDown.add(jRadioButton36);
         jRadioButton36.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton36.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton36.setSelected(true);
@@ -673,6 +692,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel32.setText("Các loại bệnh hệ thống:");
 
         jRadioButton37.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GRLCGN.add(jRadioButton37);
         jRadioButton37.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton37.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton37.setText("Có");
@@ -683,6 +703,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton38.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GRLCGN.add(jRadioButton38);
         jRadioButton38.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton38.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton38.setSelected(true);
@@ -694,6 +715,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton39.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Ghep.add(jRadioButton39);
         jRadioButton39.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton39.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton39.setText("Có");
@@ -704,6 +726,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton40.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Ghep.add(jRadioButton40);
         jRadioButton40.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton40.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton40.setSelected(true);
@@ -715,6 +738,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton41.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CacLBHT.add(jRadioButton41);
         jRadioButton41.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton41.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton41.setText("Có");
@@ -725,6 +749,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton42.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CacLBHT.add(jRadioButton42);
         jRadioButton42.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton42.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton42.setSelected(true);
@@ -741,6 +766,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel33.setText("Bệnh thần kinh mãn tính ( bao gồm sa sút trí tuệ ):");
 
         jRadioButton43.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TKMT.add(jRadioButton43);
         jRadioButton43.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton43.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton43.setText("Có");
@@ -751,6 +777,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton44.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TKMT.add(jRadioButton44);
         jRadioButton44.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton44.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton44.setSelected(true);
@@ -783,6 +810,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel36.setText("Các loại thuốc điều trị Covid:");
 
         jRadioButton45.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Steroid.add(jRadioButton45);
         jRadioButton45.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton45.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton45.setText("Có");
@@ -793,6 +821,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton46.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Steroid.add(jRadioButton46);
         jRadioButton46.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton46.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton46.setSelected(true);
@@ -804,6 +833,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton47.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocMD.add(jRadioButton47);
         jRadioButton47.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton47.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton47.setText("Có");
@@ -814,6 +844,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton48.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocMD.add(jRadioButton48);
         jRadioButton48.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton48.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton48.setSelected(true);
@@ -825,6 +856,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton49.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocCovid.add(jRadioButton49);
         jRadioButton49.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton49.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton49.setText("Có");
@@ -835,6 +867,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton50.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocCovid.add(jRadioButton50);
         jRadioButton50.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton50.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton50.setSelected(true);
@@ -856,6 +889,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel38.setText("Kháng virus:");
 
         jRadioButton51.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangSinh.add(jRadioButton51);
         jRadioButton51.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton51.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton51.setText("Có");
@@ -866,6 +900,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton52.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangSinh.add(jRadioButton52);
         jRadioButton52.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton52.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton52.setSelected(true);
@@ -877,6 +912,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton53.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangVirus.add(jRadioButton53);
         jRadioButton53.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton53.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton53.setText("Có");
@@ -887,6 +923,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         });
 
         jRadioButton54.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangVirus.add(jRadioButton54);
         jRadioButton54.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButton54.setForeground(new java.awt.Color(20, 20, 20));
         jRadioButton54.setSelected(true);
@@ -1416,21 +1453,32 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btnG_BenhGan;
     private javax.swing.ButtonGroup btnG_BeoPhi;
+    private javax.swing.ButtonGroup btnG_CacLBHT;
     private javax.swing.ButtonGroup btnG_DTD;
+    private javax.swing.ButtonGroup btnG_Ghep;
+    private javax.swing.ButtonGroup btnG_HCDown;
     private javax.swing.ButtonGroup btnG_HauSan;
     private javax.swing.ButtonGroup btnG_HenKQ;
     private javax.swing.ButtonGroup btnG_HuyetAp;
     private javax.swing.ButtonGroup btnG_KQXN;
+    private javax.swing.ButtonGroup btnG_KhangSinh;
+    private javax.swing.ButtonGroup btnG_KhangVirus;
     private javax.swing.ButtonGroup btnG_MMNao;
     private javax.swing.ButtonGroup btnG_MangThai;
     private javax.swing.ButtonGroup btnG_PhoiMT;
+    private javax.swing.ButtonGroup btnG_Steroid;
     private javax.swing.ButtonGroup btnG_THMD;
+    private javax.swing.ButtonGroup btnG_TKMT;
     private javax.swing.ButtonGroup btnG_ThanMT;
+    private javax.swing.ButtonGroup btnG_ThuocCovid;
+    private javax.swing.ButtonGroup btnG_ThuocMD;
     private javax.swing.ButtonGroup btnG_TimMach;
+    private javax.swing.ButtonGroup btnG_UngThu;
     private javax.swing.ButtonGroup btnG_XNTreSS;
-    private javax.swing.ButtonGroup buttonGroup4;
-    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup btn_GHIV;
+    private javax.swing.ButtonGroup btn_GRLCGN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;

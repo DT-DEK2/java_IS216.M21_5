@@ -348,10 +348,8 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-////                JFrame frame = new MainFrame();
+//                JFrame frame = new MainFrame("dasdas");
 //            
-//
-//                
 //                frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 //                
 //                frame.setVisible(true);
