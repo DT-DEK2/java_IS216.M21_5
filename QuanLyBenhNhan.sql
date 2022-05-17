@@ -8,11 +8,11 @@ create table BENHNHAN
    HoTen                 varchar2(40)                    null,
    NgaySinh             date                           null,
    GioiTinh              varchar2(5)                     null,
-   "CMND/CCCD"           varchar2(12)                    null,
+   CMND_CCCD           varchar2(12)                    null,
    NoiOHienTai           varchar2(20)                    null,
-   "Tinh/ThanhPho"       varchar2(20)                    null,
-   "Quan/Huyen"          varchar2(20)                    null,
-   "Phuong/Xa"           varchar2(20)                    null,
+   Tinh_ThanhPho      varchar2(20)                    null,
+   Quan_Huyen          varchar2(20)                    null,
+   Phuong_Xa           varchar2(20)                    null,
    NgheNghiep            varchar2(20)                    null,
    NoiLamViec            varchar2(50)                    null,
    SoDienThoai          numeric(10)                    null,
@@ -23,7 +23,7 @@ create table BENHNHAN
    TestNhanh            smallint                       null,
    NgayTestNhanh        date                           null,
    KetQuaXetNghiem1      varchar2(40)                    null,
-   "TestRT-PCR"         smallint                       null,
+   TestRT_PCR         smallint                       null,
    NgayTestRT_PCR       date                           null,
    KetQuaXetNghiem2      varchar2(40)                    null
    
@@ -40,7 +40,7 @@ create table BENHNEN
    TangHuyetAp          smallint                       null,
    UngThu               smallint                       null,
    DaiThaoDuong         smallint                       null,
-   "HIV/AIDS"           smallint                       null,
+   HIV_AIDS           smallint                       null,
    BenhLyMachMauNao     smallint                       null,
    BenhTimMach          smallint                       null,
    BenhGan              smallint                       null,
@@ -96,8 +96,8 @@ create table MANGTHAI
    MangThai             smallint                       null,
    SoTuanMangThai       integer                        null,
    HauSan               smallint                       null,
-   "TreSoSinhDuocXetNghiemCovid-19" smallint                       null,
-   "KetQuaXetNghiemCovid-19"  varchar2(40)                    null
+   TreSoSinhDuocXetNghiemCovid_19 smallint                       null,
+   KetQuaXetNghiemCovid_19  varchar2(40)                    null
 );
 
 
@@ -197,8 +197,8 @@ ALTER TABLE TRIEUCHUNGTAITHOIDIEMTIEPNHAN
 create table DANHGIASOLUOC 
 (
    MaBenhNhan            varchar2(4)                     not null,
-   ChuanDoanLucNhapVien  varchar2(200)                   null,
-   "DanhGiaTinhTrangBenhLyCOVID-19"  varchar2(40)                    null,
+   ChanDoanLucTiepNhan  varchar2(200)                   null,   
+   DanhGiaTinhTrangBenhLyCOVID_19  varchar2(40)                    null,
    DanhGiaDuDieuKienCachLyTaiNha smallint                       null
 );
 
@@ -219,14 +219,14 @@ create table CANBOYTE
    MaNV                  varchar2(10)                    not null,
    HoTen                 varchar2(40)                    null,
    GioiTinh              varchar2(5)                     null,
-   "CMND/CCCD"           varchar2(12)                    null,
+   CMND_CCCD           varchar2(12)                    null,
    NgaySinh             date                           null,
    SDT                   varchar2(10)                    null,
    Email        varchar2(40)                    		null,
    DonViCongTac          varchar2(50)                    null,
-   "Tinh/ThanhPho"       varchar2(20)                    null,
-   "Quan/Huyen"          varchar2(20)                    null,
-   "Phuong/Xa"           varchar2(20)                    null
+   Tinh_ThanhPho       varchar2(20)                    null,
+   Quan_Huyen          varchar2(20)                    null,
+   Phuong_Xa           varchar2(20)                    null
    
 );	
 
@@ -306,7 +306,7 @@ ALTER TABLE KETQUADIEUTRITAINHA
 create table TAIKHOANCANBOYTE 
 (
    MaNV                  varchar2(10)                    not null,
-   "SoCMND/CCCD"        varchar2(12)                    null,
+   SoCMND_CCCD        varchar2(12)                    null,
    HoTen                 varchar2(40)                    null,
    MatKhau               varchar2(20)                    null
 );
@@ -318,7 +318,7 @@ alter table TAIKHOANCANBOYTE
 
 ALTER TABLE TAIKHOANCANBOYTE
  ADD CONSTRAINT TAIKHOANCANBOYTE_SoCMND_CCCD_UK UNIQUE 
-  ("SoCMND/CCCD");
+  (SoCMND_CCCD);
 
 
 
@@ -328,7 +328,7 @@ ALTER TABLE TAIKHOANCANBOYTE
 create table TAIKHOANBENHNHAN 
 (
    MaBenhNhan            varchar2(4)                     not null,
-   "SoCMND/CCCD"         varchar2(12)                    null,
+   SoCMND_CCCD         varchar2(12)                    null,
    HoTen                 varchar2(40)                    null,
    MatKhau               varchar2(20)                    null
 );
@@ -339,7 +339,7 @@ alter table TAIKHOANBENHNHAN
       references BENHNHAN (MaBenhNhan);
 ALTER TABLE TAIKHOANBENHNHAN
  ADD CONSTRAINT TAIKHOANBENHNHAN_SoCMND_CCCD_UK UNIQUE 
-  ("SoCMND/CCCD");
+  (SoCMND_CCCD);
 
 
 /*==============================================================*/
