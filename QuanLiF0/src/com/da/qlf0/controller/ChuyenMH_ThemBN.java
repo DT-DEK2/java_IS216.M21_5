@@ -23,6 +23,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -32,21 +33,31 @@ public class ChuyenMH_ThemBN {
     
     
        private String kindSelected = "";
-        private JPanel jpnRoot;
-        private ArrayList<DanhMucThemBN> listItem = null;
+      private JPanel jpnRoot;
+      private ArrayList<DanhMucThemBN> listItem = null;
+      private JPanel node1 ;
+      private JPanel node2 ;
+      private JPanel node3 ;
+      private JPanel node4 ;
 
-    public ChuyenMH_ThemBN(JPanel jpnRoot) {
+    public ChuyenMH_ThemBN(JPanel jpnRoot, JPanel node1, JPanel node2, JPanel node3, JPanel node4) {
         this.jpnRoot = jpnRoot;
+        this.node1 = node1;
+        this.node2 = node2;
+        this.node3 = node3;
+        this.node4 = node4;
     }
+       
+   
         
     public void setView(JPanel jpnItem, JLabel jlbItem) {
         kindSelected = "ThongTinCoBan";
        jpnItem.setBackground(new Color(0, 134, 179));
        jlbItem.setBackground(new Color(0, 134, 179));
-       JPanel node = new TTCoBan_ThemBN();
+
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
-       jpnRoot.add(node);
+       jpnRoot.add(node1);
        jpnRoot.validate();
        jpnRoot.repaint();
     }
@@ -70,33 +81,66 @@ class LabelEvent implements MouseListener {
            this.jpnItem = jpnItem;
            this.jlbItem = jlbItem;
       }
-
+    
       @Override
       public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "ThongTinCoBan":
-                    node = new TTCoBan_ThemBN();
+//                    node = new TTCoBan_ThemBN();
+                    jpnRoot.removeAll();
+                    jpnRoot.setLayout(new BorderLayout());
+                    node1.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
+                    jpnRoot.add(node1);
+           
+                    jpnRoot.validate();
+                    jpnRoot.repaint();
+                    setChangeBackground(kind);
                     break;
                 case "TiemVX":
-                    node = new TiemVX_ThemBN();
+//                    node = new TiemVX_ThemBN();
+                     jpnRoot.removeAll();
+                    jpnRoot.setLayout(new BorderLayout());
+                    node2.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
+                    jpnRoot.add(node2);
+           
+                    jpnRoot.validate();
+                    jpnRoot.repaint();
+                    setChangeBackground(kind);
                     break;
                 case "BenhNen":
-                    node = new BenhNen_ThemBN();
+//                    node = new BenhNen_ThemBN();
+                     jpnRoot.removeAll();
+                    jpnRoot.setLayout(new BorderLayout());
+                    node3.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
+                    jpnRoot.add(node3);
+           
+                    jpnRoot.validate();
+                    jpnRoot.repaint();
+                    setChangeBackground(kind);
                     break;
                 case "TinhTrang":
-                    node=new TinhTrangTT_ThemBN();
+//                    node=new TinhTrangTT_ThemBN();
+                     jpnRoot.removeAll();
+                    jpnRoot.setLayout(new BorderLayout());
+                    node4.setSize(jpnRoot.getWidth()-50,jpnRoot.getHeight());
+                    JScrollPane scrollp = new JScrollPane(node4, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                    jpnRoot.add(scrollp);
+           
+                    jpnRoot.validate();
+                    jpnRoot.repaint();
+                    setChangeBackground(kind);
                     break;
                 default:
                     break;
            }
-           jpnRoot.removeAll();
-           jpnRoot.setLayout(new BorderLayout());
-           node.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
-           jpnRoot.add(node);
-           
-           jpnRoot.validate();
-           jpnRoot.repaint();
-           setChangeBackground(kind);
+//           jpnRoot.removeAll();
+//           jpnRoot.setLayout(new BorderLayout());
+//           node.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
+//           jpnRoot.add(node);
+//           
+//           jpnRoot.validate();
+//           jpnRoot.repaint();
+//           setChangeBackground(kind);
            
       }
 

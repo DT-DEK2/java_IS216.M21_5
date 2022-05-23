@@ -26,7 +26,7 @@ public class DangNhapController {
    private JRadioButton btnCanBoYTe;
     
     private String ten;
-
+    private String ID;
     public DangNhapController(JTextField jtfCMND_CCCD, JTextField jtfMatKhau) {
       
         this.jtfCMND_CCCD = jtfCMND_CCCD;
@@ -53,12 +53,17 @@ public class DangNhapController {
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 this.ten=rs.getString("HOTEN");
+                this.ID=rs.getString("SoCMND_CCCD");
             }
             ps.close();
             cons.close();
         return i ;
     }
 
+    public String getID() {
+        return ID;
+    }
+    
     public String getTen() {
         return ten;
     }

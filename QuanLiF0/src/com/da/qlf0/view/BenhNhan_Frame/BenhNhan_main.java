@@ -22,7 +22,8 @@ public class BenhNhan_main extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
-    public BenhNhan_main(String ten) {
+    private String ID;
+    public BenhNhan_main(String ten,String ID) {
         initComponents();
         
         setTitle("Quản lí F0 tại nhà");
@@ -38,6 +39,11 @@ public class BenhNhan_main extends javax.swing.JFrame {
         controller.setEvent(listItem);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.jlbTen.setText(ten);
+        this.ID=ID;
+    }
+
+    public String getID() {
+        return ID;
     }
 
     /**

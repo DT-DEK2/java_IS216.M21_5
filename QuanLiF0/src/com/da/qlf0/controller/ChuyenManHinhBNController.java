@@ -30,19 +30,20 @@ public class ChuyenManHinhBNController {
         private String kindSelected = "";
         private JPanel jpnRoot;
         private ArrayList<DanhMucBeanBNhan> listItem = null;
-
+        private String MABN;
     public ChuyenManHinhBNController(JPanel jpnRoot) {
         this.jpnRoot = jpnRoot;
+//        this.MABN=MABN;
     }
         
     public void setView(JPanel jpnItem, JLabel jlbItem) {
         kindSelected = "TTCaNhan";
        jpnItem.setBackground(new Color(0, 134, 179));
        jlbItem.setBackground(new Color(0, 134, 179));
-       JPanel node = new TrangChuPanel();
+       JPanel node = new TrangChuPanel(MABN);
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
-       jpnRoot.add(new TrangChuPanel());
+       jpnRoot.add(new TrangChuPanel(MABN));
        jpnRoot.validate();
        jpnRoot.repaint();
     }

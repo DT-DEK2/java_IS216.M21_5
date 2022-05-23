@@ -5,12 +5,15 @@
 package com.da.qlf0.view;
 
 import com.da.qlf0.controller.QuanLiBenhNhanController;
-import com.da.qlf0.view.GUI_ThemBN.Backup;
-import com.da.qlf0.view.GUI_ThemBN.Backup;
+import com.da.qlf0.controller.TimKiemController;
+
 import com.da.qlf0.view.GUI_ThemBN.ThemBN_Frame;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -47,14 +50,16 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jtfSearch = new javax.swing.JTextField();
+        jtfSoCMND_CCCD = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jtfHoTen = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        btnAdd1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1061, 688));
-
-        jtfSearch.setText("Tìm kiếm");
 
         btnAdd.setText("Thêm bệnh nhân");
         btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -68,48 +73,81 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
             }
         });
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1078, 191));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
+            .addGap(0, 1128, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 599, Short.MAX_VALUE)
         );
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel1.setText("Số CMND/CCCD");
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel2.setText("Họ và tên");
+
+        btnAdd1.setText("Tìm");
+        btnAdd1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdd1MouseClicked(evt);
+            }
+        });
+        btnAdd1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdd1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAdd)
-                        .addGap(91, 91, 91))))
+                .addGap(98, 98, 98)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jtfSoCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(btnAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(178, 178, 178)
+                .addComponent(btnAdd)
+                .addGap(40, 112, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfSoCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(btnAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
     
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-
+        
            JFrame root = new ThemBN_Frame();
            root.setExtendedState(JFrame.MAXIMIZED_BOTH);
            root.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -142,17 +180,69 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
        
 //       JPanel node = new MainPanel();
 //       node.setVisible(true);
+        
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
       
     }//GEN-LAST:event_btnAddMouseClicked
 
+    private void btnAdd1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdd1MouseClicked
+
+    private void btnAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd1ActionPerformed
+        
+                // TODO add your handling code here:
+                 TimKiemController tk= new TimKiemController(jPanel1,jtfSoCMND_CCCD, jtfHoTen);
+                   QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
+               		 		jPanel1);
+           try {
+                   
+                     if (jtfSoCMND_CCCD.getText().length() == 0
+                            && jtfHoTen.getText().length() == 0)
+				 {
+                         
+            				controller.setDataToPanel();
+                         }
+                    else {
+				int i = tk.setDataToPanel();
+				if( i==0)
+				{
+								
+                                		
+                               	 	JFrame frame = new JFrame();
+                               	 	frame.setBounds(0,0,100,50);
+                                	JOptionPane.showMessageDialog(frame,
+                                	"Không tìm thấy bệnh nhân");
+								
+					controller.setDataToPanel();
+				}	
+			}
+                        
+                }catch(ClassNotFoundException ex){
+                    Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.printStackTrace();
+                }catch (SQLException ex) {
+                    Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+                            JFrame frame = new JFrame();
+                            frame.setBounds(0,0,100,50);
+                            JOptionPane.showMessageDialog(frame,
+                            "Có lỗi xảy ra!");
+                        ex.printStackTrace();
+                    } 
+        
+    }//GEN-LAST:event_btnAdd1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnAdd1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jtfSearch;
+    private javax.swing.JTextField jtfHoTen;
+    private javax.swing.JTextField jtfSoCMND_CCCD;
     // End of variables declaration//GEN-END:variables
 
  

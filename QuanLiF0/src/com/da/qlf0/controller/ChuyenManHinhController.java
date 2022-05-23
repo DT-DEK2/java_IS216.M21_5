@@ -26,19 +26,20 @@ public class ChuyenManHinhController {
         private String kindSelected = "";
         private JPanel jpnRoot;
         private ArrayList<DanhMucBean> listItem = null;
-
-    public ChuyenManHinhController(JPanel jpnRoot) {
+        private String ID;
+    public ChuyenManHinhController(JPanel jpnRoot, String ID) {
         this.jpnRoot = jpnRoot;
+        this.ID=ID;
     }
         
     public void setView(JPanel jpnItem, JLabel jlbItem) {
         kindSelected = "TrangChu";
        jpnItem.setBackground(new Color(0, 134, 179));
        jlbItem.setBackground(new Color(0, 134, 179));
-       JPanel node = new TrangChuPanel();
+       JPanel node = new TrangChuPanel(ID);
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
-       jpnRoot.add(new TrangChuPanel());
+       jpnRoot.add(new TrangChuPanel(ID));
        jpnRoot.validate();
        jpnRoot.repaint();
     }
@@ -67,7 +68,7 @@ class LabelEvent implements MouseListener {
       public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "TrangChu":
-                    node = new TrangChuPanel();
+                    node = new TrangChuPanel(ID);
                     break;
                 case "QuanLiBN":
                     node = new QuanLiBnPanel();
@@ -76,7 +77,7 @@ class LabelEvent implements MouseListener {
                     node = new ThongKePanel();
                     break;
                 case "HoTro":
-                    node=new HoTroPanel();
+                    node=new HoTroPanel(ID);
                     break;
                 default:
                     break;
