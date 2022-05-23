@@ -15,6 +15,7 @@ public class ThongKePanel extends javax.swing.JPanel {
      */
     public ThongKePanel() {
         initComponents();
+        
     }
 
     /**

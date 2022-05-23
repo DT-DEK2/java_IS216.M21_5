@@ -4,6 +4,9 @@
  */
 package com.da.qlf0.view.GUI_ThemBN;
 
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Minh Cuong
@@ -15,6 +18,230 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
      */
     public BenhNen_ThemBN() {
         initComponents();
+    }
+
+    public JRadioButton getJrbBenhGan_Co() {
+        return jrbBenhGan_Co;
+    }
+
+    public JRadioButton getJrbBenhGan_Khong() {
+        return jrbBenhGan_Khong;
+    }
+
+    public JRadioButton getJrbBenhPhoiMT_Co() {
+        return jrbBenhPhoiMT_Co;
+    }
+
+    public JRadioButton getJrbBenhPhoiMT_Khong() {
+        return jrbBenhPhoiMT_Khong;
+    }
+
+    public JRadioButton getJrbBenhTKMT_Co() {
+        return jrbBenhTKMT_Co;
+    }
+
+    public JRadioButton getJrbBenhTKMT_Khong() {
+        return jrbBenhTKMT_Khong;
+    }
+
+    public JRadioButton getJrbBenhThanMT_Co() {
+        return jrbBenhThanMT_Co;
+    }
+
+    public JRadioButton getJrbBenhThanMT_Khong() {
+        return jrbBenhThanMT_Khong;
+    }
+
+    public JRadioButton getJrbBenhTim_Co() {
+        return jrbBenhTim_Co;
+    }
+
+    public JRadioButton getJrbBenhTim_Khong() {
+        return jrbBenhTim_Khong;
+    }
+
+    public JRadioButton getJrbBeoPhi_Co() {
+        return jrbBeoPhi_Co;
+    }
+
+    public JRadioButton getJrbBeoPhi_Khong() {
+        return jrbBeoPhi_Khong;
+    }
+
+    public JRadioButton getJrbCLBenhHT_Co() {
+        return jrbCLBenhHT_Co;
+    }
+
+    public JRadioButton getJrbCLBenhHT_Khong() {
+        return jrbCLBenhHT_Khong;
+    }
+
+    public JRadioButton getJrbDaiTD_Co() {
+        return jrbDaiTD_Co;
+    }
+
+    public JRadioButton getJrbDaiTD_Khong() {
+        return jrbDaiTD_Khong;
+    }
+
+    public JRadioButton getJrbGhepTang_TBM_Co() {
+        return jrbGhepTang_TBM_Co;
+    }
+
+    public JRadioButton getJrbGhepTang_TBM_Khong() {
+        return jrbGhepTang_TBM_Khong;
+    }
+
+    public JRadioButton getJrbHIV_Co() {
+        return jrbHIV_Co;
+    }
+
+    public JRadioButton getJrbHIV_Khong() {
+        return jrbHIV_Khong;
+    }
+
+    public JRadioButton getJrbHauSan_Co() {
+        return jrbHauSan_Co;
+    }
+
+    public JRadioButton getJrbHauSan_Khong() {
+        return jrbHauSan_Khong;
+    }
+
+    public JRadioButton getJrbHenKQ_Co() {
+        return jrbHenKQ_Co;
+    }
+
+    public JRadioButton getJrbHenKQ_Khong() {
+        return jrbHenKQ_Khong;
+    }
+
+    public JRadioButton getJrbHoiChungDown_Co() {
+        return jrbHoiChungDown_Co;
+    }
+
+    public JRadioButton getJrbHoiChungDown_Khong() {
+        return jrbHoiChungDown_Khong;
+    }
+
+    public JRadioButton getJrbKQXN_AT() {
+        return jrbKQXN_AT;
+    }
+
+    public JRadioButton getJrbKQXN_ChuaCoKQ() {
+        return jrbKQXN_ChuaCoKQ;
+    }
+
+    public JRadioButton getJrbKQXN_DT() {
+        return jrbKQXN_DT;
+    }
+
+    public JRadioButton getJrbKhangSinh_Co() {
+        return jrbKhangSinh_Co;
+    }
+
+    public JRadioButton getJrbKhangSinh_Khong() {
+        return jrbKhangSinh_Khong;
+    }
+
+    public JRadioButton getJrbKhangVirus_Co() {
+        return jrbKhangVirus_Co;
+    }
+
+    public JRadioButton getJrbKhangVirus_Khong() {
+        return jrbKhangVirus_Khong;
+    }
+
+    public JRadioButton getJrbMachMauNao_Co() {
+        return jrbMachMauNao_Co;
+    }
+
+    public JRadioButton getJrbMachMauNao_Khong() {
+        return jrbMachMauNao_Khong;
+    }
+
+    public JRadioButton getJrbMangThai_Co() {
+        return jrbMangThai_Co;
+    }
+
+    public JRadioButton getJrbMangThai_Khong() {
+        return jrbMangThai_Khong;
+    }
+
+    public JRadioButton getJrbRoiLoanSDCGN_Co() {
+        return jrbRoiLoanSDCGN_Co;
+    }
+
+    public JRadioButton getJrbRoiLoanSDCGN_Khong() {
+        return jrbRoiLoanSDCGN_Khong;
+    }
+
+    public JRadioButton getJrbSteroid_Co() {
+        return jrbSteroid_Co;
+    }
+
+    public JRadioButton getJrbSteroid_Khong() {
+        return jrbSteroid_Khong;
+    }
+
+    public JRadioButton getJrbTangHA_Co() {
+        return jrbTangHA_Co;
+    }
+
+    public JRadioButton getJrbTangHA_Khong() {
+        return jrbTangHA_Khong;
+    }
+
+    public JRadioButton getJrbThieuMD_Co() {
+        return jrbThieuMD_Co;
+    }
+
+    public JRadioButton getJrbThieuMD_Khong() {
+        return jrbThieuMD_Khong;
+    }
+
+    public JRadioButton getJrbThuocDTCovid_Co() {
+        return jrbThuocDTCovid_Co;
+    }
+
+    public JRadioButton getJrbThuocDTCovid_Khong() {
+        return jrbThuocDTCovid_Khong;
+    }
+
+    public JRadioButton getJrbThuocUCMD_Co() {
+        return jrbThuocUCMD_Co;
+    }
+
+    public JRadioButton getJrbThuocUCMD_Khong() {
+        return jrbThuocUCMD_Khong;
+    }
+
+    public JRadioButton getJrbThuocMD_Co() {
+        return jrbThuocMD_Co;
+    }
+
+    public JRadioButton getJrbThuocMD_Khong() {
+        return jrbThuocMD_Khong;
+    }
+
+    public JRadioButton getJrbTreSSXNcovid_Co() {
+        return jrbTreSSXNcovid_Co;
+    }
+
+    public JRadioButton getJrbTreSSXNcovid_Khong() {
+        return jrbTreSSXNcovid_Khong;
+    }
+
+    public JRadioButton getJrbUngThu_Co() {
+        return jrbUngThu_Co;
+    }
+
+    public JRadioButton getJrbUngThu_Khong() {
+        return jrbUngThu_Khong;
+    }
+
+    public JTextField getJtfSoTuanMT() {
+        return jtfSoTuanMT;
     }
 
     /**
@@ -37,7 +264,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         btnG_ThanMT = new javax.swing.ButtonGroup();
         btnG_HenKQ = new javax.swing.ButtonGroup();
         btnG_BeoPhi = new javax.swing.ButtonGroup();
-        btnG_THMD = new javax.swing.ButtonGroup();
+        btnG_ThieuMD = new javax.swing.ButtonGroup();
         btnG_PhoiMT = new javax.swing.ButtonGroup();
         btnG_UngThu = new javax.swing.ButtonGroup();
         btn_GHIV = new javax.swing.ButtonGroup();
@@ -48,29 +275,30 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         btnG_CacLBHT = new javax.swing.ButtonGroup();
         btnG_TKMT = new javax.swing.ButtonGroup();
         btnG_Steroid = new javax.swing.ButtonGroup();
-        btnG_ThuocMD = new javax.swing.ButtonGroup();
+        btnG_ThuocUCMD = new javax.swing.ButtonGroup();
         btnG_ThuocCovid = new javax.swing.ButtonGroup();
         btnG_KhangSinh = new javax.swing.ButtonGroup();
         btnG_KhangVirus = new javax.swing.ButtonGroup();
+        btnG_ThuocMD = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jlbMangThai = new javax.swing.JLabel();
+        jrbMangThai_Co = new javax.swing.JRadioButton();
         jSeparator3 = new javax.swing.JSeparator();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jLabel15 = new javax.swing.JLabel();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jLabel16 = new javax.swing.JLabel();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        jrbMangThai_Khong = new javax.swing.JRadioButton();
+        jlbSoTuanMT = new javax.swing.JLabel();
+        jtfSoTuanMT = new javax.swing.JTextField();
+        jlbHauSan = new javax.swing.JLabel();
+        jrbHauSan_Co = new javax.swing.JRadioButton();
+        jrbHauSan_Khong = new javax.swing.JRadioButton();
+        jlbTreSSXNcovid = new javax.swing.JLabel();
+        jrbTreSSXNcovid_Co = new javax.swing.JRadioButton();
+        jrbTreSSXNcovid_Khong = new javax.swing.JRadioButton();
+        jlbKQXN = new javax.swing.JLabel();
+        jrbKQXN_AT = new javax.swing.JRadioButton();
+        jrbKQXN_DT = new javax.swing.JRadioButton();
+        jrbKQXN_ChuaCoKQ = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
@@ -82,65 +310,68 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
-        jRadioButton17 = new javax.swing.JRadioButton();
-        jRadioButton18 = new javax.swing.JRadioButton();
-        jRadioButton19 = new javax.swing.JRadioButton();
-        jRadioButton20 = new javax.swing.JRadioButton();
-        jRadioButton21 = new javax.swing.JRadioButton();
-        jRadioButton22 = new javax.swing.JRadioButton();
-        jRadioButton23 = new javax.swing.JRadioButton();
-        jRadioButton24 = new javax.swing.JRadioButton();
-        jRadioButton25 = new javax.swing.JRadioButton();
-        jRadioButton26 = new javax.swing.JRadioButton();
-        jRadioButton27 = new javax.swing.JRadioButton();
-        jRadioButton28 = new javax.swing.JRadioButton();
+        jrbTangHA_Co = new javax.swing.JRadioButton();
+        jrbTangHA_Khong = new javax.swing.JRadioButton();
+        jrbBenhTim_Co = new javax.swing.JRadioButton();
+        jrbBenhTim_Khong = new javax.swing.JRadioButton();
+        jrbDaiTD_Co = new javax.swing.JRadioButton();
+        jrbDaiTD_Khong = new javax.swing.JRadioButton();
+        jrbMachMauNao_Co = new javax.swing.JRadioButton();
+        jrbMachMauNao_Khong = new javax.swing.JRadioButton();
+        jrbBenhThanMT_Co = new javax.swing.JRadioButton();
+        jrbBenhThanMT_Khong = new javax.swing.JRadioButton();
+        jrbHenKQ_Co = new javax.swing.JRadioButton();
+        jrbHenKQ_Khong = new javax.swing.JRadioButton();
+        jrbBeoPhi_Co = new javax.swing.JRadioButton();
+        jrbBeoPhi_Khong = new javax.swing.JRadioButton();
+        jrbThieuMD_Co = new javax.swing.JRadioButton();
+        jrbThieuMD_Khong = new javax.swing.JRadioButton();
+        jrbBenhPhoiMT_Co = new javax.swing.JRadioButton();
+        jrbBenhPhoiMT_Khong = new javax.swing.JRadioButton();
         jLabel26 = new javax.swing.JLabel();
-        jRadioButton29 = new javax.swing.JRadioButton();
-        jRadioButton30 = new javax.swing.JRadioButton();
+        jrbUngThu_Co = new javax.swing.JRadioButton();
+        jrbUngThu_Khong = new javax.swing.JRadioButton();
         jLabel27 = new javax.swing.JLabel();
-        jRadioButton31 = new javax.swing.JRadioButton();
-        jRadioButton32 = new javax.swing.JRadioButton();
+        jrbHIV_Co = new javax.swing.JRadioButton();
+        jrbHIV_Khong = new javax.swing.JRadioButton();
         jLabel28 = new javax.swing.JLabel();
-        jRadioButton33 = new javax.swing.JRadioButton();
-        jRadioButton34 = new javax.swing.JRadioButton();
+        jrbBenhGan_Co = new javax.swing.JRadioButton();
+        jrbBenhGan_Khong = new javax.swing.JRadioButton();
         jLabel29 = new javax.swing.JLabel();
-        jRadioButton35 = new javax.swing.JRadioButton();
-        jRadioButton36 = new javax.swing.JRadioButton();
+        jrbHoiChungDown_Co = new javax.swing.JRadioButton();
+        jrbHoiChungDown_Khong = new javax.swing.JRadioButton();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jRadioButton37 = new javax.swing.JRadioButton();
-        jRadioButton38 = new javax.swing.JRadioButton();
-        jRadioButton39 = new javax.swing.JRadioButton();
-        jRadioButton40 = new javax.swing.JRadioButton();
-        jRadioButton41 = new javax.swing.JRadioButton();
-        jRadioButton42 = new javax.swing.JRadioButton();
+        jrbRoiLoanSDCGN_Co = new javax.swing.JRadioButton();
+        jrbRoiLoanSDCGN_Khong = new javax.swing.JRadioButton();
+        jrbGhepTang_TBM_Co = new javax.swing.JRadioButton();
+        jrbGhepTang_TBM_Khong = new javax.swing.JRadioButton();
+        jrbCLBenhHT_Co = new javax.swing.JRadioButton();
+        jrbCLBenhHT_Khong = new javax.swing.JRadioButton();
         jLabel33 = new javax.swing.JLabel();
-        jRadioButton43 = new javax.swing.JRadioButton();
-        jRadioButton44 = new javax.swing.JRadioButton();
+        jrbBenhTKMT_Co = new javax.swing.JRadioButton();
+        jrbBenhTKMT_Khong = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        jRadioButton45 = new javax.swing.JRadioButton();
-        jRadioButton46 = new javax.swing.JRadioButton();
-        jRadioButton47 = new javax.swing.JRadioButton();
-        jRadioButton48 = new javax.swing.JRadioButton();
-        jRadioButton49 = new javax.swing.JRadioButton();
-        jRadioButton50 = new javax.swing.JRadioButton();
+        jrbSteroid_Co = new javax.swing.JRadioButton();
+        jrbSteroid_Khong = new javax.swing.JRadioButton();
+        jrbThuocUCMD_Co = new javax.swing.JRadioButton();
+        jrbThuocUCMD_Khong = new javax.swing.JRadioButton();
+        jrbThuocDTCovid_Co = new javax.swing.JRadioButton();
+        jrbThuocDTCovid_Khong = new javax.swing.JRadioButton();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jRadioButton51 = new javax.swing.JRadioButton();
-        jRadioButton52 = new javax.swing.JRadioButton();
-        jRadioButton53 = new javax.swing.JRadioButton();
-        jRadioButton54 = new javax.swing.JRadioButton();
+        jrbKhangSinh_Co = new javax.swing.JRadioButton();
+        jrbKhangSinh_Khong = new javax.swing.JRadioButton();
+        jrbKhangVirus_Co = new javax.swing.JRadioButton();
+        jrbKhangVirus_Khong = new javax.swing.JRadioButton();
+        jLabel39 = new javax.swing.JLabel();
+        jrbThuocMD_Co = new javax.swing.JRadioButton();
+        jrbThuocMD_Khong = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -173,136 +404,141 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(0, 41, 102));
         jLabel8.setText("BỆNH NỀN");
 
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel12.setText("Mang thai:");
+        jlbMangThai.setBackground(new java.awt.Color(255, 255, 255));
+        jlbMangThai.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbMangThai.setForeground(new java.awt.Color(20, 20, 20));
+        jlbMangThai.setText("Mang thai:");
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MangThai.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton2.setText("Có");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        jrbMangThai_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MangThai.add(jrbMangThai_Co);
+        jrbMangThai_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMangThai_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMangThai_Co.setText("Có");
+        jrbMangThai_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                jrbMangThai_CoActionPerformed(evt);
             }
         });
 
         jSeparator3.setBackground(new java.awt.Color(166, 166, 166));
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MangThai.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton3.setSelected(true);
-        jRadioButton3.setText("Không");
-
-        jLabel13.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel13.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel13.setText("Nếu Có: Đánh giá số tuần mang thai");
-
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jrbMangThai_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MangThai.add(jrbMangThai_Khong);
+        jrbMangThai_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMangThai_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMangThai_Khong.setSelected(true);
+        jrbMangThai_Khong.setText("Không");
+        jrbMangThai_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jrbMangThai_KhongActionPerformed(evt);
             }
         });
 
-        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel14.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel14.setText("Hậu sản ( trong vòng 6 tuần ):");
+        jlbSoTuanMT.setBackground(new java.awt.Color(255, 255, 255));
+        jlbSoTuanMT.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbSoTuanMT.setForeground(new java.awt.Color(20, 20, 20));
+        jlbSoTuanMT.setText("Nếu Có: Đánh giá số tuần mang thai");
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HauSan.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton4.setText("Có");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        jtfSoTuanMT.setBackground(new java.awt.Color(255, 255, 255));
+        jtfSoTuanMT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfSoTuanMT.setForeground(new java.awt.Color(20, 20, 20));
+        jtfSoTuanMT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfSoTuanMT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jtfSoTuanMTActionPerformed(evt);
             }
         });
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HauSan.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton5.setSelected(true);
-        jRadioButton5.setText("Không");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        jlbHauSan.setBackground(new java.awt.Color(255, 255, 255));
+        jlbHauSan.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbHauSan.setForeground(new java.awt.Color(20, 20, 20));
+        jlbHauSan.setText("Hậu sản ( trong vòng 6 tuần ):");
+
+        jrbHauSan_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HauSan.add(jrbHauSan_Co);
+        jrbHauSan_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHauSan_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHauSan_Co.setText("Có");
+        jrbHauSan_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                jrbHauSan_CoActionPerformed(evt);
             }
         });
 
-        jLabel15.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel15.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel15.setText("Trẻ sơ sinh được xét nghiệm Covid-19");
-
-        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_XNTreSS.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton6.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton6.setText("Có");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        jrbHauSan_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HauSan.add(jrbHauSan_Khong);
+        jrbHauSan_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHauSan_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHauSan_Khong.setSelected(true);
+        jrbHauSan_Khong.setText("Không");
+        jrbHauSan_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                jrbHauSan_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_XNTreSS.add(jRadioButton7);
-        jRadioButton7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton7.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton7.setText("Không");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        jlbTreSSXNcovid.setBackground(new java.awt.Color(255, 255, 255));
+        jlbTreSSXNcovid.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbTreSSXNcovid.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTreSSXNcovid.setText("Trẻ sơ sinh được xét nghiệm Covid-19");
+
+        jrbTreSSXNcovid_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_XNTreSS.add(jrbTreSSXNcovid_Co);
+        jrbTreSSXNcovid_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTreSSXNcovid_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTreSSXNcovid_Co.setText("Có");
+        jrbTreSSXNcovid_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                jrbTreSSXNcovid_CoActionPerformed(evt);
             }
         });
 
-        jLabel16.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel16.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel16.setText("Nếu Có: Kết quả xét nghiệm là :");
-
-        jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KQXN.add(jRadioButton8);
-        jRadioButton8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton8.setText("Âm tính");
-        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+        jrbTreSSXNcovid_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_XNTreSS.add(jrbTreSSXNcovid_Khong);
+        jrbTreSSXNcovid_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTreSSXNcovid_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTreSSXNcovid_Khong.setText("Không");
+        jrbTreSSXNcovid_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton8ActionPerformed(evt);
+                jrbTreSSXNcovid_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KQXN.add(jRadioButton9);
-        jRadioButton9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton9.setText("Dương tính");
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+        jlbKQXN.setBackground(new java.awt.Color(255, 255, 255));
+        jlbKQXN.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbKQXN.setForeground(new java.awt.Color(20, 20, 20));
+        jlbKQXN.setText("Nếu Có: Kết quả xét nghiệm là :");
+
+        jrbKQXN_AT.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KQXN.add(jrbKQXN_AT);
+        jrbKQXN_AT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKQXN_AT.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKQXN_AT.setText("Âm tính");
+        jrbKQXN_AT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton9ActionPerformed(evt);
+                jrbKQXN_ATActionPerformed(evt);
             }
         });
 
-        jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KQXN.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton10.setText("Chưa có kết quả");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        jrbKQXN_DT.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KQXN.add(jrbKQXN_DT);
+        jrbKQXN_DT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKQXN_DT.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKQXN_DT.setText("Dương tính");
+        jrbKQXN_DT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                jrbKQXN_DTActionPerformed(evt);
+            }
+        });
+
+        jrbKQXN_ChuaCoKQ.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KQXN.add(jrbKQXN_ChuaCoKQ);
+        jrbKQXN_ChuaCoKQ.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKQXN_ChuaCoKQ.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKQXN_ChuaCoKQ.setText("Chưa có kết quả");
+        jrbKQXN_ChuaCoKQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbKQXN_ChuaCoKQActionPerformed(evt);
             }
         });
 
@@ -357,210 +593,210 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel25.setForeground(new java.awt.Color(20, 20, 20));
         jLabel25.setText("Bệnh phổi mãn tính ( không phải hen suyễn ):");
 
-        jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HuyetAp.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton11.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton11.setText("Có");
-        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+        jrbTangHA_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HuyetAp.add(jrbTangHA_Co);
+        jrbTangHA_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTangHA_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTangHA_Co.setText("Có");
+        jrbTangHA_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton11ActionPerformed(evt);
+                jrbTangHA_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HuyetAp.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton12.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton12.setSelected(true);
-        jRadioButton12.setText("Không");
-        jRadioButton12.addActionListener(new java.awt.event.ActionListener() {
+        jrbTangHA_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HuyetAp.add(jrbTangHA_Khong);
+        jrbTangHA_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTangHA_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTangHA_Khong.setSelected(true);
+        jrbTangHA_Khong.setText("Không");
+        jrbTangHA_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton12ActionPerformed(evt);
+                jrbTangHA_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton13.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_TimMach.add(jRadioButton13);
-        jRadioButton13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton13.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton13.setText("Có");
-        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhTim_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TimMach.add(jrbBenhTim_Co);
+        jrbBenhTim_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhTim_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhTim_Co.setText("Có");
+        jrbBenhTim_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton13ActionPerformed(evt);
+                jrbBenhTim_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton14.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_TimMach.add(jRadioButton14);
-        jRadioButton14.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton14.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton14.setSelected(true);
-        jRadioButton14.setText("Không");
-        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhTim_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TimMach.add(jrbBenhTim_Khong);
+        jrbBenhTim_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhTim_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhTim_Khong.setSelected(true);
+        jrbBenhTim_Khong.setText("Không");
+        jrbBenhTim_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton14ActionPerformed(evt);
+                jrbBenhTim_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton15.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DTD.add(jRadioButton15);
-        jRadioButton15.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton15.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton15.setText("Có");
-        jRadioButton15.addActionListener(new java.awt.event.ActionListener() {
+        jrbDaiTD_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DTD.add(jrbDaiTD_Co);
+        jrbDaiTD_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDaiTD_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDaiTD_Co.setText("Có");
+        jrbDaiTD_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton15ActionPerformed(evt);
+                jrbDaiTD_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton16.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DTD.add(jRadioButton16);
-        jRadioButton16.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton16.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton16.setSelected(true);
-        jRadioButton16.setText("Không");
-        jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
+        jrbDaiTD_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DTD.add(jrbDaiTD_Khong);
+        jrbDaiTD_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDaiTD_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDaiTD_Khong.setSelected(true);
+        jrbDaiTD_Khong.setText("Không");
+        jrbDaiTD_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton16ActionPerformed(evt);
+                jrbDaiTD_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton17.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MMNao.add(jRadioButton17);
-        jRadioButton17.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton17.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton17.setText("Có");
-        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
+        jrbMachMauNao_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MMNao.add(jrbMachMauNao_Co);
+        jrbMachMauNao_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMachMauNao_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMachMauNao_Co.setText("Có");
+        jrbMachMauNao_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton17ActionPerformed(evt);
+                jrbMachMauNao_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton18.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MMNao.add(jRadioButton18);
-        jRadioButton18.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton18.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton18.setSelected(true);
-        jRadioButton18.setText("Không");
-        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
+        jrbMachMauNao_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MMNao.add(jrbMachMauNao_Khong);
+        jrbMachMauNao_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMachMauNao_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMachMauNao_Khong.setSelected(true);
+        jrbMachMauNao_Khong.setText("Không");
+        jrbMachMauNao_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton18ActionPerformed(evt);
+                jrbMachMauNao_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton19.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_ThanMT.add(jRadioButton19);
-        jRadioButton19.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton19.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton19.setText("Có");
-        jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhThanMT_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThanMT.add(jrbBenhThanMT_Co);
+        jrbBenhThanMT_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhThanMT_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhThanMT_Co.setText("Có");
+        jrbBenhThanMT_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton19ActionPerformed(evt);
+                jrbBenhThanMT_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton20.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_ThanMT.add(jRadioButton20);
-        jRadioButton20.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton20.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton20.setSelected(true);
-        jRadioButton20.setText("Không");
-        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhThanMT_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThanMT.add(jrbBenhThanMT_Khong);
+        jrbBenhThanMT_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhThanMT_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhThanMT_Khong.setSelected(true);
+        jrbBenhThanMT_Khong.setText("Không");
+        jrbBenhThanMT_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton20ActionPerformed(evt);
+                jrbBenhThanMT_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton21.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HenKQ.add(jRadioButton21);
-        jRadioButton21.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton21.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton21.setText("Có");
-        jRadioButton21.addActionListener(new java.awt.event.ActionListener() {
+        jrbHenKQ_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HenKQ.add(jrbHenKQ_Co);
+        jrbHenKQ_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHenKQ_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHenKQ_Co.setText("Có");
+        jrbHenKQ_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton21ActionPerformed(evt);
+                jrbHenKQ_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton22.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HenKQ.add(jRadioButton22);
-        jRadioButton22.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton22.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton22.setSelected(true);
-        jRadioButton22.setText("Không");
-        jRadioButton22.addActionListener(new java.awt.event.ActionListener() {
+        jrbHenKQ_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HenKQ.add(jrbHenKQ_Khong);
+        jrbHenKQ_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHenKQ_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHenKQ_Khong.setSelected(true);
+        jrbHenKQ_Khong.setText("Không");
+        jrbHenKQ_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton22ActionPerformed(evt);
+                jrbHenKQ_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton23.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_BeoPhi.add(jRadioButton23);
-        jRadioButton23.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton23.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton23.setText("Có");
-        jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
+        jrbBeoPhi_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BeoPhi.add(jrbBeoPhi_Co);
+        jrbBeoPhi_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBeoPhi_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBeoPhi_Co.setText("Có");
+        jrbBeoPhi_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton23ActionPerformed(evt);
+                jrbBeoPhi_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton24.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_BeoPhi.add(jRadioButton24);
-        jRadioButton24.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton24.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton24.setSelected(true);
-        jRadioButton24.setText("Không");
-        jRadioButton24.addActionListener(new java.awt.event.ActionListener() {
+        jrbBeoPhi_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BeoPhi.add(jrbBeoPhi_Khong);
+        jrbBeoPhi_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBeoPhi_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBeoPhi_Khong.setSelected(true);
+        jrbBeoPhi_Khong.setText("Không");
+        jrbBeoPhi_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton24ActionPerformed(evt);
+                jrbBeoPhi_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton25.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_THMD.add(jRadioButton25);
-        jRadioButton25.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton25.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton25.setText("Có");
-        jRadioButton25.addActionListener(new java.awt.event.ActionListener() {
+        jrbThieuMD_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThieuMD.add(jrbThieuMD_Co);
+        jrbThieuMD_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThieuMD_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThieuMD_Co.setText("Có");
+        jrbThieuMD_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton25ActionPerformed(evt);
+                jrbThieuMD_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton26.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_THMD.add(jRadioButton26);
-        jRadioButton26.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton26.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton26.setSelected(true);
-        jRadioButton26.setText("Không");
-        jRadioButton26.addActionListener(new java.awt.event.ActionListener() {
+        jrbThieuMD_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThieuMD.add(jrbThieuMD_Khong);
+        jrbThieuMD_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThieuMD_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThieuMD_Khong.setSelected(true);
+        jrbThieuMD_Khong.setText("Không");
+        jrbThieuMD_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton26ActionPerformed(evt);
+                jrbThieuMD_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton27.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_PhoiMT.add(jRadioButton27);
-        jRadioButton27.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton27.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton27.setText("Có");
-        jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhPhoiMT_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_PhoiMT.add(jrbBenhPhoiMT_Co);
+        jrbBenhPhoiMT_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhPhoiMT_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhPhoiMT_Co.setText("Có");
+        jrbBenhPhoiMT_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton27ActionPerformed(evt);
+                jrbBenhPhoiMT_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton28.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_PhoiMT.add(jRadioButton28);
-        jRadioButton28.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton28.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton28.setSelected(true);
-        jRadioButton28.setText("Không");
-        jRadioButton28.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhPhoiMT_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_PhoiMT.add(jrbBenhPhoiMT_Khong);
+        jrbBenhPhoiMT_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhPhoiMT_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhPhoiMT_Khong.setSelected(true);
+        jrbBenhPhoiMT_Khong.setText("Không");
+        jrbBenhPhoiMT_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton28ActionPerformed(evt);
+                jrbBenhPhoiMT_KhongActionPerformed(evt);
             }
         });
 
@@ -569,26 +805,26 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel26.setForeground(new java.awt.Color(20, 20, 20));
         jLabel26.setText("Ung thư:");
 
-        jRadioButton29.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_UngThu.add(jRadioButton29);
-        jRadioButton29.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton29.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton29.setText("Có");
-        jRadioButton29.addActionListener(new java.awt.event.ActionListener() {
+        jrbUngThu_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_UngThu.add(jrbUngThu_Co);
+        jrbUngThu_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbUngThu_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbUngThu_Co.setText("Có");
+        jrbUngThu_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton29ActionPerformed(evt);
+                jrbUngThu_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton30.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_UngThu.add(jRadioButton30);
-        jRadioButton30.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton30.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton30.setSelected(true);
-        jRadioButton30.setText("Không");
-        jRadioButton30.addActionListener(new java.awt.event.ActionListener() {
+        jrbUngThu_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_UngThu.add(jrbUngThu_Khong);
+        jrbUngThu_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbUngThu_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbUngThu_Khong.setSelected(true);
+        jrbUngThu_Khong.setText("Không");
+        jrbUngThu_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton30ActionPerformed(evt);
+                jrbUngThu_KhongActionPerformed(evt);
             }
         });
 
@@ -597,26 +833,26 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel27.setForeground(new java.awt.Color(20, 20, 20));
         jLabel27.setText("AIDS/HIV:");
 
-        jRadioButton31.setBackground(new java.awt.Color(255, 255, 255));
-        btn_GHIV.add(jRadioButton31);
-        jRadioButton31.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton31.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton31.setText("Có");
-        jRadioButton31.addActionListener(new java.awt.event.ActionListener() {
+        jrbHIV_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GHIV.add(jrbHIV_Co);
+        jrbHIV_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHIV_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHIV_Co.setText("Có");
+        jrbHIV_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton31ActionPerformed(evt);
+                jrbHIV_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton32.setBackground(new java.awt.Color(255, 255, 255));
-        btn_GHIV.add(jRadioButton32);
-        jRadioButton32.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton32.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton32.setSelected(true);
-        jRadioButton32.setText("Không");
-        jRadioButton32.addActionListener(new java.awt.event.ActionListener() {
+        jrbHIV_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GHIV.add(jrbHIV_Khong);
+        jrbHIV_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHIV_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHIV_Khong.setSelected(true);
+        jrbHIV_Khong.setText("Không");
+        jrbHIV_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton32ActionPerformed(evt);
+                jrbHIV_KhongActionPerformed(evt);
             }
         });
 
@@ -625,26 +861,26 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel28.setForeground(new java.awt.Color(20, 20, 20));
         jLabel28.setText("Bệnh gan:");
 
-        jRadioButton33.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_BenhGan.add(jRadioButton33);
-        jRadioButton33.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton33.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton33.setText("Có");
-        jRadioButton33.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhGan_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BenhGan.add(jrbBenhGan_Co);
+        jrbBenhGan_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhGan_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhGan_Co.setText("Có");
+        jrbBenhGan_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton33ActionPerformed(evt);
+                jrbBenhGan_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton34.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_BenhGan.add(jRadioButton34);
-        jRadioButton34.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton34.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton34.setSelected(true);
-        jRadioButton34.setText("Không");
-        jRadioButton34.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhGan_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BenhGan.add(jrbBenhGan_Khong);
+        jrbBenhGan_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhGan_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhGan_Khong.setSelected(true);
+        jrbBenhGan_Khong.setText("Không");
+        jrbBenhGan_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton34ActionPerformed(evt);
+                jrbBenhGan_KhongActionPerformed(evt);
             }
         });
 
@@ -653,26 +889,26 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel29.setForeground(new java.awt.Color(20, 20, 20));
         jLabel29.setText("Hội chứng down:");
 
-        jRadioButton35.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HCDown.add(jRadioButton35);
-        jRadioButton35.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton35.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton35.setText("Có");
-        jRadioButton35.addActionListener(new java.awt.event.ActionListener() {
+        jrbHoiChungDown_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HCDown.add(jrbHoiChungDown_Co);
+        jrbHoiChungDown_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHoiChungDown_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHoiChungDown_Co.setText("Có");
+        jrbHoiChungDown_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton35ActionPerformed(evt);
+                jrbHoiChungDown_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton36.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_HCDown.add(jRadioButton36);
-        jRadioButton36.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton36.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton36.setSelected(true);
-        jRadioButton36.setText("Không");
-        jRadioButton36.addActionListener(new java.awt.event.ActionListener() {
+        jrbHoiChungDown_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_HCDown.add(jrbHoiChungDown_Khong);
+        jrbHoiChungDown_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbHoiChungDown_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbHoiChungDown_Khong.setSelected(true);
+        jrbHoiChungDown_Khong.setText("Không");
+        jrbHoiChungDown_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton36ActionPerformed(evt);
+                jrbHoiChungDown_KhongActionPerformed(evt);
             }
         });
 
@@ -691,72 +927,72 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel32.setForeground(new java.awt.Color(20, 20, 20));
         jLabel32.setText("Các loại bệnh hệ thống:");
 
-        jRadioButton37.setBackground(new java.awt.Color(255, 255, 255));
-        btn_GRLCGN.add(jRadioButton37);
-        jRadioButton37.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton37.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton37.setText("Có");
-        jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
+        jrbRoiLoanSDCGN_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GRLCGN.add(jrbRoiLoanSDCGN_Co);
+        jrbRoiLoanSDCGN_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbRoiLoanSDCGN_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbRoiLoanSDCGN_Co.setText("Có");
+        jrbRoiLoanSDCGN_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton37ActionPerformed(evt);
+                jrbRoiLoanSDCGN_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton38.setBackground(new java.awt.Color(255, 255, 255));
-        btn_GRLCGN.add(jRadioButton38);
-        jRadioButton38.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton38.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton38.setSelected(true);
-        jRadioButton38.setText("Không");
-        jRadioButton38.addActionListener(new java.awt.event.ActionListener() {
+        jrbRoiLoanSDCGN_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btn_GRLCGN.add(jrbRoiLoanSDCGN_Khong);
+        jrbRoiLoanSDCGN_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbRoiLoanSDCGN_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbRoiLoanSDCGN_Khong.setSelected(true);
+        jrbRoiLoanSDCGN_Khong.setText("Không");
+        jrbRoiLoanSDCGN_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton38ActionPerformed(evt);
+                jrbRoiLoanSDCGN_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton39.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_Ghep.add(jRadioButton39);
-        jRadioButton39.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton39.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton39.setText("Có");
-        jRadioButton39.addActionListener(new java.awt.event.ActionListener() {
+        jrbGhepTang_TBM_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Ghep.add(jrbGhepTang_TBM_Co);
+        jrbGhepTang_TBM_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbGhepTang_TBM_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbGhepTang_TBM_Co.setText("Có");
+        jrbGhepTang_TBM_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton39ActionPerformed(evt);
+                jrbGhepTang_TBM_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton40.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_Ghep.add(jRadioButton40);
-        jRadioButton40.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton40.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton40.setSelected(true);
-        jRadioButton40.setText("Không");
-        jRadioButton40.addActionListener(new java.awt.event.ActionListener() {
+        jrbGhepTang_TBM_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Ghep.add(jrbGhepTang_TBM_Khong);
+        jrbGhepTang_TBM_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbGhepTang_TBM_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbGhepTang_TBM_Khong.setSelected(true);
+        jrbGhepTang_TBM_Khong.setText("Không");
+        jrbGhepTang_TBM_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton40ActionPerformed(evt);
+                jrbGhepTang_TBM_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton41.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_CacLBHT.add(jRadioButton41);
-        jRadioButton41.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton41.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton41.setText("Có");
-        jRadioButton41.addActionListener(new java.awt.event.ActionListener() {
+        jrbCLBenhHT_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CacLBHT.add(jrbCLBenhHT_Co);
+        jrbCLBenhHT_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbCLBenhHT_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbCLBenhHT_Co.setText("Có");
+        jrbCLBenhHT_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton41ActionPerformed(evt);
+                jrbCLBenhHT_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton42.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_CacLBHT.add(jRadioButton42);
-        jRadioButton42.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton42.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton42.setSelected(true);
-        jRadioButton42.setText("Không");
-        jRadioButton42.addActionListener(new java.awt.event.ActionListener() {
+        jrbCLBenhHT_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CacLBHT.add(jrbCLBenhHT_Khong);
+        jrbCLBenhHT_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbCLBenhHT_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbCLBenhHT_Khong.setSelected(true);
+        jrbCLBenhHT_Khong.setText("Không");
+        jrbCLBenhHT_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton42ActionPerformed(evt);
+                jrbCLBenhHT_KhongActionPerformed(evt);
             }
         });
 
@@ -765,26 +1001,26 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel33.setForeground(new java.awt.Color(20, 20, 20));
         jLabel33.setText("Bệnh thần kinh mãn tính ( bao gồm sa sút trí tuệ ):");
 
-        jRadioButton43.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_TKMT.add(jRadioButton43);
-        jRadioButton43.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton43.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton43.setText("Có");
-        jRadioButton43.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhTKMT_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TKMT.add(jrbBenhTKMT_Co);
+        jrbBenhTKMT_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhTKMT_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhTKMT_Co.setText("Có");
+        jrbBenhTKMT_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton43ActionPerformed(evt);
+                jrbBenhTKMT_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton44.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_TKMT.add(jRadioButton44);
-        jRadioButton44.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton44.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton44.setSelected(true);
-        jRadioButton44.setText("Không");
-        jRadioButton44.addActionListener(new java.awt.event.ActionListener() {
+        jrbBenhTKMT_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TKMT.add(jrbBenhTKMT_Khong);
+        jrbBenhTKMT_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBenhTKMT_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBenhTKMT_Khong.setSelected(true);
+        jrbBenhTKMT_Khong.setText("Không");
+        jrbBenhTKMT_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton44ActionPerformed(evt);
+                jrbBenhTKMT_KhongActionPerformed(evt);
             }
         });
 
@@ -809,72 +1045,71 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel36.setForeground(new java.awt.Color(20, 20, 20));
         jLabel36.setText("Các loại thuốc điều trị Covid:");
 
-        jRadioButton45.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_Steroid.add(jRadioButton45);
-        jRadioButton45.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton45.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton45.setText("Có");
-        jRadioButton45.addActionListener(new java.awt.event.ActionListener() {
+        jrbSteroid_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Steroid.add(jrbSteroid_Co);
+        jrbSteroid_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbSteroid_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbSteroid_Co.setText("Có");
+        jrbSteroid_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton45ActionPerformed(evt);
+                jrbSteroid_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton46.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_Steroid.add(jRadioButton46);
-        jRadioButton46.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton46.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton46.setSelected(true);
-        jRadioButton46.setText("Không");
-        jRadioButton46.addActionListener(new java.awt.event.ActionListener() {
+        jrbSteroid_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Steroid.add(jrbSteroid_Khong);
+        jrbSteroid_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbSteroid_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbSteroid_Khong.setSelected(true);
+        jrbSteroid_Khong.setText("Không");
+        jrbSteroid_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton46ActionPerformed(evt);
+                jrbSteroid_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton47.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_ThuocMD.add(jRadioButton47);
-        jRadioButton47.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton47.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton47.setText("Có");
-        jRadioButton47.addActionListener(new java.awt.event.ActionListener() {
+        jrbThuocUCMD_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocUCMD.add(jrbThuocUCMD_Co);
+        jrbThuocUCMD_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThuocUCMD_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocUCMD_Co.setText("Có");
+        jrbThuocUCMD_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton47ActionPerformed(evt);
+                jrbThuocUCMD_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton48.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_ThuocMD.add(jRadioButton48);
-        jRadioButton48.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton48.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton48.setSelected(true);
-        jRadioButton48.setText("Không");
-        jRadioButton48.addActionListener(new java.awt.event.ActionListener() {
+        jrbThuocUCMD_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocUCMD.add(jrbThuocUCMD_Khong);
+        jrbThuocUCMD_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThuocUCMD_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocUCMD_Khong.setText("Không");
+        jrbThuocUCMD_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton48ActionPerformed(evt);
+                jrbThuocUCMD_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton49.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_ThuocCovid.add(jRadioButton49);
-        jRadioButton49.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton49.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton49.setText("Có");
-        jRadioButton49.addActionListener(new java.awt.event.ActionListener() {
+        jrbThuocDTCovid_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocCovid.add(jrbThuocDTCovid_Co);
+        jrbThuocDTCovid_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThuocDTCovid_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocDTCovid_Co.setText("Có");
+        jrbThuocDTCovid_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton49ActionPerformed(evt);
+                jrbThuocDTCovid_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton50.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_ThuocCovid.add(jRadioButton50);
-        jRadioButton50.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton50.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton50.setSelected(true);
-        jRadioButton50.setText("Không");
-        jRadioButton50.addActionListener(new java.awt.event.ActionListener() {
+        jrbThuocDTCovid_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocCovid.add(jrbThuocDTCovid_Khong);
+        jrbThuocDTCovid_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThuocDTCovid_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocDTCovid_Khong.setSelected(true);
+        jrbThuocDTCovid_Khong.setText("Không");
+        jrbThuocDTCovid_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton50ActionPerformed(evt);
+                jrbThuocDTCovid_KhongActionPerformed(evt);
             }
         });
 
@@ -888,49 +1123,77 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
         jLabel38.setForeground(new java.awt.Color(20, 20, 20));
         jLabel38.setText("Kháng virus:");
 
-        jRadioButton51.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KhangSinh.add(jRadioButton51);
-        jRadioButton51.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton51.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton51.setText("Có");
-        jRadioButton51.addActionListener(new java.awt.event.ActionListener() {
+        jrbKhangSinh_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangSinh.add(jrbKhangSinh_Co);
+        jrbKhangSinh_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKhangSinh_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKhangSinh_Co.setText("Có");
+        jrbKhangSinh_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton51ActionPerformed(evt);
+                jrbKhangSinh_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton52.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KhangSinh.add(jRadioButton52);
-        jRadioButton52.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton52.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton52.setSelected(true);
-        jRadioButton52.setText("Không");
-        jRadioButton52.addActionListener(new java.awt.event.ActionListener() {
+        jrbKhangSinh_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangSinh.add(jrbKhangSinh_Khong);
+        jrbKhangSinh_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKhangSinh_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKhangSinh_Khong.setSelected(true);
+        jrbKhangSinh_Khong.setText("Không");
+        jrbKhangSinh_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton52ActionPerformed(evt);
+                jrbKhangSinh_KhongActionPerformed(evt);
             }
         });
 
-        jRadioButton53.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KhangVirus.add(jRadioButton53);
-        jRadioButton53.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton53.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton53.setText("Có");
-        jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
+        jrbKhangVirus_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangVirus.add(jrbKhangVirus_Co);
+        jrbKhangVirus_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKhangVirus_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKhangVirus_Co.setText("Có");
+        jrbKhangVirus_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton53ActionPerformed(evt);
+                jrbKhangVirus_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton54.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_KhangVirus.add(jRadioButton54);
-        jRadioButton54.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton54.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton54.setSelected(true);
-        jRadioButton54.setText("Không");
-        jRadioButton54.addActionListener(new java.awt.event.ActionListener() {
+        jrbKhangVirus_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_KhangVirus.add(jrbKhangVirus_Khong);
+        jrbKhangVirus_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbKhangVirus_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbKhangVirus_Khong.setSelected(true);
+        jrbKhangVirus_Khong.setText("Không");
+        jrbKhangVirus_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton54ActionPerformed(evt);
+                jrbKhangVirus_KhongActionPerformed(evt);
+            }
+        });
+
+        jLabel39.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel39.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel39.setText("Các thuốc miễn dịch khác:");
+
+        jrbThuocMD_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocMD.add(jrbThuocMD_Co);
+        jrbThuocMD_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThuocMD_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocMD_Co.setText("Có");
+        jrbThuocMD_Co.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbThuocMD_CoActionPerformed(evt);
+            }
+        });
+
+        jrbThuocMD_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_ThuocMD.add(jrbThuocMD_Khong);
+        jrbThuocMD_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbThuocMD_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocMD_Khong.setSelected(true);
+        jrbThuocMD_Khong.setText("Không");
+        jrbThuocMD_Khong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbThuocMD_KhongActionPerformed(evt);
             }
         });
 
@@ -955,36 +1218,36 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel14))
+                                    .addComponent(jlbMangThai)
+                                    .addComponent(jlbHauSan))
                                 .addGap(180, 180, 180)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jRadioButton4))
+                                    .addComponent(jrbMangThai_Co, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jrbHauSan_Co))
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton5)
-                                    .addComponent(jRadioButton3))
+                                    .addComponent(jrbHauSan_Khong)
+                                    .addComponent(jrbMangThai_Khong))
                                 .addGap(160, 160, 160)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel16))
+                                    .addComponent(jlbTreSSXNcovid)
+                                    .addComponent(jlbSoTuanMT)
+                                    .addComponent(jlbKQXN))
                                 .addGap(134, 134, 134)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jRadioButton6)
+                                                .addComponent(jrbTreSSXNcovid_Co)
                                                 .addGap(50, 50, 50)
-                                                .addComponent(jRadioButton7))
+                                                .addComponent(jrbTreSSXNcovid_Khong))
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jRadioButton9)
+                                                .addComponent(jrbKQXN_DT)
                                                 .addGap(39, 39, 39)
-                                                .addComponent(jRadioButton8)))
+                                                .addComponent(jrbKQXN_AT)))
                                         .addGap(39, 39, 39)
-                                        .addComponent(jRadioButton10))
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jrbKQXN_ChuaCoKQ))
+                                    .addComponent(jtfSoTuanMT, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -994,21 +1257,21 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                                             .addComponent(jLabel18))
                                         .addGap(273, 273, 273)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton15)
-                                            .addComponent(jRadioButton11)))
+                                            .addComponent(jrbDaiTD_Co)
+                                            .addComponent(jrbTangHA_Co)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel19)
                                             .addComponent(jLabel20))
                                         .addGap(8, 8, 8)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton17)
-                                            .addComponent(jRadioButton13)
-                                            .addComponent(jRadioButton19)
-                                            .addComponent(jRadioButton21)
-                                            .addComponent(jRadioButton23)
-                                            .addComponent(jRadioButton25)
-                                            .addComponent(jRadioButton27)))
+                                            .addComponent(jrbMachMauNao_Co)
+                                            .addComponent(jrbBenhTim_Co)
+                                            .addComponent(jrbBenhThanMT_Co)
+                                            .addComponent(jrbHenKQ_Co)
+                                            .addComponent(jrbBeoPhi_Co)
+                                            .addComponent(jrbThieuMD_Co)
+                                            .addComponent(jrbBenhPhoiMT_Co)))
                                     .addComponent(jLabel21)
                                     .addComponent(jLabel22)
                                     .addComponent(jLabel23)
@@ -1016,17 +1279,17 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                                     .addComponent(jLabel25))
                                 .addGap(38, 38, 38)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton28)
+                                    .addComponent(jrbBenhPhoiMT_Khong)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton12)
-                                            .addComponent(jRadioButton16)
-                                            .addComponent(jRadioButton14)
-                                            .addComponent(jRadioButton18)
-                                            .addComponent(jRadioButton20)
-                                            .addComponent(jRadioButton22)
-                                            .addComponent(jRadioButton24)
-                                            .addComponent(jRadioButton26))
+                                            .addComponent(jrbTangHA_Khong)
+                                            .addComponent(jrbDaiTD_Khong)
+                                            .addComponent(jrbBenhTim_Khong)
+                                            .addComponent(jrbMachMauNao_Khong)
+                                            .addComponent(jrbBenhThanMT_Khong)
+                                            .addComponent(jrbHenKQ_Khong)
+                                            .addComponent(jrbBeoPhi_Khong)
+                                            .addComponent(jrbThieuMD_Khong))
                                         .addGap(165, 165, 165)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
@@ -1040,27 +1303,27 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                                                     .addComponent(jLabel32))
                                                 .addGap(42, 42, 42)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jRadioButton29)
-                                                    .addComponent(jRadioButton31)
-                                                    .addComponent(jRadioButton33)
-                                                    .addComponent(jRadioButton35)
-                                                    .addComponent(jRadioButton37)
-                                                    .addComponent(jRadioButton39)
-                                                    .addComponent(jRadioButton41)))
+                                                    .addComponent(jrbUngThu_Co)
+                                                    .addComponent(jrbHIV_Co)
+                                                    .addComponent(jrbBenhGan_Co)
+                                                    .addComponent(jrbHoiChungDown_Co)
+                                                    .addComponent(jrbRoiLoanSDCGN_Co)
+                                                    .addComponent(jrbGhepTang_TBM_Co)
+                                                    .addComponent(jrbCLBenhHT_Co)))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel33)
                                                 .addGap(15, 15, 15)
-                                                .addComponent(jRadioButton43)))
+                                                .addComponent(jrbBenhTKMT_Co)))
                                         .addGap(34, 34, 34)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton44)
-                                            .addComponent(jRadioButton42)
-                                            .addComponent(jRadioButton40)
-                                            .addComponent(jRadioButton38)
-                                            .addComponent(jRadioButton36)
-                                            .addComponent(jRadioButton34)
-                                            .addComponent(jRadioButton32)
-                                            .addComponent(jRadioButton30)))))
+                                            .addComponent(jrbBenhTKMT_Khong)
+                                            .addComponent(jrbCLBenhHT_Khong)
+                                            .addComponent(jrbGhepTang_TBM_Khong)
+                                            .addComponent(jrbRoiLoanSDCGN_Khong)
+                                            .addComponent(jrbHoiChungDown_Khong)
+                                            .addComponent(jrbBenhGan_Khong)
+                                            .addComponent(jrbHIV_Khong)
+                                            .addComponent(jrbUngThu_Khong)))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel10))
@@ -1075,28 +1338,29 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                                     .addComponent(jLabel36))
                                 .addGap(139, 139, 139)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton45)
-                                    .addComponent(jRadioButton47)
-                                    .addComponent(jRadioButton49))
+                                    .addComponent(jrbSteroid_Co)
+                                    .addComponent(jrbThuocUCMD_Co)
+                                    .addComponent(jrbThuocDTCovid_Co))
                                 .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton50)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton46)
-                                            .addComponent(jRadioButton48))
-                                        .addGap(165, 165, 165)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel37)
-                                            .addComponent(jLabel38))
-                                        .addGap(272, 272, 272)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton51)
-                                            .addComponent(jRadioButton53))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton54)
-                                            .addComponent(jRadioButton52))))))
+                                    .addComponent(jrbSteroid_Khong)
+                                    .addComponent(jrbThuocUCMD_Khong)
+                                    .addComponent(jrbThuocDTCovid_Khong))
+                                .addGap(165, 165, 165)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel37)
+                                    .addComponent(jLabel38)
+                                    .addComponent(jLabel39))
+                                .addGap(116, 116, 116)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jrbKhangSinh_Co)
+                                    .addComponent(jrbKhangVirus_Co)
+                                    .addComponent(jrbThuocMD_Co))
+                                .addGap(35, 35, 35)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jrbThuocMD_Khong)
+                                    .addComponent(jrbKhangVirus_Khong)
+                                    .addComponent(jrbKhangSinh_Khong))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1113,25 +1377,25 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlbMangThai)
+                    .addComponent(jrbMangThai_Co)
+                    .addComponent(jrbMangThai_Khong)
+                    .addComponent(jlbSoTuanMT)
+                    .addComponent(jtfSoTuanMT, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jLabel15)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton7))
+                    .addComponent(jlbHauSan)
+                    .addComponent(jrbHauSan_Co)
+                    .addComponent(jrbHauSan_Khong)
+                    .addComponent(jlbTreSSXNcovid)
+                    .addComponent(jrbTreSSXNcovid_Co)
+                    .addComponent(jrbTreSSXNcovid_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton9)
-                    .addComponent(jRadioButton10))
+                    .addComponent(jlbKQXN)
+                    .addComponent(jrbKQXN_AT)
+                    .addComponent(jrbKQXN_DT)
+                    .addComponent(jrbKQXN_ChuaCoKQ))
                 .addGap(25, 25, 25)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1139,72 +1403,72 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton12)
+                    .addComponent(jrbTangHA_Co)
+                    .addComponent(jrbTangHA_Khong)
                     .addComponent(jLabel26)
-                    .addComponent(jRadioButton29)
-                    .addComponent(jRadioButton30))
+                    .addComponent(jrbUngThu_Co)
+                    .addComponent(jrbUngThu_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(jRadioButton15)
-                    .addComponent(jRadioButton16)
+                    .addComponent(jrbDaiTD_Co)
+                    .addComponent(jrbDaiTD_Khong)
                     .addComponent(jLabel27)
-                    .addComponent(jRadioButton31)
-                    .addComponent(jRadioButton32))
+                    .addComponent(jrbHIV_Co)
+                    .addComponent(jrbHIV_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
-                    .addComponent(jRadioButton13)
-                    .addComponent(jRadioButton14)
+                    .addComponent(jrbBenhTim_Co)
+                    .addComponent(jrbBenhTim_Khong)
                     .addComponent(jLabel28)
-                    .addComponent(jRadioButton33)
-                    .addComponent(jRadioButton34))
+                    .addComponent(jrbBenhGan_Co)
+                    .addComponent(jrbBenhGan_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(jRadioButton17)
-                    .addComponent(jRadioButton18)
+                    .addComponent(jrbMachMauNao_Co)
+                    .addComponent(jrbMachMauNao_Khong)
                     .addComponent(jLabel29)
-                    .addComponent(jRadioButton35)
-                    .addComponent(jRadioButton36))
+                    .addComponent(jrbHoiChungDown_Co)
+                    .addComponent(jrbHoiChungDown_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
-                    .addComponent(jRadioButton19)
-                    .addComponent(jRadioButton20)
+                    .addComponent(jrbBenhThanMT_Co)
+                    .addComponent(jrbBenhThanMT_Khong)
                     .addComponent(jLabel30)
-                    .addComponent(jRadioButton37)
-                    .addComponent(jRadioButton38))
+                    .addComponent(jrbRoiLoanSDCGN_Co)
+                    .addComponent(jrbRoiLoanSDCGN_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
-                    .addComponent(jRadioButton21)
-                    .addComponent(jRadioButton22)
+                    .addComponent(jrbHenKQ_Co)
+                    .addComponent(jrbHenKQ_Khong)
                     .addComponent(jLabel31)
-                    .addComponent(jRadioButton39)
-                    .addComponent(jRadioButton40))
+                    .addComponent(jrbGhepTang_TBM_Co)
+                    .addComponent(jrbGhepTang_TBM_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
-                    .addComponent(jRadioButton23)
-                    .addComponent(jRadioButton24)
+                    .addComponent(jrbBeoPhi_Co)
+                    .addComponent(jrbBeoPhi_Khong)
                     .addComponent(jLabel32)
-                    .addComponent(jRadioButton41)
-                    .addComponent(jRadioButton42))
+                    .addComponent(jrbCLBenhHT_Co)
+                    .addComponent(jrbCLBenhHT_Khong))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
-                    .addComponent(jRadioButton25)
-                    .addComponent(jRadioButton26)
+                    .addComponent(jrbThieuMD_Co)
+                    .addComponent(jrbThieuMD_Khong)
                     .addComponent(jLabel33)
-                    .addComponent(jRadioButton43)
-                    .addComponent(jRadioButton44))
+                    .addComponent(jrbBenhTKMT_Co)
+                    .addComponent(jrbBenhTKMT_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
-                    .addComponent(jRadioButton27)
-                    .addComponent(jRadioButton28))
+                    .addComponent(jrbBenhPhoiMT_Co)
+                    .addComponent(jrbBenhPhoiMT_Khong))
                 .addGap(33, 33, 33)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1212,244 +1476,289 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
-                    .addComponent(jRadioButton45)
-                    .addComponent(jRadioButton46)
+                    .addComponent(jrbSteroid_Co)
+                    .addComponent(jrbSteroid_Khong)
                     .addComponent(jLabel37)
-                    .addComponent(jRadioButton51)
-                    .addComponent(jRadioButton52))
+                    .addComponent(jrbKhangSinh_Co)
+                    .addComponent(jrbKhangSinh_Khong))
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
-                    .addComponent(jRadioButton47)
-                    .addComponent(jRadioButton48)
+                    .addComponent(jrbThuocUCMD_Co)
+                    .addComponent(jrbThuocUCMD_Khong)
                     .addComponent(jLabel38)
-                    .addComponent(jRadioButton53)
-                    .addComponent(jRadioButton54))
+                    .addComponent(jrbKhangVirus_Co)
+                    .addComponent(jrbKhangVirus_Khong))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
-                    .addComponent(jRadioButton49)
-                    .addComponent(jRadioButton50))
-                .addGap(0, 15, Short.MAX_VALUE))
+                    .addComponent(jrbThuocDTCovid_Co)
+                    .addComponent(jrbThuocDTCovid_Khong)
+                    .addComponent(jLabel39)
+                    .addComponent(jrbThuocMD_Co)
+                    .addComponent(jrbThuocMD_Khong))
+                .addGap(0, 14, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(84, 84, 84)
                     .addComponent(jLabel9)
-                    .addContainerGap(610, Short.MAX_VALUE)))
+                    .addContainerGap(609, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jrbMangThai_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMangThai_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+        jtfSoTuanMT.setEditable(true);
+    }//GEN-LAST:event_jrbMangThai_CoActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtfSoTuanMTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSoTuanMTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtfSoTuanMTActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jrbHauSan_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHauSan_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+        jrbTreSSXNcovid_Co.setEnabled(true);
+        
+        jrbTreSSXNcovid_Khong.setEnabled(true);
+        
+        
+        
+        jrbKQXN_AT.setEnabled(true);
+        jrbKQXN_DT.setEnabled(true);
+        jrbKQXN_ChuaCoKQ.setEnabled(true);
+    }//GEN-LAST:event_jrbHauSan_CoActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void jrbHauSan_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHauSan_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+        jrbTreSSXNcovid_Co.setEnabled(false);
+        
+        jrbTreSSXNcovid_Khong.setEnabled(false);
+        
+        
+        
+        jrbKQXN_AT.setEnabled(false);
+        jrbKQXN_DT.setEnabled(false);
+        jrbKQXN_ChuaCoKQ.setEnabled(false);
+    }//GEN-LAST:event_jrbHauSan_KhongActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void jrbTreSSXNcovid_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTreSSXNcovid_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+         jrbKQXN_AT.setEnabled(true);
+        jrbKQXN_DT.setEnabled(true);
+        jrbKQXN_ChuaCoKQ.setEnabled(true);
+        
+    }//GEN-LAST:event_jrbTreSSXNcovid_CoActionPerformed
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void jrbTreSSXNcovid_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTreSSXNcovid_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+        
+        jrbKQXN_AT.setEnabled(false);
+        jrbKQXN_DT.setEnabled(false);
+        jrbKQXN_ChuaCoKQ.setEnabled(false);
+    }//GEN-LAST:event_jrbTreSSXNcovid_KhongActionPerformed
 
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+    private void jrbKQXN_ATActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKQXN_ATActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
+    }//GEN-LAST:event_jrbKQXN_ATActionPerformed
 
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+    private void jrbKQXN_DTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKQXN_DTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
+    }//GEN-LAST:event_jrbKQXN_DTActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void jrbKQXN_ChuaCoKQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKQXN_ChuaCoKQActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_jrbKQXN_ChuaCoKQActionPerformed
 
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+    private void jrbTangHA_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTangHA_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
+    }//GEN-LAST:event_jrbTangHA_CoActionPerformed
 
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
+    private void jrbTangHA_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTangHA_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
+    }//GEN-LAST:event_jrbTangHA_KhongActionPerformed
 
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
+    private void jrbBenhTim_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhTim_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
+    }//GEN-LAST:event_jrbBenhTim_CoActionPerformed
 
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
+    private void jrbBenhTim_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhTim_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
+    }//GEN-LAST:event_jrbBenhTim_KhongActionPerformed
 
-    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
+    private void jrbDaiTD_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDaiTD_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton15ActionPerformed
+    }//GEN-LAST:event_jrbDaiTD_CoActionPerformed
 
-    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
+    private void jrbDaiTD_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDaiTD_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton16ActionPerformed
+    }//GEN-LAST:event_jrbDaiTD_KhongActionPerformed
 
-    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
+    private void jrbMachMauNao_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMachMauNao_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton17ActionPerformed
+    }//GEN-LAST:event_jrbMachMauNao_CoActionPerformed
 
-    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
+    private void jrbMachMauNao_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMachMauNao_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton18ActionPerformed
+    }//GEN-LAST:event_jrbMachMauNao_KhongActionPerformed
 
-    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
+    private void jrbBenhThanMT_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhThanMT_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton19ActionPerformed
+    }//GEN-LAST:event_jrbBenhThanMT_CoActionPerformed
 
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+    private void jrbBenhThanMT_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhThanMT_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
+    }//GEN-LAST:event_jrbBenhThanMT_KhongActionPerformed
 
-    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
+    private void jrbHenKQ_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHenKQ_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton21ActionPerformed
+    }//GEN-LAST:event_jrbHenKQ_CoActionPerformed
 
-    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
+    private void jrbHenKQ_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHenKQ_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton22ActionPerformed
+    }//GEN-LAST:event_jrbHenKQ_KhongActionPerformed
 
-    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
+    private void jrbBeoPhi_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBeoPhi_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton23ActionPerformed
+    }//GEN-LAST:event_jrbBeoPhi_CoActionPerformed
 
-    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
+    private void jrbBeoPhi_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBeoPhi_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton24ActionPerformed
+    }//GEN-LAST:event_jrbBeoPhi_KhongActionPerformed
 
-    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
+    private void jrbThieuMD_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThieuMD_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton25ActionPerformed
+    }//GEN-LAST:event_jrbThieuMD_CoActionPerformed
 
-    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
+    private void jrbThieuMD_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThieuMD_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton26ActionPerformed
+    }//GEN-LAST:event_jrbThieuMD_KhongActionPerformed
 
-    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
+    private void jrbBenhPhoiMT_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhPhoiMT_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton27ActionPerformed
+    }//GEN-LAST:event_jrbBenhPhoiMT_CoActionPerformed
 
-    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
+    private void jrbBenhPhoiMT_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhPhoiMT_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton28ActionPerformed
+    }//GEN-LAST:event_jrbBenhPhoiMT_KhongActionPerformed
 
-    private void jRadioButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton29ActionPerformed
+    private void jrbUngThu_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbUngThu_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton29ActionPerformed
+    }//GEN-LAST:event_jrbUngThu_CoActionPerformed
 
-    private void jRadioButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30ActionPerformed
+    private void jrbUngThu_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbUngThu_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton30ActionPerformed
+    }//GEN-LAST:event_jrbUngThu_KhongActionPerformed
 
-    private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
+    private void jrbHIV_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHIV_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton31ActionPerformed
+    }//GEN-LAST:event_jrbHIV_CoActionPerformed
 
-    private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
+    private void jrbHIV_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHIV_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton32ActionPerformed
+    }//GEN-LAST:event_jrbHIV_KhongActionPerformed
 
-    private void jRadioButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton33ActionPerformed
+    private void jrbBenhGan_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhGan_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton33ActionPerformed
+    }//GEN-LAST:event_jrbBenhGan_CoActionPerformed
 
-    private void jRadioButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton34ActionPerformed
+    private void jrbBenhGan_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhGan_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton34ActionPerformed
+    }//GEN-LAST:event_jrbBenhGan_KhongActionPerformed
 
-    private void jRadioButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton35ActionPerformed
+    private void jrbHoiChungDown_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHoiChungDown_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton35ActionPerformed
+    }//GEN-LAST:event_jrbHoiChungDown_CoActionPerformed
 
-    private void jRadioButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton36ActionPerformed
+    private void jrbHoiChungDown_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHoiChungDown_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton36ActionPerformed
+    }//GEN-LAST:event_jrbHoiChungDown_KhongActionPerformed
 
-    private void jRadioButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton37ActionPerformed
+    private void jrbRoiLoanSDCGN_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbRoiLoanSDCGN_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton37ActionPerformed
+    }//GEN-LAST:event_jrbRoiLoanSDCGN_CoActionPerformed
 
-    private void jRadioButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton38ActionPerformed
+    private void jrbRoiLoanSDCGN_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbRoiLoanSDCGN_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton38ActionPerformed
+    }//GEN-LAST:event_jrbRoiLoanSDCGN_KhongActionPerformed
 
-    private void jRadioButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton39ActionPerformed
+    private void jrbGhepTang_TBM_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbGhepTang_TBM_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton39ActionPerformed
+    }//GEN-LAST:event_jrbGhepTang_TBM_CoActionPerformed
 
-    private void jRadioButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton40ActionPerformed
+    private void jrbGhepTang_TBM_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbGhepTang_TBM_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton40ActionPerformed
+    }//GEN-LAST:event_jrbGhepTang_TBM_KhongActionPerformed
 
-    private void jRadioButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton41ActionPerformed
+    private void jrbCLBenhHT_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbCLBenhHT_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton41ActionPerformed
+    }//GEN-LAST:event_jrbCLBenhHT_CoActionPerformed
 
-    private void jRadioButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton42ActionPerformed
+    private void jrbCLBenhHT_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbCLBenhHT_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton42ActionPerformed
+    }//GEN-LAST:event_jrbCLBenhHT_KhongActionPerformed
 
-    private void jRadioButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton43ActionPerformed
+    private void jrbBenhTKMT_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhTKMT_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton43ActionPerformed
+    }//GEN-LAST:event_jrbBenhTKMT_CoActionPerformed
 
-    private void jRadioButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton44ActionPerformed
+    private void jrbBenhTKMT_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBenhTKMT_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton44ActionPerformed
+    }//GEN-LAST:event_jrbBenhTKMT_KhongActionPerformed
 
-    private void jRadioButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton45ActionPerformed
+    private void jrbSteroid_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbSteroid_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton45ActionPerformed
+    }//GEN-LAST:event_jrbSteroid_CoActionPerformed
 
-    private void jRadioButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton46ActionPerformed
+    private void jrbSteroid_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbSteroid_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton46ActionPerformed
+    }//GEN-LAST:event_jrbSteroid_KhongActionPerformed
 
-    private void jRadioButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton47ActionPerformed
+    private void jrbThuocUCMD_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThuocUCMD_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton47ActionPerformed
+    }//GEN-LAST:event_jrbThuocUCMD_CoActionPerformed
 
-    private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
+    private void jrbThuocUCMD_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThuocUCMD_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton48ActionPerformed
+    }//GEN-LAST:event_jrbThuocUCMD_KhongActionPerformed
 
-    private void jRadioButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton49ActionPerformed
+    private void jrbThuocDTCovid_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThuocDTCovid_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton49ActionPerformed
+    }//GEN-LAST:event_jrbThuocDTCovid_CoActionPerformed
 
-    private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
+    private void jrbThuocDTCovid_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThuocDTCovid_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton50ActionPerformed
+    }//GEN-LAST:event_jrbThuocDTCovid_KhongActionPerformed
 
-    private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
+    private void jrbKhangSinh_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKhangSinh_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton51ActionPerformed
+    }//GEN-LAST:event_jrbKhangSinh_CoActionPerformed
 
-    private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
+    private void jrbKhangSinh_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKhangSinh_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton52ActionPerformed
+    }//GEN-LAST:event_jrbKhangSinh_KhongActionPerformed
 
-    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
+    private void jrbKhangVirus_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKhangVirus_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton53ActionPerformed
+    }//GEN-LAST:event_jrbKhangVirus_CoActionPerformed
 
-    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
+    private void jrbKhangVirus_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKhangVirus_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton54ActionPerformed
+//        String choice = getSelectedButtonText(btnG_BenhGan);
+    }//GEN-LAST:event_jrbKhangVirus_KhongActionPerformed
+
+    private void jrbThuocMD_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThuocMD_CoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrbThuocMD_CoActionPerformed
+
+    private void jrbThuocMD_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbThuocMD_KhongActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrbThuocMD_KhongActionPerformed
+
+    private void jrbMangThai_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMangThai_KhongActionPerformed
+        // TODO add your handling code here:
+        jtfSoTuanMT.setEnabled(false);
+        jtfSoTuanMT.setText(null);
+    }//GEN-LAST:event_jrbMangThai_KhongActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1469,11 +1778,12 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
     private javax.swing.ButtonGroup btnG_MangThai;
     private javax.swing.ButtonGroup btnG_PhoiMT;
     private javax.swing.ButtonGroup btnG_Steroid;
-    private javax.swing.ButtonGroup btnG_THMD;
     private javax.swing.ButtonGroup btnG_TKMT;
     private javax.swing.ButtonGroup btnG_ThanMT;
+    private javax.swing.ButtonGroup btnG_ThieuMD;
     private javax.swing.ButtonGroup btnG_ThuocCovid;
     private javax.swing.ButtonGroup btnG_ThuocMD;
+    private javax.swing.ButtonGroup btnG_ThuocUCMD;
     private javax.swing.ButtonGroup btnG_TimMach;
     private javax.swing.ButtonGroup btnG_UngThu;
     private javax.swing.ButtonGroup btnG_XNTreSS;
@@ -1481,11 +1791,6 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
     private javax.swing.ButtonGroup btn_GRLCGN;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -1508,65 +1813,73 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
-    private javax.swing.JRadioButton jRadioButton18;
-    private javax.swing.JRadioButton jRadioButton19;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton20;
-    private javax.swing.JRadioButton jRadioButton21;
-    private javax.swing.JRadioButton jRadioButton22;
-    private javax.swing.JRadioButton jRadioButton23;
-    private javax.swing.JRadioButton jRadioButton24;
-    private javax.swing.JRadioButton jRadioButton25;
-    private javax.swing.JRadioButton jRadioButton26;
-    private javax.swing.JRadioButton jRadioButton27;
-    private javax.swing.JRadioButton jRadioButton28;
-    private javax.swing.JRadioButton jRadioButton29;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton30;
-    private javax.swing.JRadioButton jRadioButton31;
-    private javax.swing.JRadioButton jRadioButton32;
-    private javax.swing.JRadioButton jRadioButton33;
-    private javax.swing.JRadioButton jRadioButton34;
-    private javax.swing.JRadioButton jRadioButton35;
-    private javax.swing.JRadioButton jRadioButton36;
-    private javax.swing.JRadioButton jRadioButton37;
-    private javax.swing.JRadioButton jRadioButton38;
-    private javax.swing.JRadioButton jRadioButton39;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton40;
-    private javax.swing.JRadioButton jRadioButton41;
-    private javax.swing.JRadioButton jRadioButton42;
-    private javax.swing.JRadioButton jRadioButton43;
-    private javax.swing.JRadioButton jRadioButton44;
-    private javax.swing.JRadioButton jRadioButton45;
-    private javax.swing.JRadioButton jRadioButton46;
-    private javax.swing.JRadioButton jRadioButton47;
-    private javax.swing.JRadioButton jRadioButton48;
-    private javax.swing.JRadioButton jRadioButton49;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton50;
-    private javax.swing.JRadioButton jRadioButton51;
-    private javax.swing.JRadioButton jRadioButton52;
-    private javax.swing.JRadioButton jRadioButton53;
-    private javax.swing.JRadioButton jRadioButton54;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jlbHauSan;
+    private javax.swing.JLabel jlbKQXN;
+    private javax.swing.JLabel jlbMangThai;
+    private javax.swing.JLabel jlbSoTuanMT;
+    private javax.swing.JLabel jlbTreSSXNcovid;
+    private javax.swing.JRadioButton jrbBenhGan_Co;
+    private javax.swing.JRadioButton jrbBenhGan_Khong;
+    private javax.swing.JRadioButton jrbBenhPhoiMT_Co;
+    private javax.swing.JRadioButton jrbBenhPhoiMT_Khong;
+    private javax.swing.JRadioButton jrbBenhTKMT_Co;
+    private javax.swing.JRadioButton jrbBenhTKMT_Khong;
+    private javax.swing.JRadioButton jrbBenhThanMT_Co;
+    private javax.swing.JRadioButton jrbBenhThanMT_Khong;
+    private javax.swing.JRadioButton jrbBenhTim_Co;
+    private javax.swing.JRadioButton jrbBenhTim_Khong;
+    private javax.swing.JRadioButton jrbBeoPhi_Co;
+    private javax.swing.JRadioButton jrbBeoPhi_Khong;
+    private javax.swing.JRadioButton jrbCLBenhHT_Co;
+    private javax.swing.JRadioButton jrbCLBenhHT_Khong;
+    private javax.swing.JRadioButton jrbDaiTD_Co;
+    private javax.swing.JRadioButton jrbDaiTD_Khong;
+    private javax.swing.JRadioButton jrbGhepTang_TBM_Co;
+    private javax.swing.JRadioButton jrbGhepTang_TBM_Khong;
+    private javax.swing.JRadioButton jrbHIV_Co;
+    private javax.swing.JRadioButton jrbHIV_Khong;
+    private javax.swing.JRadioButton jrbHauSan_Co;
+    private javax.swing.JRadioButton jrbHauSan_Khong;
+    private javax.swing.JRadioButton jrbHenKQ_Co;
+    private javax.swing.JRadioButton jrbHenKQ_Khong;
+    private javax.swing.JRadioButton jrbHoiChungDown_Co;
+    private javax.swing.JRadioButton jrbHoiChungDown_Khong;
+    private javax.swing.JRadioButton jrbKQXN_AT;
+    private javax.swing.JRadioButton jrbKQXN_ChuaCoKQ;
+    private javax.swing.JRadioButton jrbKQXN_DT;
+    private javax.swing.JRadioButton jrbKhangSinh_Co;
+    private javax.swing.JRadioButton jrbKhangSinh_Khong;
+    private javax.swing.JRadioButton jrbKhangVirus_Co;
+    private javax.swing.JRadioButton jrbKhangVirus_Khong;
+    private javax.swing.JRadioButton jrbMachMauNao_Co;
+    private javax.swing.JRadioButton jrbMachMauNao_Khong;
+    private javax.swing.JRadioButton jrbMangThai_Co;
+    private javax.swing.JRadioButton jrbMangThai_Khong;
+    private javax.swing.JRadioButton jrbRoiLoanSDCGN_Co;
+    private javax.swing.JRadioButton jrbRoiLoanSDCGN_Khong;
+    private javax.swing.JRadioButton jrbSteroid_Co;
+    private javax.swing.JRadioButton jrbSteroid_Khong;
+    private javax.swing.JRadioButton jrbTangHA_Co;
+    private javax.swing.JRadioButton jrbTangHA_Khong;
+    private javax.swing.JRadioButton jrbThieuMD_Co;
+    private javax.swing.JRadioButton jrbThieuMD_Khong;
+    private javax.swing.JRadioButton jrbThuocDTCovid_Co;
+    private javax.swing.JRadioButton jrbThuocDTCovid_Khong;
+    private javax.swing.JRadioButton jrbThuocMD_Co;
+    private javax.swing.JRadioButton jrbThuocMD_Khong;
+    private javax.swing.JRadioButton jrbThuocUCMD_Co;
+    private javax.swing.JRadioButton jrbThuocUCMD_Khong;
+    private javax.swing.JRadioButton jrbTreSSXNcovid_Co;
+    private javax.swing.JRadioButton jrbTreSSXNcovid_Khong;
+    private javax.swing.JRadioButton jrbUngThu_Co;
+    private javax.swing.JRadioButton jrbUngThu_Khong;
+    private javax.swing.JTextField jtfSoTuanMT;
     // End of variables declaration//GEN-END:variables
 }

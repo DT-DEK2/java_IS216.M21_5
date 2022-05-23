@@ -310,7 +310,7 @@ public class Login extends javax.swing.JFrame {
                              } else {
                             
                                 this.dispose();
-                                    JFrame frame = new BenhNhan_main(dn.getTen());
+                                    JFrame frame = new BenhNhan_main(dn.getTen(),dn.getID());
                                     frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
                                     frame.setVisible(true);
                                      
@@ -329,7 +329,7 @@ public class Login extends javax.swing.JFrame {
                                 this.dispose();
                                 
                                  
-                                    JFrame frame = new MainFrame(dn.getTen());
+                                    JFrame frame = new MainFrame(dn.getTen(),dn.getID());
                                     frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
                                     frame.setVisible(true);
                                  

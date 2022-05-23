@@ -4,6 +4,10 @@
  */
 package com.da.qlf0.view.GUI_ThemBN;
 
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+
 /**
  *
  * @author Minh Cuong
@@ -16,6 +20,50 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
     public TiemVX_ThemBN() {
         initComponents();
         
+    }
+
+    public JComboBox<String> getJcobLoaiVX1() {
+        return jcobLoaiVX1;
+    }
+
+    public JComboBox<String> getJcobLoaiVX2() {
+        return jcobLoaiVX2;
+    }
+
+    public JComboBox<String> getJcobLoaiVX3() {
+        return jcobLoaiVX3;
+    }
+
+    public JDateChooser getJdcTGTiem1() {
+        return jdcTGTiem1;
+    }
+
+    public JDateChooser getJdcTGTiem2() {
+        return jdcTGTiem2;
+    }
+
+    public JDateChooser getJdcTGTiem3() {
+        return jdcTGTiem3;
+    }
+
+    public JRadioButton getJrbTiemVX_1m() {
+        return jrbTiemVX_1m;
+    }
+
+    public JRadioButton getJrbTiemVX_2m() {
+        return jrbTiemVX_2m;
+    }
+
+    public JRadioButton getJrbTiemVX_3m() {
+        return jrbTiemVX_3m;
+    }
+
+    public JRadioButton getJrbTiemVX_ChuaTiem() {
+        return jrbTiemVX_ChuaTiem;
+    }
+
+    public JRadioButton getJrbTiemVX_KhongBiet() {
+        return jrbTiemVX_KhongBiet;
     }
     
 
@@ -32,16 +80,16 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
+        jrbTiemVX_ChuaTiem = new javax.swing.JRadioButton();
+        jrbTiemVX_1m = new javax.swing.JRadioButton();
+        jrbTiemVX_3m = new javax.swing.JRadioButton();
+        jrbTiemVX_2m = new javax.swing.JRadioButton();
+        jrbTiemVX_KhongBiet = new javax.swing.JRadioButton();
         jSeparator3 = new javax.swing.JSeparator();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jcobLoaiVX1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jdcTGTiem1 = new com.toedter.calendar.JDateChooser();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
@@ -51,16 +99,16 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jcobLoaiVX2 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        jdcTGTiem2 = new com.toedter.calendar.JDateChooser();
         jLabel13 = new javax.swing.JLabel();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jcobLoaiVX3 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jdcTGTiem3 = new com.toedter.calendar.JDateChooser();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(20, 20, 20));
@@ -77,46 +125,66 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(20, 20, 20));
         jLabel12.setText(" Tình trạng tiêm Vắc xin:");
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MuiTiem.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton2.setText("Chưa tiêm");
-
-        jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MuiTiem.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton10.setText("1 Mũi");
-
-        jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MuiTiem.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton11.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton11.setText("3 Mũi");
-
-        jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MuiTiem.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton12.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton12.setText("2 Mũi");
-
-        jRadioButton13.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MuiTiem.add(jRadioButton13);
-        jRadioButton13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton13.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton13.setText("Không biết");
-        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
+        jrbTiemVX_ChuaTiem.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MuiTiem.add(jrbTiemVX_ChuaTiem);
+        jrbTiemVX_ChuaTiem.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTiemVX_ChuaTiem.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTiemVX_ChuaTiem.setText("Chưa tiêm");
+        jrbTiemVX_ChuaTiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton13ActionPerformed(evt);
+                jrbTiemVX_ChuaTiemActionPerformed(evt);
+            }
+        });
+
+        jrbTiemVX_1m.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MuiTiem.add(jrbTiemVX_1m);
+        jrbTiemVX_1m.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTiemVX_1m.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTiemVX_1m.setText("1 Mũi");
+        jrbTiemVX_1m.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiemVX_1mActionPerformed(evt);
+            }
+        });
+
+        jrbTiemVX_3m.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MuiTiem.add(jrbTiemVX_3m);
+        jrbTiemVX_3m.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTiemVX_3m.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTiemVX_3m.setText("3 Mũi");
+        jrbTiemVX_3m.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiemVX_3mActionPerformed(evt);
+            }
+        });
+
+        jrbTiemVX_2m.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MuiTiem.add(jrbTiemVX_2m);
+        jrbTiemVX_2m.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTiemVX_2m.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTiemVX_2m.setText("2 Mũi");
+        jrbTiemVX_2m.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiemVX_2mActionPerformed(evt);
+            }
+        });
+
+        jrbTiemVX_KhongBiet.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MuiTiem.add(jrbTiemVX_KhongBiet);
+        jrbTiemVX_KhongBiet.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTiemVX_KhongBiet.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTiemVX_KhongBiet.setText("Không biết");
+        jrbTiemVX_KhongBiet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiemVX_KhongBietActionPerformed(evt);
             }
         });
 
         jSeparator3.setBackground(new java.awt.Color(166, 166, 166));
 
-        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobLoaiVX1.setBackground(new java.awt.Color(255, 255, 255));
+        jcobLoaiVX1.setForeground(new java.awt.Color(20, 20, 20));
+        jcobLoaiVX1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -128,8 +196,9 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(20, 20, 20));
         jLabel2.setText("Loại Vắc xin 1: *");
 
-        jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser1.setForeground(new java.awt.Color(20, 20, 20));
+        jdcTGTiem1.setBackground(new java.awt.Color(255, 255, 255));
+        jdcTGTiem1.setForeground(new java.awt.Color(20, 20, 20));
+        jdcTGTiem1.setDateFormatString("dd-MM-yyyy");
 
         jSeparator5.setBackground(new java.awt.Color(166, 166, 166));
 
@@ -159,15 +228,15 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                             .addContainerGap()
                             .addComponent(jLabel12)
                             .addGap(75, 75, 75)
-                            .addComponent(jRadioButton2)
+                            .addComponent(jrbTiemVX_ChuaTiem)
                             .addGap(60, 60, 60)
-                            .addComponent(jRadioButton10)
+                            .addComponent(jrbTiemVX_1m)
                             .addGap(83, 83, 83)
-                            .addComponent(jRadioButton12)
+                            .addComponent(jrbTiemVX_2m)
                             .addGap(73, 73, 73)
-                            .addComponent(jRadioButton11)
+                            .addComponent(jrbTiemVX_3m)
                             .addGap(60, 60, 60)
-                            .addComponent(jRadioButton13))
+                            .addComponent(jrbTiemVX_KhongBiet))
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(73, 73, 73)
@@ -177,11 +246,11 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                             .addGap(98, 98, 98)
                             .addComponent(jLabel2)
                             .addGap(93, 93, 93)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcobLoaiVX1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(170, 170, 170)
                             .addComponent(jLabel1)
                             .addGap(119, 119, 119)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jdcTGTiem1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(72, 72, 72)
                             .addComponent(jLabel11))))
@@ -195,11 +264,11 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                 .addGap(13, 13, 13)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton10)
-                    .addComponent(jRadioButton12)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton13))
+                    .addComponent(jrbTiemVX_ChuaTiem)
+                    .addComponent(jrbTiemVX_1m)
+                    .addComponent(jrbTiemVX_2m)
+                    .addComponent(jrbTiemVX_3m)
+                    .addComponent(jrbTiemVX_KhongBiet))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
@@ -210,9 +279,9 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcobLoaiVX1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel1))
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jdcTGTiem1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -254,17 +323,18 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(20, 20, 20));
         jLabel3.setText("Loại Vắc xin 2: *");
 
-        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobLoaiVX2.setBackground(new java.awt.Color(255, 255, 255));
+        jcobLoaiVX2.setForeground(new java.awt.Color(20, 20, 20));
+        jcobLoaiVX2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(20, 20, 20));
         jLabel4.setText("Thời gian tiêm: *");
 
-        jDateChooser2.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser2.setForeground(new java.awt.Color(20, 20, 20));
+        jdcTGTiem2.setBackground(new java.awt.Color(255, 255, 255));
+        jdcTGTiem2.setForeground(new java.awt.Color(20, 20, 20));
+        jdcTGTiem2.setDateFormatString("dd-MM-yyyy");
 
         jLabel13.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 41, 102));
@@ -279,17 +349,18 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(20, 20, 20));
         jLabel5.setText("Loại Vắc xin 3: *");
 
-        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox3.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobLoaiVX3.setBackground(new java.awt.Color(255, 255, 255));
+        jcobLoaiVX3.setForeground(new java.awt.Color(20, 20, 20));
+        jcobLoaiVX3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(20, 20, 20));
         jLabel6.setText("Thời gian tiêm : *");
 
-        jDateChooser3.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser3.setForeground(new java.awt.Color(20, 20, 20));
+        jdcTGTiem3.setBackground(new java.awt.Color(255, 255, 255));
+        jdcTGTiem3.setForeground(new java.awt.Color(20, 20, 20));
+        jdcTGTiem3.setDateFormatString("dd-MM-yyyy");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -306,11 +377,11 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                                 .addGap(103, 103, 103)
                                 .addComponent(jLabel3)
                                 .addGap(102, 102, 102)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jcobLoaiVX2, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(163, 163, 163)
                                 .addComponent(jLabel4)
                                 .addGap(128, 128, 128)
-                                .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jdcTGTiem2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(85, 85, 85)
                                 .addComponent(jLabel13))
@@ -318,11 +389,11 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                                 .addGap(98, 98, 98)
                                 .addComponent(jLabel5)
                                 .addGap(107, 107, 107)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jcobLoaiVX3, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(165, 165, 165)
                                 .addComponent(jLabel6)
                                 .addGap(128, 128, 128)
-                                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jdcTGTiem3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -349,9 +420,9 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcobLoaiVX2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jdcTGTiem2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -363,26 +434,66 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel5)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcobLoaiVX3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)))
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jdcTGTiem3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
+    private void jrbTiemVX_KhongBietActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiemVX_KhongBietActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
+         jcobLoaiVX1.setEnabled(false);
+        jcobLoaiVX2.setEnabled(false);
+        jcobLoaiVX3.setEnabled(false);
+        
+//         jcobLoaiVX1.setSelectedItem(null);
+//        jcobLoaiVX2.setSelectedItem(null);
+//        jcobLoaiVX3.setSelectedItem(null);
+    }//GEN-LAST:event_jrbTiemVX_KhongBietActionPerformed
+
+    private void jrbTiemVX_ChuaTiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiemVX_ChuaTiemActionPerformed
+        // TODO add your handling code here:
+        jcobLoaiVX1.setEnabled(false);
+        jcobLoaiVX2.setEnabled(false);
+        jcobLoaiVX3.setEnabled(false);
+        
+//        jcobLoaiVX1.setSelectedItem(null);
+//        jcobLoaiVX2.setSelectedItem(null);
+//        jcobLoaiVX3.setSelectedItem(null);
+        
+        jdcTGTiem1.setEnabled(false);
+    }//GEN-LAST:event_jrbTiemVX_ChuaTiemActionPerformed
+
+    private void jrbTiemVX_1mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiemVX_1mActionPerformed
+        // TODO add your handling code here:
+        jcobLoaiVX1.setEnabled(true);
+        jcobLoaiVX2.setEnabled(false);
+        jcobLoaiVX3.setEnabled(false);
+        
+//         jcobLoaiVX2.setSelectedItem(null);
+//        jcobLoaiVX3.setSelectedItem(null);
+    }//GEN-LAST:event_jrbTiemVX_1mActionPerformed
+
+    private void jrbTiemVX_2mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiemVX_2mActionPerformed
+        // TODO add your handling code here:
+        jcobLoaiVX1.setEnabled(true);
+        jcobLoaiVX2.setEnabled(true);
+        jcobLoaiVX3.setEnabled(false);
+//         jcobLoaiVX3.setSelectedItem(null);
+       
+    }//GEN-LAST:event_jrbTiemVX_2mActionPerformed
+
+    private void jrbTiemVX_3mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiemVX_3mActionPerformed
+        // TODO add your handling code here:
+        jcobLoaiVX1.setEnabled(true);
+        jcobLoaiVX2.setEnabled(true);
+        jcobLoaiVX3.setEnabled(true);
+    }//GEN-LAST:event_jrbTiemVX_3mActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnG_MuiTiem;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -397,11 +508,6 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -409,5 +515,16 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JComboBox<String> jcobLoaiVX1;
+    private javax.swing.JComboBox<String> jcobLoaiVX2;
+    private javax.swing.JComboBox<String> jcobLoaiVX3;
+    private com.toedter.calendar.JDateChooser jdcTGTiem1;
+    private com.toedter.calendar.JDateChooser jdcTGTiem2;
+    private com.toedter.calendar.JDateChooser jdcTGTiem3;
+    private javax.swing.JRadioButton jrbTiemVX_1m;
+    private javax.swing.JRadioButton jrbTiemVX_2m;
+    private javax.swing.JRadioButton jrbTiemVX_3m;
+    private javax.swing.JRadioButton jrbTiemVX_ChuaTiem;
+    private javax.swing.JRadioButton jrbTiemVX_KhongBiet;
     // End of variables declaration//GEN-END:variables
 }

@@ -19,11 +19,12 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
-    public MainFrame(String ten) {
+    private String ID;
+    public MainFrame(String ten,String ID) {
         initComponents();
         
         setTitle("Quản lí F0 tại nhà");
-        ChuyenManHinhController controller = new ChuyenManHinhController(jpnView);
+        ChuyenManHinhController controller = new ChuyenManHinhController(jpnView,ID);
         controller.setView(jpnTrangChu,jlbTrangChu);
         
         ArrayList<DanhMucBean> listItem = new ArrayList<>();
@@ -35,8 +36,13 @@ public class MainFrame extends javax.swing.JFrame {
         controller.setEvent(listItem);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         this.jlbTen.setText(ten);
+        this.ID=ID;
     }
 
+    public String getID() {
+        return ID;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -348,11 +354,11 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-//                JFrame frame = new MainFrame("dasdas");
-//            
-//                frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-//                
-//                frame.setVisible(true);
+                JFrame frame = new MainFrame("dasdas","122");
+            
+                frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+                
+                frame.setVisible(true);
             }
         });
     }
