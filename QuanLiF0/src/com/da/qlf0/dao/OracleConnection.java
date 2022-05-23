@@ -19,8 +19,8 @@ public class OracleConnection {
     public static Connection getOracleConnection() throws ClassNotFoundException{
         String hostName="localhost";
         String sid = "orcl";
-        String userName="da";
-        String passWord="doan";
+        String userName="quanlybenhnhan";
+        String passWord="12345678";
         String URL="jdbc:oracle:thin:@"+hostName+":1521:"+sid;
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
