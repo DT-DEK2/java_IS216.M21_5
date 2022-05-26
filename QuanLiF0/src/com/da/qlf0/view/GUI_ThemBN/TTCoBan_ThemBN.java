@@ -6,9 +6,6 @@ package com.da.qlf0.view.GUI_ThemBN;
 
 import com.toedter.calendar.JDateChooser;
 
-import java.awt.event.ActionListener;
-import javax.swing.Action;
-import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -209,7 +206,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         setForeground(new java.awt.Color(20, 20, 20));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(null);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(20, 20, 20));
@@ -221,9 +217,9 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(625, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(579, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,7 +233,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbHoTen.setForeground(new java.awt.Color(20, 20, 20));
         jlbHoTen.setText("Họ và tên *");
 
-        jtfHoTen.setBackground(new java.awt.Color(255, 255, 255));
         jtfHoTen.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfHoTen.setForeground(new java.awt.Color(20, 20, 20));
         jtfHoTen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -251,7 +246,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbNgheNghiep.setForeground(new java.awt.Color(20, 20, 20));
         jlbNgheNghiep.setText("Nghề nghiệp");
 
-        jtfNgheNghiep.setBackground(new java.awt.Color(255, 255, 255));
         jtfNgheNghiep.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfNgheNghiep.setForeground(new java.awt.Color(20, 20, 20));
         jtfNgheNghiep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -265,7 +259,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbTinh_ThanhPho.setForeground(new java.awt.Color(20, 20, 20));
         jlbTinh_ThanhPho.setText("Tỉnh/Thành phố *");
 
-        jcobTinh_ThanhPho.setBackground(new java.awt.Color(255, 255, 255));
         jcobTinh_ThanhPho.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobTinh_ThanhPho.setForeground(new java.awt.Color(20, 20, 20));
         jcobTinh_ThanhPho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
@@ -280,7 +273,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbQuan_Huyen.setForeground(new java.awt.Color(20, 20, 20));
         jlbQuan_Huyen.setText("Quận/Huyện *");
 
-        jcobQuan_Huyen.setBackground(new java.awt.Color(255, 255, 255));
         jcobQuan_Huyen.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobQuan_Huyen.setForeground(new java.awt.Color(20, 20, 20));
         jcobQuan_Huyen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
@@ -295,7 +287,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbCMND_CCCD.setForeground(new java.awt.Color(20, 20, 20));
         jlbCMND_CCCD.setText("CMND/CCCD *");
 
-        jtfCMND_CCCD.setBackground(new java.awt.Color(255, 255, 255));
         jtfCMND_CCCD.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfCMND_CCCD.setForeground(new java.awt.Color(20, 20, 20));
         jtfCMND_CCCD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -444,7 +435,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbNoiO.setForeground(new java.awt.Color(20, 20, 20));
         jlbNoiO.setText("Nơi ở hiện tại *");
 
-        jtfSDT.setBackground(new java.awt.Color(255, 255, 255));
         jtfSDT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfSDT.setForeground(new java.awt.Color(20, 20, 20));
         jtfSDT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -463,7 +453,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbPhuong_Xa.setForeground(new java.awt.Color(20, 20, 20));
         jlbPhuong_Xa.setText("Phường/Xã *");
 
-        jcobPhuong_Xa.setBackground(new java.awt.Color(255, 255, 255));
         jcobPhuong_Xa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobPhuong_Xa.setForeground(new java.awt.Color(20, 20, 20));
         jcobPhuong_Xa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
@@ -478,7 +467,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbNoiLamViec.setForeground(new java.awt.Color(20, 20, 20));
         jlbNoiLamViec.setText("Nơi làm việc");
 
-        jtfNoiO.setBackground(new java.awt.Color(255, 255, 255));
         jtfNoiO.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfNoiO.setForeground(new java.awt.Color(20, 20, 20));
         jtfNoiO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -492,7 +480,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbSĐT.setForeground(new java.awt.Color(20, 20, 20));
         jlbSĐT.setText("Số điện thoại *");
 
-        jtfNoiLamViec.setBackground(new java.awt.Color(255, 255, 255));
         jtfNoiLamViec.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfNoiLamViec.setForeground(new java.awt.Color(20, 20, 20));
         jtfNoiLamViec.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -506,7 +493,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbSoThangLaF0.setForeground(new java.awt.Color(20, 20, 20));
         jlbSoThangLaF0.setText("Số ngày từng là F0");
 
-        jtfSoThangF0.setBackground(new java.awt.Color(255, 255, 255));
         jtfSoThangF0.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfSoThangF0.setForeground(new java.awt.Color(20, 20, 20));
         jtfSoThangF0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -544,7 +530,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbTestNhanh1.setForeground(new java.awt.Color(20, 20, 20));
         jlbTestNhanh1.setText("Kết quả:*");
 
-        jcobKQTestNhanh.setBackground(new java.awt.Color(255, 255, 255));
         jcobKQTestNhanh.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobKQTestNhanh.setForeground(new java.awt.Color(20, 20, 20));
         jcobKQTestNhanh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Âm tính", "Dương tính", " " }));
@@ -559,7 +544,6 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
         jlbTestNhanh2.setForeground(new java.awt.Color(20, 20, 20));
         jlbTestNhanh2.setText("Kết quả:*");
 
-        jcobKQTestPCR.setBackground(new java.awt.Color(255, 255, 255));
         jcobKQTestPCR.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobKQTestPCR.setForeground(new java.awt.Color(20, 20, 20));
         jcobKQTestPCR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Âm tính", "Dương tính", " " }));
@@ -679,7 +663,7 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
                                 .addComponent(jlbNgayXHTTDT)
                                 .addGap(59, 59, 59)
                                 .addComponent(jdcNgayXHTTDT, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 9, Short.MAX_VALUE))))
+                        .addGap(0, 56, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -780,7 +764,7 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
                                 .addComponent(jcobKQTestPCR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jdcNgayTestPCR, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jdcNgayXHTTDT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(108, 108, 108))
+                .addGap(142, 142, 142))
         );
     }// </editor-fold>//GEN-END:initComponents
 
