@@ -5,7 +5,7 @@
 package com.da.qlf0.ultility;
 
 import com.da.qlf0.controller.XoaBenhNhanController;
-import com.da.qlf0.view.GUI_ThemBN.KQDieuTri;
+import com.da.qlf0.view.KQDieuTri;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -201,7 +201,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 //        JFrame frame = new JFrame();
-        JPanel KQ = new KQDieuTri();
+        JPanel KQ = new KQDieuTri(this.jLabel4.getText());
 //        
 //        JScrollPane scrollp = new JScrollPane(KQ, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 //        frame.setResizable(true);

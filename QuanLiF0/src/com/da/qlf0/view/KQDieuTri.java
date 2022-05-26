@@ -2,10 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.da.qlf0.view.GUI_ThemBN;
+package com.da.qlf0.view;
 
+import com.da.qlf0.controller.TaoKQDieuTriController;
+import com.toedter.calendar.JDateChooser;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
@@ -21,7 +28,8 @@ public class KQDieuTri extends javax.swing.JPanel {
      * Creates new form TinhTrangTT_ThemBN
      */
     private JFrame frame2;
-    public KQDieuTri() {
+    private String MABN;
+    public KQDieuTri(String MABN) {
         initComponents();
         JFrame frame = new JFrame();
         
@@ -37,6 +45,87 @@ public class KQDieuTri extends javax.swing.JPanel {
                     frame.repaint();
                     frame.setVisible(true);
                     this.frame2=frame;
+                    this.MABN=MABN;
+    }
+
+    public String getMABN() {
+        return MABN;
+    }
+
+    public JComboBox<String> getJcobNoiTuVong() {
+        return jcobNoiTuVong;
+    }
+
+    public JDateChooser getJdcNgayNhapVien() {
+        return jdcNgayNhapVien;
+    }
+
+    public JDateChooser getJdcNgayTuVong() {
+        return jdcNgayTuVong;
+    }
+
+    public JDateChooser getJdc_NgayKTCL() {
+        return jdc_NgayKTCL;
+    }
+
+    public JDateChooser getJdc_NgayXNAT() {
+        return jdc_NgayXNAT;
+    }
+
+    public JRadioButton getJrbCN_NV() {
+        return jrbCN_NV;
+    }
+
+    public JRadioButton getJrbHTCL() {
+        return jrbHTCL;
+    }
+
+    public JRadioButton getJrbKhac() {
+        return jrbKhac;
+    }
+
+    public JRadioButton getJrbLiDoTV_BenhNen() {
+        return jrbLiDoTV_BenhNen;
+    }
+
+    public JRadioButton getJrbLiDoTV_Covid() {
+        return jrbLiDoTV_Covid;
+    }
+
+    public JRadioButton getJrbPCR() {
+        return jrbPCR;
+    }
+
+    public JRadioButton getJrbTestNhanh() {
+        return jrbTestNhanh;
+    }
+
+    public JRadioButton getJrbTuVong() {
+        return jrbTuVong;
+    }
+
+    public JTextField getJtfKhacCuThe() {
+        return jtfKhacCuThe;
+    }
+
+    public JTextField getJtfLidoTuVongKhac() {
+        return jtfLidoTuVongKhac;
+    }
+
+    public JTextField getJtfLuuY() {
+        return jtfLuuY;
+    }
+
+    public JTextField getJtfNoiTuVongKhac() {
+        return jtfNoiTuVongKhac;
+    }
+
+    public JTextField getJtfTTkhiNV() {
+        return jtfTTkhiNV;
+    }
+
+    public JTextField getJtfTenCSNV() {
+        return jtfTenCSNV;
     }
 
     
@@ -216,6 +305,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         });
 
         jrbKhac.setBackground(new java.awt.Color(255, 255, 255));
+        bntG_TinhTrang.add(jrbKhac);
         jrbKhac.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbKhac.setForeground(new java.awt.Color(20, 20, 20));
         jrbKhac.setText("Khác");
@@ -232,7 +322,7 @@ public class KQDieuTri extends javax.swing.JPanel {
 
         jdc_NgayKTCL.setBackground(new java.awt.Color(255, 255, 255));
         jdc_NgayKTCL.setForeground(new java.awt.Color(20, 20, 20));
-        jdc_NgayKTCL.setDateFormatString("dd-MM-yyyy\n");
+        jdc_NgayKTCL.setDateFormatString("dd-MM-yyyy\n\n\n");
         jdc_NgayKTCL.setEnabled(false);
 
         jLabel17.setBackground(new java.awt.Color(255, 255, 255));
@@ -398,6 +488,11 @@ public class KQDieuTri extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setText("Lưu kết quả");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(255, 102, 102));
         jButton2.setText("Xuất bệnh án");
@@ -691,6 +786,30 @@ public class KQDieuTri extends javax.swing.JPanel {
 
     private void jrbKhacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbKhacActionPerformed
         // TODO add your handling code here:
+        
+               
+        jdc_NgayKTCL.setEnabled(false);
+        jdc_NgayXNAT.setEnabled(false);
+        jrbTestNhanh.setEnabled(false);
+        jrbPCR.setEnabled(false);
+        
+        
+       
+        jtfKhacCuThe.setEnabled(true);
+        
+        jdcNgayNhapVien.setEnabled(false);
+        jtfTTkhiNV.setEnabled(false);
+        jtfTenCSNV.setEnabled(false);
+        jtfLuuY.setEnabled(false);
+        
+        jdcNgayTuVong.setEnabled(false);
+        jcobNoiTuVong.setEnabled(false);
+        jtfNoiTuVongKhac.setEnabled(false);
+        jtfLidoTuVongKhac.setEnabled(false);
+        
+        jrbLiDoTV_BenhNen.setEnabled(false);
+        jrbLiDoTV_Covid.setEnabled(false);
+        
     }//GEN-LAST:event_jrbKhacActionPerformed
 
     private void jrbTestNhanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTestNhanhActionPerformed
@@ -729,6 +848,58 @@ public class KQDieuTri extends javax.swing.JPanel {
         // TODO add your handling code here:
         this.frame2.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        JFrame framex = new JFrame();
+        String[] options = new String[2];
+        options[0] = "Có";
+        options[1] = "Không";
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        
+        
+        int dialogResult = JOptionPane.showOptionDialog(framex.getContentPane(), "Bạn muốn lưu thông tin kết quả điều trị?", "Lưu thông tin Kết quả điều trị", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+       
+        if(dialogResult == 0) {
+            TaoKQDieuTriController kq = new TaoKQDieuTriController(this.MABN,
+                    jcobNoiTuVong,
+                    jdcNgayNhapVien,
+                    jdcNgayTuVong,
+                    jdc_NgayKTCL,
+                    jdc_NgayXNAT,
+                    jrbCN_NV,
+                    jrbHTCL,
+                    jrbKhac, 
+                    jrbLiDoTV_BenhNen, 
+                    jrbLiDoTV_Covid,
+                    jrbPCR,
+                    jrbTestNhanh,
+                    jrbTuVong,
+                    jtfKhacCuThe,
+                    jtfLidoTuVongKhac,
+                    jtfLuuY, 
+                    jtfNoiTuVongKhac,
+                    jtfTTkhiNV, 
+                    jtfTenCSNV);
+                    
+            try {
+                kq.setDateToKQDieuTri();
+                 JFrame frame3 = new JFrame();
+                    frame3.setBounds(0,0,100,50);
+                    JOptionPane.showMessageDialog(frame3,
+                    "Thêm thành công kết quả điều trị");
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ParseException ex) {
+                Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                    
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

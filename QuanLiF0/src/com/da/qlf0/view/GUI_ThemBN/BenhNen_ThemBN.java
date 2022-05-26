@@ -1508,7 +1508,7 @@ public class BenhNen_ThemBN extends javax.swing.JPanel {
 
     private void jrbMangThai_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMangThai_CoActionPerformed
         // TODO add your handling code here:
-        jtfSoTuanMT.setEditable(true);
+        jtfSoTuanMT.setEnabled(true);
     }//GEN-LAST:event_jrbMangThai_CoActionPerformed
 
     private void jtfSoTuanMTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSoTuanMTActionPerformed

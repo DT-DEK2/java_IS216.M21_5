@@ -425,69 +425,66 @@ public class ThemBN_Frame extends javax.swing.JFrame {
             }
 
             try {
-                th.SetDataTo_BenhNhan();
+                th.ThemBN();
+                JFrame frame2 = new JFrame();
+                    frame.setBounds(0,0,100,50);
+                    JOptionPane.showMessageDialog(frame,
+                    "Thêm thành công bệnh nhân");
+                    this.dispose();
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                ex.printStackTrace();
+                JFrame frame2 = new JFrame();
+                    frame.setBounds(0,0,100,50);
+                    JOptionPane.showMessageDialog(frame,
+                    "Thêm thất bại bệnh nhân\n" +
+                     ex.getMessage()
+                        );
+                   try {
+                       th.XoaBn();
+                   } catch (ClassNotFoundException ex1) {
+                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                   } catch (SQLException ex1) {
+                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                   }
+                
             } catch (SQLException ex) {
                 Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_TiemVX();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_BenhNen();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_MangThai();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_ThuocDaDungTruocTT();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_TongTrang();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_TTLucTiepNhan();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                th.SetDataTo_DanhGiaSoLuoc();
+                ex.printStackTrace();
+//                if(ex.getErrorCode()==-20123){
+//                    JFrame frame2 = new JFrame();
+//                    frame.setBounds(0,0,100,50);
+//                    JOptionPane.showMessageDialog(frame,
+//                            "Nam không mang thai"
+//                        );
+//                }
+//                  if(ex.getMessage().substring(0, 8).equals("ORA-20123")){
+//                       JFrame frame2 = new JFrame();
+//                    frame.setBounds(0,0,100,50);
+//                    JOptionPane.showMessageDialog(frame,
+//                    "Nam không thể mang thai"+"Thêm thất bại");
+//                  }
                  JFrame frame2 = new JFrame();
                     frame.setBounds(0,0,100,50);
                     JOptionPane.showMessageDialog(frame,
-                    "Thêm thành bệnh nhân");
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    "Thêm thất bại bệnh nhân\n" +
+                     ex.getSQLState()+"\n"+
+                     ex.getMessage()
+                            
+                        );
+                   try {
+                       th.XoaBn();
+                   } catch (ClassNotFoundException ex1) {
+                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                   } catch (SQLException ex1) {
+                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                   }
             }
+            
             
         }
         
-        this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
