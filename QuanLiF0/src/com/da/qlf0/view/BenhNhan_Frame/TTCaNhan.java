@@ -132,6 +132,8 @@ public class TTCaNhan extends javax.swing.JPanel {
             .addComponent(jpnBenhNen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jpnView.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jpnViewLayout = new javax.swing.GroupLayout(jpnView);
         jpnView.setLayout(jpnViewLayout);
         jpnViewLayout.setHorizontalGroup(
