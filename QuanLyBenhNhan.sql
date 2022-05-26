@@ -15,11 +15,11 @@ create table BENHNHAN
    Phuong_Xa           varchar2(20)                    null,
    NgheNghiep            varchar2(20)                    null,
    NoiLamViec            varchar2(50)                    null,
-   SoDienThoai          numeric(10)                    null,
+   SoDienThoai          varchar2(10)                    null,
    NgayTiepNhan         date                           null,
-   NgayXuatHienTrieuChungDauTien  varchar2(10)                    null,
+   NgayXuatHienTrieuChungDauTien  date                    null,
    TungLaF0             smallint                       null,
-   SoNgayLaF0           integer                        null,
+   SoNgayLaF0           varchar2(4)                        null,
    TestNhanh            smallint                       null,
    NgayTestNhanh        date                           null,
    KetQuaXetNghiem1      varchar2(40)                    null,
@@ -66,9 +66,9 @@ ALTER TABLE BENHNEN
 
 
 /*==============================================================*/
-/* Table: THUOCDUNGTRUOCKHINHAPVIEN                             */
+/* Table: THUOCDUNGTRUOCKHITIEPNHAN                            */
 /*==============================================================*/
-create table THUOCDUNGTRUOCKHINHAPVIEN 
+create table THUOCDUNGTRUOCKHITIEPNHAN 
 (
    MaBenhNhan            varchar2(4)                     not null,
    Steroid              smallint                       null,
@@ -79,11 +79,11 @@ create table THUOCDUNGTRUOCKHINHAPVIEN
    CacThuocUcCheMienDichKhac smallint                       null
 );
 
-alter table THUOCDUNGTRUOCKHINHAPVIEN
+alter table THUOCDUNGTRUOCKHITIEPNHAN
    add constraint FK_THUOCDUN_BENHNHAN foreign key (MaBenhNhan)
       references BENHNHAN (MaBenhNhan);
 
-ALTER TABLE THUOCDUNGTRUOCKHINHAPVIEN 
+ALTER TABLE THUOCDUNGTRUOCKHITIEPNHAN
  ADD ( CONSTRAINT THUOCDUNGTRUOCKHINHAPVIEN_MABN_UK UNIQUE 
   (MaBenhNhan));
 
@@ -94,7 +94,7 @@ create table MANGTHAI
 (
    MaBenhNhan            varchar2(4)                     not null,
    MangThai             smallint                       null,
-   SoTuanMangThai       integer                        null,
+   SoTuanMangThai       varchar(2)                        null,
    HauSan               smallint                       null,
    TreSoSinhDuocXetNghiemCovid_19 smallint                       null,
    KetQuaXetNghiemCovid_19  varchar2(40)                    null
@@ -119,11 +119,11 @@ create table TIEMVACCINE
    MaBenhNhan            varchar2(4)                     not null,
    TinhTrangTiemVaccine  varchar2(40)                    null,
    Loai_Vaccine1         varchar2(40)                    null,
-   NgayTiem1            timestamp                      null,
+   NgayTiem1            date                      null,
    Loai_Vaccine2         varchar2(40)                    null,
-   NgayTiem2            timestamp                      null,
+   NgayTiem2            date                      null,
    Loai_Vaccine3         varchar2(40)                    null,
-   NgayTiem3            timestamp                      null
+   NgayTiem3            date                      null
 );
 
 
@@ -179,7 +179,7 @@ create table TRIEUCHUNGTAITHOIDIEMTIEPNHAN
    MatViGiac            smallint                       null,
    BuonNon              smallint                       null,
    XuatHuyet            smallint                       null,
-   TrieuChungKhac       smallint                       null
+   TrieuChungKhac      	varchar2(100)                      null
 );
 
 alter table TRIEUCHUNGTAITHOIDIEMTIEPNHAN
@@ -263,7 +263,7 @@ create table QUATRINHDIEUTRITAINHA
    GoiThuocB            smallint                       null,
    GoiThuocC            smallint                       null,
    XetNghiem            smallint                       null,
-   NgayXetNghiem        timestamp                      null,
+   NgayXetNghiem        date                      null,
    KetQuaXetNghiem1      varchar2(40)                    null
 );
 alter table QUATRINHDIEUTRITAINHA 
@@ -280,7 +280,7 @@ create table KETQUADIEUTRITAINHA
    TinhTrangKhac         varchar2(100)                   null,
    NgayKetThucCachLyTaiNha date                           null,
    NgayXetNghiemAmTinh  date                           null,
-   LoaiXetNghiem        smallint                       null,
+   LoaiXetNghiem        varchar2(30)                       null,
    NhapVien             smallint                       null,
    NgayNhapVien         date                           null,
    TrieuChungKhiNhapVien  varchar2(200)                   null,
@@ -290,7 +290,7 @@ create table KETQUADIEUTRITAINHA
    NgayTuVong           date                           null,
    NoiTuVong             varchar2(100)                   null,
    NoiTuVongKhac         varchar2(50)                    null,
-   LyDoTuVong           smallint                       null,
+   LyDoTuVong           varchar2(30)                        null,
    LyDoTuVongKhac        varchar2(100)                   null
 );
 
