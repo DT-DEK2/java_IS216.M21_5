@@ -17,9 +17,15 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     /**
      * Creates new form CapNhat_Frame
      */
+    private TTCoBan_CapNhat node1 = new TTCoBan_CapNhat();
+    private TiemVX_CapNhat node2 = new TiemVX_CapNhat();
+    private BenhNen_CapNhat node3 = new BenhNen_CapNhat();
+    private TinhTrangTT_CapNhat node4 = new TinhTrangTT_CapNhat();
+    private QTDieuTri_CapNhat node5 = new QTDieuTri_CapNhat();
+
     public CapNhat_Frame() {
         initComponents();
-        ChuyenMH_CapNhat controller = new ChuyenMH_CapNhat(jpnView);
+        ChuyenMH_CapNhat controller = new ChuyenMH_CapNhat(jpnView, node1, node2, node3, node4, node5);
         controller.setView(jpnTTCoBan, jlbTTCoBan);
 
         ArrayList<DanhMucCapNhatBN> listItem = new ArrayList<>();
@@ -27,7 +33,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         listItem.add(new DanhMucCapNhatBN("TiemVX", jpnTiemVX, jlbTiemVX));
         listItem.add(new DanhMucCapNhatBN("BenhNen", jpnBenhNen, jlbBenhNen));
         listItem.add(new DanhMucCapNhatBN("TinhTrang", jpnTinhTrang, jlbTinhTrang));
-        listItem.add(new DanhMucCapNhatBN("QuaTrinhDieuTri",jpnQTDieuTri,jlbQTDieuTri));
+        listItem.add(new DanhMucCapNhatBN("QuaTrinhDieuTri", jpnQTDieuTri, jlbQTDieuTri));
 
         controller.setEvent(listItem);
     }
@@ -42,6 +48,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jpnTTCoBan = new javax.swing.JPanel();
         jlbTTCoBan = new javax.swing.JLabel();
@@ -58,6 +65,16 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jButton1.setBackground(new java.awt.Color(204, 102, 0));
+        jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Lưu thông tin");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 10)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 115, 153));
@@ -86,7 +103,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
             jpnTTCoBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnTTCoBanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlbTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addComponent(jlbTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -117,23 +134,6 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jlbTiemVX.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jlbTiemVX.setText("Tiêm Vắc xin");
 
-        javax.swing.GroupLayout jpnTiemVXLayout = new javax.swing.GroupLayout(jpnTiemVX);
-        jpnTiemVX.setLayout(jpnTiemVXLayout);
-        jpnTiemVXLayout.setHorizontalGroup(
-            jpnTiemVXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnTiemVXLayout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jlbTiemVX, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
-        );
-        jpnTiemVXLayout.setVerticalGroup(
-            jpnTiemVXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnTiemVXLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlbTiemVX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         jpnBenhNen.setBackground(new java.awt.Color(0, 180, 153));
 
         jlbBenhNen.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
@@ -144,16 +144,38 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jpnBenhNenLayout.setHorizontalGroup(
             jpnBenhNenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnBenhNenLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jlbBenhNen, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(17, 17, 17)
+                .addComponent(jlbBenhNen, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpnBenhNenLayout.setVerticalGroup(
             jpnBenhNenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnBenhNenLayout.createSequentialGroup()
+            .addGroup(jpnBenhNenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlbBenhNen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlbBenhNen, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jpnTiemVXLayout = new javax.swing.GroupLayout(jpnTiemVX);
+        jpnTiemVX.setLayout(jpnTiemVXLayout);
+        jpnTiemVXLayout.setHorizontalGroup(
+            jpnTiemVXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnTiemVXLayout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addComponent(jlbTiemVX, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jpnBenhNen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+        jpnTiemVXLayout.setVerticalGroup(
+            jpnTiemVXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnTiemVXLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlbTiemVX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jpnTiemVXLayout.createSequentialGroup()
+                .addComponent(jpnBenhNen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jpnQTDieuTri.setBackground(new java.awt.Color(0, 180, 153));
@@ -183,63 +205,63 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jpnTTCoBan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jpnTiemVX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jpnBenhNen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
                 .addComponent(jpnTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpnBenhNen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnTiemVX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnTinhTrang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(16, 16, 16))
-            .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jpnView.setPreferredSize(new java.awt.Dimension(0, 619));
 
         javax.swing.GroupLayout jpnViewLayout = new javax.swing.GroupLayout(jpnView);
         jpnView.setLayout(jpnViewLayout);
         jpnViewLayout.setHorizontalGroup(
             jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 883, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jpnViewLayout.setVerticalGroup(
             jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 565, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpnView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 791, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jpnView, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1011, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpnView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE))
         );
 
         pack();
@@ -248,6 +270,233 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+//        JFrame frame = new JFrame();
+//        String[] options = new String[2];
+//        options[0] = "Có";
+//        options[1] = "Không";
+//        int dialogButton = JOptionPane.YES_NO_OPTION;
+//        int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Bạn muốn lưu thông tin thêm mới?", "Lưu thông tin thêm mới", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+//        if (dialogResult == 0) {
+//            //            System.out.println("Yes option");
+//            ThemBNController th = new ThemBNController(
+//                this.node1.getJcbNam(),
+//                this.node1.getJcbNu(),
+//                this.node1.getJcobKQTestNhanh(),
+//                this.node1.getJcobKQTestPCR(),
+//                this.node1.getJcbTestNhanh_Co(),
+//                this.node1.getJcbTestNhanh_Khong(),
+//                this.node1.getJcbTestPCR_Co(),
+//                this.node1.getJcbTestPCR_Khong(),
+//                this.node1.getJcbTungLaF0_Co(),
+//                this.node1.getJcbTungLaF0_Khong(),
+//                this.node1.getJcobPhuong_Xa(),
+//                this.node1.getJcobQuan_Huyen(),
+//                this.node1.getJcobTinh_ThanhPho(),
+//                this.node1.getJdcNgaySinh(),
+//                this.node1.getJdcNgayTestNhanh(),
+//                this.node1.getJdcNgayTestPCR(),
+//                this.node1.getJdcNgayTnF0(),
+//                this.node1.getJdcNgayXHTTDT(),
+//                this.node1.getJtfCMND_CCCD(),
+//                this.node1.getJtfHoTen(),
+//                this.node1.getJtfMABN(),
+//                this.node1.getJtfNgheNghiep(),
+//                this.node1.getJtfNoiLamViec(),
+//                this.node1.getJtfNoiO(),
+//                this.node1.getJtfSDT(),
+//                this.node1.getJtfSoThangF0(),
+//                this.node2.getJcobLoaiVX1(),
+//                this.node2.getJcobLoaiVX2(),
+//                this.node2.getJcobLoaiVX3(),
+//                this.node2.getJdcTGTiem1(),
+//                this.node2.getJdcTGTiem2(),
+//                this.node2.getJdcTGTiem3(),
+//                this.node2.getJrbTiemVX_1m(),
+//                this.node2.getJrbTiemVX_2m(),
+//                this.node2.getJrbTiemVX_3m(),
+//                this.node2.getJrbTiemVX_ChuaTiem(),
+//                this.node2.getJrbTiemVX_KhongBiet(),
+//                this.node3.getJrbBenhGan_Co(),
+//                this.node3.getJrbBenhGan_Khong(),
+//                this.node3.getJrbBenhPhoiMT_Co(),
+//                this.node3.getJrbBenhPhoiMT_Khong(),
+//                this.node3.getJrbBenhTKMT_Co(),
+//                this.node3.getJrbBenhTKMT_Khong(),
+//                this.node3.getJrbBenhThanMT_Co(),
+//                this.node3.getJrbBenhThanMT_Khong(),
+//                this.node3.getJrbBenhTim_Co(),
+//                this.node3.getJrbBenhTim_Khong(),
+//                this.node3.getJrbBeoPhi_Co(),
+//                this.node3.getJrbBeoPhi_Khong(),
+//                this.node3.getJrbCLBenhHT_Co(),
+//                this.node3.getJrbCLBenhHT_Khong(),
+//                this.node3.getJrbDaiTD_Co(),
+//                this.node3.getJrbDaiTD_Khong(),
+//                this.node3.getJrbGhepTang_TBM_Co(),
+//                this.node3.getJrbGhepTang_TBM_Khong(),
+//                this.node3.getJrbHIV_Co(),
+//                this.node3.getJrbHIV_Khong(),
+//                this.node3.getJrbMangThai_Co(),
+//                this.node3.getJrbMangThai_Khong(),
+//                this.node3.getJrbHauSan_Co(),
+//                this.node3.getJrbHauSan_Khong(),
+//                this.node3.getJtfSoTuanMT(),
+//                this.node3.getJrbTreSSXNcovid_Co(),
+//                this.node3.getJrbTreSSXNcovid_Khong(),
+//                this.node3.getJrbKQXN_AT(),
+//                this.node3.getJrbKQXN_ChuaCoKQ(),
+//                this.node3.getJrbKQXN_DT(),
+//                this.node3.getJrbHenKQ_Co(),
+//                this.node3.getJrbHenKQ_Khong(),
+//                this.node3.getJrbHoiChungDown_Co(),
+//                this.node3.getJrbHoiChungDown_Khong(),
+//                this.node3.getJrbMachMauNao_Co(),
+//                this.node3.getJrbMachMauNao_Khong(),
+//                this.node3.getJrbUngThu_Co(),
+//                this.node3.getJrbUngThu_Khong(),
+//                this.node3.getJrbRoiLoanSDCGN_Co(),
+//                this.node3.getJrbRoiLoanSDCGN_Khong(),
+//                this.node3.getJrbTangHA_Co(),
+//                this.node3.getJrbTangHA_Khong(),
+//                this.node3.getJrbThieuMD_Co(),
+//                this.node3.getJrbThieuMD_Khong(),
+//                this.node3.getJrbThuocDTCovid_Co(),
+//                this.node3.getJrbThuocDTCovid_Khong(),
+//                this.node3.getJrbThuocUCMD_Co(),
+//                this.node3.getJrbThuocUCMD_Khong(),
+//                this.node3.getJrbThuocMD_Co(),
+//                this.node3.getJrbThuocMD_Khong(),
+//                this.node3.getJrbSteroid_Co(),
+//                this.node3.getJrbSteroid_Khong(),
+//                this.node3.getJrbKhangSinh_Co(),
+//                this.node3.getJrbKhangSinh_Khong(),
+//                this.node3.getJrbKhangVirus_Co(),
+//                this.node3.getJrbKhangVirus_Khong(),
+//                this.node4.getJcobDGTTBL(),
+//                this.node4.getJrbBuonNon_Co(),
+//                this.node4.getJrbBuonNon_Khong(),
+//                this.node4.getJrbCoGiat_Co(),
+//                this.node4.getJrbCoGiat_Khong(),
+//                this.node4.getJrbDKCL_Co(),
+//                this.node4.getJrbDKCL_Khong(),
+//                this.node4.getJrbDauBung_Co(),
+//                this.node4.getJrbDauBung_Khong(),
+//                this.node4.getJrbDauDau_Co(),
+//                this.node4.getJrbDauDau_Khong(),
+//                this.node4.getJrbDauCo_Co(),
+//                this.node4.getJrbDauCo_Khong(),
+//                this.node4.getJrbDauHong_Co(),
+//                this.node4.getJrbDauHong_Khong(),
+//                this.node4.getJrbDauKhop_Co(),
+//                this.node4.getJrbDauKhop_Khong(),
+//                this.node4.getJrbMatKhuuGiac_Co(),
+//                this.node4.getJrbMatKhuuGiac_Khong(),
+//                this.node4.getJrbMatViGiac_Co(),
+//                this.node4.getJrbMatViGiac_Khong(),
+//                this.node4.getJrbNoiHach_Co(),
+//                this.node4.getJrbNoiHach_Khong(),
+//                this.node4.getJrbSot_Co(),
+//                this.node4.getJrbSot_Khong(),
+//                this.node4.getJrbTTKhac_Co(),
+//                this.node4.getJrbTTKhac_Khong(),
+//                this.node4.getJrbXuatHuyet_Co(),
+//                this.node4.getJrbXuatHuyet_Khong(),
+//                this.node4.getJtfCanNang(),
+//                this.node4.getJtfChieuCao(),
+//                this.node4.getJtfChuanDoanTT(),
+//                this.node4.getJtfDoBH_Oxi(),
+//                this.node4.getJtfHuyetApTThu(),
+//                this.node4.getJtfHuyetApTTruong(),
+//                this.node4.getJtfNhietDo(),
+//                this.node4.getJtfNhipTho(),
+//                this.node4.getJtfNhipTim(),
+//                this.node4.getJtfTTKhac()
+//            );
+//
+//            if (node1.getJtfHoTen().getText().length() == 0
+//                || node1.getJtfCMND_CCCD().getText().length() == 0
+//                || node1.getJtfNoiO().getText().length() == 0
+//                || node1.getJtfSDT().getText().length() == 0
+//                || node4.getJtfNhietDo().getText().length() == 0
+//                || node4.getJtfNhipTho().getText().length() == 0
+//                || node4.getJtfNhipTim().getText().length() == 0
+//                || node4.getJtfChieuCao().getText().length() == 0
+//                || node4.getJtfCanNang().getText().length() == 0
+//                || node4.getJtfChuanDoanTT().getText().length() == 0) {
+//                JFrame frame4 = new JFrame();
+//                frame.setBounds(0, 0, 100, 50);
+//                JOptionPane.showMessageDialog(frame,
+//                    "Vui lòng nhập dữ liệu bắt buộc!");
+//            }
+//
+//            try {
+//                th.SetDataTo_BenhNhan();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_TiemVX();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_BenhNen();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_MangThai();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_ThuocDaDungTruocTT();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_TongTrang();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_TTLucTiepNhan();
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            try {
+//                th.SetDataTo_DanhGiaSoLuoc();
+//                JFrame frame2 = new JFrame();
+//                frame.setBounds(0, 0, 100, 50);
+//                JOptionPane.showMessageDialog(frame,
+//                    "Thêm thành bệnh nhân");
+//            } catch (ClassNotFoundException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//
+//        }
+//
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,6 +534,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlbBenhNen;

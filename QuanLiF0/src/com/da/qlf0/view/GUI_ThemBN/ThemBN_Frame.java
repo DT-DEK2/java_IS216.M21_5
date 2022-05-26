@@ -31,23 +31,24 @@ public class ThemBN_Frame extends javax.swing.JFrame {
 //      private JPanel node3 = new BenhNen_ThemBN();
 //      private JPanel node4 =new TinhTrangTT_ThemBN();
     private TTCoBan_ThemBN node1 = new TTCoBan_ThemBN();
-      private TiemVX_ThemBN node2 = new TiemVX_ThemBN();
-      private BenhNen_ThemBN node3 = new BenhNen_ThemBN();
-      private TinhTrangTT_ThemBN node4 =new TinhTrangTT_ThemBN();
+    private TiemVX_ThemBN node2 = new TiemVX_ThemBN();
+    private BenhNen_ThemBN node3 = new BenhNen_ThemBN();
+    private TinhTrangTT_ThemBN node4 = new TinhTrangTT_ThemBN();
+
     public ThemBN_Frame() {
         initComponents();
-        ChuyenMH_ThemBN controller = new ChuyenMH_ThemBN(jpnView,node1,node2,node3,node4);
-        controller.setView(jpnTTCoBan,jlbTTCoBan);
-        
+        ChuyenMH_ThemBN controller = new ChuyenMH_ThemBN(jpnView, node1, node2, node3, node4);
+        controller.setView(jpnTTCoBan, jlbTTCoBan);
+
         ArrayList<DanhMucThemBN> listItem = new ArrayList<>();
-        listItem.add(new DanhMucThemBN("ThongTinCoBan",jpnTTCoBan,jlbTTCoBan));
-        listItem.add(new DanhMucThemBN("TiemVX",jpnTiemVX,jlbTiemVX));
-        listItem.add(new DanhMucThemBN("BenhNen",jpnBenhNen2,jlbBenhNen));
-        listItem.add(new DanhMucThemBN("TinhTrang",jpnTinhTrang,jlbTinhTrang));
-        
+        listItem.add(new DanhMucThemBN("ThongTinCoBan", jpnTTCoBan, jlbTTCoBan));
+        listItem.add(new DanhMucThemBN("TiemVX", jpnTiemVX, jlbTiemVX));
+        listItem.add(new DanhMucThemBN("BenhNen", jpnBenhNen2, jlbBenhNen));
+        listItem.add(new DanhMucThemBN("TinhTrang", jpnTinhTrang, jlbTinhTrang));
+
         controller.setEvent(listItem);
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -232,7 +233,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -241,7 +242,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -252,7 +253,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-                this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -263,165 +264,157 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         options[1] = "Không";
         int dialogButton = JOptionPane.YES_NO_OPTION;
         int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Bạn muốn lưu thông tin thêm mới?", "Lưu thông tin thêm mới", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
-        if(dialogResult == 0) {
+        if (dialogResult == 0) {
 //            System.out.println("Yes option");
-               ThemBNController th= new ThemBNController(
-               this.node1.getJcbNam(),
-               this.node1.getJcbNu(),
-               this.node1.getJcobKQTestNhanh(),
-               this.node1.getJcobKQTestPCR(),
-               this.node1.getJcbTestNhanh_Co(),
-               this.node1.getJcbTestNhanh_Khong(),
-               this.node1.getJcbTestPCR_Co(),
-               this.node1.getJcbTestPCR_Khong(),
-               this.node1.getJcbTungLaF0_Co(),
-               this.node1.getJcbTungLaF0_Khong(),       
-               this.node1.getJcobPhuong_Xa(),
-               this.node1.getJcobQuan_Huyen(),
-               this.node1.getJcobTinh_ThanhPho(),
-               this.node1.getJdcNgaySinh(),
-               this.node1.getJdcNgayTestNhanh(),
-               this.node1.getJdcNgayTestPCR(),
-               this.node1.getJdcNgayTnF0(),
-               this.node1.getJdcNgayXHTTDT(),
-               this.node1.getJtfCMND_CCCD(),
-               this.node1.getJtfHoTen(),
-               this.node1.getJtfMABN(),
-               this.node1.getJtfNgheNghiep(),
-               this.node1.getJtfNoiLamViec(),
-               this.node1.getJtfNoiO(),
-               this.node1.getJtfSDT(),
-               this.node1.getJtfSoThangF0(),
-                       
-                       
-               this.node2.getJcobLoaiVX1(),
-               this.node2.getJcobLoaiVX2(),
-               this.node2.getJcobLoaiVX3(),
-               this.node2.getJdcTGTiem1(),
-               this.node2.getJdcTGTiem2(),
-               this.node2.getJdcTGTiem3(),
-               this.node2.getJrbTiemVX_1m(),
-               this.node2.getJrbTiemVX_2m(),
-               this.node2.getJrbTiemVX_3m(),
-               this.node2.getJrbTiemVX_ChuaTiem(),
-               this.node2.getJrbTiemVX_KhongBiet(),
-                       
-               this.node3.getJrbBenhGan_Co(),
-               this.node3.getJrbBenhGan_Khong(),
-               this.node3.getJrbBenhPhoiMT_Co(),
-               this.node3.getJrbBenhPhoiMT_Khong(),
-               this.node3.getJrbBenhTKMT_Co(),
-               this.node3.getJrbBenhTKMT_Khong(),
-               this.node3.getJrbBenhThanMT_Co(),
-               this.node3.getJrbBenhThanMT_Khong(),
-               this.node3.getJrbBenhTim_Co(),
-               this.node3.getJrbBenhTim_Khong(),
-               this.node3.getJrbBeoPhi_Co(),
-               this.node3.getJrbBeoPhi_Khong(),
-               this.node3.getJrbCLBenhHT_Co(),
-               this.node3.getJrbCLBenhHT_Khong(),
-               this.node3.getJrbDaiTD_Co(),
-               this.node3.getJrbDaiTD_Khong(),
-               this.node3.getJrbGhepTang_TBM_Co(),
-               this.node3.getJrbGhepTang_TBM_Khong(),
-               this.node3.getJrbHIV_Co(),
-               this.node3.getJrbHIV_Khong(),
-               this.node3.getJrbMangThai_Co(),
-               this.node3.getJrbMangThai_Khong(),
-               this.node3.getJrbHauSan_Co(),
-               this.node3.getJrbHauSan_Khong(),
-               this.node3.getJtfSoTuanMT(),
-               this.node3.getJrbTreSSXNcovid_Co(),
-               this.node3.getJrbTreSSXNcovid_Khong(),
-               this.node3.getJrbKQXN_AT(),
-               this.node3.getJrbKQXN_ChuaCoKQ(),
-               this.node3.getJrbKQXN_DT(),
-               this.node3.getJrbHenKQ_Co(),
-               this.node3.getJrbHenKQ_Khong(),
-               this.node3.getJrbHoiChungDown_Co(),
-               this.node3.getJrbHoiChungDown_Khong(),
-               this.node3.getJrbMachMauNao_Co(),
-               this.node3.getJrbMachMauNao_Khong(),
-               this.node3.getJrbUngThu_Co(),
-               this.node3.getJrbUngThu_Khong(),
-               this.node3.getJrbRoiLoanSDCGN_Co(),
-               this.node3.getJrbRoiLoanSDCGN_Khong(),
-               this.node3.getJrbTangHA_Co(),
-               this.node3.getJrbTangHA_Khong(),
-               this.node3.getJrbThieuMD_Co(),
-               this.node3.getJrbThieuMD_Khong(),
-               this.node3.getJrbThuocDTCovid_Co(),
-               this.node3.getJrbThuocDTCovid_Khong(),
-               this.node3.getJrbThuocUCMD_Co(),
-               this.node3.getJrbThuocUCMD_Khong(),
-               this.node3.getJrbThuocMD_Co(),
-               this.node3.getJrbThuocMD_Khong(),
-               this.node3.getJrbSteroid_Co(),
-               this.node3.getJrbSteroid_Khong(),
-               this.node3.getJrbKhangSinh_Co(),
-               this.node3.getJrbKhangSinh_Khong(),
-               this.node3.getJrbKhangVirus_Co(),
-               this.node3.getJrbKhangVirus_Khong(),
-                       
-               this.node4.getJcobDGTTBL(),
-               this.node4.getJrbBuonNon_Co(),
-               this.node4.getJrbBuonNon_Khong(),
-               this.node4.getJrbCoGiat_Co(),
-               this.node4.getJrbCoGiat_Khong(),
-               this.node4.getJrbDKCL_Co(),
-               this.node4.getJrbDKCL_Khong(),
-               this.node4.getJrbDauBung_Co(),
-               this.node4.getJrbDauBung_Khong(),
-               this.node4.getJrbDauDau_Co(),
-               this.node4.getJrbDauDau_Khong(),
-               this.node4.getJrbDauCo_Co(),
-               this.node4.getJrbDauCo_Khong(),
-               this.node4.getJrbDauHong_Co(),
-               this.node4.getJrbDauHong_Khong(),
-               this.node4.getJrbDauKhop_Co(),
-               this.node4.getJrbDauKhop_Khong(),
-               this.node4.getJrbMatKhuuGiac_Co(),
-               this.node4.getJrbMatKhuuGiac_Khong(),
-               this.node4.getJrbMatViGiac_Co(),
-               this.node4.getJrbMatViGiac_Khong(),
-               this.node4.getJrbNoiHach_Co(),
-               this.node4.getJrbNoiHach_Khong(),
-               this.node4.getJrbSot_Co(),
-               this.node4.getJrbSot_Khong(),
-               this.node4.getJrbTTKhac_Co(),
-               this.node4.getJrbTTKhac_Khong(),
-               this.node4.getJrbXuatHuyet_Co(),
-               this.node4.getJrbXuatHuyet_Khong(),
-               this.node4.getJtfCanNang(),
-               this.node4.getJtfChieuCao(),
-               this.node4.getJtfChuanDoanTT(),
-               this.node4.getJtfDoBH_Oxi(),
-               this.node4.getJtfHuyetApTThu(),
-               this.node4.getJtfHuyetApTTruong(),
-               this.node4.getJtfNhietDo(),
-               this.node4.getJtfNhipTho(),
-               this.node4.getJtfNhipTim(),
-               this.node4.getJtfTTKhac()
-                                            );
-               
-            
+            ThemBNController th = new ThemBNController(
+                    this.node1.getJcbNam(),
+                    this.node1.getJcbNu(),
+                    this.node1.getJcobKQTestNhanh(),
+                    this.node1.getJcobKQTestPCR(),
+                    this.node1.getJcbTestNhanh_Co(),
+                    this.node1.getJcbTestNhanh_Khong(),
+                    this.node1.getJcbTestPCR_Co(),
+                    this.node1.getJcbTestPCR_Khong(),
+                    this.node1.getJcbTungLaF0_Co(),
+                    this.node1.getJcbTungLaF0_Khong(),
+                    this.node1.getJcobPhuong_Xa(),
+                    this.node1.getJcobQuan_Huyen(),
+                    this.node1.getJcobTinh_ThanhPho(),
+                    this.node1.getJdcNgaySinh(),
+                    this.node1.getJdcNgayTestNhanh(),
+                    this.node1.getJdcNgayTestPCR(),
+                    this.node1.getJdcNgayTnF0(),
+                    this.node1.getJdcNgayXHTTDT(),
+                    this.node1.getJtfCMND_CCCD(),
+                    this.node1.getJtfHoTen(),
+                    this.node1.getJtfMABN(),
+                    this.node1.getJtfNgheNghiep(),
+                    this.node1.getJtfNoiLamViec(),
+                    this.node1.getJtfNoiO(),
+                    this.node1.getJtfSDT(),
+                    this.node1.getJtfSoThangF0(),
+                    this.node2.getJcobLoaiVX1(),
+                    this.node2.getJcobLoaiVX2(),
+                    this.node2.getJcobLoaiVX3(),
+                    this.node2.getJdcTGTiem1(),
+                    this.node2.getJdcTGTiem2(),
+                    this.node2.getJdcTGTiem3(),
+                    this.node2.getJrbTiemVX_1m(),
+                    this.node2.getJrbTiemVX_2m(),
+                    this.node2.getJrbTiemVX_3m(),
+                    this.node2.getJrbTiemVX_ChuaTiem(),
+                    this.node2.getJrbTiemVX_KhongBiet(),
+                    this.node3.getJrbBenhGan_Co(),
+                    this.node3.getJrbBenhGan_Khong(),
+                    this.node3.getJrbBenhPhoiMT_Co(),
+                    this.node3.getJrbBenhPhoiMT_Khong(),
+                    this.node3.getJrbBenhTKMT_Co(),
+                    this.node3.getJrbBenhTKMT_Khong(),
+                    this.node3.getJrbBenhThanMT_Co(),
+                    this.node3.getJrbBenhThanMT_Khong(),
+                    this.node3.getJrbBenhTim_Co(),
+                    this.node3.getJrbBenhTim_Khong(),
+                    this.node3.getJrbBeoPhi_Co(),
+                    this.node3.getJrbBeoPhi_Khong(),
+                    this.node3.getJrbCLBenhHT_Co(),
+                    this.node3.getJrbCLBenhHT_Khong(),
+                    this.node3.getJrbDaiTD_Co(),
+                    this.node3.getJrbDaiTD_Khong(),
+                    this.node3.getJrbGhepTang_TBM_Co(),
+                    this.node3.getJrbGhepTang_TBM_Khong(),
+                    this.node3.getJrbHIV_Co(),
+                    this.node3.getJrbHIV_Khong(),
+                    this.node3.getJrbMangThai_Co(),
+                    this.node3.getJrbMangThai_Khong(),
+                    this.node3.getJrbHauSan_Co(),
+                    this.node3.getJrbHauSan_Khong(),
+                    this.node3.getJtfSoTuanMT(),
+                    this.node3.getJrbTreSSXNcovid_Co(),
+                    this.node3.getJrbTreSSXNcovid_Khong(),
+                    this.node3.getJrbKQXN_AT(),
+                    this.node3.getJrbKQXN_ChuaCoKQ(),
+                    this.node3.getJrbKQXN_DT(),
+                    this.node3.getJrbHenKQ_Co(),
+                    this.node3.getJrbHenKQ_Khong(),
+                    this.node3.getJrbHoiChungDown_Co(),
+                    this.node3.getJrbHoiChungDown_Khong(),
+                    this.node3.getJrbMachMauNao_Co(),
+                    this.node3.getJrbMachMauNao_Khong(),
+                    this.node3.getJrbUngThu_Co(),
+                    this.node3.getJrbUngThu_Khong(),
+                    this.node3.getJrbRoiLoanSDCGN_Co(),
+                    this.node3.getJrbRoiLoanSDCGN_Khong(),
+                    this.node3.getJrbTangHA_Co(),
+                    this.node3.getJrbTangHA_Khong(),
+                    this.node3.getJrbThieuMD_Co(),
+                    this.node3.getJrbThieuMD_Khong(),
+                    this.node3.getJrbThuocDTCovid_Co(),
+                    this.node3.getJrbThuocDTCovid_Khong(),
+                    this.node3.getJrbThuocUCMD_Co(),
+                    this.node3.getJrbThuocUCMD_Khong(),
+                    this.node3.getJrbThuocMD_Co(),
+                    this.node3.getJrbThuocMD_Khong(),
+                    this.node3.getJrbSteroid_Co(),
+                    this.node3.getJrbSteroid_Khong(),
+                    this.node3.getJrbKhangSinh_Co(),
+                    this.node3.getJrbKhangSinh_Khong(),
+                    this.node3.getJrbKhangVirus_Co(),
+                    this.node3.getJrbKhangVirus_Khong(),
+                    this.node4.getJcobDGTTBL(),
+                    this.node4.getJrbBuonNon_Co(),
+                    this.node4.getJrbBuonNon_Khong(),
+                    this.node4.getJrbCoGiat_Co(),
+                    this.node4.getJrbCoGiat_Khong(),
+                    this.node4.getJrbDKCL_Co(),
+                    this.node4.getJrbDKCL_Khong(),
+                    this.node4.getJrbDauBung_Co(),
+                    this.node4.getJrbDauBung_Khong(),
+                    this.node4.getJrbDauDau_Co(),
+                    this.node4.getJrbDauDau_Khong(),
+                    this.node4.getJrbDauCo_Co(),
+                    this.node4.getJrbDauCo_Khong(),
+                    this.node4.getJrbDauHong_Co(),
+                    this.node4.getJrbDauHong_Khong(),
+                    this.node4.getJrbDauKhop_Co(),
+                    this.node4.getJrbDauKhop_Khong(),
+                    this.node4.getJrbMatKhuuGiac_Co(),
+                    this.node4.getJrbMatKhuuGiac_Khong(),
+                    this.node4.getJrbMatViGiac_Co(),
+                    this.node4.getJrbMatViGiac_Khong(),
+                    this.node4.getJrbNoiHach_Co(),
+                    this.node4.getJrbNoiHach_Khong(),
+                    this.node4.getJrbSot_Co(),
+                    this.node4.getJrbSot_Khong(),
+                    this.node4.getJrbTTKhac_Co(),
+                    this.node4.getJrbTTKhac_Khong(),
+                    this.node4.getJrbXuatHuyet_Co(),
+                    this.node4.getJrbXuatHuyet_Khong(),
+                    this.node4.getJtfCanNang(),
+                    this.node4.getJtfChieuCao(),
+                    this.node4.getJtfChuanDoanTT(),
+                    this.node4.getJtfDoBH_Oxi(),
+                    this.node4.getJtfHuyetApTThu(),
+                    this.node4.getJtfHuyetApTTruong(),
+                    this.node4.getJtfNhietDo(),
+                    this.node4.getJtfNhipTho(),
+                    this.node4.getJtfNhipTim(),
+                    this.node4.getJtfTTKhac()
+            );
+
             if (node1.getJtfHoTen().getText().length() == 0
-               || node1.getJtfCMND_CCCD().getText().length() == 0
-               || node1.getJtfNoiO().getText().length()== 0
-               || node1.getJtfSDT().getText().length()== 0
-               ||node4.getJtfNhietDo().getText().length()== 0
-               ||node4.getJtfNhipTho().getText().length()== 0
-               ||node4.getJtfNhipTim().getText().length()== 0
-               ||node4.getJtfChieuCao().getText().length()== 0
-               ||node4.getJtfCanNang().getText().length()== 0
-               ||node4.getJtfChuanDoanTT().getText().length()== 0
-                  
-                    
-                    ) {
-                        JFrame frame4 = new JFrame();
-                            frame.setBounds(0,0,100,50);
-                            JOptionPane.showMessageDialog(frame,
-                            "Vui lòng nhập dữ liệu bắt buộc!");
+                    || node1.getJtfCMND_CCCD().getText().length() == 0
+                    || node1.getJtfNoiO().getText().length() == 0
+                    || node1.getJtfSDT().getText().length() == 0
+                    || node4.getJtfNhietDo().getText().length() == 0
+                    || node4.getJtfNhipTho().getText().length() == 0
+                    || node4.getJtfNhipTim().getText().length() == 0
+                    || node4.getJtfChieuCao().getText().length() == 0
+                    || node4.getJtfCanNang().getText().length() == 0
+                    || node4.getJtfChuanDoanTT().getText().length() == 0) {
+                JFrame frame4 = new JFrame();
+                frame.setBounds(0, 0, 100, 50);
+                JOptionPane.showMessageDialog(frame,
+                        "Vui lòng nhập dữ liệu bắt buộc!");
             }
 
             try {
@@ -475,18 +468,18 @@ public class ThemBN_Frame extends javax.swing.JFrame {
             }
             try {
                 th.SetDataTo_DanhGiaSoLuoc();
-                 JFrame frame2 = new JFrame();
-                    frame.setBounds(0,0,100,50);
-                    JOptionPane.showMessageDialog(frame,
-                    "Thêm thành bệnh nhân");
+                JFrame frame2 = new JFrame();
+                frame.setBounds(0, 0, 100, 50);
+                JOptionPane.showMessageDialog(frame,
+                        "Thêm thành bệnh nhân");
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
                 Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+
         }
-        
+
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

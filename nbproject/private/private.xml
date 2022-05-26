@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/MainFrame.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/controller/ChuyenMH_ThongTinCaNhan.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/TTCaNhan_BenhNen.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/Login.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/ThongKePanel.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/bean/DanhMucTTCaNhan.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/bean/DanhMucBeanBNhan.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/YCHoTro.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/HoTroPanel.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/controller/QuanLiBenhNhanController.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/GUI_ThemBN/BenhNen_ThemBN.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/RegisterFrame.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/CapNhat/QTDieuTri_CapNhat.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/TTCaNhan_ttcb.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/controller/ChuyenManHinhBNController.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/CapNhat/TinhTrangTT_CapNhat.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/CapNhat/TiemVX_CapNhat.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/TrangChuPanel.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/CapNhat/CapNhat_Frame.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/ultility/BNTableModel.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/GUI_ThemBN/ThemBN_Frame.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/ultility/ThongTinBN_Form.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/KhaiBao.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/controller/ChuyenMH_ThemBN.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/CapNhat/TTCoBan_CapNhat.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/CapNhat/BenhNen_CapNhat.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/QuanLiBnPanel.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/controller/DangNhapController.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/TTCaNhan_Vaccine.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/controller/ChuyenMH_CapNhat.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/TTCaNhan.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/GUI_ThemBN/TinhTrangTT_ThemBN.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/BenhNhan_Frame/BenhNhan_main.java</file>
+            <file>file:/D:/Nam_2/Code/java_IS216.M21_5/src/com/da/qlf0/view/GUI_ThemBN/TTCoBan_ThemBN.java</file>
+        </group>
+    </open-files>
+</project-private>
