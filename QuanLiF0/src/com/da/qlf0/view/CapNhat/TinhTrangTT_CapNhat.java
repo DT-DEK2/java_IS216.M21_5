@@ -862,7 +862,7 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                             .addComponent(jLabel35)
                             .addComponent(jRadioButton26)
                             .addComponent(jRadioButton27))))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
