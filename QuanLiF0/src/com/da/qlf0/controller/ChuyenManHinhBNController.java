@@ -8,7 +8,6 @@ import com.da.qlf0.bean.DanhMucBean;
 import com.da.qlf0.bean.DanhMucBeanBNhan;
 import com.da.qlf0.view.BenhNhan_Frame.KhaiBao;
 import com.da.qlf0.view.BenhNhan_Frame.TTCaNhan;
-import com.da.qlf0.view.BenhNhan_Frame.TrangChu_BN;
 import com.da.qlf0.view.BenhNhan_Frame.YCHoTro;
 import com.da.qlf0.view.HoTroPanel;
 import com.da.qlf0.view.QuanLiBnPanel;
@@ -38,13 +37,13 @@ public class ChuyenManHinhBNController {
     }
         
     public void setView(JPanel jpnItem, JLabel jlbItem) {
-        kindSelected = "TrangChu";
+        kindSelected = "TTCaNhan";
        jpnItem.setBackground(new Color(0, 134, 179));
        jlbItem.setBackground(new Color(0, 134, 179));
        JPanel node = new TrangChuPanel(MABN);
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
-       jpnRoot.add(node);
+       jpnRoot.add(new TrangChuPanel(MABN));
        jpnRoot.validate();
        jpnRoot.repaint();
     }
@@ -72,9 +71,6 @@ class LabelEvent implements MouseListener {
       @Override
       public void mouseClicked(MouseEvent e) {
             switch (kind) {
-                case "TrangChu":
-                    node = new TrangChu_BN(MABN);
-                    break;
                 case "TTCaNhan":
                     node = new TTCaNhan();
                     break;

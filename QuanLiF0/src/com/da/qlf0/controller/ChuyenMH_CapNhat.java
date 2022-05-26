@@ -17,7 +17,6 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 /**
  *
@@ -28,32 +27,19 @@ public class ChuyenMH_CapNhat {
     private String kindSelected = "";
     private JPanel jpnRoot;
     private ArrayList<DanhMucCapNhatBN> listItem = null;
-    private JPanel node1;
-    private JPanel node2;
-    private JPanel node3;
-    private JPanel node4;
-    private JPanel node5;
 
-    public ChuyenMH_CapNhat() {
-    }
-
-    public ChuyenMH_CapNhat(JPanel jpnRoot, JPanel node1, JPanel node2, JPanel node3, JPanel node4, JPanel node5) {
+    public ChuyenMH_CapNhat(JPanel jpnRoot) {
         this.jpnRoot = jpnRoot;
-        this.node1 = node1;
-        this.node2 = node2;
-        this.node3 = node3;
-        this.node4 = node4;
-        this.node5 = node5;
     }
 
     public void setView(JPanel jpnItem, JLabel jlbItem) {
         kindSelected = "ThongTinCoBan";
         jpnItem.setBackground(new Color(0, 134, 179));
         jlbItem.setBackground(new Color(0, 134, 179));
-//        JPanel node = new TTCoBan_CapNhat();
+        JPanel node = new TTCoBan_CapNhat();
         jpnRoot.removeAll();
         jpnRoot.setLayout(new BorderLayout());
-        jpnRoot.add(node1);
+        jpnRoot.add(node);
         jpnRoot.validate();
         jpnRoot.repaint();
     }
@@ -83,72 +69,31 @@ public class ChuyenMH_CapNhat {
         public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "ThongTinCoBan":
-                    //              node = new TTCoBan_CapNhat();
-                    jpnRoot.removeAll();
-                    jpnRoot.setLayout(new BorderLayout());
-                    node1.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-                    jpnRoot.add(node1);
-
-                    jpnRoot.validate();
-                    jpnRoot.repaint();
-                    setChangeBackground(kind);
+                    node = new TTCoBan_CapNhat();
                     break;
                 case "TiemVX":
-                    // node = new TiemVX_CapNhat();
-                    jpnRoot.removeAll();
-                    jpnRoot.setLayout(new BorderLayout());
-                    node2.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-                    jpnRoot.add(node2);
-
-                    jpnRoot.validate();
-                    jpnRoot.repaint();
-                    setChangeBackground(kind);
+                    node = new TiemVX_CapNhat();
                     break;
                 case "BenhNen":
-                    //  node = new BenhNen_CapNhat();
-                    jpnRoot.removeAll();
-                    jpnRoot.setLayout(new BorderLayout());
-                    node3.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-                    jpnRoot.add(node3);
-
-                    jpnRoot.validate();
-                    jpnRoot.repaint();
-                    setChangeBackground(kind);
+                    node = new BenhNen_CapNhat();
                     break;
                 case "TinhTrang":
-                    //   node = new TinhTrangTT_CapNhat();
-                    jpnRoot.removeAll();
-                    jpnRoot.setLayout(new BorderLayout());
-                    node4.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-                    jpnRoot.add(node4);
-
-                    jpnRoot.validate();
-                    jpnRoot.repaint();
-                    setChangeBackground(kind);
+                    node = new TinhTrangTT_CapNhat();
                     break;
                 case "QuaTrinhDieuTri":
-                    // node = new QTDieuTri_CapNhat();
-                    jpnRoot.removeAll();
-                    jpnRoot.setLayout(new BorderLayout());
-                    node5.setSize(jpnRoot.getWidth() - 50, jpnRoot.getHeight());
-                    JScrollPane scrollp = new JScrollPane(node5, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-                    jpnRoot.add(scrollp);
-
-                    jpnRoot.validate();
-                    jpnRoot.repaint();
-                    setChangeBackground(kind);
+                    node = new QTDieuTri_CapNhat();
                     break;
                 default:
                     break;
             }
-//            jpnRoot.removeAll();
-//            jpnRoot.setLayout(new BorderLayout());
-//            node.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-//            jpnRoot.add(node);
-//
-//            jpnRoot.validate();
-//            jpnRoot.repaint();
-//            setChangeBackground(kind);
+            jpnRoot.removeAll();
+            jpnRoot.setLayout(new BorderLayout());
+            node.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
+            jpnRoot.add(node);
+
+            jpnRoot.validate();
+            jpnRoot.repaint();
+            setChangeBackground(kind);
 
         }
 

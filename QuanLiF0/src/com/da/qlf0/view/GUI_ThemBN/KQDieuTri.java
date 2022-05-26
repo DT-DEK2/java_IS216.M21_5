@@ -102,6 +102,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(null);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(20, 20, 20));
@@ -130,7 +131,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jButton3))
@@ -149,6 +150,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel15.setForeground(new java.awt.Color(20, 20, 20));
         jLabel15.setText("Khác cụ thể:");
 
+        jtfKhacCuThe.setBackground(new java.awt.Color(255, 255, 255));
         jtfKhacCuThe.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfKhacCuThe.setForeground(new java.awt.Color(20, 20, 20));
         jtfKhacCuThe.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -164,6 +166,7 @@ public class KQDieuTri extends javax.swing.JPanel {
 
         jSeparator4.setBackground(new java.awt.Color(166, 166, 166));
 
+        jtfTTkhiNV.setBackground(new java.awt.Color(255, 255, 255));
         jtfTTkhiNV.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfTTkhiNV.setForeground(new java.awt.Color(20, 20, 20));
         jtfTTkhiNV.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -287,6 +290,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel21.setForeground(new java.awt.Color(20, 20, 20));
         jLabel21.setText("Tên cơ sở nhập viện :");
 
+        jtfLuuY.setBackground(new java.awt.Color(255, 255, 255));
         jtfLuuY.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfLuuY.setForeground(new java.awt.Color(20, 20, 20));
         jtfLuuY.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -301,6 +305,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel22.setForeground(new java.awt.Color(20, 20, 20));
         jLabel22.setText("Lưu ý với bệnh nhân:");
 
+        jtfTenCSNV.setBackground(new java.awt.Color(255, 255, 255));
         jtfTenCSNV.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfTenCSNV.setForeground(new java.awt.Color(20, 20, 20));
         jtfTenCSNV.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -330,6 +335,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel24.setForeground(new java.awt.Color(20, 20, 20));
         jLabel24.setText("Nơi tử vong:");
 
+        jcobNoiTuVong.setBackground(new java.awt.Color(255, 255, 255));
         jcobNoiTuVong.setForeground(new java.awt.Color(20, 20, 20));
         jcobNoiTuVong.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -338,6 +344,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel25.setForeground(new java.awt.Color(20, 20, 20));
         jLabel25.setText("Nơi tử vong khác:");
 
+        jtfLidoTuVongKhac.setBackground(new java.awt.Color(255, 255, 255));
         jtfLidoTuVongKhac.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfLidoTuVongKhac.setForeground(new java.awt.Color(20, 20, 20));
         jtfLidoTuVongKhac.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -379,6 +386,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel27.setForeground(new java.awt.Color(20, 20, 20));
         jLabel27.setText("Lý do tử vong khác:");
 
+        jtfNoiTuVongKhac.setBackground(new java.awt.Color(255, 255, 255));
         jtfNoiTuVongKhac.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfNoiTuVongKhac.setForeground(new java.awt.Color(20, 20, 20));
         jtfNoiTuVongKhac.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
@@ -399,7 +407,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 1645, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -506,7 +514,7 @@ public class KQDieuTri extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
+                .addGap(54, 54, 54)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -582,7 +590,7 @@ public class KQDieuTri extends javax.swing.JPanel {
                         .addComponent(jrbLiDoTV_Covid)
                         .addComponent(jLabel27)
                         .addComponent(jtfLidoTuVongKhac, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
