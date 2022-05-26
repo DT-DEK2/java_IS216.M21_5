@@ -6,6 +6,7 @@ package com.da.qlf0.controller;
 
 import com.da.qlf0.bean.DanhMucBean;
 import com.da.qlf0.view.HoTroPanel;
+import com.da.qlf0.view.NghiepVuPanel;
 import com.da.qlf0.view.QuanLiBnPanel;
 import com.da.qlf0.view.ThongKePanel;
 import com.da.qlf0.view.TrangChuPanel;
@@ -78,6 +79,9 @@ class LabelEvent implements MouseListener {
                     break;
                 case "HoTro":
                     node=new HoTroPanel(ID);
+                    break;
+                case "NghiepVu":
+                    node=new NghiepVuPanel();
                     break;
                 default:
                     break;

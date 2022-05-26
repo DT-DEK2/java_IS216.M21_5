@@ -5,9 +5,7 @@
 package com.da.qlf0.ultility;
 
 import com.da.qlf0.controller.XoaBenhNhanController;
-import com.da.qlf0.view.BenhNhan_Frame.TTCaNhan;
-import com.da.qlf0.view.CapNhat.CapNhat_Frame;
-import com.da.qlf0.view.GUI_ThemBN.KQDieuTri;
+import com.da.qlf0.view.KQDieuTri;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,8 +26,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     public ThongTinBN_Form() {
         initComponents();
     }
-
-    public ThongTinBN_Form(String Hovaten, String Mabenhnhan) {
+    public ThongTinBN_Form( String Hovaten, String Mabenhnhan){
         initComponents();
         this.jLabel2.setText(Hovaten);
         this.jLabel4.setText(Mabenhnhan);
@@ -94,11 +91,6 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setText("Xem chi tiết");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(841, 46, -1, -1));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -189,14 +181,14 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         options[1] = "Không";
         int dialogButton = JOptionPane.YES_NO_OPTION;
         int dialogResult = JOptionPane.showOptionDialog(frame1.getContentPane(), "Bạn muốn xóa bệnh nhân này?", "Xóa bệnh nhân", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
-        if (dialogResult == 0) {
+        if(dialogResult == 0) {
             try {
                 int i = dl.Xoa_BN();
-                if (i != 0) {
-                    JFrame frame = new JFrame();
-                    frame.setBounds(0, 0, 100, 50);
-                    JOptionPane.showMessageDialog(frame,
-                            "Xóa thành công bệnh nhân");
+                if(i!=0){
+                     JFrame frame = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Xóa thành công bệnh nhân");
                 }
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ThongTinBN_Form.class.getName()).log(Level.SEVERE, null, ex);
@@ -209,7 +201,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 //        JFrame frame = new JFrame();
-        JPanel KQ = new KQDieuTri();
+        JPanel KQ = new KQDieuTri(this.jLabel4.getText());
 //        
 //        JScrollPane scrollp = new JScrollPane(KQ, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 //        frame.setResizable(true);
@@ -222,12 +214,6 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
 //                    frame.repaint();
 //                    frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //
-        CapNhat_Frame CapNhat = new CapNhat_Frame();
-        CapNhat.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

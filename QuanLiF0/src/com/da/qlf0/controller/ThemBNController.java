@@ -516,7 +516,7 @@ public class ThemBNController {
         cStmt.setDate(18, sqlStartDate4);
 //        cStmt.setString(19, jcobKQTestNhanh.getSelectedItem().toString());
         if(jcbTestNhanh_Khong.isSelected()){
-            
+            cStmt.setNull(18, java.sql.Types.DATE);
             cStmt.setString(19,null);
         }else {
             cStmt.setString(19, jcobKQTestNhanh.getSelectedItem().toString());
@@ -528,7 +528,7 @@ public class ThemBNController {
         cStmt.setDate(21, sqlStartDate5);
 //        cStmt.setString(22, jcobKQTestPCR.getSelectedItem().toString());
          if(jcbTestPCR_Khong.isSelected()){
-            
+                cStmt.setNull(21, java.sql.Types.DATE);
             cStmt.setString(22,null);
         }else{
               cStmt.setString(22, jcobKQTestPCR.getSelectedItem().toString());
@@ -587,6 +587,10 @@ public class ThemBNController {
             cStmt.setString(3,null);
             cStmt.setString(5,null);
             cStmt.setString(7,null);
+                        cStmt.setNull(4, java.sql.Types.DATE);
+            cStmt.setNull(6, java.sql.Types.DATE);
+            cStmt.setNull(8, java.sql.Types.DATE);
+
         }else{
             cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
             cStmt.setString(5,jcobLoaiVX2.getSelectedItem().toString());
@@ -596,21 +600,31 @@ public class ThemBNController {
             
             cStmt.setString(5,null);
             cStmt.setString(7,null);
-        }else{
-             cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
+            cStmt.setNull(6, java.sql.Types.DATE);
+            cStmt.setNull(8, java.sql.Types.DATE);
+
         }
+//        else{
+//             cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
+//        }
         if(jrbTiemVX_2m.isSelected()){
             
             
             cStmt.setString(7,null);
-        }else{
-            cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
-            cStmt.setString(5,jcobLoaiVX2.getSelectedItem().toString());
+                        cStmt.setNull(8, java.sql.Types.DATE);
+
         }
+//        else{
+//            cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
+//            cStmt.setString(5,jcobLoaiVX2.getSelectedItem().toString());
+//        }
         if(jrbTiemVX_KhongBiet.isSelected()){
             cStmt.setString(3,null);
             cStmt.setString(5,null);
             cStmt.setString(7,null);
+             cStmt.setNull(4, java.sql.Types.DATE);
+            cStmt.setNull(6, java.sql.Types.DATE);
+            cStmt.setNull(8, java.sql.Types.DATE);
         }
       
         
@@ -794,4 +808,29 @@ public class ThemBNController {
         cStmt.close();
         conn.close();
     }
+     public void XoaBn() throws ClassNotFoundException, SQLException{
+         Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+        
+         cStmt = conn.prepareCall("{call DELETE_BENHNHAN(?)}");
+        cStmt.setString(1, jtfMABN.getText());
+        
+        
+         cStmt.execute();
+        cStmt.close();
+        conn.close();
+     }
+     public void ThemBN() throws ClassNotFoundException, SQLException {
+               SetDataTo_BenhNhan();
+               SetDataTo_TiemVX();
+               SetDataTo_BenhNen();
+               SetDataTo_MangThai();
+               SetDataTo_ThuocDaDungTruocTT();
+               SetDataTo_TongTrang();
+               SetDataTo_TTLucTiepNhan();
+               SetDataTo_DanhGiaSoLuoc();
+     }
 }
