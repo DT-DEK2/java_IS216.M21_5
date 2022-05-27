@@ -4,6 +4,11 @@
  */
 package com.da.qlf0.view.CapNhat;
 
+import com.da.qlf0.view.GUI_ThemBN.*;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Minh Cuong
@@ -17,6 +22,162 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         initComponents();
     }
 
+    public JComboBox<String> getJcobDGTTBL() {
+        return jcobDGTTBL;
+    }
+
+    public JRadioButton getJrbDauDau_Co() {
+        return jrbDauDau_Co;
+    }
+
+    public JRadioButton getJrbDauDau_Khong() {
+        return jrbDauDau_Khong;
+    }
+
+    public JRadioButton getJrbBuonNon_Co() {
+        return jrbBuonNon_Co;
+    }
+
+    public JRadioButton getJrbBuonNon_Khong() {
+        return jrbBuonNon_Khong;
+    }
+
+    public JRadioButton getJrbCoGiat_Co() {
+        return jrbCoGiat_Co;
+    }
+
+    public JRadioButton getJrbCoGiat_Khong() {
+        return jrbCoGiat_Khong;
+    }
+
+    public JRadioButton getJrbDauBung_Co() {
+        return jrbDauBung_Co;
+    }
+
+    public JRadioButton getJrbDauBung_Khong() {
+        return jrbDauBung_Khong;
+    }
+
+    public JRadioButton getJrbDauCo_Co() {
+        return jrbDauCo_Co;
+    }
+
+    public JRadioButton getJrbDauCo_Khong() {
+        return jrbDauCo_Khong;
+    }
+
+    public JRadioButton getJrbDauHong_Co() {
+        return jrbDauHong_Co;
+    }
+
+    public JRadioButton getJrbDauHong_Khong() {
+        return jrbDauHong_Khong;
+    }
+
+    public JRadioButton getJrbDauKhop_Co() {
+        return jrbDauKhop_Co;
+    }
+
+    public JRadioButton getJrbDauKhop_Khong() {
+        return jrbDauKhop_Khong;
+    }
+
+    public JRadioButton getJrbMatKhuuGiac_Co() {
+        return jrbMatKhuuGiac_Co;
+    }
+
+    public JRadioButton getJrbMatKhuuGiac_Khong() {
+        return jrbMatKhuuGiac_Khong;
+    }
+
+    public JRadioButton getJrbMatViGiac_Co() {
+        return jrbMatViGiac_Co;
+    }
+
+    public JRadioButton getJrbMatViGiac_Khong() {
+        return jrbMatViGiac_Khong;
+    }
+
+    public JRadioButton getJrbNoiHach_Co() {
+        return jrbNoiHach_Co;
+    }
+
+    public JRadioButton getJrbNoiHach_Khong() {
+        return jrbNoiHach_Khong;
+    }
+
+    public JRadioButton getJrbSot_Co() {
+        return jrbSot_Co;
+    }
+
+    public JRadioButton getJrbSot_Khong() {
+        return jrbSot_Khong;
+    }
+
+    public JRadioButton getJrbTTKhac_Co() {
+        return jrbTTKhac_Co;
+    }
+
+    public JRadioButton getJrbTTKhac_Khong() {
+        return jrbTTKhac_Khong;
+    }
+
+    public JRadioButton getJrbXuatHuyet_Co() {
+        return jrbXuatHuyet_Co;
+    }
+
+    public JRadioButton getJrbXuatHuyet_Khong() {
+        return jrbXuatHuyet_Khong;
+    }
+
+    public JTextField getJtfCanNang() {
+        return jtfCanNang;
+    }
+
+    public JTextField getJtfChieuCao() {
+        return jtfChieuCao;
+    }
+
+    public JTextField getJtfChuanDoanTT() {
+        return jtfChuanDoanTT;
+    }
+
+    public JTextField getJtfDoBH_Oxi() {
+        return jtfDoBH_Oxi;
+    }
+
+    public JTextField getJtfHuyetApTThu() {
+        return jtfHuyetApTThu;
+    }
+
+    public JTextField getJtfHuyetApTTruong() {
+        return jtfHuyetApTTruong;
+    }
+
+    public JTextField getJtfNhietDo() {
+        return jtfNhietDo;
+    }
+
+    public JTextField getJtfNhipTho() {
+        return jtfNhipTho;
+    }
+
+    public JTextField getJtfNhipTim() {
+        return jtfNhipTim;
+    }
+
+    public JTextField getJtfTTKhac() {
+        return jtfTTKhac;
+    }
+
+    public JRadioButton getJrbDKCL_Co() {
+        return jrbDKCL_Co;
+    }
+
+    public JRadioButton getJrbDKCL_Khong() {
+        return jrbDKCL_Khong;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,14 +200,15 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         btnG_BuonNon = new javax.swing.ButtonGroup();
         btnG_TTkhac = new javax.swing.ButtonGroup();
         btnG_DuDKCL = new javax.swing.ButtonGroup();
+        btnG_DauDau = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jtfNhietDo = new javax.swing.JTextField();
+        jrbSot_Co = new javax.swing.JRadioButton();
+        jrbSot_Khong = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -54,13 +216,13 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        jtfNhipTim = new javax.swing.JTextField();
+        jtfDoBH_Oxi = new javax.swing.JTextField();
+        jtfNhipTho = new javax.swing.JTextField();
+        jtfHuyetApTTruong = new javax.swing.JTextField();
+        jtfChieuCao = new javax.swing.JTextField();
+        jtfHuyetApTThu = new javax.swing.JTextField();
+        jtfCanNang = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel20 = new javax.swing.JLabel();
@@ -68,14 +230,14 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
+        jrbDauHong_Co = new javax.swing.JRadioButton();
+        jrbDauHong_Khong = new javax.swing.JRadioButton();
+        jrbNoiHach_Co = new javax.swing.JRadioButton();
+        jrbNoiHach_Khong = new javax.swing.JRadioButton();
+        jrbMatKhuuGiac_Co = new javax.swing.JRadioButton();
+        jrbMatKhuuGiac_Khong = new javax.swing.JRadioButton();
+        jrbCoGiat_Co = new javax.swing.JRadioButton();
+        jrbCoGiat_Khong = new javax.swing.JRadioButton();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -83,35 +245,39 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
-        jRadioButton17 = new javax.swing.JRadioButton();
-        jRadioButton18 = new javax.swing.JRadioButton();
-        jRadioButton19 = new javax.swing.JRadioButton();
-        jRadioButton20 = new javax.swing.JRadioButton();
-        jRadioButton21 = new javax.swing.JRadioButton();
-        jRadioButton22 = new javax.swing.JRadioButton();
-        jRadioButton23 = new javax.swing.JRadioButton();
+        jrbDauCo_Co = new javax.swing.JRadioButton();
+        jrbDauCo_Khong = new javax.swing.JRadioButton();
+        jrbDauKhop_Co = new javax.swing.JRadioButton();
+        jrbDauKhop_Khong = new javax.swing.JRadioButton();
+        jrbDauBung_Co = new javax.swing.JRadioButton();
+        jrbDauBung_Khong = new javax.swing.JRadioButton();
+        jrbMatViGiac_Co = new javax.swing.JRadioButton();
+        jrbMatViGiac_Khong = new javax.swing.JRadioButton();
+        jrbBuonNon_Co = new javax.swing.JRadioButton();
+        jrbBuonNon_Khong = new javax.swing.JRadioButton();
+        jrbTTKhac_Co = new javax.swing.JRadioButton();
+        jrbTTKhac_Khong = new javax.swing.JRadioButton();
         jLabel32 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jRadioButton24 = new javax.swing.JRadioButton();
-        jRadioButton25 = new javax.swing.JRadioButton();
+        jtfTTKhac = new javax.swing.JTextField();
+        jrbXuatHuyet_Co = new javax.swing.JRadioButton();
+        jrbXuatHuyet_Khong = new javax.swing.JRadioButton();
         jLabel11 = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         jLabel33 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jtfChuanDoanTT = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jcobDGTTBL = new javax.swing.JComboBox<>();
         jLabel35 = new javax.swing.JLabel();
-        jRadioButton26 = new javax.swing.JRadioButton();
-        jRadioButton27 = new javax.swing.JRadioButton();
+        jrbDKCL_Co = new javax.swing.JRadioButton();
+        jrbDKCL_Khong = new javax.swing.JRadioButton();
+        jLabel36 = new javax.swing.JLabel();
+        jrbDauDau_Co = new javax.swing.JRadioButton();
+        jrbDauDau_Khong = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(null);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(20, 20, 20));
@@ -146,32 +312,33 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel12.setForeground(new java.awt.Color(20, 20, 20));
         jLabel12.setText("Nhiệt tim (lần/phút)*:");
 
-        jTextField1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jtfNhietDo.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNhietDo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfNhietDo.setForeground(new java.awt.Color(20, 20, 20));
+        jtfNhietDo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfNhietDo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jtfNhietDoActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_Sot.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton2.setText("Có");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        jrbSot_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Sot.add(jrbSot_Co);
+        jrbSot_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbSot_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbSot_Co.setText("Có");
+        jrbSot_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                jrbSot_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_Sot.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton3.setSelected(true);
-        jRadioButton3.setText("Không");
+        jrbSot_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_Sot.add(jrbSot_Khong);
+        jrbSot_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbSot_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbSot_Khong.setSelected(true);
+        jrbSot_Khong.setText("Không");
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -181,7 +348,7 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel14.setText("Nhiệt thở (lần/phút)*:");
+        jLabel14.setText("Nhịp thở (lần/phút)*:");
 
         jLabel15.setBackground(new java.awt.Color(255, 255, 255));
         jLabel15.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -208,66 +375,73 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel19.setForeground(new java.awt.Color(20, 20, 20));
         jLabel19.setText("Cân nặng(kg):");
 
-        jTextField2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jtfNhipTim.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNhipTim.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfNhipTim.setForeground(new java.awt.Color(20, 20, 20));
+        jtfNhipTim.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfNhipTim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jtfNhipTimActionPerformed(evt);
             }
         });
 
-        jTextField4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jtfDoBH_Oxi.setBackground(new java.awt.Color(255, 255, 255));
+        jtfDoBH_Oxi.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfDoBH_Oxi.setForeground(new java.awt.Color(20, 20, 20));
+        jtfDoBH_Oxi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfDoBH_Oxi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jtfDoBH_OxiActionPerformed(evt);
             }
         });
 
-        jTextField5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jtfNhipTho.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNhipTho.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfNhipTho.setForeground(new java.awt.Color(20, 20, 20));
+        jtfNhipTho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfNhipTho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jtfNhipThoActionPerformed(evt);
             }
         });
 
-        jTextField6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jtfHuyetApTTruong.setBackground(new java.awt.Color(255, 255, 255));
+        jtfHuyetApTTruong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfHuyetApTTruong.setForeground(new java.awt.Color(20, 20, 20));
+        jtfHuyetApTTruong.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfHuyetApTTruong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jtfHuyetApTTruongActionPerformed(evt);
             }
         });
 
-        jTextField8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jtfChieuCao.setBackground(new java.awt.Color(255, 255, 255));
+        jtfChieuCao.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfChieuCao.setForeground(new java.awt.Color(20, 20, 20));
+        jtfChieuCao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfChieuCao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jtfChieuCaoActionPerformed(evt);
             }
         });
 
-        jTextField9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        jtfHuyetApTThu.setBackground(new java.awt.Color(255, 255, 255));
+        jtfHuyetApTThu.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfHuyetApTThu.setForeground(new java.awt.Color(20, 20, 20));
+        jtfHuyetApTThu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfHuyetApTThu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                jtfHuyetApTThuActionPerformed(evt);
             }
         });
 
-        jTextField10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        jtfCanNang.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCanNang.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfCanNang.setForeground(new java.awt.Color(20, 20, 20));
+        jtfCanNang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfCanNang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                jtfCanNangActionPerformed(evt);
             }
         });
 
@@ -302,77 +476,76 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel24.setForeground(new java.awt.Color(20, 20, 20));
         jLabel24.setText("Co giật:");
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauHong.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton4.setText("Có");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        jrbDauHong_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauHong.add(jrbDauHong_Co);
+        jrbDauHong_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauHong_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauHong_Co.setText("Có");
+        jrbDauHong_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jrbDauHong_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauHong.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton5.setSelected(true);
-        jRadioButton5.setText("Không");
+        jrbDauHong_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauHong.add(jrbDauHong_Khong);
+        jrbDauHong_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauHong_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauHong_Khong.setText("Không");
 
-        jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_NoiHach.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton6.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton6.setText("Có");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        jrbNoiHach_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_NoiHach.add(jrbNoiHach_Co);
+        jrbNoiHach_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbNoiHach_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbNoiHach_Co.setText("Có");
+        jrbNoiHach_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                jrbNoiHach_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_NoiHach.add(jRadioButton7);
-        jRadioButton7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton7.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton7.setSelected(true);
-        jRadioButton7.setText("Không");
+        jrbNoiHach_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_NoiHach.add(jrbNoiHach_Khong);
+        jrbNoiHach_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbNoiHach_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbNoiHach_Khong.setSelected(true);
+        jrbNoiHach_Khong.setText("Không");
 
-        jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MatKG.add(jRadioButton8);
-        jRadioButton8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton8.setText("Có");
-        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+        jrbMatKhuuGiac_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatKG.add(jrbMatKhuuGiac_Co);
+        jrbMatKhuuGiac_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMatKhuuGiac_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMatKhuuGiac_Co.setText("Có");
+        jrbMatKhuuGiac_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton8ActionPerformed(evt);
+                jrbMatKhuuGiac_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MatKG.add(jRadioButton9);
-        jRadioButton9.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton9.setSelected(true);
-        jRadioButton9.setText("Không");
+        jrbMatKhuuGiac_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatKG.add(jrbMatKhuuGiac_Khong);
+        jrbMatKhuuGiac_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMatKhuuGiac_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMatKhuuGiac_Khong.setSelected(true);
+        jrbMatKhuuGiac_Khong.setText("Không");
 
-        jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_CoGiat.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton10.setText("Có");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        jrbCoGiat_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CoGiat.add(jrbCoGiat_Co);
+        jrbCoGiat_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbCoGiat_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbCoGiat_Co.setText("Có");
+        jrbCoGiat_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                jrbCoGiat_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_CoGiat.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton11.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton11.setSelected(true);
-        jRadioButton11.setText("Không");
+        jrbCoGiat_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_CoGiat.add(jrbCoGiat_Khong);
+        jrbCoGiat_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbCoGiat_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbCoGiat_Khong.setSelected(true);
+        jrbCoGiat_Khong.setText("Không");
 
         jLabel25.setBackground(new java.awt.Color(255, 255, 255));
         jLabel25.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -409,145 +582,146 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel31.setForeground(new java.awt.Color(20, 20, 20));
         jLabel31.setText("Triệu chứng khác:");
 
-        jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauCo.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton12.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton12.setText("Có");
-        jRadioButton12.addActionListener(new java.awt.event.ActionListener() {
+        jrbDauCo_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauCo.add(jrbDauCo_Co);
+        jrbDauCo_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauCo_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauCo_Co.setText("Có");
+        jrbDauCo_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton12ActionPerformed(evt);
+                jrbDauCo_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton13.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauCo.add(jRadioButton13);
-        jRadioButton13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton13.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton13.setSelected(true);
-        jRadioButton13.setText("Không");
+        jrbDauCo_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauCo.add(jrbDauCo_Khong);
+        jrbDauCo_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauCo_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauCo_Khong.setSelected(true);
+        jrbDauCo_Khong.setText("Không");
 
-        jRadioButton14.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauKhop.add(jRadioButton14);
-        jRadioButton14.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton14.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton14.setText("Có");
-        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
+        jrbDauKhop_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauKhop.add(jrbDauKhop_Co);
+        jrbDauKhop_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauKhop_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauKhop_Co.setText("Có");
+        jrbDauKhop_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton14ActionPerformed(evt);
+                jrbDauKhop_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton15.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauKhop.add(jRadioButton15);
-        jRadioButton15.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton15.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton15.setSelected(true);
-        jRadioButton15.setText("Không");
+        jrbDauKhop_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauKhop.add(jrbDauKhop_Khong);
+        jrbDauKhop_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauKhop_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauKhop_Khong.setSelected(true);
+        jrbDauKhop_Khong.setText("Không");
 
-        jRadioButton16.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauBung.add(jRadioButton16);
-        jRadioButton16.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton16.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton16.setText("Có");
-        jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
+        jrbDauBung_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauBung.add(jrbDauBung_Co);
+        jrbDauBung_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauBung_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauBung_Co.setText("Có");
+        jrbDauBung_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton16ActionPerformed(evt);
+                jrbDauBung_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton17.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DauBung.add(jRadioButton17);
-        jRadioButton17.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton17.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton17.setSelected(true);
-        jRadioButton17.setText("Không");
+        jrbDauBung_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauBung.add(jrbDauBung_Khong);
+        jrbDauBung_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauBung_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauBung_Khong.setSelected(true);
+        jrbDauBung_Khong.setText("Không");
 
-        jRadioButton18.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MatVG.add(jRadioButton18);
-        jRadioButton18.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton18.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton18.setText("Có");
-        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
+        jrbMatViGiac_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatVG.add(jrbMatViGiac_Co);
+        jrbMatViGiac_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMatViGiac_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMatViGiac_Co.setText("Có");
+        jrbMatViGiac_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton18ActionPerformed(evt);
+                jrbMatViGiac_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton19.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_MatVG.add(jRadioButton19);
-        jRadioButton19.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton19.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton19.setSelected(true);
-        jRadioButton19.setText("Không");
+        jrbMatViGiac_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_MatVG.add(jrbMatViGiac_Khong);
+        jrbMatViGiac_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbMatViGiac_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbMatViGiac_Khong.setSelected(true);
+        jrbMatViGiac_Khong.setText("Không");
 
-        jRadioButton20.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_BuonNon.add(jRadioButton20);
-        jRadioButton20.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton20.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton20.setText("Có");
-        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
+        jrbBuonNon_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BuonNon.add(jrbBuonNon_Co);
+        jrbBuonNon_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBuonNon_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBuonNon_Co.setText("Có");
+        jrbBuonNon_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton20ActionPerformed(evt);
+                jrbBuonNon_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton21.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_BuonNon.add(jRadioButton21);
-        jRadioButton21.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton21.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton21.setSelected(true);
-        jRadioButton21.setText("Không");
+        jrbBuonNon_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_BuonNon.add(jrbBuonNon_Khong);
+        jrbBuonNon_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbBuonNon_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbBuonNon_Khong.setSelected(true);
+        jrbBuonNon_Khong.setText("Không");
 
-        jRadioButton22.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_TTkhac.add(jRadioButton22);
-        jRadioButton22.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton22.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton22.setText("Có");
-        jRadioButton22.addActionListener(new java.awt.event.ActionListener() {
+        jrbTTKhac_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TTkhac.add(jrbTTKhac_Co);
+        jrbTTKhac_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTTKhac_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTTKhac_Co.setText("Có");
+        jrbTTKhac_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton22ActionPerformed(evt);
+                jrbTTKhac_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton23.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_TTkhac.add(jRadioButton23);
-        jRadioButton23.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton23.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton23.setSelected(true);
-        jRadioButton23.setText("Không");
+        jrbTTKhac_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_TTkhac.add(jrbTTKhac_Khong);
+        jrbTTKhac_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbTTKhac_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbTTKhac_Khong.setSelected(true);
+        jrbTTKhac_Khong.setText("Không");
 
         jLabel32.setBackground(new java.awt.Color(255, 255, 255));
         jLabel32.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(20, 20, 20));
         jLabel32.setText("Nếu CÓ, ghi cụ thể*:");
 
-        jTextField11.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        jtfTTKhac.setBackground(new java.awt.Color(255, 255, 255));
+        jtfTTKhac.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfTTKhac.setForeground(new java.awt.Color(20, 20, 20));
+        jtfTTKhac.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfTTKhac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                jtfTTKhacActionPerformed(evt);
             }
         });
 
-        jRadioButton24.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_XuatHuyet.add(jRadioButton24);
-        jRadioButton24.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton24.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton24.setText("Có");
-        jRadioButton24.addActionListener(new java.awt.event.ActionListener() {
+        jrbXuatHuyet_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_XuatHuyet.add(jrbXuatHuyet_Co);
+        jrbXuatHuyet_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbXuatHuyet_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbXuatHuyet_Co.setText("Có");
+        jrbXuatHuyet_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton24ActionPerformed(evt);
+                jrbXuatHuyet_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton25.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_XuatHuyet.add(jRadioButton25);
-        jRadioButton25.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton25.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton25.setSelected(true);
-        jRadioButton25.setText("Không");
+        jrbXuatHuyet_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_XuatHuyet.add(jrbXuatHuyet_Khong);
+        jrbXuatHuyet_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbXuatHuyet_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbXuatHuyet_Khong.setSelected(true);
+        jrbXuatHuyet_Khong.setText("Không");
 
         jLabel11.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 41, 102));
@@ -560,12 +734,13 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel33.setForeground(new java.awt.Color(20, 20, 20));
         jLabel33.setText("Chẩn đoán lúc tiếp nhận:");
 
-        jTextField7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        jtfChuanDoanTT.setBackground(new java.awt.Color(255, 255, 255));
+        jtfChuanDoanTT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfChuanDoanTT.setForeground(new java.awt.Color(20, 20, 20));
+        jtfChuanDoanTT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfChuanDoanTT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                jtfChuanDoanTTActionPerformed(evt);
             }
         });
 
@@ -574,31 +749,55 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
         jLabel34.setForeground(new java.awt.Color(20, 20, 20));
         jLabel34.setText("Đánh giá tình trạng bệnh lý COVID-19:");
 
-        jComboBox1.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobDGTTBL.setBackground(new java.awt.Color(255, 255, 255));
+        jcobDGTTBL.setForeground(new java.awt.Color(20, 20, 20));
+        jcobDGTTBL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel35.setBackground(new java.awt.Color(255, 255, 255));
         jLabel35.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(20, 20, 20));
         jLabel35.setText("Đánh giá đủ điều kiện cách ly tại nhà:");
 
-        jRadioButton26.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DuDKCL.add(jRadioButton26);
-        jRadioButton26.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton26.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton26.setSelected(true);
-        jRadioButton26.setText("Có");
-        jRadioButton26.addActionListener(new java.awt.event.ActionListener() {
+        jrbDKCL_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DuDKCL.add(jrbDKCL_Co);
+        jrbDKCL_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDKCL_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDKCL_Co.setSelected(true);
+        jrbDKCL_Co.setText("Đủ");
+        jrbDKCL_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton26ActionPerformed(evt);
+                jrbDKCL_CoActionPerformed(evt);
             }
         });
 
-        jRadioButton27.setBackground(new java.awt.Color(255, 255, 255));
-        btnG_DuDKCL.add(jRadioButton27);
-        jRadioButton27.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jRadioButton27.setForeground(new java.awt.Color(20, 20, 20));
-        jRadioButton27.setText("Không");
+        jrbDKCL_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DuDKCL.add(jrbDKCL_Khong);
+        jrbDKCL_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDKCL_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDKCL_Khong.setText("Không");
+
+        jLabel36.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel36.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel36.setText("Đau Đầu:");
+
+        jrbDauDau_Co.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauDau.add(jrbDauDau_Co);
+        jrbDauDau_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauDau_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauDau_Co.setSelected(true);
+        jrbDauDau_Co.setText("Có");
+        jrbDauDau_Co.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbDauDau_CoActionPerformed(evt);
+            }
+        });
+
+        jrbDauDau_Khong.setBackground(new java.awt.Color(255, 255, 255));
+        btnG_DauDau.add(jrbDauDau_Khong);
+        jrbDauDau_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jrbDauDau_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauDau_Khong.setText("Không");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -622,10 +821,10 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                                             .addComponent(jLabel17))
                                         .addGap(53, 53, 53)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jtfNhipTim, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfNhietDo, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfNhipTho, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfDoBH_Oxi, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(158, 158, 158)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel15)
@@ -634,10 +833,10 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                                             .addComponent(jLabel19))
                                         .addGap(38, 38, 38)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(jtfCanNang, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfChieuCao, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfHuyetApTThu, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jtfHuyetApTTruong, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 1766, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(14, 14, 14))))
@@ -647,7 +846,7 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                                 .addGap(48, 48, 48)
                                 .addComponent(jLabel33)
                                 .addGap(51, 51, 51)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtfChuanDoanTT, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(119, 119, 119)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel34)
@@ -655,69 +854,81 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                                 .addGap(99, 99, 99)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jRadioButton26)
+                                        .addComponent(jrbDKCL_Co)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton27))
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jrbDKCL_Khong))
+                                    .addComponent(jcobDGTTBL, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(48, 48, 48)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel30)
-                                    .addComponent(jLabel23)
-                                    .addComponent(jLabel22)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel24))
-                                .addGap(102, 102, 102)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jRadioButton4)
-                                    .addComponent(jRadioButton2)
-                                    .addComponent(jRadioButton6)
-                                    .addComponent(jRadioButton8)
-                                    .addComponent(jRadioButton10)
-                                    .addComponent(jRadioButton24))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel30)
+                                            .addComponent(jLabel23)
+                                            .addComponent(jLabel22)
+                                            .addComponent(jLabel21)
+                                            .addComponent(jLabel20)
+                                            .addComponent(jLabel24))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(102, 102, 102)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jrbDauHong_Co)
+                                                    .addComponent(jrbSot_Co))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jrbNoiHach_Co, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jrbMatKhuuGiac_Co, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jrbCoGiat_Co, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jrbXuatHuyet_Co, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel36)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jrbDauDau_Co)))
                                 .addGap(157, 157, 157)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jRadioButton5)
-                                    .addComponent(jRadioButton3)
-                                    .addComponent(jRadioButton7)
-                                    .addComponent(jRadioButton9)
-                                    .addComponent(jRadioButton11)
-                                    .addComponent(jRadioButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jrbDauHong_Khong)
+                                    .addComponent(jrbSot_Khong)
+                                    .addComponent(jrbNoiHach_Khong)
+                                    .addComponent(jrbMatKhuuGiac_Khong)
+                                    .addComponent(jrbCoGiat_Khong)
+                                    .addComponent(jrbXuatHuyet_Khong, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jrbDauDau_Khong))
                                 .addGap(226, 226, 226)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel25)
-                                    .addComponent(jLabel32)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel28)
-                                                    .addComponent(jLabel29)
-                                                    .addComponent(jLabel31))
+                                                .addComponent(jLabel31)
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(jLabel26)
-                                                    .addGap(55, 55, 55)))
-                                            .addComponent(jLabel27))
+                                                    .addGap(55, 55, 55))
+                                                .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.LEADING))
+                                            .addComponent(jLabel28)
+                                            .addComponent(jLabel29))
                                         .addGap(140, 140, 140)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jRadioButton12)
-                                                    .addComponent(jRadioButton14)
-                                                    .addComponent(jRadioButton18)
-                                                    .addComponent(jRadioButton20)
-                                                    .addComponent(jRadioButton22)
-                                                    .addComponent(jRadioButton16))
-                                                .addGap(168, 168, 168)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jRadioButton17)
-                                                    .addComponent(jRadioButton23)
-                                                    .addComponent(jRadioButton21)
-                                                    .addComponent(jRadioButton19)
-                                                    .addComponent(jRadioButton15)
-                                                    .addComponent(jRadioButton13)))))))
+                                            .addComponent(jrbDauCo_Co)
+                                            .addComponent(jrbDauKhop_Co)
+                                            .addComponent(jrbMatViGiac_Co)
+                                            .addComponent(jrbBuonNon_Co)
+                                            .addComponent(jrbTTKhac_Co)
+                                            .addComponent(jrbDauBung_Co))
+                                        .addGap(168, 168, 168)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jrbDauBung_Khong)
+                                            .addComponent(jrbTTKhac_Khong)
+                                            .addComponent(jrbBuonNon_Khong)
+                                            .addComponent(jrbMatViGiac_Khong)
+                                            .addComponent(jrbDauKhop_Khong)
+                                            .addComponent(jrbDauCo_Khong)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel32)
+                                        .addGap(103, 103, 103)
+                                        .addComponent(jtfTTKhac, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(53, 53, 53)
                                 .addComponent(jLabel9))
@@ -746,7 +957,7 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(jLabel15)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtfHuyetApTThu, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -756,95 +967,114 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel16)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jtfHuyetApTTruong, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(12, 12, 12)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jtfChieuCao, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(12, 12, 12)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfCanNang, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfNhietDo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfNhipTim, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfNhipTho, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel18))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfDoBH_Oxi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel17)
                             .addComponent(jLabel19))))
-                .addGap(60, 60, 60)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton12)
-                    .addComponent(jRadioButton13)
+                    .addComponent(jrbSot_Co)
+                    .addComponent(jrbSot_Khong)
+                    .addComponent(jrbDauCo_Co)
+                    .addComponent(jrbDauCo_Khong)
                     .addComponent(jLabel25))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel21)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel22))
+                    .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton5)
-                            .addComponent(jLabel26)
-                            .addComponent(jRadioButton14)
-                            .addComponent(jRadioButton15))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton6)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jLabel27)
-                            .addComponent(jRadioButton16)
-                            .addComponent(jRadioButton17))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jrbDauHong_Co)
+                                    .addComponent(jrbDauHong_Khong)
+                                    .addComponent(jLabel26)
+                                    .addComponent(jrbDauKhop_Co)
+                                    .addComponent(jrbDauKhop_Khong)
+                                    .addComponent(jLabel21))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jrbDauDau_Khong))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(jrbDauBung_Co)
+                                                .addComponent(jrbDauBung_Khong))
+                                            .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                            .addComponent(jrbDauDau_Co))))
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jrbNoiHach_Co)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton21))
-                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jrbMatKhuuGiac_Co)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrbCoGiat_Co))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel28)
-                                    .addComponent(jLabel23)
-                                    .addComponent(jRadioButton8)
-                                    .addComponent(jRadioButton9))
+                                    .addComponent(jLabel22)
+                                    .addComponent(jrbNoiHach_Khong))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23)
+                                    .addComponent(jrbMatKhuuGiac_Khong))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel24)
+                                    .addComponent(jrbCoGiat_Khong)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel28)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jrbMatViGiac_Khong, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel29)
-                                    .addComponent(jLabel24)
-                                    .addComponent(jRadioButton10)
-                                    .addComponent(jRadioButton11))))
+                                    .addComponent(jrbBuonNon_Khong))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrbTTKhac_Khong)))
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton23)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel30)
-                            .addComponent(jRadioButton24))
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel11))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel30)
+                                    .addComponent(jrbXuatHuyet_Co)
+                                    .addComponent(jrbXuatHuyet_Khong, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel11))
+                            .addComponent(jtfTTKhac, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton18)
+                        .addComponent(jrbMatViGiac_Co)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton20)
+                        .addComponent(jrbBuonNon_Co)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel31)
-                            .addComponent(jRadioButton22))
+                            .addComponent(jrbTTKhac_Co))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel32)))
                 .addGap(18, 18, 18)
@@ -852,111 +1082,115 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel33)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfChuanDoanTT, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel34)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jcobDGTTBL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel35)
-                            .addComponent(jRadioButton26)
-                            .addComponent(jRadioButton27))))
-                .addContainerGap(243, Short.MAX_VALUE))
+                            .addComponent(jrbDKCL_Co)
+                            .addComponent(jrbDKCL_Khong))))
+                .addContainerGap(184, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtfNhietDoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNhietDoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtfNhietDoActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jrbSot_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbSot_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_jrbSot_CoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtfNhipTimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNhipTimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtfNhipTimActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jtfDoBH_OxiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDoBH_OxiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jtfDoBH_OxiActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jtfNhipThoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNhipThoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jtfNhipThoActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jtfHuyetApTTruongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfHuyetApTTruongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jtfHuyetApTTruongActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jtfChieuCaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfChieuCaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jtfChieuCaoActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void jtfHuyetApTThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfHuyetApTThuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_jtfHuyetApTThuActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void jtfCanNangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCanNangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_jtfCanNangActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jrbDauHong_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDauHong_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_jrbDauHong_CoActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void jrbNoiHach_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbNoiHach_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_jrbNoiHach_CoActionPerformed
 
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+    private void jrbMatKhuuGiac_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMatKhuuGiac_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
+    }//GEN-LAST:event_jrbMatKhuuGiac_CoActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void jrbCoGiat_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbCoGiat_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_jrbCoGiat_CoActionPerformed
 
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
+    private void jrbDauCo_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDauCo_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
+    }//GEN-LAST:event_jrbDauCo_CoActionPerformed
 
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
+    private void jrbDauKhop_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDauKhop_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
+    }//GEN-LAST:event_jrbDauKhop_CoActionPerformed
 
-    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
+    private void jrbDauBung_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDauBung_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton16ActionPerformed
+    }//GEN-LAST:event_jrbDauBung_CoActionPerformed
 
-    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
+    private void jrbMatViGiac_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMatViGiac_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton18ActionPerformed
+    }//GEN-LAST:event_jrbMatViGiac_CoActionPerformed
 
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+    private void jrbBuonNon_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbBuonNon_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
+    }//GEN-LAST:event_jrbBuonNon_CoActionPerformed
 
-    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
+    private void jrbTTKhac_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTTKhac_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton22ActionPerformed
+    }//GEN-LAST:event_jrbTTKhac_CoActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void jtfTTKhacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTTKhacActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_jtfTTKhacActionPerformed
 
-    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
+    private void jrbXuatHuyet_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbXuatHuyet_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton24ActionPerformed
+    }//GEN-LAST:event_jrbXuatHuyet_CoActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jtfChuanDoanTTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfChuanDoanTTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jtfChuanDoanTTActionPerformed
 
-    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
+    private void jrbDKCL_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDKCL_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton26ActionPerformed
+    }//GEN-LAST:event_jrbDKCL_CoActionPerformed
+
+    private void jrbDauDau_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDauDau_CoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jrbDauDau_CoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -964,6 +1198,7 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
     private javax.swing.ButtonGroup btnG_CoGiat;
     private javax.swing.ButtonGroup btnG_DauBung;
     private javax.swing.ButtonGroup btnG_DauCo;
+    private javax.swing.ButtonGroup btnG_DauDau;
     private javax.swing.ButtonGroup btnG_DauHong;
     private javax.swing.ButtonGroup btnG_DauKhop;
     private javax.swing.ButtonGroup btnG_DuDKCL;
@@ -973,7 +1208,6 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
     private javax.swing.ButtonGroup btnG_Sot;
     private javax.swing.ButtonGroup btnG_TTkhac;
     private javax.swing.ButtonGroup btnG_XuatHuyet;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1001,46 +1235,50 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton17;
-    private javax.swing.JRadioButton jRadioButton18;
-    private javax.swing.JRadioButton jRadioButton19;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton20;
-    private javax.swing.JRadioButton jRadioButton21;
-    private javax.swing.JRadioButton jRadioButton22;
-    private javax.swing.JRadioButton jRadioButton23;
-    private javax.swing.JRadioButton jRadioButton24;
-    private javax.swing.JRadioButton jRadioButton25;
-    private javax.swing.JRadioButton jRadioButton26;
-    private javax.swing.JRadioButton jRadioButton27;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JComboBox<String> jcobDGTTBL;
+    private javax.swing.JRadioButton jrbBuonNon_Co;
+    private javax.swing.JRadioButton jrbBuonNon_Khong;
+    private javax.swing.JRadioButton jrbCoGiat_Co;
+    private javax.swing.JRadioButton jrbCoGiat_Khong;
+    private javax.swing.JRadioButton jrbDKCL_Co;
+    private javax.swing.JRadioButton jrbDKCL_Khong;
+    private javax.swing.JRadioButton jrbDauBung_Co;
+    private javax.swing.JRadioButton jrbDauBung_Khong;
+    private javax.swing.JRadioButton jrbDauCo_Co;
+    private javax.swing.JRadioButton jrbDauCo_Khong;
+    private javax.swing.JRadioButton jrbDauDau_Co;
+    private javax.swing.JRadioButton jrbDauDau_Khong;
+    private javax.swing.JRadioButton jrbDauHong_Co;
+    private javax.swing.JRadioButton jrbDauHong_Khong;
+    private javax.swing.JRadioButton jrbDauKhop_Co;
+    private javax.swing.JRadioButton jrbDauKhop_Khong;
+    private javax.swing.JRadioButton jrbMatKhuuGiac_Co;
+    private javax.swing.JRadioButton jrbMatKhuuGiac_Khong;
+    private javax.swing.JRadioButton jrbMatViGiac_Co;
+    private javax.swing.JRadioButton jrbMatViGiac_Khong;
+    private javax.swing.JRadioButton jrbNoiHach_Co;
+    private javax.swing.JRadioButton jrbNoiHach_Khong;
+    private javax.swing.JRadioButton jrbSot_Co;
+    private javax.swing.JRadioButton jrbSot_Khong;
+    private javax.swing.JRadioButton jrbTTKhac_Co;
+    private javax.swing.JRadioButton jrbTTKhac_Khong;
+    private javax.swing.JRadioButton jrbXuatHuyet_Co;
+    private javax.swing.JRadioButton jrbXuatHuyet_Khong;
+    private javax.swing.JTextField jtfCanNang;
+    private javax.swing.JTextField jtfChieuCao;
+    private javax.swing.JTextField jtfChuanDoanTT;
+    private javax.swing.JTextField jtfDoBH_Oxi;
+    private javax.swing.JTextField jtfHuyetApTThu;
+    private javax.swing.JTextField jtfHuyetApTTruong;
+    private javax.swing.JTextField jtfNhietDo;
+    private javax.swing.JTextField jtfNhipTho;
+    private javax.swing.JTextField jtfNhipTim;
+    private javax.swing.JTextField jtfTTKhac;
     // End of variables declaration//GEN-END:variables
 }

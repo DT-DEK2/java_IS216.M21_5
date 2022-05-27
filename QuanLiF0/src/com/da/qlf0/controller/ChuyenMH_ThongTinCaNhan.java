@@ -109,7 +109,7 @@ public class ChuyenMH_ThongTinCaNhan {
                     jpnRoot.removeAll();
                     jpnRoot.setLayout(new BorderLayout());
 
-                     node3.setSize(jpnRoot.getWidth() - 50, jpnRoot.getHeight());
+//                     node3.setSize(jpnRoot.getWidth() - 50, jpnRoot.getHeight());
                     JScrollPane scrollp = new JScrollPane(node3, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
                     jpnRoot.add(scrollp);
                     jpnRoot.validate();

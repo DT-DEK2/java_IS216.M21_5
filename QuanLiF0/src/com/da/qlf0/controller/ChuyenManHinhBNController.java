@@ -8,6 +8,7 @@ import com.da.qlf0.bean.DanhMucBean;
 import com.da.qlf0.bean.DanhMucBeanBNhan;
 import com.da.qlf0.view.BenhNhan_Frame.KhaiBao;
 import com.da.qlf0.view.BenhNhan_Frame.TTCaNhan;
+import com.da.qlf0.view.BenhNhan_Frame.TrangChu_BN;
 import com.da.qlf0.view.BenhNhan_Frame.YCHoTro;
 import com.da.qlf0.view.HoTroPanel;
 import com.da.qlf0.view.QuanLiBnPanel;
@@ -15,6 +16,7 @@ import com.da.qlf0.view.ThongKePanel;
 import com.da.qlf0.view.TrangChuPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.List;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -43,7 +45,7 @@ public class ChuyenManHinhBNController {
        JPanel node = new TrangChuPanel(MABN);
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
-       jpnRoot.add(new TrangChuPanel(MABN));
+       jpnRoot.add(node);
        jpnRoot.validate();
        jpnRoot.repaint();
     }
@@ -57,6 +59,7 @@ public class ChuyenManHinhBNController {
 class LabelEvent implements MouseListener {
 
       private JPanel node;
+      
       private String kind;
 
       private JPanel jpnItem;
@@ -71,21 +74,26 @@ class LabelEvent implements MouseListener {
       @Override
       public void mouseClicked(MouseEvent e) {
             switch (kind) {
+                case "TrangChu":
+                    node = new TrangChu_BN(MABN);
+                    break;
                 case "TTCaNhan":
                     node = new TTCaNhan();
                     break;
                 case "KhaiBao":
                     node = new KhaiBao();
+                    
                     break;
                 case "YCHoTro":
                     node = new YCHoTro();
+                    
                     break;
                 default:
                     break;
            }
            jpnRoot.removeAll();
            jpnRoot.setLayout(new BorderLayout());
-           node.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
+           node.setPreferredSize(new Dimension(jpnRoot.getWidth(),jpnRoot.getHeight()));
            jpnRoot.add(node);
            
            jpnRoot.validate();

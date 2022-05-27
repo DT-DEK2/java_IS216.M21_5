@@ -27,6 +27,7 @@ public class DangNhapController {
     
     private String ten;
     private String ID;
+    
     public DangNhapController(JTextField jtfCMND_CCCD, JTextField jtfMatKhau) {
       
         this.jtfCMND_CCCD = jtfCMND_CCCD;
@@ -59,6 +60,7 @@ public class DangNhapController {
             cons.close();
         return i ;
     }
+    
 
     public String getID() {
         return ID;

@@ -284,6 +284,7 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnBenhNhanActionPerformed
 
+    @SuppressWarnings("deprecation")
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
                     // TODO add your handling code here:
            
@@ -354,6 +355,9 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        DangKyFrame dk = new  DangKyFrame();
+        dk.setVisible(true);
+        dk.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jtfCMND_CCCDFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDFocusGained

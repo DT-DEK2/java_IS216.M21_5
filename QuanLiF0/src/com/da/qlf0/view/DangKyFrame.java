@@ -4,16 +4,24 @@
  */
 package com.da.qlf0.view;
 
+import com.da.qlf0.controller.DangKyController;
+import java.awt.event.KeyEvent;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author NDAT_UIT
  */
-public class RegisterFrame extends javax.swing.JFrame {
+public class DangKyFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form RegisterFrame
      */
-    public RegisterFrame() {
+    public DangKyFrame() {
         initComponents();
     }
 
@@ -34,15 +42,15 @@ public class RegisterFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        jtfHoTen = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        jtfCMND_CCCD = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        jtfSDT = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        jtfMatKhau = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        jtfXnMatKhau = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
@@ -64,33 +72,53 @@ public class RegisterFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(224, 235, 235));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(20, 20, 20));
         jLabel2.setText("Số điện thoại*:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(20, 20, 20));
         jLabel3.setText("Họ và tên*:");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(20, 20, 20));
         jLabel4.setText("Số CMND/CCCD*:");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(20, 20, 20));
         jLabel5.setText("Xác nhận mật khẩu*:");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(20, 20, 20));
         jLabel6.setText("Mật khẩu*:");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(jtfHoTen);
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jtfCMND_CCCD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfCMND_CCCDKeyPressed(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jtfCMND_CCCD);
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jtfSDT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSDTKeyPressed(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jtfSDT);
 
-        jScrollPane4.setViewportView(jTextPane4);
+        jScrollPane4.setViewportView(jtfMatKhau);
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(jtfXnMatKhau);
 
         jButton1.setBackground(new java.awt.Color(77, 184, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Tạo Tài Khoản");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(77, 184, 255));
 
@@ -124,29 +152,31 @@ public class RegisterFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(79, 79, 79)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel2)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel4)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(69, 69, 69)
-                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(69, 69, 69)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -171,18 +201,17 @@ public class RegisterFrame extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel6)
                         .addGap(20, 20, 20))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addGap(2, 2, 2)
+                        .addGap(10, 10, 10)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -209,6 +238,116 @@ public class RegisterFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jtfCMND_CCCDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDKeyPressed
+        // TODO add your handling code here:
+        String sdt = jtfCMND_CCCD.getText();
+        int length = sdt.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
+            if(length<12){
+                jtfCMND_CCCD.setEditable(true);
+            }else{
+                jtfCMND_CCCD.setEditable(false);
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                jtfCMND_CCCD.setEditable(true);
+            }else{
+                jtfCMND_CCCD.setEditable(false);
+            }
+        }
+    
+    }//GEN-LAST:event_jtfCMND_CCCDKeyPressed
+
+    private void jtfSDTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSDTKeyPressed
+        // TODO add your handling code here:
+        String sdt = jtfSDT.getText();
+        int length = sdt.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
+            if(length<10){
+                jtfSDT.setEditable(true);
+            }else{
+                jtfSDT.setEditable(false);
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                jtfSDT.setEditable(true);
+            }else{
+                jtfSDT.setEditable(false);
+            }
+        }
+                 
+    }//GEN-LAST:event_jtfSDTKeyPressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       
+        
+        JFrame frame = new JFrame();
+        String[] options = new String[2];
+        options[0] = "Có";
+        options[1] = "Không";
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        var dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Bạn xác nhận đăng ký", "Xác nhận đăng ký", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+        if(dialogResult == 0) {
+        
+         DangKyController dk = new DangKyController(jtfCMND_CCCD, jtfHoTen, jtfMatKhau, jtfSDT);
+         if(jtfCMND_CCCD.getText().length()==0
+            || jtfHoTen.getText().length()==0
+            || jtfMatKhau.getText().length()==0
+            || jtfSDT.getText().length()==0
+            || jtfXnMatKhau.getText().length()==0
+     
+               ){
+              JFrame frame2 = new JFrame();
+                    frame.setBounds(0,0,100,50);
+                    JOptionPane.showMessageDialog(frame,
+                    "Vui lòng nhập dữ liệu bắt buộc!");
+                   
+                }
+         else if(jtfMatKhau.getText().equals(jtfXnMatKhau.getText())==false){
+             
+              JFrame frame3 = new JFrame();
+                    frame.setBounds(0,0,100,50);
+                    JOptionPane.showMessageDialog(frame,
+                    "Xác nhận mật khẩu không trùng khớp! Vui lòng nhập lại");
+         }else{
+             try {
+                 dk.setData_DK();
+                     JFrame frame4 = new JFrame();
+                    frame.setBounds(0,0,100,50);
+                    JOptionPane.showMessageDialog(frame,
+                    "Đăng kí thành công!");
+                    this.dispose();
+             } catch (ClassNotFoundException ex) {
+                 Logger.getLogger(DangKyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                 
+                  JFrame frame5 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Thêm thất bại bệnh nhân\n" +
+                        
+                         ex.getMessage());
+             } catch (SQLException ex) {
+                 Logger.getLogger(DangKyFrame.class.getName()).log(Level.SEVERE, null, ex);
+                 
+                  JFrame frame6 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Thêm thất bại bệnh nhân\n" +
+                         ex.getSQLState()+"\n"+
+                         ex.getMessage());
+             }
+         }
+        
+        
+        
+        }
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -226,21 +365,20 @@ public class RegisterFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegisterFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DangKyFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegisterFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DangKyFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegisterFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DangKyFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegisterFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DangKyFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegisterFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new DangKyFrame().setVisible(true);
         });
     }
 
@@ -261,10 +399,10 @@ public class RegisterFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
+    private javax.swing.JTextPane jtfCMND_CCCD;
+    private javax.swing.JTextPane jtfHoTen;
+    private javax.swing.JTextPane jtfMatKhau;
+    private javax.swing.JTextPane jtfSDT;
+    private javax.swing.JTextPane jtfXnMatKhau;
     // End of variables declaration//GEN-END:variables
 }

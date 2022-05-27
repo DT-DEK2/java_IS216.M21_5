@@ -931,7 +931,7 @@ public class TTCoBan_ThemBN extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfSDTKeyPressed
 
     public void MyinnitsetMBBN(){
-       LayMABNTuDong td= new LayMABNTuDong(this.jtfMABN);
+       LayMABNTuDong td= new LayMABNTuDong();
         try {
             this.jtfMABN.setText(td.SetMABN());
             Color color=new Color(140,140,140);

@@ -4,9 +4,12 @@
  */
 package com.da.qlf0.ultility;
 
+import com.da.qlf0.controller.XemTT_CapNhatDTController;
 import com.da.qlf0.controller.XoaBenhNhanController;
+import com.da.qlf0.view.CapNhat.CapNhat_Frame;
 import com.da.qlf0.view.KQDieuTri;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -29,7 +32,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     public ThongTinBN_Form( String Hovaten, String Mabenhnhan){
         initComponents();
         this.jLabel2.setText(Hovaten);
-        this.jLabel4.setText(Mabenhnhan);
+        this.jlbMABN.setText(Mabenhnhan);
     }
 
     /**
@@ -44,7 +47,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jlbMABN = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -83,14 +86,19 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         jLabel3.setText("Mã bệnh nhân:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 50, -1, -1));
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel4.setText("............");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 50, -1, -1));
+        jlbMABN.setBackground(new java.awt.Color(255, 255, 255));
+        jlbMABN.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbMABN.setForeground(new java.awt.Color(20, 20, 20));
+        jlbMABN.setText("............");
+        add(jlbMABN, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 50, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setText("Xem chi tiết");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(841, 46, -1, -1));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -174,7 +182,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        XoaBenhNhanController dl = new XoaBenhNhanController(this.jLabel4.getText());
+        XoaBenhNhanController dl = new XoaBenhNhanController(this.jlbMABN.getText());
         JFrame frame1 = new JFrame();
         String[] options = new String[2];
         options[0] = "Có";
@@ -201,7 +209,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 //        JFrame frame = new JFrame();
-        JPanel KQ = new KQDieuTri(this.jLabel4.getText());
+        JPanel KQ = new KQDieuTri(this.jlbMABN.getText());
 //        
 //        JScrollPane scrollp = new JScrollPane(KQ, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 //        frame.setResizable(true);
@@ -214,6 +222,203 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
 //                    frame.repaint();
 //                    frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CapNhat_Frame cn = new CapNhat_Frame(this.jlbMABN.getText());
+        cn.setVisible(true);
+        cn.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        XemTT_CapNhatDTController tt_cn = new XemTT_CapNhatDTController(
+                this.jlbMABN.getText(),
+                cn.getNode1().getJcbNam(),
+                cn.getNode1().getJcbNu(),
+                cn.getNode1().getJcbTestPCR_Co(),
+                cn.getNode1().getJcbTestPCR_Khong(),
+                cn.getNode1().getJcbTestNhanh_Co(),
+                cn.getNode1().getJcbTestNhanh_Khong(),
+                cn.getNode1().getJcbTungLaF0_Co(),
+                cn.getNode1().getJcbTungLaF0_Khong(),
+                cn.getNode1().getJcobPhuong_Xa(),
+                cn.getNode1().getJcobQuan_Huyen(),
+                cn.getNode1().getJcobTinh_ThanhPho(),
+                cn.getNode1().getJdcNgaySinh(),
+                cn.getNode1().getJdcNgayTnF0(),
+                cn.getNode1().getJdcNgayTestNhanh(),
+                cn.getNode1().getJdcNgayTestPCR(),
+                cn.getNode1().getJcobKQTestNhanh(),
+                cn.getNode1().getJcobKQTestPCR(),
+                cn.getNode1().getJdcNgayXHTTDT(),
+                cn.getNode1().getJtfCMND_CCCD(),
+                cn.getNode1().getJtfHoTen(),
+                cn.getNode1().getJtfMABN(),
+                cn.getNode1().getJtfNgheNghiep(),
+                cn.getNode1().getJtfNoiLamViec(),
+                cn.getNode1().getJtfNoiO(),
+                cn.getNode1().getJtfSDT(),
+                cn.getNode1().getJtfSoThangF0(),
+                
+                
+                
+                cn.getNode2().getJcobTiemVX_1(),
+                cn.getNode2().getJcobTiemVX_2(),
+                cn.getNode2().getJcobTiemVX_3(),
+                cn.getNode2().getJdcTGMui1(),
+                cn.getNode2().getJdcTGMui2(),
+                cn.getNode2().getJdcTGMui3(),
+                cn.getNode2().getJrbChuaTiem(),
+                cn.getNode2().getJrbTiem1Mui(),
+                cn.getNode2().getJrbTiem2Mui(),
+                cn.getNode2().getJrbTiem3Mui(),
+                cn.getNode2().getJrbTiem_KhongBiet(),
+        
+                cn.getNode3().getJrbBenhGan_Co(),
+                cn.getNode3().getJrbBenhGan_Khong(),
+                cn.getNode3().getJrbBenhPhoiMT_Co(),
+                cn.getNode3().getJrbBenhPhoiMT_Khong(),
+                cn.getNode3().getJrbBenhTKMT_Co(),
+                cn.getNode3().getJrbBenhTKMT_Khong(),
+                cn.getNode3().getJrbBenhThanMT_Co(),
+                cn.getNode3().getJrbBenhThanMT_Khong(),
+                cn.getNode3().getJrbBenhTim_Co(),
+                cn.getNode3().getJrbBenhTim_Khong(),
+                cn.getNode3().getJrbBeoPhi_Co(),
+                cn.getNode3().getJrbBeoPhi_Khong(),
+                cn.getNode3().getJrbCLBenhHT_Co(),
+                cn.getNode3().getJrbCLBenhHT_Khong(),
+                cn.getNode3().getJrbDaiTD_Co(),
+                cn.getNode3().getJrbDaiTD_Khong(),
+                cn.getNode3().getJrbGhepTang_TBM_Co(),
+                cn.getNode3().getJrbGhepTang_TBM_Khong(),
+                cn.getNode3().getJrbHIV_Co(),
+                cn.getNode3().getJrbHIV_Khong(),
+                cn.getNode3().getJrbHauSan_Co(),
+                cn.getNode3().getJrbHauSan_Khong(),
+                cn.getNode3().getJrbHenKQ_Co(),
+                cn.getNode3().getJrbHenKQ_Khong(),
+                cn.getNode3().getJrbHoiChungDown_Co(),
+                cn.getNode3().getJrbHoiChungDown_Khong(),
+                cn.getNode3().getJrbKQXN_AT(),
+                cn.getNode3().getJrbKQXN_ChuaCoKQ(),
+                cn.getNode3().getJrbKQXN_DT(),
+                cn.getNode3().getJrbKhangSinh_Co(),
+                cn.getNode3().getJrbKhangSinh_Khong(),
+                cn.getNode3().getJrbKhangVirus_Co(),
+                cn.getNode3().getJrbKhangVirus_Khong(),
+                cn.getNode3().getJrbMachMauNao_Co(),
+                cn.getNode3().getJrbMachMauNao_Khong(),
+                cn.getNode3().getJrbMangThai_Co(),
+                cn.getNode3().getJrbMangThai_Khong(),
+                cn.getNode3().getJrbRoiLoanSDCGN_Co(),
+                cn.getNode3().getJrbRoiLoanSDCGN_Khong(),
+                cn.getNode3().getJrbSteroid_Co(),
+                cn.getNode3().getJrbSteroid_Khong(),
+                cn.getNode3().getJrbTangHA_Co(),
+                cn.getNode3().getJrbTangHA_Khong(),
+                cn.getNode3().getJrbThieuMD_Co(),
+                cn.getNode3().getJrbThieuMD_Khong(),
+                cn.getNode3().getJrbThuocDTCovid_Co(),
+                cn.getNode3().getJrbThuocDTCovid_Khong(),
+                cn.getNode3().getJrbThuocMD_Co(),
+                cn.getNode3().getJrbThuocMD_Khong(),
+                cn.getNode3().getJrbThuocUCMD_Co(),
+                cn.getNode3().getJrbThuocUCMD_Khong(),
+                cn.getNode3().getJrbTreSSXNcovid_Co(),
+                cn.getNode3().getJrbTreSSXNcovid_Khong(),
+                cn.getNode3().getJrbUngThu_Co(),
+                cn.getNode3().getJrbUngThu_Khong(),
+                cn.getNode3().getJtfSoTuanMT(),
+                
+                
+                cn.getNode4().getJcobDGTTBL(),
+                cn.getNode4().getJrbBuonNon_Co(),
+                cn.getNode4().getJrbBuonNon_Khong(),
+                cn.getNode4().getJrbCoGiat_Co(),
+                cn.getNode4().getJrbCoGiat_Khong(),
+                cn.getNode4().getJrbDKCL_Co(),
+                cn.getNode4().getJrbDKCL_Khong(),
+                cn.getNode4().getJrbDauBung_Co(),
+                cn.getNode4().getJrbDauBung_Khong(),
+                cn.getNode4().getJrbDauCo_Co(),
+                cn.getNode4().getJrbDauCo_Khong(),
+                cn.getNode4().getJrbDauDau_Co(),
+                cn.getNode4().getJrbDauDau_Khong(),
+                cn.getNode4().getJrbDauHong_Co(),
+                cn.getNode4().getJrbDauHong_Khong(),
+                cn.getNode4().getJrbDauKhop_Co(),
+                cn.getNode4().getJrbDauKhop_Khong(),
+                cn.getNode4().getJrbMatKhuuGiac_Co(),
+                cn.getNode4().getJrbMatKhuuGiac_Khong(),
+                cn.getNode4().getJrbMatViGiac_Co(),
+                cn.getNode4().getJrbMatViGiac_Khong(),
+                cn.getNode4().getJrbNoiHach_Co(),
+                cn.getNode4().getJrbNoiHach_Khong(),
+                cn.getNode4().getJrbSot_Co(),
+                cn.getNode4().getJrbSot_Khong(),
+                cn.getNode4().getJrbTTKhac_Co(),
+                cn.getNode4().getJrbTTKhac_Khong(),
+                cn.getNode4().getJrbXuatHuyet_Co(),
+                cn.getNode4().getJrbXuatHuyet_Khong(),
+                cn.getNode4().getJtfCanNang(),
+                cn.getNode4().getJtfChieuCao(),
+                cn.getNode4().getJtfChuanDoanTT(),
+                cn.getNode4().getJtfDoBH_Oxi(),
+                cn.getNode4().getJtfHuyetApTThu(),
+                cn.getNode4().getJtfHuyetApTTruong(),
+                cn.getNode4().getJtfNhietDo(),
+                cn.getNode4().getJtfNhipTho(),
+                cn.getNode4().getJtfNhipTim(),
+                cn.getNode4().getJtfTTKhac(),
+                
+                cn.getNode5().getJdcNgayXN(),
+                
+                cn.getNode5().getJrbDauNguc_Co(),
+                cn.getNode5().getJrbDauNguc_Khong(),
+                cn.getNode5().getJrbGoiA_Co(),
+                cn.getNode5().getJrbGoiA_Khong(),
+                  cn.getNode5().getJrbGoiB_Co(),
+                cn.getNode5().getJrbGoiB_Khong(),
+                  cn.getNode5().getJrbGoiC_Co(),
+                cn.getNode5().getJrbGoiC_Khong(),
+                cn.getNode5().getJrbHoRaDom_Co(),
+                cn.getNode5().getJrbHoRaDom_Khong(),
+                cn.getNode5().getJrbHoRaMau_Co(),
+                cn.getNode5().getJrbHoRaMau_Khong(),
+                cn.getNode5().getJrbHo_Co(),
+                cn.getNode5().getJrbHo_Khong(),
+                cn.getNode5().getJrbKQ_AT(),
+                cn.getNode5().getJrbKQ_DT(),
+                cn.getNode5().getJrbKhoTho_Co(),
+                cn.getNode5().getJrbKhoTho_Khong(),
+                cn.getNode5().getJrbKhongTT_Co(),
+                cn.getNode5().getJrbKhongTT_Khong(),
+                cn.getNode5().getJrbKietSuc_Co(),
+                cn.getNode5().getJrbKietSuc_Khong(),
+                cn.getNode5().getJrbMatKG_Co(),
+                cn.getNode5().getJrbMatKG_Khong(),
+                cn.getNode5().getJrbMatVG_Co(),
+                cn.getNode5().getJrbMatVG_Khong(),
+                cn.getNode5().getJrbOnLanh_Co(),
+                cn.getNode5().getJrbOnLanh_Khong(),
+                cn.getNode5().getJrbTieuChay_Co(),
+                cn.getNode5().getJrbTieuChay_Khong(),
+                cn.getNode5().getJrbXN_Co(),
+                cn.getNode5().getJrbXN_Khong(),
+                cn.getNode5().getJtfDoBHOxi(),
+                cn.getNode5().getJtfHuyetApTD(),
+                cn.getNode5().getJtfHuyetApToiThieu(),
+                cn.getNode5().getJtfMach(),
+                cn.getNode5().getJtfNhietDo_QTDT(),
+                cn.getNode5().getJtfNhipTho_QTDT());
+        try {
+            tt_cn.SetThongTin();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ThongTinBN_Form.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(ThongTinBN_Form.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParseException ex) {
+            Logger.getLogger(ThongTinBN_Form.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -228,11 +433,11 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jlbMABN;
     // End of variables declaration//GEN-END:variables
 }
