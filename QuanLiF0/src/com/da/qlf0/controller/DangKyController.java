@@ -14,6 +14,7 @@ import java.sql.Connection;
 import com.da.qlf0.dao.OracleConnection;
 
 import java.sql.CallableStatement;
+import javax.swing.JTextField;
 
 /**
  *
@@ -22,13 +23,13 @@ import java.sql.CallableStatement;
 public class DangKyController {
     
     private String MABN;
-      private javax.swing.JTextPane jtfCMND_CCCD;
-    private javax.swing.JTextPane jtfHoTen;
-    private javax.swing.JTextPane jtfMatKhau;
-    private javax.swing.JTextPane jtfSDT;
+      private javax.swing.JTextField jtfCMND_CCCD;
+    private javax.swing.JTextField jtfHoTen;
+    private javax.swing.JTextField jtfMatKhau;
+    private javax.swing.JTextField jtfSDT;
     
 
-    public DangKyController(JTextPane jtfCMND_CCCD, JTextPane jtfHoTen, JTextPane jtfMatKhau, JTextPane jtfSDT) {
+    public DangKyController(JTextField jtfCMND_CCCD, JTextField jtfHoTen, JTextField jtfMatKhau, JTextField jtfSDT) {
         this.jtfCMND_CCCD = jtfCMND_CCCD;
         this.jtfHoTen = jtfHoTen;
         this.jtfMatKhau = jtfMatKhau;

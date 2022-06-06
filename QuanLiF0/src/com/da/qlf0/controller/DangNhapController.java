@@ -61,7 +61,42 @@ public class DangNhapController {
         return i ;
     }
     
+    public String getMABN() throws ClassNotFoundException, SQLException{
+         Connection cons=null;
+        String ma = null;
+        cons= OracleConnection.getOracleConnection();
 
+	
+        String sql = " SELECT * FROM BENHNHAN WHERE CMND_CCCD like ?";
+        
+        PreparedStatement ps = cons.prepareStatement(sql);
+        ps.setString(1, jtfCMND_CCCD.getText());
+          ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                ma=rs.getString("MaBenhNhan");
+            }
+            ps.close();
+            cons.close();
+        return ma;
+    }
+    public String getMANV() throws ClassNotFoundException, SQLException{
+         Connection cons=null;
+        String ma = null;
+        cons= OracleConnection.getOracleConnection();
+
+	
+        String sql = " SELECT * FROM CANBOYTE WHERE CMND_CCCD like ?";
+        
+        PreparedStatement ps = cons.prepareStatement(sql);
+        ps.setString(1, jtfCMND_CCCD.getText());
+          ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                ma=rs.getString("MANV");
+            }
+            ps.close();
+            cons.close();
+        return ma;
+    }
     public String getID() {
         return ID;
     }

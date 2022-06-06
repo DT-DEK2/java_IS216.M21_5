@@ -11,6 +11,7 @@ import com.da.qlf0.view.BenhNhan_Frame.TTCaNhan_Vaccine;
 import com.da.qlf0.view.BenhNhan_Frame.TTCaNhan_ttcb;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -48,9 +49,10 @@ public class ChuyenMH_ThongTinCaNhan {
         jpnItem.setBackground(new Color(0, 134, 179));
         jlbItem.setBackground(new Color(0, 134, 179));
        // JPanel node = new TTCaNhan_ttcb();
+        node1.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
         jpnRoot.removeAll();
         jpnRoot.setLayout(new BorderLayout());
-        jpnRoot.add(node1);
+        jpnRoot.add(node1,BorderLayout.CENTER);
         jpnRoot.validate();
         jpnRoot.repaint();
     }
@@ -87,7 +89,7 @@ public class ChuyenMH_ThongTinCaNhan {
 //                    JScrollPane scrollp1 = new JScrollPane(node1, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 //                    jpnRoot.add(scrollp1);
                     node1.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-                    jpnRoot.add(node1);
+                    jpnRoot.add(node1,BorderLayout.CENTER);
 
                     jpnRoot.validate();
                     jpnRoot.repaint();
@@ -97,8 +99,8 @@ public class ChuyenMH_ThongTinCaNhan {
                     //   node = new TTCaNhan_Vaccine();
                     jpnRoot.removeAll();
                     jpnRoot.setLayout(new BorderLayout());
-                    node2.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
-                    jpnRoot.add(node2);
+//                    node2.setSize(jpnRoot.getWidth(), jpnRoot.getHeight());
+                    jpnRoot.add(node2,BorderLayout.CENTER);
 
                     jpnRoot.validate();
                     jpnRoot.repaint();
@@ -111,7 +113,9 @@ public class ChuyenMH_ThongTinCaNhan {
 
 //                     node3.setSize(jpnRoot.getWidth() - 50, jpnRoot.getHeight());
                     JScrollPane scrollp = new JScrollPane(node3, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-                    jpnRoot.add(scrollp);
+//                    scrollp.setSize(new Dimension(jpnRoot.getWidth()+75, jpnRoot.getHeight()));
+                    scrollp.setSize(new Dimension(1060,680));
+                    jpnRoot.add(scrollp,BorderLayout.CENTER);
                     jpnRoot.validate();
                     jpnRoot.repaint();
                     setChangeBackground(kind);

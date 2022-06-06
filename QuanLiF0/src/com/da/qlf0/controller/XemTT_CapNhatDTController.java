@@ -23,6 +23,7 @@ import java.text.SimpleDateFormat;
  * @author Minh Cuong
  */
 public class XemTT_CapNhatDTController {
+    private String ID;
     private String MABN;
     private javax.swing.JCheckBox jcbNam;
     private javax.swing.JCheckBox jcbNu;
@@ -207,6 +208,7 @@ public class XemTT_CapNhatDTController {
     private javax.swing.JTextField jtfNhipTho_QTDT;
 
     public XemTT_CapNhatDTController(
+            String ID,
             String MABN,
             JCheckBox jcbNam,
             JCheckBox jcbNu,
@@ -381,6 +383,7 @@ public class XemTT_CapNhatDTController {
             JTextField jtfMach, 
             JTextField jtfNhietDo_QTDT,
             JTextField jtfNhipTho_QTDT) {
+        this.ID=ID;
         this.MABN=MABN;
         this.jcbNam = jcbNam;
         this.jcbNu = jcbNu;
@@ -555,8 +558,290 @@ public class XemTT_CapNhatDTController {
         this.jtfMach = jtfMach;
         this.jtfNhietDo_QTDT = jtfNhietDo_QTDT;
         this.jtfNhipTho_QTDT = jtfNhipTho_QTDT;
+    } 
+    public XemTT_CapNhatDTController(
+            
+            String MABN,
+            JCheckBox jcbNam,
+            JCheckBox jcbNu,
+           
+            JCheckBox jcbTestPCR_Co,
+            JCheckBox jcbTestPCR_Khong ,
+            JCheckBox jcbTestNhanh_Co, 
+            JCheckBox jcbTestNhanh_Khong, 
+            JCheckBox jcbTunglaF0_Co, 
+            JCheckBox jcbTunglaF0_Khong,
+            JComboBox<String> jcobPhuong_Xa,
+            JComboBox<String> jcobQuan_Huyen,
+            JComboBox<String> jcobTinh_ThanhPho, 
+            JDateChooser jdcNgaySinh, 
+            JDateChooser jdcNgayTN, 
+            JDateChooser jdcNgayTestNhanh, 
+            JDateChooser jdcNgayTestPCR, 
+            JComboBox<String> jcobKQTestNhanh ,
+            JComboBox<String> jcobKQTestPCR,
+            JDateChooser jdcNgayXHTTDT, 
+            JTextField jtfCMND_CCCD, 
+            JTextField jtfHoTen, 
+            JTextField jtfMABN, 
+            JTextField jtfNgheNghiep,
+            JTextField jtfNoiLamViec, 
+            JTextField jtfNoiO, 
+            JTextField jtfSDT,
+            JTextField jtfSoNgayF0, 
+            JComboBox<String> jcobTiemVX_1,
+            JComboBox<String> jcobTiemVX_2,
+            JComboBox<String> jcobTiemVX_3,
+            JDateChooser jdcTGMui1, 
+            JDateChooser jdcTGMui2,
+            JDateChooser jdcTGMui3, 
+            JRadioButton jrbChuaTiem, 
+            JRadioButton jrbTiem1Mui, 
+            JRadioButton jrbTiem2Mui, 
+            JRadioButton jrbTiem3Mui, 
+            JRadioButton jrbTiem_KhongBiet,
+            JRadioButton jrbBenhGan_Co,
+            JRadioButton jrbBenhGan_Khong,
+            JRadioButton jrbBenhPhoiMT_Co, 
+            JRadioButton jrbBenhPhoiMT_Khong,
+            JRadioButton jrbBenhTKMT_Co, 
+            JRadioButton jrbBenhTKMT_Khong,
+            JRadioButton jrbBenhThanMT_Co,
+            JRadioButton jrbBenhThanMT_Khong, 
+            JRadioButton jrbBenhTim_Co,
+            JRadioButton jrbBenhTim_Khong,
+            JRadioButton jrbBeoPhi_Co, 
+            JRadioButton jrbBeoPhi_Khong,
+            JRadioButton jrbCLBenhHT_Co, 
+            JRadioButton jrbCLBenhHT_Khong, 
+            JRadioButton jrbDaiTD_Co, 
+            JRadioButton jrbDaiTD_Khong, 
+            JRadioButton jrbGhepTang_TBM_Co,
+            JRadioButton jrbGhepTang_TBM_Khong, 
+            JRadioButton jrbHIV_Co, 
+            JRadioButton jrbHIV_Khong, 
+            JRadioButton jrbHauSan_Co,
+            JRadioButton jrbHauSan_Khong, 
+            JRadioButton jrbHenKQ_Co, 
+            JRadioButton jrbHenKQ_Khong,
+            JRadioButton jrbHoiChungDown_Co,
+            JRadioButton jrbHoiChungDown_Khong,
+            JRadioButton jrbKQXN_AT, 
+            JRadioButton jrbKQXN_ChuaCoKQ,
+            JRadioButton jrbKQXN_DT,
+            JRadioButton jrbKhangSinh_Co, 
+            JRadioButton jrbKhangSinh_Khong,
+            JRadioButton jrbKhangVirus_Co,
+            JRadioButton jrbKhangVirus_Khong,
+            JRadioButton jrbMachMauNao_Co, 
+            JRadioButton jrbMachMauNao_Khong,
+            JRadioButton jrbMangThai_Co,
+            JRadioButton jrbMangThai_Khong,
+            JRadioButton jrbRoiLoanSDCGN_Co, 
+            JRadioButton jrbRoiLoanSDCGN_Khong, 
+            JRadioButton jrbSteroid_Co, 
+            JRadioButton jrbSteroid_Khong, 
+            JRadioButton jrbTangHA_Co, 
+            JRadioButton jrbTangHA_Khong,
+            JRadioButton jrbThieuMD_Co, 
+            JRadioButton jrbThieuMD_Khong, 
+            JRadioButton jrbThuocDTCovid_Co,
+            JRadioButton jrbThuocDTCovid_Khong,
+            JRadioButton jrbThuocMD_Co, 
+            JRadioButton jrbThuocMD_Khong, 
+            JRadioButton jrbThuocUCMD_Co, 
+            JRadioButton jrbThuocUCMD_Khong,
+            JRadioButton jrbTreSSXNcovid_Co,
+            JRadioButton jrbTreSSXNcovid_Khong,
+            JRadioButton jrbUngThu_Co, 
+            JRadioButton jrbUngThu_Khong,
+            JTextField jtfSoTuanMT 
+                    ) {
+        
+        this.MABN=MABN;
+        this.jcbNam = jcbNam;
+        this.jcbNu = jcbNu;
+        
+        this.jcbTestNhanh_Co = jcbTestNhanh_Co;
+        this.jcbTestNhanh_Khong = jcbTestNhanh_Khong;
+        this.jcbTestPCR_Co=jcbTestPCR_Co;
+        this.jcbTestPCR_Khong=jcbTestPCR_Khong;
+        this.jcbTunglaF0_Co = jcbTunglaF0_Co;
+        this.jcbTunglaF0_Khong = jcbTunglaF0_Khong;
+        this.jcobPhuong_Xa = jcobPhuong_Xa;
+        this.jcobQuan_Huyen = jcobQuan_Huyen;
+        this.jcobTinh_ThanhPho = jcobTinh_ThanhPho;
+        this.jdcNgaySinh = jdcNgaySinh;
+        this.jdcNgayTN = jdcNgayTN;
+        this.jdcNgayTestNhanh = jdcNgayTestNhanh;
+        this.jdcNgayTestPCR = jdcNgayTestPCR;
+        this.jdcNgayXHTTDT = jdcNgayXHTTDT;
+          this.jcobKQTestNhanh=jcobKQTestNhanh;
+          this.jcobKQTestPCR=jcobKQTestPCR;
+        this.jtfCMND_CCCD = jtfCMND_CCCD;
+        this.jtfHoTen = jtfHoTen;
+        this.jtfMABN = jtfMABN;
+        this.jtfNgheNghiep = jtfNgheNghiep;
+        this.jtfNoiLamViec = jtfNoiLamViec;
+        this.jtfNoiO = jtfNoiO;
+        this.jtfSDT = jtfSDT;
+        this.jtfSoNgayF0 = jtfSoNgayF0;
+        this.jcobTiemVX_1 = jcobTiemVX_1;
+        this.jcobTiemVX_2 = jcobTiemVX_2;
+        this.jcobTiemVX_3 = jcobTiemVX_3;
+        this.jdcTGMui1 = jdcTGMui1;
+        this.jdcTGMui2 = jdcTGMui2;
+        this.jdcTGMui3 = jdcTGMui3;
+        this.jrbChuaTiem = jrbChuaTiem;
+        this.jrbTiem1Mui = jrbTiem1Mui;
+        this.jrbTiem2Mui = jrbTiem2Mui;
+        this.jrbTiem3Mui = jrbTiem3Mui;
+        this.jrbTiem_KhongBiet = jrbTiem_KhongBiet;
+        this.jrbBenhGan_Co = jrbBenhGan_Co;
+        this.jrbBenhGan_Khong = jrbBenhGan_Khong;
+        this.jrbBenhPhoiMT_Co = jrbBenhPhoiMT_Co;
+        this.jrbBenhPhoiMT_Khong = jrbBenhPhoiMT_Khong;
+        this.jrbBenhTKMT_Co = jrbBenhTKMT_Co;
+        this.jrbBenhTKMT_Khong = jrbBenhTKMT_Khong;
+        this.jrbBenhThanMT_Co = jrbBenhThanMT_Co;
+        this.jrbBenhThanMT_Khong = jrbBenhThanMT_Khong;
+        this.jrbBenhTim_Co = jrbBenhTim_Co;
+        this.jrbBenhTim_Khong = jrbBenhTim_Khong;
+        this.jrbBeoPhi_Co = jrbBeoPhi_Co;
+        this.jrbBeoPhi_Khong = jrbBeoPhi_Khong;
+        this.jrbCLBenhHT_Co = jrbCLBenhHT_Co;
+        this.jrbCLBenhHT_Khong = jrbCLBenhHT_Khong;
+        this.jrbDaiTD_Co = jrbDaiTD_Co;
+        this.jrbDaiTD_Khong = jrbDaiTD_Khong;
+        this.jrbGhepTang_TBM_Co = jrbGhepTang_TBM_Co;
+        this.jrbGhepTang_TBM_Khong = jrbGhepTang_TBM_Khong;
+        this.jrbHIV_Co = jrbHIV_Co;
+        this.jrbHIV_Khong = jrbHIV_Khong;
+        this.jrbHauSan_Co = jrbHauSan_Co;
+        this.jrbHauSan_Khong = jrbHauSan_Khong;
+        this.jrbHenKQ_Co = jrbHenKQ_Co;
+        this.jrbHenKQ_Khong = jrbHenKQ_Khong;
+        this.jrbHoiChungDown_Co = jrbHoiChungDown_Co;
+        this.jrbHoiChungDown_Khong = jrbHoiChungDown_Khong;
+        this.jrbKQXN_AT = jrbKQXN_AT;
+        this.jrbKQXN_ChuaCoKQ = jrbKQXN_ChuaCoKQ;
+        this.jrbKQXN_DT = jrbKQXN_DT;
+        this.jrbKhangSinh_Co = jrbKhangSinh_Co;
+        this.jrbKhangSinh_Khong = jrbKhangSinh_Khong;
+        this.jrbKhangVirus_Co = jrbKhangVirus_Co;
+        this.jrbKhangVirus_Khong = jrbKhangVirus_Khong;
+        this.jrbMachMauNao_Co = jrbMachMauNao_Co;
+        this.jrbMachMauNao_Khong = jrbMachMauNao_Khong;
+        this.jrbMangThai_Co = jrbMangThai_Co;
+        this.jrbMangThai_Khong = jrbMangThai_Khong;
+        this.jrbRoiLoanSDCGN_Co = jrbRoiLoanSDCGN_Co;
+        this.jrbRoiLoanSDCGN_Khong = jrbRoiLoanSDCGN_Khong;
+        this.jrbSteroid_Co = jrbSteroid_Co;
+        this.jrbSteroid_Khong = jrbSteroid_Khong;
+        this.jrbTangHA_Co = jrbTangHA_Co;
+        this.jrbTangHA_Khong = jrbTangHA_Khong;
+        this.jrbThieuMD_Co = jrbThieuMD_Co;
+        this.jrbThieuMD_Khong = jrbThieuMD_Khong;
+        this.jrbThuocDTCovid_Co = jrbThuocDTCovid_Co;
+        this.jrbThuocDTCovid_Khong = jrbThuocDTCovid_Khong;
+        this.jrbThuocMD_Co = jrbThuocMD_Co;
+        this.jrbThuocMD_Khong = jrbThuocMD_Khong;
+        this.jrbThuocUCMD_Co = jrbThuocUCMD_Co;
+        this.jrbThuocUCMD_Khong = jrbThuocUCMD_Khong;
+        this.jrbTreSSXNcovid_Co = jrbTreSSXNcovid_Co;
+        this.jrbTreSSXNcovid_Khong = jrbTreSSXNcovid_Khong;
+        this.jrbUngThu_Co = jrbUngThu_Co;
+        this.jrbUngThu_Khong = jrbUngThu_Khong;
+        this.jtfSoTuanMT = jtfSoTuanMT;
+       
     }
-    
+    public XemTT_CapNhatDTController(
+            
+            String MABN,
+			 JDateChooser jdcNgayXN,
+            
+            JRadioButton jrbDauNguc_Co, 
+            JRadioButton jrbDauNguc_Khong,
+            JRadioButton jrbGoiA_Co, 
+            JRadioButton jrbGoiA_Khong,
+            JRadioButton jrbGoiB_Co,
+            JRadioButton jrbGoiB_Khong,
+            JRadioButton jrbGoiC_Co, 
+            JRadioButton jrbGoiC_Khong, 
+            JRadioButton jrbHoRaDom_Co, 
+            JRadioButton jrbHoRaDom_Khong,
+            JRadioButton jrbHoRaMau_Co, 
+            JRadioButton jrbHoRaMau_Khong,
+            JRadioButton jrbHo_Co, 
+            JRadioButton jrbHo_Khong, 
+            JRadioButton jrbKQ_AT,
+            JRadioButton jrbKQ_DT, 
+            JRadioButton jrbKhoTho_Co, 
+            JRadioButton jrbKhoTho_Khong, 
+            JRadioButton jrbKhongTT_Co, 
+            JRadioButton jrbKhongTT_Khong, 
+            JRadioButton jrbKietSuc_Co, 
+            JRadioButton jrbKietSuc_Khong, 
+            JRadioButton jrbMatKG_Co, 
+            JRadioButton jrbMatKG_Khong,
+            JRadioButton jrbMatVG_Co, 
+            JRadioButton jrbMatVG_Khong, 
+            JRadioButton jrbOnLanh_Co, 
+            JRadioButton jrbOnLanh_Khong,
+            JRadioButton jrbTieuChay_Co, 
+            JRadioButton jrbTieuChay_Khong,
+            JRadioButton jrbXN_Co, 
+            JRadioButton jrbXN_Khong, 
+            JTextField jtfDoBHOxi, 
+            JTextField jtfHuyetApTD, 
+            JTextField jtfHuyetApToiThieu,
+            JTextField jtfMach, 
+            JTextField jtfNhietDo_QTDT,
+            JTextField jtfNhipTho_QTDT) {
+		
+
+		this.MABN=MABN;
+		 this.jdcNgayXN = jdcNgayXN;
+        
+        this.jrbDauNguc_Co = jrbDauNguc_Co;
+        this.jrbDauNguc_Khong = jrbDauNguc_Khong;
+        this.jrbGoiA_Co = jrbGoiA_Co;
+        this.jrbGoiA_Khong = jrbGoiA_Khong;
+        this.jrbGoiB_Co = jrbGoiB_Co;
+        this.jrbGoiB_Khong = jrbGoiB_Khong;
+        this.jrbGoiC_Co = jrbGoiC_Co;
+        this.jrbGoiC_Khong = jrbGoiC_Khong;
+        this.jrbHoRaDom_Co = jrbHoRaDom_Co;
+        this.jrbHoRaDom_Khong = jrbHoRaDom_Khong;
+        this.jrbHoRaMau_Co = jrbHoRaMau_Co;
+        this.jrbHoRaMau_Khong = jrbHoRaMau_Khong;
+        this.jrbHo_Co = jrbHo_Co;
+        this.jrbHo_Khong = jrbHo_Khong;
+        this.jrbKQ_AT = jrbKQ_AT;
+        this.jrbKQ_DT = jrbKQ_DT;
+        this.jrbKhoTho_Co = jrbKhoTho_Co;
+        this.jrbKhoTho_Khong = jrbKhoTho_Khong;
+        this.jrbKhongTT_Co = jrbKhongTT_Co;
+        this.jrbKhongTT_Khong = jrbKhongTT_Khong;
+        this.jrbKietSuc_Co = jrbKietSuc_Co;
+        this.jrbKietSuc_Khong = jrbKietSuc_Khong;
+        this.jrbMatKG_Co = jrbMatKG_Co;
+        this.jrbMatKG_Khong = jrbMatKG_Khong;
+        this.jrbMatVG_Co = jrbMatVG_Co;
+        this.jrbMatVG_Khong = jrbMatVG_Khong;
+        this.jrbOnLanh_Co = jrbOnLanh_Co;
+        this.jrbOnLanh_Khong = jrbOnLanh_Khong;
+        this.jrbTieuChay_Co = jrbTieuChay_Co;
+        this.jrbTieuChay_Khong = jrbTieuChay_Khong;
+        this.jrbXN_Co = jrbXN_Co;
+        this.jrbXN_Khong = jrbXN_Khong;
+        this.jtfDoBHOxi = jtfDoBHOxi;
+        this.jtfHuyetApTD = jtfHuyetApTD;
+        this.jtfHuyetApToiThieu = jtfHuyetApToiThieu;
+        this.jtfMach = jtfMach;
+        this.jtfNhietDo_QTDT = jtfNhietDo_QTDT;
+        this.jtfNhipTho_QTDT = jtfNhipTho_QTDT;
+    } 
     public void SetDataTTCB() throws ClassNotFoundException, SQLException, ParseException {
         Connection conn = null;
     
@@ -629,6 +914,25 @@ public class XemTT_CapNhatDTController {
                     this.jdcNgayTestPCR.setDate(date2);
                 }
              
+            }
+            ps.close();
+            conn.close();
+    }
+    public void SetTTBN_LanDau() throws ClassNotFoundException, SQLException, ParseException {
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        PreparedStatement ps=null;
+        String sql ="SELECT MABENHNHAN,HOTEN,CMND_CCCD,SODIENTHOAI FROM BENHNHAN WHERE MaBenhNhan LIKE ? ";
+        ps=conn.prepareStatement(sql);
+        
+         ps.setString(1, this.MABN);
+          ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                this.jtfMABN.setText(this.MABN);
+                this.jtfHoTen.setText(rs.getString("HoTen"));
+                 this.jtfCMND_CCCD.setText(rs.getString("CMND_CCCD"));
+                  this.jtfSDT.setText(rs.getString("SoDienThoai"));
             }
             ps.close();
             conn.close();
@@ -1204,6 +1508,15 @@ public class XemTT_CapNhatDTController {
                 SetDataDanhGiaSoLuoc();
                 SetDataQTDT();
       }
+      public void SetThongTin_BN()throws ClassNotFoundException, SQLException, ParseException {
+                SetDataTTCB();
+                SetDataTiemVX();
+                SetDataBenhNen();
+                SetDataMangThai();
+                SetDataThuocDaDungTruocTT();
+     
+               
+      }
       public int GetInt(JRadioButton btn_co ,JRadioButton btn_khong){
         if(btn_co.isSelected())
             return 1;
@@ -1251,10 +1564,10 @@ public class XemTT_CapNhatDTController {
         cStmt.setString(11,jtfNoiLamViec.getText());
         cStmt.setString(12, jtfSDT.getText());
         java.util.Date utilStartDate2 =jdcNgayTN.getDate();
-        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate2.getTime());
         cStmt.setDate(13, sqlStartDate2);
         java.util.Date utilStartDate3 =jdcNgayXHTTDT.getDate();
-        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate3.getTime());
         cStmt.setDate(14, sqlStartDate3);
         cStmt.setInt(15, GetInt_jcb(jcbTunglaF0_Co, jcbTunglaF0_Khong));
 //        cStmt.setString(16, jtfSoThangF0.getText());
@@ -1266,7 +1579,7 @@ public class XemTT_CapNhatDTController {
         cStmt.setInt(17, GetInt_jcb(jcbTestNhanh_Co, jcbTestNhanh_Khong));
         
         java.util.Date utilStartDate4 =jdcNgayTestNhanh.getDate();
-        java.sql.Date sqlStartDate4 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate4 = new java.sql.Date(utilStartDate4.getTime());
         cStmt.setDate(18, sqlStartDate4);
 //        cStmt.setString(19, jcobKQTestNhanh.getSelectedItem().toString());
         if(jcbTestNhanh_Khong.isSelected()){
@@ -1278,7 +1591,7 @@ public class XemTT_CapNhatDTController {
         
         cStmt.setInt(20, GetInt_jcb(jcbTestPCR_Co, jcbTestPCR_Khong));
          java.util.Date utilStartDate5 =jdcNgayTestPCR.getDate();
-        java.sql.Date sqlStartDate5 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate5 = new java.sql.Date(utilStartDate5.getTime());
         cStmt.setDate(21, sqlStartDate5);
 //        cStmt.setString(22, jcobKQTestPCR.getSelectedItem().toString());
          if(jcbTestPCR_Khong.isSelected()){
@@ -1584,8 +1897,9 @@ public class XemTT_CapNhatDTController {
         conn = OracleConnection.getOracleConnection();
         
         CallableStatement cStmt=null;
-        
-         cStmt = conn.prepareCall("{call UPDATE_QUATRINHDIEUTRITAINHA(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+         CallableStatement cStmt2=null;
+         cStmt = conn.prepareCall("{call INSERT_QUATRINHDIEUTRITAINHA(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+         cStmt2=conn.prepareCall("{call INSERT_CAPNHAT(?,?,?)}");
            long time = System.currentTimeMillis();
         Timestamp timestamp = new Timestamp(time);
         cStmt.setTimestamp(1,timestamp );
@@ -1627,10 +1941,72 @@ public class XemTT_CapNhatDTController {
              cStmt.setString(24, null);
              
         } 
-    
+        cStmt2.setString(1, jtfMABN.getText());
+        cStmt2.setTimestamp(2,timestamp );
+        cStmt2.setString(3, this.ID);
         
          cStmt.execute();
         cStmt.close();
+        conn.close();
+    }
+      public void UpdateDataTo_QTDT_BN() throws ClassNotFoundException, SQLException{
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+         CallableStatement cStmt2=null;
+         cStmt = conn.prepareCall("{call INSERT_QUATRINHDIEUTRITAINHA(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+         cStmt2=conn.prepareCall("{call INSERT_CAPNHAT(?,?,?)}");
+           long time = System.currentTimeMillis();
+        Timestamp timestamp = new Timestamp(time);
+        cStmt.setTimestamp(1,timestamp );
+        cStmt.setInt(2, Integer.parseInt(jtfMach.getText()));
+        cStmt.setInt(3, Integer.parseInt(jtfNhietDo_QTDT.getText()));
+        cStmt.setInt(4, Integer.parseInt(jtfNhipTho_QTDT.getText()));
+        cStmt.setInt(5, Integer.parseInt(jtfDoBHOxi.getText()));
+        cStmt.setInt(6, Integer.parseInt(jtfHuyetApTD.getText()));
+        cStmt.setInt(7, Integer.parseInt(jtfHuyetApToiThieu.getText()));
+        cStmt.setInt(8, GetInt(jrbKietSuc_Co, jrbKietSuc_Khong));
+        cStmt.setInt(9, GetInt(jrbHo_Co, jrbHo_Khong));
+        cStmt.setInt(10, GetInt(jrbHoRaDom_Co, jrbHoRaDom_Khong));
+        cStmt.setInt(11, GetInt(jrbOnLanh_Co, jrbOnLanh_Khong));
+        cStmt.setInt(12, GetInt(jrbMatVG_Co, jrbMatVG_Khong));
+        cStmt.setInt(13, GetInt(jrbMatKG_Co, jrbMatKG_Khong));
+        cStmt.setInt(14, GetInt(jrbTieuChay_Co, jrbTieuChay_Khong));
+        cStmt.setInt(15, GetInt(jrbHoRaMau_Co, jrbHoRaMau_Khong));
+        cStmt.setInt(16, GetInt(jrbKhoTho_Co, jrbKhoTho_Khong));
+        cStmt.setInt(17, GetInt(jrbDauNguc_Co, jrbDauNguc_Khong));
+        cStmt.setInt(18, GetInt(jrbKhongTT_Co, jrbKhongTT_Khong));
+        cStmt.setInt(19, GetInt(jrbGoiA_Co, jrbGoiA_Khong));
+        cStmt.setInt(20, GetInt(jrbGoiB_Co, jrbGoiB_Khong));
+        cStmt.setInt(21, GetInt(jrbGoiC_Co, jrbGoiC_Khong));
+        cStmt.setInt(22, GetInt(jrbXN_Co, jrbXN_Khong));
+        
+        
+     
+        
+        
+        
+        
+        if(jrbXN_Co.isSelected()){
+            java.util.Date utilStartDate3 =jdcNgayXN.getDate();
+             java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate3.getTime());
+                cStmt.setDate(23,sqlStartDate3);
+            cStmt.setString(24, getKQ_QTDT(jrbKQ_DT, jrbKQ_AT));
+        }else{
+            cStmt.setNull(23, java.sql.Types.DATE);
+             cStmt.setString(24, null);
+             
+        } 
+        cStmt2.setString(1, this.MABN);
+        cStmt2.setTimestamp(2,timestamp );
+        cStmt2.setString(3, "4564");
+        
+         cStmt.execute();
+          cStmt2.execute();
+        cStmt.close();
+        cStmt2.close();
         conn.close();
     }
 //     JDateChooser jdcNgayXN,
@@ -1683,5 +2059,13 @@ public class XemTT_CapNhatDTController {
                 UpdateDataTo_TTLucTiepNhan();
                 UpdateDataTo_DanhGiaSoLuoc();
                 UpdateDataTo_QTDT();
+     }
+     public void UpdateTT_BN() throws ClassNotFoundException, SQLException {
+              UpdateDataTo_BenhNhan();
+                UpdateDataTo_TiemVX();
+                UpdateDataTo_BenhNen();
+                UpdateDataTo_MangThai();
+                UpdateDataTo_ThuocDaDungTruocTT();
+                
      }
 }

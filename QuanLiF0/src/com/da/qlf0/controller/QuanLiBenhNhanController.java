@@ -9,9 +9,9 @@ import com.da.qlf0.dao.OracleConnection;
 import com.da.qlf0.model.BenhNhan;
 import com.da.qlf0.service.BenhNhanService;
 import com.da.qlf0.service.BenhNhanServiceImpl;
-import com.da.qlf0.ultility.BNTableModel;
-import com.da.qlf0.ultility.HoTro_Form;
-import com.da.qlf0.ultility.ThongTinBN_Form;
+import com.da.qlf0.ultility.NVTableModel;
+import com.da.qlf0.view.HoTro_Form;
+import com.da.qlf0.view.ThongTinBN_Form;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Dimension;
@@ -22,6 +22,7 @@ import java.lang.ProcessBuilder.Redirect.Type;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,6 +39,7 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import oracle.jdbc.OracleTypes;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
+import java.sql.Timestamp;
 
 /**
  *
@@ -100,10 +102,13 @@ public class QuanLiBenhNhanController {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 dem++;
-                String Hovaten, Mabenhnhan;
+                String Hovaten, Mabenhnhan, CMND, SDT , DiaChi;
                 Mabenhnhan=rs.getString("MaBenhNhan");
                 Hovaten=rs.getString("HoTen");
-                JPanel tt= new ThongTinBN_Form(Hovaten,Mabenhnhan);
+                CMND=rs.getString("CMND_CCCD");
+                SDT=rs.getString("SoDienThoai");
+                DiaChi=rs.getString("NoiOHienTai");
+                JPanel tt= new ThongTinBN_Form(Hovaten,Mabenhnhan,CMND,SDT,DiaChi,this.ID);
                 tt.setSize(1078, 191);
                 panel.add(tt);
             }
@@ -147,6 +152,59 @@ public class QuanLiBenhNhanController {
 ////            }
 ////        });
     }
+    public String getTenBN(String MABN) throws SQLException{
+         Connection cons = null;
+           try {
+               cons = OracleConnection.getOracleConnection();
+           } catch (ClassNotFoundException ex) {
+               Logger.getLogger(BenhNhanDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+           }
+        String sql = "SELECT * FROM BENHNHAN where MaBenhNhan like ? ";
+         String ma = null;
+         PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);
+        try {
+            
+            ps.setString(1, MABN);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                    
+                    ma=rs.getString("HoTen");
+           
+                }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+             ps.close();
+            cons.close();
+        return ma;
+    }
+    public String getCMND(String MABN) throws SQLException{
+         Connection cons = null;
+           try {
+               cons = OracleConnection.getOracleConnection();
+           } catch (ClassNotFoundException ex) {
+               Logger.getLogger(BenhNhanDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+           }
+        String sql = "SELECT * FROM BENHNHAN where MaBenhNhan like ? ";
+         String cmnd = null;
+          PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);
+        try {
+            
+            ps.setString(1, MABN);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                    
+                    cmnd=rs.getString("CMND_CCCD");
+            
+                }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        ps.close();
+            cons.close();
+        
+        return cmnd;
+    }
     public void setDataHotro(){
         
         JPanel panel= new JPanel();
@@ -170,23 +228,30 @@ public class QuanLiBenhNhanController {
             ps.setString(1, this.getID());
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
+                
                CallableStatement cs= cons.prepareCall("{?= call NguyCoChuyenBienNang (?) }");
                 
-                String Hovaten, Mabenhnhan;
+                String Hovaten, Mabenhnhan,CMND, NoiDung;
+                Timestamp time;
                 Mabenhnhan=rs.getString("MaBenhNhan");
-                Hovaten=rs.getString("HoTen");
+                NoiDung=rs.getString("YeuCau");
+                time=rs.getTimestamp("ThoiDiemYeuCau");
+                Hovaten=this.getTenBN(Mabenhnhan);
+                CMND=this.getCMND(Mabenhnhan);
                  cs.setString(2, Mabenhnhan);
                  cs.registerOutParameter(1, OracleTypes.INTEGER);
                  int rs2 = cs.executeUpdate();
                   int result = cs.getInt(1);
                  if(result==1 || result==2){
+                     dem++;
                      String cn = "Có";
-                     JPanel tt= new HoTro_Form(Hovaten,Mabenhnhan,cn); 
+                     JPanel tt= new HoTro_Form(Hovaten,Mabenhnhan,CMND,NoiDung,cn,time); 
                      tt.setSize(1078, 191);
                      panel.add(tt);
                  }else{
+                     dem++;
                      String cn = "Không";
-                     JPanel tt= new HoTro_Form(Hovaten,Mabenhnhan,cn); 
+                     JPanel tt= new HoTro_Form(Hovaten,Mabenhnhan,CMND,NoiDung,cn,time); 
                      tt.setSize(1078, 191);
                      panel.add(tt);
                  }
@@ -207,7 +272,7 @@ public class QuanLiBenhNhanController {
         jpnView.repaint();
 
     }
-    public void setDataChuyenNang(){
+    public void setDataChuyenNang() throws SQLException{
         
         JPanel panel= new JPanel();
         int dem=0;
@@ -226,35 +291,42 @@ public class QuanLiBenhNhanController {
            
          
         String sql = "SELECT * FROM BENHNHAN ";
-        
+         PreparedStatement ps = cons.prepareStatement(sql);
+         CallableStatement cs= cons.prepareCall("{?= call NguyCoChuyenBienNang (?) }");
         try {
-            PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);
+           
             
             
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                dem++;
-                CallableStatement cs= cons.prepareCall("{?= call NguyCoChuyenBienNang (?) }");
                 
-                String Hovaten, Mabenhnhan;
+                
+                
+                String Hovaten, Mabenhnhan, CMND, SDT , DiaChi;
                 Mabenhnhan=rs.getString("MaBenhNhan");
                 Hovaten=rs.getString("HoTen");
-                 cs.setString(2, Mabenhnhan);
-                 cs.registerOutParameter(1, OracleTypes.INTEGER);
-                 int rs2 = cs.executeUpdate();
+                CMND=rs.getString("CMND_CCCD");
+                SDT=rs.getString("SoDienThoai");
+                DiaChi=rs.getString("NoiOHienTai");
+                cs.setString(2, Mabenhnhan);
+                 cs.registerOutParameter(1, OracleTypes.NUMBER);
+                 cs.execute();
                   int result = cs.getInt(1);
                  if(result==1 || result==2){
-//                     JPanel tt= new HoTro_Form(Hovaten,Mabenhnhan); //ddooi thanh chuyen_nang_form
-//                     tt.setSize(1078, 191);
-//                     panel.add(tt);
+                     dem++;
+                     JPanel tt= new ThongTinBN_Form(Hovaten,Mabenhnhan,CMND,SDT,DiaChi,this.ID);
+                     tt.setSize(1078, 191);
+                     panel.add(tt);
                  }
                 
             }
-            ps.close();
-            cons.close();
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
+        ps.close();
+        cs.close();
+            cons.close();
         panel.setLayout(new GridLayout(dem,1));
         jpnView.removeAll();
         jpnView.setLayout(new BorderLayout());

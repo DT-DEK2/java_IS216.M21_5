@@ -52,56 +52,180 @@ public class TrangChu_BN extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1000, 650));
 
-        jButton1.setText("jButton1");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new java.awt.GridLayout(2, 2, 20, 20));
+
+        jButton1.setBackground(new java.awt.Color(0, 180, 153));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/world-wide-web.png"))); // NOI18N
+        jButton1.setText("CỔNG THÔNG TIN CỦA BỘ Y TẾ  "); // NOI18N
+        jButton1.setToolTipText(""); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
+
+        jButton2.setBackground(new java.awt.Color(0, 180, 153));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/analysis.png"))); // NOI18N
+        jButton2.setText("REALTIME MONITORING SARS-CoV-2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+
+        jButton4.setBackground(new java.awt.Color(0, 180, 153));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/handover.png"))); // NOI18N
+        jButton4.setText("CẨM NANG CHO F0 TẠI NHÀ");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+
+        jButton3.setBackground(new java.awt.Color(0, 180, 153));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/heatmap.png"))); // NOI18N
+        jButton3.setText("BẢN ĐỒ LÂY NHIỄM COVID-19 TRÊN THẾ GIỚI");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 41, 102));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/safety-suit.png"))); // NOI18N
+        jLabel1.setText("PHẦN MỀM QUẢN LÝ BỆNH NHÂN COVID - 19 TẠI NHÀ");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 41, 102));
+        jLabel2.setText("BỆNH NHÂN THỂ CẬP NHẬT CÁC SỐ LIỆU VỀ CÁC CA NHIỄM MỚI TẠI VIỆT NAM VÀ TRÊN THẾ GIỚI TRONG CÁC WEBSITE SAU!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(347, 347, 347)
-                .addComponent(jButton1)
-                .addContainerGap(583, Short.MAX_VALUE))
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1016, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jButton1)
-                .addContainerGap(500, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         Engine engine = Engine.newInstance(
-        EngineOptions.newBuilder(OFF_SCREEN)
-                .licenseKey("1BNDHFSC1G2RCPD2ZQ4965WAVKIVGHARPEK9A66RH4RE5PMXKNREX1N5U2YNXVRJR6KSC2")
-                .build());
-         Browser browser = engine.newBrowser();
+        Engine engine = Engine.newInstance(
+            EngineOptions.newBuilder(OFF_SCREEN)
+            .licenseKey("1BNDHFSC1G2RCPD2ZQ4965WAVKIVGHARPEK9A66RH4RE5PMXKNREX1N5U2YNXVRJR6KSC2")
+            .build());
+        Browser browser = engine.newBrowser();
         SwingUtilities.invokeLater(()->{
             BrowserView view = BrowserView.newInstance(browser);
-            JFrame frame = new JFrame("Java swing web browser");
+            JFrame frame = new JFrame("Cổng thông tin Bộ y tế");
             frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
             frame.add(view,BorderLayout.CENTER);
             frame.setSize(1280,900);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-            browser.navigation().loadUrl("https://zingnews.vn/");
+            browser.navigation().loadUrl("https://covid19.gov.vn/");
         });
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+             Engine engine = Engine.newInstance(
+            EngineOptions.newBuilder(OFF_SCREEN)
+            .licenseKey("1BNDHFSC1G2RCPD2ZQ4965WAVKIVGHARPEK9A66RH4RE5PMXKNREX1N5U2YNXVRJR6KSC2")
+            .build());
+        Browser browser = engine.newBrowser();
+        SwingUtilities.invokeLater(()->{
+            BrowserView view = BrowserView.newInstance(browser);
+            JFrame frame = new JFrame("Biểu đồ số liệu");
+            frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+            frame.add(view,BorderLayout.CENTER);
+            frame.setSize(1280,900);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+            browser.navigation().loadUrl("https://corona.kompa.ai/?fbclid=IwAR3Ydv1KjtvnioCTMJVVkC8bDrSphomDQJTPA3STXNyMZ8MBx5S0XMalef4");
+        });
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       Engine engine = Engine.newInstance(
+            EngineOptions.newBuilder(OFF_SCREEN)
+            .licenseKey("1BNDHFSC1G2RCPD2ZQ4965WAVKIVGHARPEK9A66RH4RE5PMXKNREX1N5U2YNXVRJR6KSC2")
+            .build());
+        Browser browser = engine.newBrowser();
+        SwingUtilities.invokeLater(()->{
+            BrowserView view = BrowserView.newInstance(browser);
+            JFrame frame = new JFrame("Bản đồ lây nhiễm");
+            frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+            frame.add(view,BorderLayout.CENTER);
+            frame.setSize(1280,900);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+            browser.navigation().loadUrl("https://news.google.com/covid19/map?hl=vi&gl=VN&ceid=VN:vi");
+        });
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+      Engine engine = Engine.newInstance(
+            EngineOptions.newBuilder(OFF_SCREEN)
+            .licenseKey("1BNDHFSC1G2RCPD2ZQ4965WAVKIVGHARPEK9A66RH4RE5PMXKNREX1N5U2YNXVRJR6KSC2")
+            .build());
+        Browser browser = engine.newBrowser();
+        SwingUtilities.invokeLater(()->{
+            BrowserView view = BrowserView.newInstance(browser);
+            JFrame frame = new JFrame("Cẩm nang cho F0 tại nhà");
+            frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+            frame.add(view,BorderLayout.CENTER);
+            frame.setSize(1280,900);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+            browser.navigation().loadUrl("https://vnexpress.net/suc-khoe/cham-soc-f0/tu-cham-soc");
+        });
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

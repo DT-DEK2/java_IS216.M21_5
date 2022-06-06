@@ -46,6 +46,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         listItem.add(new DanhMucThemBN("TinhTrang",jpnTinhTrang,jlbTinhTrang));
         
         controller.setEvent(listItem);
+        setTitle("Thêm bệnh nhân");
     }
     
     /**

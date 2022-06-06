@@ -72,7 +72,7 @@ class LabelEvent implements MouseListener {
                     node = new TrangChuPanel(ID);
                     break;
                 case "QuanLiBN":
-                    node = new QuanLiBnPanel();
+                    node = new QuanLiBnPanel(ID);
                     break;
                 case "ThongKe":
                     node = new ThongKePanel();
@@ -89,7 +89,7 @@ class LabelEvent implements MouseListener {
            jpnRoot.removeAll();
            jpnRoot.setLayout(new BorderLayout());
            node.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
-           jpnRoot.add(node);
+           jpnRoot.add(node,BorderLayout.CENTER);
            
            jpnRoot.validate();
            jpnRoot.repaint();

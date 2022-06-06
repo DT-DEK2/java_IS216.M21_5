@@ -23,6 +23,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 /**
  *
  * @author Minh Cuong
@@ -33,16 +34,16 @@ public class ChuyenManHinhBNController {
         private JPanel jpnRoot;
         private ArrayList<DanhMucBeanBNhan> listItem = null;
         private String MABN;
-    public ChuyenManHinhBNController(JPanel jpnRoot) {
+    public ChuyenManHinhBNController(JPanel jpnRoot,String MABN) {
         this.jpnRoot = jpnRoot;
-//        this.MABN=MABN;
+        this.MABN=MABN;
     }
         
     public void setView(JPanel jpnItem, JLabel jlbItem) {
         kindSelected = "TTCaNhan";
        jpnItem.setBackground(new Color(0, 134, 179));
        jlbItem.setBackground(new Color(0, 134, 179));
-       JPanel node = new TrangChuPanel(MABN);
+       JPanel node = new TrangChu_BN(MABN);
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
        jpnRoot.add(node);
@@ -78,23 +79,36 @@ class LabelEvent implements MouseListener {
                     node = new TrangChu_BN(MABN);
                     break;
                 case "TTCaNhan":
-                    node = new TTCaNhan();
+                    node = new TTCaNhan(MABN);
                     break;
-                case "KhaiBao":
-                    node = new KhaiBao();
-                    
-                    break;
+//                case "KhaiBao":
+//                    node = new KhaiBao(MABN);
+//                    
+//                    break;
                 case "YCHoTro":
-                    node = new YCHoTro();
+                    node = new YCHoTro(MABN);
                     
                     break;
                 default:
                     break;
            }
+            if(kind.equals("KhaiBao")){
+                 node = new KhaiBao(MABN);
+                 jpnRoot.removeAll();
+                   jpnRoot.setLayout(new BorderLayout());
+                  JScrollPane scrollp = new JScrollPane(node, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                    scrollp.setPreferredSize(new Dimension(1060, 500));
+                    jpnRoot.add(scrollp,BorderLayout.CENTER);
+                     jpnRoot.validate();
+             jpnRoot.repaint();
+            setChangeBackground(kind);
+           
+            }
            jpnRoot.removeAll();
            jpnRoot.setLayout(new BorderLayout());
+           
            node.setPreferredSize(new Dimension(jpnRoot.getWidth(),jpnRoot.getHeight()));
-           jpnRoot.add(node);
+           jpnRoot.add(node,BorderLayout.CENTER);
            
            jpnRoot.validate();
            jpnRoot.repaint();

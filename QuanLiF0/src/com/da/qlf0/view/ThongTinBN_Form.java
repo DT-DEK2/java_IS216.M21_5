@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.da.qlf0.ultility;
+package com.da.qlf0.view;
 
 import com.da.qlf0.controller.XemTT_CapNhatDTController;
 import com.da.qlf0.controller.XoaBenhNhanController;
@@ -26,13 +26,19 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     /**
      * Creates new form ThongTinBN_Form
      */
+    private String ID;
     public ThongTinBN_Form() {
         initComponents();
     }
-    public ThongTinBN_Form( String Hovaten, String Mabenhnhan){
+    public ThongTinBN_Form( String Hovaten, String Mabenhnhan, String CMND, String SDT,  String DiaChi, String ID){
         initComponents();
-        this.jLabel2.setText(Hovaten);
+        this.jlbCMND.setText(CMND);
+        this.jlbSDT.setText(SDT);
+        
+        this.jlbDiaChi.setText(DiaChi);
+        this.jlbHoTen.setText(Hovaten);
         this.jlbMABN.setText(Mabenhnhan);
+        this.ID=ID;
     }
 
     /**
@@ -45,18 +51,16 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jlbHoTen = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jlbMABN = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jlbCMND = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jlbSDT = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jlbDiaChi = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
@@ -74,11 +78,11 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         jLabel1.setText("Họ và tên: ");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 50, -1, -1));
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel2.setText("............");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 50, -1, -1));
+        jlbHoTen.setBackground(new java.awt.Color(255, 255, 255));
+        jlbHoTen.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbHoTen.setForeground(new java.awt.Color(20, 20, 20));
+        jlbHoTen.setText("............");
+        add(jlbHoTen, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 50, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -93,6 +97,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         add(jlbMABN, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 50, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/search.png"))); // NOI18N
         jButton1.setText("Xem chi tiết");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,11 +112,11 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         jLabel5.setText("Số CMND/CCCD:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 50, -1, -1));
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel6.setText("............");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, -1, -1));
+        jlbCMND.setBackground(new java.awt.Color(255, 255, 255));
+        jlbCMND.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbCMND.setForeground(new java.awt.Color(20, 20, 20));
+        jlbCMND.setText("............");
+        add(jlbCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 50, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -119,46 +124,36 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         jLabel7.setText("Số điện thoại:");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 132, -1, -1));
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel8.setText("............");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 132, -1, -1));
-
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel9.setText("Địa chỉ Mail:");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 132, -1, -1));
+        jlbSDT.setBackground(new java.awt.Color(255, 255, 255));
+        jlbSDT.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbSDT.setForeground(new java.awt.Color(20, 20, 20));
+        jlbSDT.setText("............");
+        add(jlbSDT, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 132, -1, -1));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
         jLabel10.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(20, 20, 20));
         jLabel10.setText("Địa chỉ đang sinh sống:");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(519, 132, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, -1));
 
-        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel11.setText("............");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(372, 132, -1, -1));
-
-        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel12.setText("............");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 132, -1, -1));
+        jlbDiaChi.setBackground(new java.awt.Color(255, 255, 255));
+        jlbDiaChi.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbDiaChi.setForeground(new java.awt.Color(20, 20, 20));
+        jlbDiaChi.setText("............");
+        add(jlbDiaChi, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/trash.png"))); // NOI18N
         jButton2.setText("Xóa bệnh nhân");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(971, 156, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 160, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/create.png"))); // NOI18N
         jButton3.setText("Tạo kết quả điều trị");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,10 +220,10 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CapNhat_Frame cn = new CapNhat_Frame(this.jlbMABN.getText());
+        CapNhat_Frame cn = new CapNhat_Frame(this.jlbMABN.getText(),this.ID);
         cn.setVisible(true);
         cn.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-        XemTT_CapNhatDTController tt_cn = new XemTT_CapNhatDTController(
+        XemTT_CapNhatDTController tt_cn = new XemTT_CapNhatDTController(this.ID,
                 this.jlbMABN.getText(),
                 cn.getNode1().getJcbNam(),
                 cn.getNode1().getJcbNu(),
@@ -427,17 +422,15 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jlbCMND;
+    private javax.swing.JLabel jlbDiaChi;
+    private javax.swing.JLabel jlbHoTen;
     private javax.swing.JLabel jlbMABN;
+    private javax.swing.JLabel jlbSDT;
     // End of variables declaration//GEN-END:variables
 }

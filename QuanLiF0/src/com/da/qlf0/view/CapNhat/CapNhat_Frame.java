@@ -29,7 +29,8 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     private TinhTrangTT_CapNhat node4 = new TinhTrangTT_CapNhat();
     private QTDieuTri_CapNhat node5 = new QTDieuTri_CapNhat();
     private String MABN;
-    public CapNhat_Frame(String MABN) {
+    private String ID;
+    public CapNhat_Frame(String MABN, String ID) {
         initComponents();
         ChuyenMH_CapNhat controller = new ChuyenMH_CapNhat(jpnView, node1, node2, node3, node4, node5);
         controller.setView(jpnTTCoBan, jlbTTCoBan);
@@ -43,6 +44,8 @@ public class CapNhat_Frame extends javax.swing.JFrame {
 
         controller.setEvent(listItem);
         this.MABN=MABN;
+        this.ID=ID;
+        setTitle("Xem chi tiết thông tin và cập nhật");
     }
 
     public TTCoBan_CapNhat getNode1() {
@@ -96,6 +99,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(204, 102, 0));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/floppy-disk.png"))); // NOI18N
         jButton1.setText("Cập nhật quá trình điều trị");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,9 +107,10 @@ public class CapNhat_Frame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 1, 10)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 115, 153));
-        jLabel1.setText("<<BACK");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/previous.png"))); // NOI18N
+        jLabel1.setText("Trở lại");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -232,8 +237,8 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jpnTTCoBan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -242,7 +247,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
                 .addComponent(jpnTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -252,14 +257,14 @@ public class CapNhat_Frame extends javax.swing.JFrame {
             .addComponent(jpnTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnTinhTrang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(16, 16, 16))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jpnView.setPreferredSize(new java.awt.Dimension(0, 619));
@@ -307,7 +312,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Xác nhận lưu thông tin?", "Lưu cập nhật", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
         if(dialogResult == 0) {
             
-                XemTT_CapNhatDTController tt_cn = new XemTT_CapNhatDTController(
+                XemTT_CapNhatDTController tt_cn = new XemTT_CapNhatDTController(this.ID,
                  this.node1.getJlbMABN().getText(),
                  this.node1.getJcbNam(),
                  this.node1.getJcbNu(),
@@ -499,6 +504,9 @@ public class CapNhat_Frame extends javax.swing.JFrame {
                ||node4.getJtfChieuCao().getText().length()== 0
                ||node4.getJtfCanNang().getText().length()== 0
                ||node4.getJtfChuanDoanTT().getText().length()== 0
+               ||node5.getJtfMach().getText().length()== 0
+               ||node5.getJtfNhietDo_QTDT().getText().length()== 0
+               ||node5.getJtfNhipTho_QTDT().getText().length()== 0
                   
                     
                     ) {

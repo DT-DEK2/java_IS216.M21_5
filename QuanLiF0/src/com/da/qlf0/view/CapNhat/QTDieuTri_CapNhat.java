@@ -292,7 +292,7 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel12.setText("Nhịp thở (lần/phút):");
+        jLabel12.setText("Nhịp thở (lần/phút)*:");
 
         jtfMach.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfMach.setForeground(new java.awt.Color(20, 20, 20));
@@ -324,7 +324,7 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel13.setText("Mạch: ");
+        jLabel13.setText("Mạch*: ");
 
         jLabel14.setBackground(new java.awt.Color(255, 255, 255));
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

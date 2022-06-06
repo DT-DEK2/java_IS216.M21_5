@@ -23,6 +23,8 @@ public class DangKyFrame extends javax.swing.JFrame {
      */
     public DangKyFrame() {
         initComponents();
+        setTitle("Đăng kí");
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
     }
 
     /**
@@ -41,20 +43,15 @@ public class DangKyFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jtfHoTen = new javax.swing.JTextPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jtfCMND_CCCD = new javax.swing.JTextPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jtfSDT = new javax.swing.JTextPane();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jtfMatKhau = new javax.swing.JTextPane();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jtfXnMatKhau = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jtfHoTen = new javax.swing.JTextField();
+        jtfCMND_CCCD = new javax.swing.JTextField();
+        jtfSDT = new javax.swing.JTextField();
+        jtfMatKhau = new javax.swing.JPasswordField();
+        jtfXnMatKhau = new javax.swing.JPasswordField();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -91,26 +88,6 @@ public class DangKyFrame extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(20, 20, 20));
         jLabel6.setText("Mật khẩu*:");
 
-        jScrollPane1.setViewportView(jtfHoTen);
-
-        jtfCMND_CCCD.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jtfCMND_CCCDKeyPressed(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jtfCMND_CCCD);
-
-        jtfSDT.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jtfSDTKeyPressed(evt);
-            }
-        });
-        jScrollPane3.setViewportView(jtfSDT);
-
-        jScrollPane4.setViewportView(jtfMatKhau);
-
-        jScrollPane5.setViewportView(jtfXnMatKhau);
-
         jButton1.setBackground(new java.awt.Color(77, 184, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Tạo Tài Khoản");
@@ -143,6 +120,22 @@ public class DangKyFrame extends javax.swing.JFrame {
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
+        jtfCMND_CCCD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfCMND_CCCDKeyPressed(evt);
+            }
+        });
+
+        jtfSDT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSDTKeyPressed(evt);
+            }
+        });
+
+        jtfMatKhau.setText("jPasswordField1");
+
+        jtfXnMatKhau.setText("jPasswordField1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -151,32 +144,31 @@ public class DangKyFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(48, 48, 48)
+                                .addComponent(jtfCMND_CCCD, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(80, 80, 80)
+                                .addComponent(jtfHoTen))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(79, 79, 79)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(69, 69, 69)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel5))
+                                .addGap(12, 12, 12)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jtfSDT, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                                            .addComponent(jtfMatKhau)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jtfXnMatKhau))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -192,30 +184,27 @@ public class DangKyFrame extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(20, 20, 20))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jtfSDT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jtfMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                    .addComponent(jtfXnMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
                 .addComponent(jButton1)
                 .addContainerGap(56, Short.MAX_VALUE))
         );
@@ -238,48 +227,6 @@ public class DangKyFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtfCMND_CCCDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDKeyPressed
-        // TODO add your handling code here:
-        String sdt = jtfCMND_CCCD.getText();
-        int length = sdt.length();
-        char c=evt.getKeyChar();
-        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
-            if(length<12){
-                jtfCMND_CCCD.setEditable(true);
-            }else{
-                jtfCMND_CCCD.setEditable(false);
-            }
-        }else{
-            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
-                jtfCMND_CCCD.setEditable(true);
-            }else{
-                jtfCMND_CCCD.setEditable(false);
-            }
-        }
-    
-    }//GEN-LAST:event_jtfCMND_CCCDKeyPressed
-
-    private void jtfSDTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSDTKeyPressed
-        // TODO add your handling code here:
-        String sdt = jtfSDT.getText();
-        int length = sdt.length();
-        char c=evt.getKeyChar();
-        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
-            if(length<10){
-                jtfSDT.setEditable(true);
-            }else{
-                jtfSDT.setEditable(false);
-            }
-        }else{
-            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
-                jtfSDT.setEditable(true);
-            }else{
-                jtfSDT.setEditable(false);
-            }
-        }
-                 
-    }//GEN-LAST:event_jtfSDTKeyPressed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        
@@ -301,7 +248,7 @@ public class DangKyFrame extends javax.swing.JFrame {
      
                ){
               JFrame frame2 = new JFrame();
-                    frame.setBounds(0,0,100,50);
+                    frame2.setBounds(0,0,100,50);
                     JOptionPane.showMessageDialog(frame,
                     "Vui lòng nhập dữ liệu bắt buộc!");
                    
@@ -309,7 +256,7 @@ public class DangKyFrame extends javax.swing.JFrame {
          else if(jtfMatKhau.getText().equals(jtfXnMatKhau.getText())==false){
              
               JFrame frame3 = new JFrame();
-                    frame.setBounds(0,0,100,50);
+                    frame3.setBounds(0,0,100,50);
                     JOptionPane.showMessageDialog(frame,
                     "Xác nhận mật khẩu không trùng khớp! Vui lòng nhập lại");
          }else{
@@ -319,12 +266,12 @@ public class DangKyFrame extends javax.swing.JFrame {
                     frame.setBounds(0,0,100,50);
                     JOptionPane.showMessageDialog(frame,
                     "Đăng kí thành công!");
-                    this.dispose();
+                   
              } catch (ClassNotFoundException ex) {
                  Logger.getLogger(DangKyFrame.class.getName()).log(Level.SEVERE, null, ex);
                  
                   JFrame frame5 = new JFrame();
-                        frame.setBounds(0,0,100,50);
+                        frame5.setBounds(0,0,100,50);
                         JOptionPane.showMessageDialog(frame,
                         "Thêm thất bại bệnh nhân\n" +
                         
@@ -333,7 +280,7 @@ public class DangKyFrame extends javax.swing.JFrame {
                  Logger.getLogger(DangKyFrame.class.getName()).log(Level.SEVERE, null, ex);
                  
                   JFrame frame6 = new JFrame();
-                        frame.setBounds(0,0,100,50);
+                        frame6.setBounds(0,0,100,50);
                         JOptionPane.showMessageDialog(frame,
                         "Thêm thất bại bệnh nhân\n" +
                          ex.getSQLState()+"\n"+
@@ -347,6 +294,46 @@ public class DangKyFrame extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jtfCMND_CCCDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDKeyPressed
+        // TODO add your handling code here:
+        String sdt = jtfCMND_CCCD.getText();
+        int length = sdt.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
+            if(length<12){
+                jtfCMND_CCCD.setEditable(true);
+            }else{
+                jtfCMND_CCCD.setEditable(false);
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                jtfCMND_CCCD.setEditable(true);
+            }else{
+                jtfCMND_CCCD.setEditable(false);
+            }
+        }
+    }//GEN-LAST:event_jtfCMND_CCCDKeyPressed
+
+    private void jtfSDTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSDTKeyPressed
+        // TODO add your handling code here:
+        String sdt = jtfSDT.getText();
+        int length = sdt.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
+            if(length<10){
+                jtfSDT.setEditable(true);
+            }else{
+                jtfSDT.setEditable(false);
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                jtfSDT.setEditable(true);
+            }else{
+                jtfSDT.setEditable(false);
+            }
+        }
+    }//GEN-LAST:event_jtfSDTKeyPressed
 
     /**
      * @param args the command line arguments
@@ -393,16 +380,11 @@ public class DangKyFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextPane jtfCMND_CCCD;
-    private javax.swing.JTextPane jtfHoTen;
-    private javax.swing.JTextPane jtfMatKhau;
-    private javax.swing.JTextPane jtfSDT;
-    private javax.swing.JTextPane jtfXnMatKhau;
+    private javax.swing.JTextField jtfCMND_CCCD;
+    private javax.swing.JTextField jtfHoTen;
+    private javax.swing.JPasswordField jtfMatKhau;
+    private javax.swing.JTextField jtfSDT;
+    private javax.swing.JPasswordField jtfXnMatKhau;
     // End of variables declaration//GEN-END:variables
 }
