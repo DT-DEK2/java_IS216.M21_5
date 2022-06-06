@@ -6,7 +6,13 @@ package com.da.qlf0.view.CapNhat;
 
 import com.da.qlf0.bean.DanhMucCapNhatBN;
 import com.da.qlf0.controller.ChuyenMH_CapNhat;
+import com.da.qlf0.controller.XemTT_CapNhatDTController;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,8 +28,9 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     private BenhNen_CapNhat node3 = new BenhNen_CapNhat();
     private TinhTrangTT_CapNhat node4 = new TinhTrangTT_CapNhat();
     private QTDieuTri_CapNhat node5 = new QTDieuTri_CapNhat();
-
-    public CapNhat_Frame() {
+    private String MABN;
+    private String ID;
+    public CapNhat_Frame(String MABN, String ID) {
         initComponents();
         ChuyenMH_CapNhat controller = new ChuyenMH_CapNhat(jpnView, node1, node2, node3, node4, node5);
         controller.setView(jpnTTCoBan, jlbTTCoBan);
@@ -36,8 +43,31 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         listItem.add(new DanhMucCapNhatBN("QuaTrinhDieuTri", jpnQTDieuTri, jlbQTDieuTri));
 
         controller.setEvent(listItem);
+        this.MABN=MABN;
+        this.ID=ID;
+        setTitle("Xem chi tiết thông tin và cập nhật");
     }
 
+    public TTCoBan_CapNhat getNode1() {
+        return node1;
+    }
+
+    public TiemVX_CapNhat getNode2() {
+        return node2;
+    }
+
+    public BenhNen_CapNhat getNode3() {
+        return node3;
+    }
+
+    public TinhTrangTT_CapNhat getNode4() {
+        return node4;
+    }
+
+    public QTDieuTri_CapNhat getNode5() {
+        return node5;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,16 +99,18 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(204, 102, 0));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Lưu thông tin");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/floppy-disk.png"))); // NOI18N
+        jButton1.setText("Cập nhật quá trình điều trị");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 1, 10)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 115, 153));
-        jLabel1.setText("<<BACK");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/previous.png"))); // NOI18N
+        jLabel1.setText("Trở lại");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -205,8 +237,8 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jpnTTCoBan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -215,9 +247,9 @@ public class CapNhat_Frame extends javax.swing.JFrame {
                 .addComponent(jpnTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,14 +257,14 @@ public class CapNhat_Frame extends javax.swing.JFrame {
             .addComponent(jpnTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnTinhTrang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnQTDieuTri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(16, 16, 16))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jpnView.setPreferredSize(new java.awt.Dimension(0, 619));
@@ -272,230 +304,251 @@ public class CapNhat_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-//        JFrame frame = new JFrame();
-//        String[] options = new String[2];
-//        options[0] = "Có";
-//        options[1] = "Không";
-//        int dialogButton = JOptionPane.YES_NO_OPTION;
-//        int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Bạn muốn lưu thông tin thêm mới?", "Lưu thông tin thêm mới", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
-//        if (dialogResult == 0) {
-//            //            System.out.println("Yes option");
-//            ThemBNController th = new ThemBNController(
-//                this.node1.getJcbNam(),
-//                this.node1.getJcbNu(),
-//                this.node1.getJcobKQTestNhanh(),
-//                this.node1.getJcobKQTestPCR(),
-//                this.node1.getJcbTestNhanh_Co(),
-//                this.node1.getJcbTestNhanh_Khong(),
-//                this.node1.getJcbTestPCR_Co(),
-//                this.node1.getJcbTestPCR_Khong(),
-//                this.node1.getJcbTungLaF0_Co(),
-//                this.node1.getJcbTungLaF0_Khong(),
-//                this.node1.getJcobPhuong_Xa(),
-//                this.node1.getJcobQuan_Huyen(),
-//                this.node1.getJcobTinh_ThanhPho(),
-//                this.node1.getJdcNgaySinh(),
-//                this.node1.getJdcNgayTestNhanh(),
-//                this.node1.getJdcNgayTestPCR(),
-//                this.node1.getJdcNgayTnF0(),
-//                this.node1.getJdcNgayXHTTDT(),
-//                this.node1.getJtfCMND_CCCD(),
-//                this.node1.getJtfHoTen(),
-//                this.node1.getJtfMABN(),
-//                this.node1.getJtfNgheNghiep(),
-//                this.node1.getJtfNoiLamViec(),
-//                this.node1.getJtfNoiO(),
-//                this.node1.getJtfSDT(),
-//                this.node1.getJtfSoThangF0(),
-//                this.node2.getJcobLoaiVX1(),
-//                this.node2.getJcobLoaiVX2(),
-//                this.node2.getJcobLoaiVX3(),
-//                this.node2.getJdcTGTiem1(),
-//                this.node2.getJdcTGTiem2(),
-//                this.node2.getJdcTGTiem3(),
-//                this.node2.getJrbTiemVX_1m(),
-//                this.node2.getJrbTiemVX_2m(),
-//                this.node2.getJrbTiemVX_3m(),
-//                this.node2.getJrbTiemVX_ChuaTiem(),
-//                this.node2.getJrbTiemVX_KhongBiet(),
-//                this.node3.getJrbBenhGan_Co(),
-//                this.node3.getJrbBenhGan_Khong(),
-//                this.node3.getJrbBenhPhoiMT_Co(),
-//                this.node3.getJrbBenhPhoiMT_Khong(),
-//                this.node3.getJrbBenhTKMT_Co(),
-//                this.node3.getJrbBenhTKMT_Khong(),
-//                this.node3.getJrbBenhThanMT_Co(),
-//                this.node3.getJrbBenhThanMT_Khong(),
-//                this.node3.getJrbBenhTim_Co(),
-//                this.node3.getJrbBenhTim_Khong(),
-//                this.node3.getJrbBeoPhi_Co(),
-//                this.node3.getJrbBeoPhi_Khong(),
-//                this.node3.getJrbCLBenhHT_Co(),
-//                this.node3.getJrbCLBenhHT_Khong(),
-//                this.node3.getJrbDaiTD_Co(),
-//                this.node3.getJrbDaiTD_Khong(),
-//                this.node3.getJrbGhepTang_TBM_Co(),
-//                this.node3.getJrbGhepTang_TBM_Khong(),
-//                this.node3.getJrbHIV_Co(),
-//                this.node3.getJrbHIV_Khong(),
-//                this.node3.getJrbMangThai_Co(),
-//                this.node3.getJrbMangThai_Khong(),
-//                this.node3.getJrbHauSan_Co(),
-//                this.node3.getJrbHauSan_Khong(),
-//                this.node3.getJtfSoTuanMT(),
-//                this.node3.getJrbTreSSXNcovid_Co(),
-//                this.node3.getJrbTreSSXNcovid_Khong(),
-//                this.node3.getJrbKQXN_AT(),
-//                this.node3.getJrbKQXN_ChuaCoKQ(),
-//                this.node3.getJrbKQXN_DT(),
-//                this.node3.getJrbHenKQ_Co(),
-//                this.node3.getJrbHenKQ_Khong(),
-//                this.node3.getJrbHoiChungDown_Co(),
-//                this.node3.getJrbHoiChungDown_Khong(),
-//                this.node3.getJrbMachMauNao_Co(),
-//                this.node3.getJrbMachMauNao_Khong(),
-//                this.node3.getJrbUngThu_Co(),
-//                this.node3.getJrbUngThu_Khong(),
-//                this.node3.getJrbRoiLoanSDCGN_Co(),
-//                this.node3.getJrbRoiLoanSDCGN_Khong(),
-//                this.node3.getJrbTangHA_Co(),
-//                this.node3.getJrbTangHA_Khong(),
-//                this.node3.getJrbThieuMD_Co(),
-//                this.node3.getJrbThieuMD_Khong(),
-//                this.node3.getJrbThuocDTCovid_Co(),
-//                this.node3.getJrbThuocDTCovid_Khong(),
-//                this.node3.getJrbThuocUCMD_Co(),
-//                this.node3.getJrbThuocUCMD_Khong(),
-//                this.node3.getJrbThuocMD_Co(),
-//                this.node3.getJrbThuocMD_Khong(),
-//                this.node3.getJrbSteroid_Co(),
-//                this.node3.getJrbSteroid_Khong(),
-//                this.node3.getJrbKhangSinh_Co(),
-//                this.node3.getJrbKhangSinh_Khong(),
-//                this.node3.getJrbKhangVirus_Co(),
-//                this.node3.getJrbKhangVirus_Khong(),
-//                this.node4.getJcobDGTTBL(),
-//                this.node4.getJrbBuonNon_Co(),
-//                this.node4.getJrbBuonNon_Khong(),
-//                this.node4.getJrbCoGiat_Co(),
-//                this.node4.getJrbCoGiat_Khong(),
-//                this.node4.getJrbDKCL_Co(),
-//                this.node4.getJrbDKCL_Khong(),
-//                this.node4.getJrbDauBung_Co(),
-//                this.node4.getJrbDauBung_Khong(),
-//                this.node4.getJrbDauDau_Co(),
-//                this.node4.getJrbDauDau_Khong(),
-//                this.node4.getJrbDauCo_Co(),
-//                this.node4.getJrbDauCo_Khong(),
-//                this.node4.getJrbDauHong_Co(),
-//                this.node4.getJrbDauHong_Khong(),
-//                this.node4.getJrbDauKhop_Co(),
-//                this.node4.getJrbDauKhop_Khong(),
-//                this.node4.getJrbMatKhuuGiac_Co(),
-//                this.node4.getJrbMatKhuuGiac_Khong(),
-//                this.node4.getJrbMatViGiac_Co(),
-//                this.node4.getJrbMatViGiac_Khong(),
-//                this.node4.getJrbNoiHach_Co(),
-//                this.node4.getJrbNoiHach_Khong(),
-//                this.node4.getJrbSot_Co(),
-//                this.node4.getJrbSot_Khong(),
-//                this.node4.getJrbTTKhac_Co(),
-//                this.node4.getJrbTTKhac_Khong(),
-//                this.node4.getJrbXuatHuyet_Co(),
-//                this.node4.getJrbXuatHuyet_Khong(),
-//                this.node4.getJtfCanNang(),
-//                this.node4.getJtfChieuCao(),
-//                this.node4.getJtfChuanDoanTT(),
-//                this.node4.getJtfDoBH_Oxi(),
-//                this.node4.getJtfHuyetApTThu(),
-//                this.node4.getJtfHuyetApTTruong(),
-//                this.node4.getJtfNhietDo(),
-//                this.node4.getJtfNhipTho(),
-//                this.node4.getJtfNhipTim(),
-//                this.node4.getJtfTTKhac()
-//            );
-//
-//            if (node1.getJtfHoTen().getText().length() == 0
-//                || node1.getJtfCMND_CCCD().getText().length() == 0
-//                || node1.getJtfNoiO().getText().length() == 0
-//                || node1.getJtfSDT().getText().length() == 0
-//                || node4.getJtfNhietDo().getText().length() == 0
-//                || node4.getJtfNhipTho().getText().length() == 0
-//                || node4.getJtfNhipTim().getText().length() == 0
-//                || node4.getJtfChieuCao().getText().length() == 0
-//                || node4.getJtfCanNang().getText().length() == 0
-//                || node4.getJtfChuanDoanTT().getText().length() == 0) {
-//                JFrame frame4 = new JFrame();
-//                frame.setBounds(0, 0, 100, 50);
-//                JOptionPane.showMessageDialog(frame,
-//                    "Vui lòng nhập dữ liệu bắt buộc!");
-//            }
-//
-//            try {
-//                th.SetDataTo_BenhNhan();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_TiemVX();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_BenhNen();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_MangThai();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_ThuocDaDungTruocTT();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_TongTrang();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_TTLucTiepNhan();
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            try {
-//                th.SetDataTo_DanhGiaSoLuoc();
-//                JFrame frame2 = new JFrame();
-//                frame.setBounds(0, 0, 100, 50);
-//                JOptionPane.showMessageDialog(frame,
-//                    "Thêm thành bệnh nhân");
-//            } catch (ClassNotFoundException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//
-//        }
-//
-        this.dispose();
+        JFrame frame = new JFrame();
+        String[] options = new String[2];
+        options[0] = "Có";
+        options[1] = "Không";
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Xác nhận lưu thông tin?", "Lưu cập nhật", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+        if(dialogResult == 0) {
+            
+                XemTT_CapNhatDTController tt_cn = new XemTT_CapNhatDTController(this.ID,
+                 this.node1.getJlbMABN().getText(),
+                 this.node1.getJcbNam(),
+                 this.node1.getJcbNu(),
+                 this.node1.getJcbTestPCR_Co(),
+                 this.node1.getJcbTestPCR_Khong(),
+                 this.node1.getJcbTestNhanh_Co(),
+                 this.node1.getJcbTestNhanh_Khong(),
+                 this.node1.getJcbTungLaF0_Co(),
+                 this.node1.getJcbTungLaF0_Khong(),
+                 this.node1.getJcobPhuong_Xa(),
+                 this.node1.getJcobQuan_Huyen(),
+                 this.node1.getJcobTinh_ThanhPho(),
+                 this.node1.getJdcNgaySinh(),
+                 this.node1.getJdcNgayTnF0(),
+                 this.node1.getJdcNgayTestNhanh(),
+                 this.node1.getJdcNgayTestPCR(),
+                 this.node1.getJcobKQTestNhanh(),
+                 this.node1.getJcobKQTestPCR(),
+                 this.node1.getJdcNgayXHTTDT(),
+                 this.node1.getJtfCMND_CCCD(),
+                 this.node1.getJtfHoTen(),
+                 this.node1.getJtfMABN(),
+                 this.node1.getJtfNgheNghiep(),
+                 this.node1.getJtfNoiLamViec(),
+                 this.node1.getJtfNoiO(),
+                 this.node1.getJtfSDT(),
+                 this.node1.getJtfSoThangF0(),
+                
+                
+                
+                 this.node2.getJcobTiemVX_1(),
+                 this.node2.getJcobTiemVX_2(),
+                 this.node2.getJcobTiemVX_3(),
+                 this.node2.getJdcTGMui1(),
+                 this.node2.getJdcTGMui2(),
+                 this.node2.getJdcTGMui3(),
+                 this.node2.getJrbChuaTiem(),
+                 this.node2.getJrbTiem1Mui(),
+                 this.node2.getJrbTiem2Mui(),
+                 this.node2.getJrbTiem3Mui(),
+                 this.node2.getJrbTiem_KhongBiet(),
+        
+                 this.node3.getJrbBenhGan_Co(),
+                 this.node3.getJrbBenhGan_Khong(),
+                 this.node3.getJrbBenhPhoiMT_Co(),
+                 this.node3.getJrbBenhPhoiMT_Khong(),
+                 this.node3.getJrbBenhTKMT_Co(),
+                 this.node3.getJrbBenhTKMT_Khong(),
+                 this.node3.getJrbBenhThanMT_Co(),
+                 this.node3.getJrbBenhThanMT_Khong(),
+                 this.node3.getJrbBenhTim_Co(),
+                 this.node3.getJrbBenhTim_Khong(),
+                 this.node3.getJrbBeoPhi_Co(),
+                 this.node3.getJrbBeoPhi_Khong(),
+                 this.node3.getJrbCLBenhHT_Co(),
+                 this.node3.getJrbCLBenhHT_Khong(),
+                 this.node3.getJrbDaiTD_Co(),
+                 this.node3.getJrbDaiTD_Khong(),
+                 this.node3.getJrbGhepTang_TBM_Co(),
+                 this.node3.getJrbGhepTang_TBM_Khong(),
+                 this.node3.getJrbHIV_Co(),
+                 this.node3.getJrbHIV_Khong(),
+                 this.node3.getJrbHauSan_Co(),
+                 this.node3.getJrbHauSan_Khong(),
+                 this.node3.getJrbHenKQ_Co(),
+                 this.node3.getJrbHenKQ_Khong(),
+                 this.node3.getJrbHoiChungDown_Co(),
+                 this.node3.getJrbHoiChungDown_Khong(),
+                 this.node3.getJrbKQXN_AT(),
+                 this.node3.getJrbKQXN_ChuaCoKQ(),
+                 this.node3.getJrbKQXN_DT(),
+                 this.node3.getJrbKhangSinh_Co(),
+                 this.node3.getJrbKhangSinh_Khong(),
+                 this.node3.getJrbKhangVirus_Co(),
+                 this.node3.getJrbKhangVirus_Khong(),
+                 this.node3.getJrbMachMauNao_Co(),
+                 this.node3.getJrbMachMauNao_Khong(),
+                 this.node3.getJrbMangThai_Co(),
+                 this.node3.getJrbMangThai_Khong(),
+                 this.node3.getJrbRoiLoanSDCGN_Co(),
+                 this.node3.getJrbRoiLoanSDCGN_Khong(),
+                 this.node3.getJrbSteroid_Co(),
+                 this.node3.getJrbSteroid_Khong(),
+                 this.node3.getJrbTangHA_Co(),
+                 this.node3.getJrbTangHA_Khong(),
+                 this.node3.getJrbThieuMD_Co(),
+                 this.node3.getJrbThieuMD_Khong(),
+                 this.node3.getJrbThuocDTCovid_Co(),
+                 this.node3.getJrbThuocDTCovid_Khong(),
+                 this.node3.getJrbThuocMD_Co(),
+                 this.node3.getJrbThuocMD_Khong(),
+                 this.node3.getJrbThuocUCMD_Co(),
+                 this.node3.getJrbThuocUCMD_Khong(),
+                 this.node3.getJrbTreSSXNcovid_Co(),
+                 this.node3.getJrbTreSSXNcovid_Khong(),
+                 this.node3.getJrbUngThu_Co(),
+                 this.node3.getJrbUngThu_Khong(),
+                 this.node3.getJtfSoTuanMT(),
+                
+                
+                 this.node4.getJcobDGTTBL(),
+                 this.node4.getJrbBuonNon_Co(),
+                 this.node4.getJrbBuonNon_Khong(),
+                 this.node4.getJrbCoGiat_Co(),
+                 this.node4.getJrbCoGiat_Khong(),
+                 this.node4.getJrbDKCL_Co(),
+                 this.node4.getJrbDKCL_Khong(),
+                 this.node4.getJrbDauBung_Co(),
+                 this.node4.getJrbDauBung_Khong(),
+                 this.node4.getJrbDauCo_Co(),
+                 this.node4.getJrbDauCo_Khong(),
+                 this.node4.getJrbDauDau_Co(),
+                 this.node4.getJrbDauDau_Khong(),
+                 this.node4.getJrbDauHong_Co(),
+                 this.node4.getJrbDauHong_Khong(),
+                 this.node4.getJrbDauKhop_Co(),
+                 this.node4.getJrbDauKhop_Khong(),
+                 this.node4.getJrbMatKhuuGiac_Co(),
+                 this.node4.getJrbMatKhuuGiac_Khong(),
+                 this.node4.getJrbMatViGiac_Co(),
+                 this.node4.getJrbMatViGiac_Khong(),
+                 this.node4.getJrbNoiHach_Co(),
+                 this.node4.getJrbNoiHach_Khong(),
+                 this.node4.getJrbSot_Co(),
+                 this.node4.getJrbSot_Khong(),
+                 this.node4.getJrbTTKhac_Co(),
+                 this.node4.getJrbTTKhac_Khong(),
+                 this.node4.getJrbXuatHuyet_Co(),
+                 this.node4.getJrbXuatHuyet_Khong(),
+                 this.node4.getJtfCanNang(),
+                 this.node4.getJtfChieuCao(),
+                 this.node4.getJtfChuanDoanTT(),
+                 this.node4.getJtfDoBH_Oxi(),
+                 this.node4.getJtfHuyetApTThu(),
+                 this.node4.getJtfHuyetApTTruong(),
+                 this.node4.getJtfNhietDo(),
+                 this.node4.getJtfNhipTho(),
+                 this.node4.getJtfNhipTim(),
+                 this.node4.getJtfTTKhac(),
+                
+                 this.node5.getJdcNgayXN(),
+                
+                 this.node5.getJrbDauNguc_Co(),
+                 this.node5.getJrbDauNguc_Khong(),
+                 this.node5.getJrbGoiA_Co(),
+                 this.node5.getJrbGoiA_Khong(),
+                   this.node5.getJrbGoiB_Co(),
+                 this.node5.getJrbGoiB_Khong(),
+                   this.node5.getJrbGoiC_Co(),
+                 this.node5.getJrbGoiC_Khong(),
+                 this.node5.getJrbHoRaDom_Co(),
+                 this.node5.getJrbHoRaDom_Khong(),
+                 this.node5.getJrbHoRaMau_Co(),
+                 this.node5.getJrbHoRaMau_Khong(),
+                 this.node5.getJrbHo_Co(),
+                 this.node5.getJrbHo_Khong(),
+                 this.node5.getJrbKQ_AT(),
+                 this.node5.getJrbKQ_DT(),
+                 this.node5.getJrbKhoTho_Co(),
+                 this.node5.getJrbKhoTho_Khong(),
+                 this.node5.getJrbKhongTT_Co(),
+                 this.node5.getJrbKhongTT_Khong(),
+                 this.node5.getJrbKietSuc_Co(),
+                 this.node5.getJrbKietSuc_Khong(),
+                 this.node5.getJrbMatKG_Co(),
+                 this.node5.getJrbMatKG_Khong(),
+                 this.node5.getJrbMatVG_Co(),
+                 this.node5.getJrbMatVG_Khong(),
+                 this.node5.getJrbOnLanh_Co(),
+                 this.node5.getJrbOnLanh_Khong(),
+                 this.node5.getJrbTieuChay_Co(),
+                 this.node5.getJrbTieuChay_Khong(),
+                 this.node5.getJrbXN_Co(),
+                 this.node5.getJrbXN_Khong(),
+                 this.node5.getJtfDoBHOxi(),
+                 this.node5.getJtfHuyetApTD(),
+                 this.node5.getJtfHuyetApToiThieu(),
+                 this.node5.getJtfMach(),
+                 this.node5.getJtfNhietDo_QTDT(),
+                 this.node5.getJtfNhipTho_QTDT());
+                
+                if (node1.getJtfHoTen().getText().length() == 0
+               || node1.getJtfCMND_CCCD().getText().length() == 0
+               || node1.getJtfNoiO().getText().length()== 0
+               || node1.getJtfSDT().getText().length()== 0
+               ||node4.getJtfNhietDo().getText().length()== 0
+               ||node4.getJtfNhipTho().getText().length()== 0
+               ||node4.getJtfNhipTim().getText().length()== 0
+               ||node4.getJtfChieuCao().getText().length()== 0
+               ||node4.getJtfCanNang().getText().length()== 0
+               ||node4.getJtfChuanDoanTT().getText().length()== 0
+               ||node5.getJtfMach().getText().length()== 0
+               ||node5.getJtfNhietDo_QTDT().getText().length()== 0
+               ||node5.getJtfNhipTho_QTDT().getText().length()== 0
+                  
+                    
+                    ) {
+                        JFrame frame4 = new JFrame();
+                            frame.setBounds(0,0,100,50);
+                            JOptionPane.showMessageDialog(frame,
+                            "Vui lòng nhập dữ liệu bắt buộc!");
+                }else {
+                    try {
+                        tt_cn.UpdateTT();
+                        JFrame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Cập nhật thành công");
+                        this.dispose(); 
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(CapNhat_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                            ex.printStackTrace();
+                        JFrame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Cập nhật thất bại\n" +
+                         ex.getMessage()
+                            );
+                    } catch (SQLException ex) {
+                        Logger.getLogger(CapNhat_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                         ex.printStackTrace();
+                        JFrame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Cập nhật thất bại\n" +
+                         ex.getSQLState()+"\n"+
+                         ex.getMessage()
+
+                            );
+                    }
+                    
+                    
+				}
+            }
+
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -526,10 +579,8 @@ public class CapNhat_Frame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CapNhat_Frame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+//            new CapNhat_Frame(this).setVisible(true);
         });
     }
 

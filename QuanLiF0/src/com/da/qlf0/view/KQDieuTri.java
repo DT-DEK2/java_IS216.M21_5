@@ -4,10 +4,12 @@
  */
 package com.da.qlf0.view;
 
+import com.da.qlf0.controller.PrintBenhAnController;
 import com.da.qlf0.controller.TaoKQDieuTriController;
 import com.toedter.calendar.JDateChooser;
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.Hashtable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComboBox;
@@ -17,6 +19,10 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperReport;
+import java.lang.Exception;
 
 /**
  *
@@ -198,7 +204,9 @@ public class KQDieuTri extends javax.swing.JPanel {
         jLabel1.setText("KẾT QUẢ SAU ĐIỀU TRỊ TẠI NHÀ ");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jButton3.setBackground(new java.awt.Color(153, 102, 0));
+        jButton3.setBackground(new java.awt.Color(0, 102, 102));
+        jButton3.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/previous.png"))); // NOI18N
         jButton3.setText("Trờ lại");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +221,7 @@ public class KQDieuTri extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jButton3)
-                .addGap(501, 501, 501)
+                .addGap(452, 452, 452)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -487,6 +495,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         });
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/floppy-disk.png"))); // NOI18N
         jButton1.setText("Lưu kết quả");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -495,7 +504,13 @@ public class KQDieuTri extends javax.swing.JPanel {
         });
 
         jButton2.setBackground(new java.awt.Color(255, 102, 102));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/printer.png"))); // NOI18N
         jButton2.setText("Xuất bệnh án");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -685,7 +700,7 @@ public class KQDieuTri extends javax.swing.JPanel {
                         .addComponent(jrbLiDoTV_Covid)
                         .addComponent(jLabel27)
                         .addComponent(jtfLidoTuVongKhac, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -860,7 +875,7 @@ public class KQDieuTri extends javax.swing.JPanel {
         
         
         int dialogResult = JOptionPane.showOptionDialog(framex.getContentPane(), "Bạn muốn lưu thông tin kết quả điều trị?", "Lưu thông tin Kết quả điều trị", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
-       
+        
         if(dialogResult == 0) {
             TaoKQDieuTriController kq = new TaoKQDieuTriController(this.MABN,
                     jcobNoiTuVong,
@@ -882,13 +897,25 @@ public class KQDieuTri extends javax.swing.JPanel {
                     jtfNoiTuVongKhac,
                     jtfTTkhiNV, 
                     jtfTenCSNV);
-                    
+            
             try {
-                kq.setDateToKQDieuTri();
-                 JFrame frame3 = new JFrame();
-                    frame3.setBounds(0,0,100,50);
-                    JOptionPane.showMessageDialog(frame3,
-                    "Thêm thành công kết quả điều trị");
+                if(kq.check_KQDT()==0){
+                    kq.setDateToKQDieuTri();
+                     JFrame frame3 = new JFrame();
+                        frame3.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame3,
+                                "Thêm thành công kết quả điều trị");
+                }else{
+                    int dialogResult2 = JOptionPane.showOptionDialog(framex.getContentPane(), "Bệnh nhân đã có kết quả điều trị! Bạn muốn cập nhật mới thông tin ?", "Cập nhật Kết quả điều trị", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+                     if(dialogResult == 0) {
+                        kq.setDateToKQDieuTri_Update();
+                        JFrame frame3 = new JFrame();
+                        frame3.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame3,
+                                "Cập nhật thành công kết quả điều trị");
+                     }
+                    
+                }
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex) {
@@ -896,12 +923,66 @@ public class KQDieuTri extends javax.swing.JPanel {
             } catch (ParseException ex) {
                 Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
             }
-                    
-        }
-        
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         JFrame framex = new JFrame();
+        String[] options = new String[2];
+        options[0] = "Có";
+        options[1] = "Không";
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        
+        
+        int dialogResult = JOptionPane.showOptionDialog(framex.getContentPane(), "Xác nhận xuất bệnh án?", "Tạo bệnh án", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+        
+        if(dialogResult == 0) {
+            TaoKQDieuTriController kq = new TaoKQDieuTriController(this.MABN,
+                    jcobNoiTuVong,
+                    jdcNgayNhapVien,
+                    jdcNgayTuVong,
+                    jdc_NgayKTCL,
+                    jdc_NgayXNAT,
+                    jrbCN_NV,
+                    jrbHTCL,
+                    jrbKhac, 
+                    jrbLiDoTV_BenhNen, 
+                    jrbLiDoTV_Covid,
+                    jrbPCR,
+                    jrbTestNhanh,
+                    jrbTuVong,
+                    jtfKhacCuThe,
+                    jtfLidoTuVongKhac,
+                    jtfLuuY, 
+                    jtfNoiTuVongKhac,
+                    jtfTTkhiNV, 
+                    jtfTenCSNV);
+             try {
+                 if(kq.check_KQDT()==1){
+                     PrintBenhAnController in =new PrintBenhAnController(this.MABN);
+                     in.InBenhAn();
+                 }else{
+                     JFrame frame3 = new JFrame();
+                        frame3.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame3,
+                                "Bệnh nhân chưa có kết quả điều trị tại nhà! Vui lòng tạo kết quả điều trị!");
+                 }
+             } catch (ClassNotFoundException ex) {
+                 Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (SQLException ex) {
+                 Logger.getLogger(KQDieuTri.class.getName()).log(Level.SEVERE, null, ex);
+                 JFrame frame3 = new JFrame();
+                        frame3.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame3,
+                                "Lỗi xảy ra ! Vui lòng cập nhật các thông tin liên quan hoặc kiểm tra lại thông tin ");
+             }
+            
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bntG_TinhTrang;
     private javax.swing.ButtonGroup btnG_LiDoTV;

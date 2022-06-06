@@ -6,9 +6,11 @@ package com.da.qlf0.view;
 
 import com.da.qlf0.controller.QuanLiBenhNhanController;
 import com.da.qlf0.controller.TimKiemController;
+import com.da.qlf0.controller.XuatFileController;
 
 import com.da.qlf0.view.GUI_ThemBN.ThemBN_Frame;
 import java.awt.BorderLayout;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -28,16 +30,17 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
     /**
      * Creates new form QuanLiBnPanel
      */
-    public QuanLiBnPanel() {
+    private String ID;
+    public QuanLiBnPanel(String ID) {
         initComponents();
         
 //         QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
 //                jPanel1, btnAdd, jtfSearch);
 //        controller.setDataToTable();
             QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
-                jPanel1);
+                jPanel1,ID);
             controller.setDataToPanel();
-        
+        this.ID=ID;
          
     }
 
@@ -57,10 +60,19 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnAdd1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jtfMABN = new javax.swing.JTextField();
+        jcobLoai = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1061, 688));
 
+        btnAdd.setBackground(new java.awt.Color(0, 102, 102));
+        btnAdd.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/add-file.png"))); // NOI18N
         btnAdd.setText("Thêm bệnh nhân");
         btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -83,7 +95,7 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 599, Short.MAX_VALUE)
+            .addGap(0, 569, Short.MAX_VALUE)
         );
 
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
@@ -94,6 +106,10 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(20, 20, 20));
         jLabel2.setText("Họ và tên");
 
+        btnAdd1.setBackground(new java.awt.Color(0, 153, 153));
+        btnAdd1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        btnAdd1.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/find-my-friend.png"))); // NOI18N
         btnAdd1.setText("Tìm");
         btnAdd1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -106,28 +122,61 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/printer.png"))); // NOI18N
+        jButton1.setText("Xuất file danh sách");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel3.setText("Mã bệnh nhân");
+
+        jcobLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất cả", "Nguy cơ chuyển nặng" }));
+
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel4.setText("Loại");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jtfSoCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(178, 178, 178)
-                .addComponent(btnAdd)
-                .addGap(40, 112, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(24, 24, 24)
+                        .addComponent(jtfMABN, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jtfSoCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jcobLoai, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfHoTen, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAdd1)
+                .addGap(52, 52, 52)
+                .addComponent(btnAdd)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(17, 17, 17))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,9 +188,21 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
                     .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(btnAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
+                    .addComponent(btnAdd1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jtfMABN, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jcobLoai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 569, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -194,13 +255,14 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
     private void btnAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd1ActionPerformed
         
                 // TODO add your handling code here:
-                 TimKiemController tk= new TimKiemController(jPanel1,jtfSoCMND_CCCD, jtfHoTen);
+                 TimKiemController tk= new TimKiemController(jPanel1,jtfSoCMND_CCCD, jtfHoTen,jtfMABN,this.ID);
                    QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
                		 		jPanel1);
+           if(jcobLoai.getSelectedItem().equals("Tất cả")){        
            try {
                    
                      if (jtfSoCMND_CCCD.getText().length() == 0
-                            && jtfHoTen.getText().length() == 0)
+                            && jtfHoTen.getText().length() == 0 && jtfMABN.getText().length() == 0)
 				 {
                          
             				controller.setDataToPanel();
@@ -231,17 +293,104 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
                             "Có lỗi xảy ra!");
                         ex.printStackTrace();
                     } 
-        
+           }else {
+                     try {
+                   
+                     if (jtfSoCMND_CCCD.getText().length() == 0
+                            && jtfHoTen.getText().length() == 0 && jtfMABN.getText().length() == 0)
+				 {
+                         
+            				controller.setDataChuyenNang();
+                         }
+                    else {
+				int i = tk.setDataToPanel_ChuyenNang();
+				if( i==0)
+				{
+								
+                                		
+                               	 	JFrame frame = new JFrame();
+                               	 	frame.setBounds(0,0,100,50);
+                                	JOptionPane.showMessageDialog(frame,
+                                	"Không tìm thấy bệnh nhân");
+								
+					controller.setDataChuyenNang();
+				}	
+			}
+                        
+                }catch(ClassNotFoundException ex){
+                    Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.printStackTrace();
+                }catch (SQLException ex) {
+                    Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+                            JFrame frame = new JFrame();
+                            frame.setBounds(0,0,100,50);
+                            JOptionPane.showMessageDialog(frame,
+                            "Có lỗi xảy ra!");
+                        ex.printStackTrace();
+                    } 
+           }
     }//GEN-LAST:event_btnAdd1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(jcobLoai.getSelectedItem().equals("Tất cả")){
+         JFrame frame = new JFrame();
+        String[] options = new String[2];
+        options[0] = "Có";
+        options[1] = "Không";
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Xác nhận xuất file?", "Xuất file danh sách", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+        if(dialogResult == 0) {
+                XuatFileController file = new XuatFileController();
+             try {
+                 file.XuatFile();
+                 Frame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Tạo file thành công !" );
+             } catch (ClassNotFoundException ex) {
+                 Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (SQLException ex) {
+                 Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        }
+       }else{
+                JFrame frame = new JFrame();
+        String[] options = new String[2];
+        options[0] = "Có";
+        options[1] = "Không";
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showOptionDialog(frame.getContentPane(), "Xác nhận xuất file?", "Xuất file danh sách", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
+        if(dialogResult == 0) {
+                XuatFileController file = new XuatFileController();
+             try {
+                 file.XuatFile_chuyennang();
+                 Frame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Tạo file thành công !" );
+             } catch (ClassNotFoundException ex) {
+                 Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (SQLException ex) {
+                 Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnAdd1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox<String> jcobLoai;
     private javax.swing.JTextField jtfHoTen;
+    private javax.swing.JTextField jtfMABN;
     private javax.swing.JTextField jtfSoCMND_CCCD;
     // End of variables declaration//GEN-END:variables
 

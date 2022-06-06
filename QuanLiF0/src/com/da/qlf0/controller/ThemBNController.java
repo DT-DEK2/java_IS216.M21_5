@@ -497,10 +497,10 @@ public class ThemBNController {
         cStmt.setString(11,jtfNoiLamViec.getText());
         cStmt.setString(12, jtfSDT.getText());
         java.util.Date utilStartDate2 =jdcNgayTnF0.getDate();
-        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate2.getTime());
         cStmt.setDate(13, sqlStartDate2);
         java.util.Date utilStartDate3 =jdcNgayXHTTDT.getDate();
-        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate3.getTime());
         cStmt.setDate(14, sqlStartDate3);
         cStmt.setInt(15, GetInt_jcb(jcbTungLaF0_Co, jcbTungLaF0_Khong));
 //        cStmt.setString(16, jtfSoThangF0.getText());
@@ -512,7 +512,7 @@ public class ThemBNController {
         cStmt.setInt(17, GetInt_jcb(jcbTestNhanh_Co, jcbTestNhanh_Khong));
         
         java.util.Date utilStartDate4 =jdcNgayTestNhanh.getDate();
-        java.sql.Date sqlStartDate4 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate4 = new java.sql.Date(utilStartDate4.getTime());
         cStmt.setDate(18, sqlStartDate4);
 //        cStmt.setString(19, jcobKQTestNhanh.getSelectedItem().toString());
         if(jcbTestNhanh_Khong.isSelected()){
@@ -524,7 +524,7 @@ public class ThemBNController {
         
         cStmt.setInt(20, GetInt_jcb(jcbTestPCR_Co, jcbTestPCR_Khong));
          java.util.Date utilStartDate5 =jdcNgayTestPCR.getDate();
-        java.sql.Date sqlStartDate5 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate5 = new java.sql.Date(utilStartDate5.getTime());
         cStmt.setDate(21, sqlStartDate5);
 //        cStmt.setString(22, jcobKQTestPCR.getSelectedItem().toString());
          if(jcbTestPCR_Khong.isSelected()){
@@ -569,10 +569,10 @@ public class ThemBNController {
         java.sql.Date sqlStartDate = new java.sql.Date(utilStartDate.getTime());
         
         java.util.Date utilStartDate2 =jdcTGTiem2.getDate();
-        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate2.getTime());
         
         java.util.Date utilStartDate3 =jdcTGTiem3.getDate();
-        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate.getTime());
+        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate3.getTime());
         cStmt.setDate(4,sqlStartDate);
         
 //        cStmt.setString(5,jcobLoaiVX2.getSelectedItem().toString());

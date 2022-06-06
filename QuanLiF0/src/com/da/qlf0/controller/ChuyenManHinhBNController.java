@@ -8,6 +8,7 @@ import com.da.qlf0.bean.DanhMucBean;
 import com.da.qlf0.bean.DanhMucBeanBNhan;
 import com.da.qlf0.view.BenhNhan_Frame.KhaiBao;
 import com.da.qlf0.view.BenhNhan_Frame.TTCaNhan;
+import com.da.qlf0.view.BenhNhan_Frame.TrangChu_BN;
 import com.da.qlf0.view.BenhNhan_Frame.YCHoTro;
 import com.da.qlf0.view.HoTroPanel;
 import com.da.qlf0.view.QuanLiBnPanel;
@@ -15,12 +16,14 @@ import com.da.qlf0.view.ThongKePanel;
 import com.da.qlf0.view.TrangChuPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.List;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 /**
  *
  * @author Minh Cuong
@@ -31,19 +34,19 @@ public class ChuyenManHinhBNController {
         private JPanel jpnRoot;
         private ArrayList<DanhMucBeanBNhan> listItem = null;
         private String MABN;
-    public ChuyenManHinhBNController(JPanel jpnRoot) {
+    public ChuyenManHinhBNController(JPanel jpnRoot,String MABN) {
         this.jpnRoot = jpnRoot;
-//        this.MABN=MABN;
+        this.MABN=MABN;
     }
         
     public void setView(JPanel jpnItem, JLabel jlbItem) {
         kindSelected = "TTCaNhan";
        jpnItem.setBackground(new Color(0, 134, 179));
        jlbItem.setBackground(new Color(0, 134, 179));
-       JPanel node = new TrangChuPanel(MABN);
+       JPanel node = new TrangChu_BN(MABN);
        jpnRoot.removeAll();
        jpnRoot.setLayout(new BorderLayout());
-       jpnRoot.add(new TrangChuPanel(MABN));
+       jpnRoot.add(node);
        jpnRoot.validate();
        jpnRoot.repaint();
     }
@@ -57,6 +60,7 @@ public class ChuyenManHinhBNController {
 class LabelEvent implements MouseListener {
 
       private JPanel node;
+      
       private String kind;
 
       private JPanel jpnItem;
@@ -71,22 +75,40 @@ class LabelEvent implements MouseListener {
       @Override
       public void mouseClicked(MouseEvent e) {
             switch (kind) {
+                case "TrangChu":
+                    node = new TrangChu_BN(MABN);
+                    break;
                 case "TTCaNhan":
-                    node = new TTCaNhan();
+                    node = new TTCaNhan(MABN);
                     break;
-                case "KhaiBao":
-                    node = new KhaiBao();
-                    break;
+//                case "KhaiBao":
+//                    node = new KhaiBao(MABN);
+//                    
+//                    break;
                 case "YCHoTro":
-                    node = new YCHoTro();
+                    node = new YCHoTro(MABN);
+                    
                     break;
                 default:
                     break;
            }
+            if(kind.equals("KhaiBao")){
+                 node = new KhaiBao(MABN);
+                 jpnRoot.removeAll();
+                   jpnRoot.setLayout(new BorderLayout());
+                  JScrollPane scrollp = new JScrollPane(node, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                    scrollp.setPreferredSize(new Dimension(1060, 500));
+                    jpnRoot.add(scrollp,BorderLayout.CENTER);
+                     jpnRoot.validate();
+             jpnRoot.repaint();
+            setChangeBackground(kind);
+           
+            }
            jpnRoot.removeAll();
            jpnRoot.setLayout(new BorderLayout());
-           node.setSize(jpnRoot.getWidth(),jpnRoot.getHeight());
-           jpnRoot.add(node);
+           
+           node.setPreferredSize(new Dimension(jpnRoot.getWidth(),jpnRoot.getHeight()));
+           jpnRoot.add(node,BorderLayout.CENTER);
            
            jpnRoot.validate();
            jpnRoot.repaint();

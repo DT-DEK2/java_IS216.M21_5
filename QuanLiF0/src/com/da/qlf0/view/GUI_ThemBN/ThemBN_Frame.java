@@ -46,6 +46,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         listItem.add(new DanhMucThemBN("TinhTrang",jpnTinhTrang,jlbTinhTrang));
         
         controller.setEvent(listItem);
+        setTitle("Thêm bệnh nhân");
     }
     
     /**
@@ -422,66 +423,67 @@ public class ThemBN_Frame extends javax.swing.JFrame {
                             frame.setBounds(0,0,100,50);
                             JOptionPane.showMessageDialog(frame,
                             "Vui lòng nhập dữ liệu bắt buộc!");
-            }
+            }else {
 
-            try {
-                th.ThemBN();
-                JFrame frame2 = new JFrame();
-                    frame.setBounds(0,0,100,50);
-                    JOptionPane.showMessageDialog(frame,
-                    "Thêm thành công bệnh nhân");
-                    this.dispose();
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-                ex.printStackTrace();
-                JFrame frame2 = new JFrame();
-                    frame.setBounds(0,0,100,50);
-                    JOptionPane.showMessageDialog(frame,
-                    "Thêm thất bại bệnh nhân\n" +
-                     ex.getMessage()
-                        );
-                   try {
-                       th.XoaBn();
-                   } catch (ClassNotFoundException ex1) {
-                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
-                   } catch (SQLException ex1) {
-                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
-                   }
-                
-            } catch (SQLException ex) {
-                Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
-                ex.printStackTrace();
-//                if(ex.getErrorCode()==-20123){
-//                    JFrame frame2 = new JFrame();
-//                    frame.setBounds(0,0,100,50);
-//                    JOptionPane.showMessageDialog(frame,
-//                            "Nam không mang thai"
-//                        );
-//                }
-//                  if(ex.getMessage().substring(0, 8).equals("ORA-20123")){
-//                       JFrame frame2 = new JFrame();
-//                    frame.setBounds(0,0,100,50);
-//                    JOptionPane.showMessageDialog(frame,
-//                    "Nam không thể mang thai"+"Thêm thất bại");
-//                  }
-                 JFrame frame2 = new JFrame();
-                    frame.setBounds(0,0,100,50);
-                    JOptionPane.showMessageDialog(frame,
-                    "Thêm thất bại bệnh nhân\n" +
-                     ex.getSQLState()+"\n"+
-                     ex.getMessage()
-                            
-                        );
-                   try {
-                       th.XoaBn();
-                   } catch (ClassNotFoundException ex1) {
-                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
-                   } catch (SQLException ex1) {
-                       Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
-                   }
+                try {
+                    th.ThemBN();
+                    JFrame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Thêm thành công bệnh nhân");
+                        this.dispose();
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.printStackTrace();
+                    JFrame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Thêm thất bại bệnh nhân\n" +
+                         ex.getMessage()
+                            );
+                       try {
+                           th.XoaBn();
+                       } catch (ClassNotFoundException ex1) {
+                           Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                       } catch (SQLException ex1) {
+                           Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                       }
+
+                } catch (SQLException ex) {
+                    Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.printStackTrace();
+    //                if(ex.getErrorCode()==-20123){
+    //                    JFrame frame2 = new JFrame();
+    //                    frame.setBounds(0,0,100,50);
+    //                    JOptionPane.showMessageDialog(frame,
+    //                            "Nam không mang thai"
+    //                        );
+    //                }
+    //                  if(ex.getMessage().substring(0, 8).equals("ORA-20123")){
+    //                       JFrame frame2 = new JFrame();
+    //                    frame.setBounds(0,0,100,50);
+    //                    JOptionPane.showMessageDialog(frame,
+    //                    "Nam không thể mang thai"+"Thêm thất bại");
+    //                  }
+                     JFrame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Thêm thất bại bệnh nhân\n" +
+                         ex.getSQLState()+"\n"+
+                         ex.getMessage()
+
+                            );
+                       try {
+                           th.XoaBn();
+                       } catch (ClassNotFoundException ex1) {
+                           Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                       } catch (SQLException ex1) {
+                           Logger.getLogger(ThemBN_Frame.class.getName()).log(Level.SEVERE, null, ex1);
+                       }
+                }
+
+
             }
-            
-            
         }
         
         

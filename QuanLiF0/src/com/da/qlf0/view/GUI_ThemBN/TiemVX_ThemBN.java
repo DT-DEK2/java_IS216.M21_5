@@ -184,7 +184,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
 
         jcobLoaiVX1.setBackground(new java.awt.Color(255, 255, 255));
         jcobLoaiVX1.setForeground(new java.awt.Color(20, 20, 20));
-        jcobLoaiVX1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobLoaiVX1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AstraZeneca", "Sputnik V", "VeroCell", "Pfizer", "Moderna", "Janssen", "Covaxin" }));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -198,7 +198,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
 
         jdcTGTiem1.setBackground(new java.awt.Color(255, 255, 255));
         jdcTGTiem1.setForeground(new java.awt.Color(20, 20, 20));
-        jdcTGTiem1.setDateFormatString("dd-MM-yyyy");
+        jdcTGTiem1.setDateFormatString("dd-MM-yyyy\n\n");
 
         jSeparator5.setBackground(new java.awt.Color(166, 166, 166));
 
@@ -325,7 +325,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
 
         jcobLoaiVX2.setBackground(new java.awt.Color(255, 255, 255));
         jcobLoaiVX2.setForeground(new java.awt.Color(20, 20, 20));
-        jcobLoaiVX2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobLoaiVX2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AstraZeneca", "Sputnik V", "VeroCell", "Pfizer", "Moderna", "Janssen", "Covaxin" }));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -334,7 +334,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
 
         jdcTGTiem2.setBackground(new java.awt.Color(255, 255, 255));
         jdcTGTiem2.setForeground(new java.awt.Color(20, 20, 20));
-        jdcTGTiem2.setDateFormatString("dd-MM-yyyy");
+        jdcTGTiem2.setDateFormatString("dd-MM-yyyy\n\n");
 
         jLabel13.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 41, 102));
@@ -351,7 +351,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
 
         jcobLoaiVX3.setBackground(new java.awt.Color(255, 255, 255));
         jcobLoaiVX3.setForeground(new java.awt.Color(20, 20, 20));
-        jcobLoaiVX3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobLoaiVX3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AstraZeneca", "Sputnik V", "VeroCell", "Pfizer", "Moderna", "Janssen", "Covaxin", " " }));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N

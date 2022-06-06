@@ -17,10 +17,10 @@ import oracle.jdbc.OracleTypes;
  * @author Minh Cuong
  */
 public class LayMABNTuDong {
-    private JTextField jtfMABN;
-
-    public LayMABNTuDong(JTextField jtfMABN) {
-        this.jtfMABN = jtfMABN;
+  
+    
+    public LayMABNTuDong(){
+        
     }
     public String SetMABN()throws ClassNotFoundException, SQLException{
         
@@ -35,7 +35,7 @@ public class LayMABNTuDong {
       
          cStmt.execute();
          String x =cStmt.getString(1);
-        this.jtfMABN.setText(x);
+//        this.jtfMABN.setText(x);
         cStmt.close();
         conn.close();
         return x;

@@ -40,11 +40,11 @@
                               <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jComboBox2" min="-2" pref="289" max="-2" attributes="0"/>
+                              <Component id="jcobTiemVX_2" min="-2" pref="289" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                              <Component id="jDateChooser2" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="jdcTGMui2" min="-2" pref="145" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
@@ -54,11 +54,11 @@
                               <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                              <Component id="jComboBox3" min="-2" pref="289" max="-2" attributes="0"/>
+                              <Component id="jcobTiemVX_3" min="-2" pref="289" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                              <Component id="jDateChooser3" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="jdcTGMui3" min="-2" pref="145" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -95,10 +95,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcobTiemVX_2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jdcTGMui2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
               <Component id="jSeparator8" min="-2" max="-2" attributes="0"/>
@@ -111,11 +111,11 @@
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jcobTiemVX_3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jDateChooser3" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jdcTGMui3" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -149,15 +149,15 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jrbChuaTiem" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+                              <Component id="jrbTiem1Mui" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                              <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
+                              <Component id="jrbTiem2Mui" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                              <Component id="jRadioButton11" min="-2" max="-2" attributes="0"/>
+                              <Component id="jrbTiem3Mui" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jRadioButton13" min="-2" max="-2" attributes="0"/>
+                              <Component id="jrbTiem_KhongBiet" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jSeparator3" alignment="0" min="-2" pref="1766" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -169,11 +169,11 @@
                               <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" min="-2" pref="289" max="-2" attributes="0"/>
+                              <Component id="jcobTiemVX_1" min="-2" pref="289" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                              <Component id="jDateChooser1" min="-2" pref="145" max="-2" attributes="0"/>
+                              <Component id="jdcTGMui1" min="-2" pref="145" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
@@ -193,11 +193,11 @@
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton13" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbChuaTiem" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbTiem1Mui" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbTiem2Mui" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbTiem3Mui" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jrbTiem_KhongBiet" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator3" min="-2" max="-2" attributes="0"/>
@@ -209,10 +209,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jcobTiemVX_1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jdcTGMui1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="60" max="32767" attributes="0"/>
                   <Component id="jSeparator6" min="-2" max="-2" attributes="0"/>
@@ -250,7 +250,7 @@
             <Property name="text" type="java.lang.String" value=" T&#xec;nh tr&#x1ea1;ng ti&#xea;m V&#x1eaf;c xin:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+        <Component class="javax.swing.JRadioButton" name="jrbChuaTiem">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -267,7 +267,7 @@
             <Property name="text" type="java.lang.String" value="Ch&#x1b0;a ti&#xea;m"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+        <Component class="javax.swing.JRadioButton" name="jrbTiem1Mui">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -284,7 +284,7 @@
             <Property name="text" type="java.lang.String" value="1 M&#x169;i"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+        <Component class="javax.swing.JRadioButton" name="jrbTiem3Mui">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -301,7 +301,7 @@
             <Property name="text" type="java.lang.String" value="3 M&#x169;i"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+        <Component class="javax.swing.JRadioButton" name="jrbTiem2Mui">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -318,7 +318,7 @@
             <Property name="text" type="java.lang.String" value="2 M&#x169;i"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+        <Component class="javax.swing.JRadioButton" name="jrbTiem_KhongBiet">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -335,7 +335,7 @@
             <Property name="text" type="java.lang.String" value="Kh&#xf4;ng bi&#x1ebf;t"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton13ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbTiem_KhongBietActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator3">
@@ -345,7 +345,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="jcobTiemVX_1">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="14" green="14" red="14" type="rgb"/>
@@ -391,7 +391,7 @@
             <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i V&#x1eaf;c xin 1: *"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+        <Component class="com.toedter.calendar.JDateChooser" name="jdcTGMui1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -508,7 +508,7 @@
         <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i V&#x1eaf;c xin 2: *"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
+    <Component class="javax.swing.JComboBox" name="jcobTiemVX_2">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="14" green="14" red="14" type="rgb"/>
@@ -540,7 +540,7 @@
         <Property name="text" type="java.lang.String" value="Th&#x1edd;i gian ti&#xea;m: *"/>
       </Properties>
     </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+    <Component class="com.toedter.calendar.JDateChooser" name="jdcTGMui2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -589,7 +589,7 @@
         <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i V&#x1eaf;c xin 3: *"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox3">
+    <Component class="javax.swing.JComboBox" name="jcobTiemVX_3">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="14" green="14" red="14" type="rgb"/>
@@ -621,7 +621,7 @@
         <Property name="text" type="java.lang.String" value="Th&#x1edd;i gian ti&#xea;m : *"/>
       </Properties>
     </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
+    <Component class="com.toedter.calendar.JDateChooser" name="jdcTGMui3">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>

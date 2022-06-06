@@ -4,18 +4,149 @@
  */
 package com.da.qlf0.view.BenhNhan_Frame;
 
+import com.da.qlf0.view.CapNhat.*;
+import com.da.qlf0.view.GUI_ThemBN.*;
+import com.toedter.calendar.JDateChooser;
+
+import java.awt.event.ActionListener;
+import javax.swing.Action;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+import com.da.qlf0.controller.LayMABNTuDong;
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JLabel;
 /**
  *
- * @author NDAT_UIT
+ * @author Minh Cuong
  */
 public class TTCaNhan_ttcb extends javax.swing.JPanel {
 
     /**
-     * Creates new form TTCaNhan_ttcb
+     * Creates new form TTCoBan_ThemBN
      */
     public TTCaNhan_ttcb() {
         initComponents();
+        MyinnitsetMBBN();
+       
+        
+        
     }
+
+    public JLabel getJlbMABN() {
+        return jlbMABN;
+    }
+
+    public JCheckBox getJcbNam() {
+        return jcbNam;
+    }
+
+    public JCheckBox getJcbNu() {
+        return jcbNu;
+    }
+
+    public JCheckBox getJcbTestNhanh_Co() {
+        return jcbTestNhanh_Co;
+    }
+
+    public JCheckBox getJcbTestNhanh_Khong() {
+        return jcbTestNhanh_Khong;
+    }
+
+    public JCheckBox getJcbTestPCR_Co() {
+        return jcbTestPCR_Co;
+    }
+
+    public JCheckBox getJcbTestPCR_Khong() {
+        return jcbTestPCR_Khong;
+    }
+
+    public JCheckBox getJcbTungLaF0_Co() {
+        return jcbTungLaF0_Co;
+    }
+
+    public JCheckBox getJcbTungLaF0_Khong() {
+        return jcbTungLaF0_Khong;
+    }
+
+    public JComboBox<String> getJcobPhuong_Xa() {
+        return jcobPhuong_Xa;
+    }
+
+    public JComboBox<String> getJcobQuan_Huyen() {
+        return jcobQuan_Huyen;
+    }
+
+    public JComboBox<String> getJcobTinh_ThanhPho() {
+        return jcobTinh_ThanhPho;
+    }
+
+    public JDateChooser getJdcNgaySinh() {
+        return jdcNgaySinh;
+    }
+
+    public JDateChooser getJdcNgayTestNhanh() {
+        return jdcNgayTestNhanh;
+    }
+
+    public JDateChooser getJdcNgayTestPCR() {
+        return jdcNgayTestPCR;
+    }
+
+    public JDateChooser getJdcNgayTnF0() {
+        return jdcNgayTnF0;
+    }
+
+    public JDateChooser getJdcNgayXHTTDT() {
+        return jdcNgayXHTTDT;
+    }
+
+    public JTextField getJtfCMND_CCCD() {
+        return jtfCMND_CCCD;
+    }
+
+    public JTextField getJtfHoTen() {
+        return jtfHoTen;
+    }
+
+    public JTextField getJtfMABN() {
+        return jtfMABN;
+    }
+
+    public JTextField getJtfNgheNghiep() {
+        return jtfNgheNghiep;
+    }
+
+    public JTextField getJtfNoiLamViec() {
+        return jtfNoiLamViec;
+    }
+
+    public JTextField getJtfNoiO() {
+        return jtfNoiO;
+    }
+
+    public JTextField getJtfSDT() {
+        return jtfSDT;
+    }
+
+    public JTextField getJtfSoThangF0() {
+        return jtfSoThangF0;
+    }
+
+    public JComboBox<String> getJcobKQTestNhanh() {
+        return jcobKQTestNhanh;
+    }
+
+    public JComboBox<String> getJcobKQTestPCR() {
+        return jcobKQTestPCR;
+    }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,668 +157,853 @@ public class TTCaNhan_ttcb extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnG_GioiTinh = new javax.swing.ButtonGroup();
+        btnG_TunglaF0 = new javax.swing.ButtonGroup();
+        btnG_TestNhanh = new javax.swing.ButtonGroup();
+        btnG_RTPCR = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel10 = new javax.swing.JLabel();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel17 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        jLabel20 = new javax.swing.JLabel();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
-        jLabel21 = new javax.swing.JLabel();
-        jDateChooser5 = new com.toedter.calendar.JDateChooser();
+        jlbHoTen = new javax.swing.JLabel();
+        jtfHoTen = new javax.swing.JTextField();
+        jlbNgheNghiep = new javax.swing.JLabel();
+        jtfNgheNghiep = new javax.swing.JTextField();
+        jlbTinh_ThanhPho = new javax.swing.JLabel();
+        jcobTinh_ThanhPho = new javax.swing.JComboBox<>();
+        jlbQuan_Huyen = new javax.swing.JLabel();
+        jcobQuan_Huyen = new javax.swing.JComboBox<>();
+        jlbCMND_CCCD = new javax.swing.JLabel();
+        jtfCMND_CCCD = new javax.swing.JTextField();
+        jlbNgayTiepNhan = new javax.swing.JLabel();
+        jlbGioiTinh = new javax.swing.JLabel();
+        jdcNgayTnF0 = new com.toedter.calendar.JDateChooser();
+        jcbTungLaF0_Co = new javax.swing.JCheckBox();
+        jcbNu = new javax.swing.JCheckBox();
+        jlbTungLaF0 = new javax.swing.JLabel();
+        jcbNam = new javax.swing.JCheckBox();
+        jcbTungLaF0_Khong = new javax.swing.JCheckBox();
+        jlbTestNhanh = new javax.swing.JLabel();
+        jlbRT_PCR = new javax.swing.JLabel();
+        jcbTestNhanh_Co = new javax.swing.JCheckBox();
+        jcbTestNhanh_Khong = new javax.swing.JCheckBox();
+        jcbTestPCR_Co = new javax.swing.JCheckBox();
+        jcbTestPCR_Khong = new javax.swing.JCheckBox();
+        jlbMABN = new javax.swing.JLabel();
+        jtfMABN = new javax.swing.JTextField();
+        jlbNgaySinh = new javax.swing.JLabel();
+        jdcNgaySinh = new com.toedter.calendar.JDateChooser();
+        jlbNoiO = new javax.swing.JLabel();
+        jtfSDT = new javax.swing.JTextField();
+        jlbPhuong_Xa = new javax.swing.JLabel();
+        jcobPhuong_Xa = new javax.swing.JComboBox<>();
+        jlbNoiLamViec = new javax.swing.JLabel();
+        jtfNoiO = new javax.swing.JTextField();
+        jlbSĐT = new javax.swing.JLabel();
+        jtfNoiLamViec = new javax.swing.JTextField();
+        jlbSoThangLaF0 = new javax.swing.JLabel();
+        jtfSoThangF0 = new javax.swing.JTextField();
+        jlbNgayXHTTDT = new javax.swing.JLabel();
+        jdcNgayTestPCR = new com.toedter.calendar.JDateChooser();
+        jlbNgayTestNhanh = new javax.swing.JLabel();
+        jdcNgayXHTTDT = new com.toedter.calendar.JDateChooser();
+        jlbNgayTestPCR = new javax.swing.JLabel();
+        jdcNgayTestNhanh = new com.toedter.calendar.JDateChooser();
+        jlbTestNhanh1 = new javax.swing.JLabel();
+        jcobKQTestNhanh = new javax.swing.JComboBox<>();
+        jlbTestNhanh2 = new javax.swing.JLabel();
+        jcobKQTestPCR = new javax.swing.JComboBox<>();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(20, 20, 20));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setForeground(new java.awt.Color(20, 20, 20));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(null);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(20, 20, 20));
         jLabel1.setText("THÔNG TIN NGƯỜI BỆNH");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(495, 495, 495)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel2.setText("Họ và tên *");
-
-        jTextField1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel3.setText("Nghề nghiệp");
-
-        jTextField2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel5.setText("Tỉnh/Thành phố *");
-
-        jComboBox1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
-        jComboBox1.setBorder(null);
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel6.setText("Phường/Xã *");
-
-        jComboBox2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
-        jComboBox2.setBorder(null);
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel7.setText("CMND/CCCD *");
-
-        jTextField3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel8.setText("Ngày tiếp nhận F0 *");
-
-        jLabel9.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel9.setText("Giới Tính *");
-
-        jCheckBox1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox1.setText("Có ");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox2.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox2.setText("Nữ");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel10.setText("Từng là F0 *");
-
-        jCheckBox3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox3.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox3.setText("Nam");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox4.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox4.setText("Không");
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
-            }
-        });
-
-        jLabel11.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel11.setText("Test Nhanh *");
-
-        jLabel12.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel12.setText("RT-PCR *");
-
-        jCheckBox5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox5.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox5.setText("Có ");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox6.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox6.setText("Không");
-        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox6ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox7.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox7.setText("Có ");
-        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox7ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jCheckBox8.setForeground(new java.awt.Color(20, 20, 20));
-        jCheckBox8.setText("Không");
-        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox8ActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel4.setText("Mã bệnh nhân *");
-
-        jTextField4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-
-        jLabel13.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel13.setText("Ngày sinh *");
-
-        jDateChooser2.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser2.setForeground(new java.awt.Color(20, 20, 20));
-        jDateChooser2.setDateFormatString("dd-MM-yyyy");
-
-        jLabel15.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel15.setText("Nơi ở hiện tại *");
-
-        jTextField5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel16.setText("Phường/Xã *");
-
-        jComboBox3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(20, 20, 20));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
-        jComboBox3.setBorder(null);
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
-            }
-        });
-
-        jLabel17.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel17.setText("Nơi làm việc");
-
-        jTextField6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-
-        jLabel14.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel14.setText("Số điện thoại *");
-
-        jTextField7.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
-
-        jLabel18.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel18.setText("Số tháng từng là F0");
-
-        jTextField8.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(20, 20, 20));
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
-
-        jLabel19.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel19.setText("Ngày xuất hiện triệu chứng đầu tiên *");
-
-        jDateChooser3.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser3.setForeground(new java.awt.Color(20, 20, 20));
-
-        jLabel20.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel20.setText("Ngày test nhanh *");
-
-        jDateChooser4.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser4.setForeground(new java.awt.Color(20, 20, 20));
-
-        jLabel21.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(20, 20, 20));
-        jLabel21.setText("Ngày test RT-PCR *");
-
-        jDateChooser5.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser5.setForeground(new java.awt.Color(20, 20, 20));
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel9)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jCheckBox3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox2))
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel8))
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jCheckBox1)
-                                    .addComponent(jCheckBox5)
-                                    .addComponent(jCheckBox7))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox8)
-                                    .addComponent(jCheckBox6)
-                                    .addComponent(jCheckBox4))))))
-                .addGap(100, 100, 100)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel21)
-                                .addGap(181, 181, 181)
-                                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel18)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(56, 56, 56)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel14))
-                                .addGap(67, 67, 67)
-                                .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(173, 173, 173)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel19)
-                                .addGap(59, 59, 59)
-                                .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 619, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel9)
-                        .addComponent(jCheckBox3)
-                        .addComponent(jCheckBox2)
-                        .addComponent(jLabel13))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel6)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel16))
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel17))
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jCheckBox1)
-                                    .addComponent(jCheckBox4)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(20, 20, 20)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jCheckBox5)
-                                    .addComponent(jCheckBox6)
-                                    .addComponent(jLabel20)))
-                            .addComponent(jDateChooser5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel12)
-                                .addComponent(jCheckBox7)
-                                .addComponent(jCheckBox8)
-                                .addComponent(jLabel21))
-                            .addComponent(jDateChooser3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(412, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 12, Short.MAX_VALUE)
+                .addComponent(jLabel1))
         );
+
+        jlbHoTen.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbHoTen.setForeground(new java.awt.Color(20, 20, 20));
+        jlbHoTen.setText("Họ và tên *");
+
+        jtfHoTen.setBackground(new java.awt.Color(255, 255, 255));
+        jtfHoTen.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfHoTen.setForeground(new java.awt.Color(20, 20, 20));
+        jtfHoTen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfHoTen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfHoTenActionPerformed(evt);
+            }
+        });
+
+        jlbNgheNghiep.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNgheNghiep.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNgheNghiep.setText("Nghề nghiệp");
+
+        jtfNgheNghiep.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNgheNghiep.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfNgheNghiep.setForeground(new java.awt.Color(20, 20, 20));
+        jtfNgheNghiep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfNgheNghiep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNgheNghiepActionPerformed(evt);
+            }
+        });
+
+        jlbTinh_ThanhPho.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbTinh_ThanhPho.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTinh_ThanhPho.setText("Tỉnh/Thành phố *");
+
+        jcobTinh_ThanhPho.setBackground(new java.awt.Color(255, 255, 255));
+        jcobTinh_ThanhPho.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcobTinh_ThanhPho.setForeground(new java.awt.Color(20, 20, 20));
+        jcobTinh_ThanhPho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ", "Đồng tháp", "Hà Nội", "Thanh Hóa", "Thái Bình", "An Giang", " " }));
+        jcobTinh_ThanhPho.setBorder(null);
+        jcobTinh_ThanhPho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcobTinh_ThanhPhoActionPerformed(evt);
+            }
+        });
+
+        jlbQuan_Huyen.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbQuan_Huyen.setForeground(new java.awt.Color(20, 20, 20));
+        jlbQuan_Huyen.setText("Quận/Huyện *");
+
+        jcobQuan_Huyen.setBackground(new java.awt.Color(255, 255, 255));
+        jcobQuan_Huyen.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcobQuan_Huyen.setForeground(new java.awt.Color(20, 20, 20));
+        jcobQuan_Huyen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quận 1", "Quận 3", "Quận 4", "Quận 5", "Quận 6", "Quận 7", "Quận 8", "Quận 9", "Quận 10", "Quận 11", "Quận 12", "Bình Thạnh", "Gò Vấp", "Tân Phú", "Cần Giờ", "Củ Chi", "Hóc Môn", "Nhà Bè", " " }));
+        jcobQuan_Huyen.setBorder(null);
+        jcobQuan_Huyen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcobQuan_HuyenActionPerformed(evt);
+            }
+        });
+
+        jlbCMND_CCCD.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbCMND_CCCD.setForeground(new java.awt.Color(20, 20, 20));
+        jlbCMND_CCCD.setText("CMND/CCCD *");
+
+        jtfCMND_CCCD.setBackground(new java.awt.Color(255, 255, 255));
+        jtfCMND_CCCD.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfCMND_CCCD.setForeground(new java.awt.Color(20, 20, 20));
+        jtfCMND_CCCD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfCMND_CCCD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfCMND_CCCDActionPerformed(evt);
+            }
+        });
+        jtfCMND_CCCD.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfCMND_CCCDKeyPressed(evt);
+            }
+        });
+
+        jlbNgayTiepNhan.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNgayTiepNhan.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNgayTiepNhan.setText("Ngày tiếp nhận F0 *");
+
+        jlbGioiTinh.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbGioiTinh.setForeground(new java.awt.Color(20, 20, 20));
+        jlbGioiTinh.setText("Giới Tính *");
+
+        jdcNgayTnF0.setDateFormatString("dd-MM-yyyy\n");
+
+        btnG_TunglaF0.add(jcbTungLaF0_Co);
+        jcbTungLaF0_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbTungLaF0_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jcbTungLaF0_Co.setText("Có ");
+        jcbTungLaF0_Co.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbTungLaF0_CoActionPerformed(evt);
+            }
+        });
+
+        btnG_GioiTinh.add(jcbNu);
+        jcbNu.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbNu.setForeground(new java.awt.Color(20, 20, 20));
+        jcbNu.setText("Nữ");
+        jcbNu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbNuActionPerformed(evt);
+            }
+        });
+
+        jlbTungLaF0.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbTungLaF0.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTungLaF0.setText("Từng là F0 *");
+
+        btnG_GioiTinh.add(jcbNam);
+        jcbNam.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbNam.setForeground(new java.awt.Color(20, 20, 20));
+        jcbNam.setText("Nam");
+        jcbNam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbNamActionPerformed(evt);
+            }
+        });
+
+        btnG_TunglaF0.add(jcbTungLaF0_Khong);
+        jcbTungLaF0_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbTungLaF0_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jcbTungLaF0_Khong.setText("Không");
+        jcbTungLaF0_Khong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbTungLaF0_KhongActionPerformed(evt);
+            }
+        });
+
+        jlbTestNhanh.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbTestNhanh.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTestNhanh.setText("Test Nhanh *");
+
+        jlbRT_PCR.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbRT_PCR.setForeground(new java.awt.Color(20, 20, 20));
+        jlbRT_PCR.setText("RT-PCR *");
+
+        btnG_TestNhanh.add(jcbTestNhanh_Co);
+        jcbTestNhanh_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbTestNhanh_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jcbTestNhanh_Co.setText("Có ");
+        jcbTestNhanh_Co.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbTestNhanh_CoActionPerformed(evt);
+            }
+        });
+
+        btnG_TestNhanh.add(jcbTestNhanh_Khong);
+        jcbTestNhanh_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbTestNhanh_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jcbTestNhanh_Khong.setText("Không");
+        jcbTestNhanh_Khong.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jcbTestNhanh_KhongStateChanged(evt);
+            }
+        });
+        jcbTestNhanh_Khong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbTestNhanh_KhongActionPerformed(evt);
+            }
+        });
+
+        btnG_RTPCR.add(jcbTestPCR_Co);
+        jcbTestPCR_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbTestPCR_Co.setForeground(new java.awt.Color(20, 20, 20));
+        jcbTestPCR_Co.setText("Có ");
+        jcbTestPCR_Co.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbTestPCR_CoActionPerformed(evt);
+            }
+        });
+
+        btnG_RTPCR.add(jcbTestPCR_Khong);
+        jcbTestPCR_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcbTestPCR_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jcbTestPCR_Khong.setText("Không");
+        jcbTestPCR_Khong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbTestPCR_KhongActionPerformed(evt);
+            }
+        });
+
+        jlbMABN.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbMABN.setForeground(new java.awt.Color(20, 20, 20));
+        jlbMABN.setText("Mã bệnh nhân *");
+
+        jtfMABN.setEditable(false);
+        jtfMABN.setBackground(new java.awt.Color(255, 255, 255));
+        jtfMABN.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfMABN.setForeground(new java.awt.Color(20, 20, 20));
+        jtfMABN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfMABN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfMABNActionPerformed(evt);
+            }
+        });
+
+        jlbNgaySinh.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNgaySinh.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNgaySinh.setText("Ngày sinh *");
+
+        jdcNgaySinh.setBackground(new java.awt.Color(255, 255, 255));
+        jdcNgaySinh.setForeground(new java.awt.Color(20, 20, 20));
+        jdcNgaySinh.setDateFormatString("dd-MM-yyyy");
+
+        jlbNoiO.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNoiO.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNoiO.setText("Nơi ở hiện tại *");
+
+        jtfSDT.setBackground(new java.awt.Color(255, 255, 255));
+        jtfSDT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfSDT.setForeground(new java.awt.Color(20, 20, 20));
+        jtfSDT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfSDT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfSDTActionPerformed(evt);
+            }
+        });
+        jtfSDT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSDTKeyPressed(evt);
+            }
+        });
+
+        jlbPhuong_Xa.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbPhuong_Xa.setForeground(new java.awt.Color(20, 20, 20));
+        jlbPhuong_Xa.setText("Phường/Xã *");
+
+        jcobPhuong_Xa.setBackground(new java.awt.Color(255, 255, 255));
+        jcobPhuong_Xa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcobPhuong_Xa.setForeground(new java.awt.Color(20, 20, 20));
+        jcobPhuong_Xa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tân Thới Nhất", "Đông Hưng Thuận", "Trung Mỹ Tây", "Tân Chánh Hiệp", "Tân Thới Hiệp", "Hiệp Thành", "Thới An", "Thạnh Lộc", "Thạnh Xuân", "Tân Hưng Thuận", "An Phú Đông", "Bến Nghé", "Bến Thành", "Cô Giang", "Cầu Kho", "Cầu Ông Lãnh", "Đa Kao", "Nguyễn Cư Trinh", "Nguyễn Thái Bình", "Phạm Ngũ Lão", "Tân Định" }));
+        jcobPhuong_Xa.setBorder(null);
+        jcobPhuong_Xa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcobPhuong_XaActionPerformed(evt);
+            }
+        });
+
+        jlbNoiLamViec.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNoiLamViec.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNoiLamViec.setText("Nơi làm việc");
+
+        jtfNoiO.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNoiO.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfNoiO.setForeground(new java.awt.Color(20, 20, 20));
+        jtfNoiO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfNoiO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNoiOActionPerformed(evt);
+            }
+        });
+
+        jlbSĐT.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbSĐT.setForeground(new java.awt.Color(20, 20, 20));
+        jlbSĐT.setText("Số điện thoại *");
+
+        jtfNoiLamViec.setBackground(new java.awt.Color(255, 255, 255));
+        jtfNoiLamViec.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfNoiLamViec.setForeground(new java.awt.Color(20, 20, 20));
+        jtfNoiLamViec.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfNoiLamViec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNoiLamViecActionPerformed(evt);
+            }
+        });
+
+        jlbSoThangLaF0.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbSoThangLaF0.setForeground(new java.awt.Color(20, 20, 20));
+        jlbSoThangLaF0.setText("Số ngày từng là F0");
+
+        jtfSoThangF0.setBackground(new java.awt.Color(255, 255, 255));
+        jtfSoThangF0.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jtfSoThangF0.setForeground(new java.awt.Color(20, 20, 20));
+        jtfSoThangF0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfSoThangF0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfSoThangF0ActionPerformed(evt);
+            }
+        });
+
+        jlbNgayXHTTDT.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNgayXHTTDT.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNgayXHTTDT.setText("Ngày xuất hiện triệu chứng đầu tiên *");
+
+        jdcNgayTestPCR.setBackground(new java.awt.Color(255, 255, 255));
+        jdcNgayTestPCR.setForeground(new java.awt.Color(20, 20, 20));
+        jdcNgayTestPCR.setDateFormatString("dd-MM-yyyy");
+
+        jlbNgayTestNhanh.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNgayTestNhanh.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNgayTestNhanh.setText("Ngày test nhanh *");
+
+        jdcNgayXHTTDT.setBackground(new java.awt.Color(255, 255, 255));
+        jdcNgayXHTTDT.setForeground(new java.awt.Color(20, 20, 20));
+        jdcNgayXHTTDT.setDateFormatString("dd-MM-yyyy");
+
+        jlbNgayTestPCR.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbNgayTestPCR.setForeground(new java.awt.Color(20, 20, 20));
+        jlbNgayTestPCR.setText("Ngày test RT-PCR *");
+
+        jdcNgayTestNhanh.setBackground(new java.awt.Color(255, 255, 255));
+        jdcNgayTestNhanh.setForeground(new java.awt.Color(20, 20, 20));
+        jdcNgayTestNhanh.setDateFormatString("dd-MM-yyyy");
+
+        jlbTestNhanh1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbTestNhanh1.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTestNhanh1.setText("Kết quả:*");
+
+        jcobKQTestNhanh.setBackground(new java.awt.Color(255, 255, 255));
+        jcobKQTestNhanh.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcobKQTestNhanh.setForeground(new java.awt.Color(20, 20, 20));
+        jcobKQTestNhanh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Âm tính", "Dương tính", " " }));
+        jcobKQTestNhanh.setBorder(null);
+        jcobKQTestNhanh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcobKQTestNhanhActionPerformed(evt);
+            }
+        });
+
+        jlbTestNhanh2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jlbTestNhanh2.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTestNhanh2.setText("Kết quả:*");
+
+        jcobKQTestPCR.setBackground(new java.awt.Color(255, 255, 255));
+        jcobKQTestPCR.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jcobKQTestPCR.setForeground(new java.awt.Color(20, 20, 20));
+        jcobKQTestPCR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Âm tính", "Dương tính", " " }));
+        jcobKQTestPCR.setBorder(null);
+        jcobKQTestPCR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcobKQTestPCRActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbCMND_CCCD)
+                            .addComponent(jlbNgheNghiep)
+                            .addComponent(jlbQuan_Huyen)
+                            .addComponent(jlbTinh_ThanhPho)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jlbGioiTinh)
+                                .addComponent(jlbHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jcbNam)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jcbNu))
+                            .addComponent(jcobTinh_ThanhPho, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcobQuan_Huyen, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfNgheNghiep, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtfCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbTungLaF0)
+                            .addComponent(jlbTestNhanh)
+                            .addComponent(jlbRT_PCR)
+                            .addComponent(jlbNgayTiepNhan))
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jdcNgayTnF0, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jcbTungLaF0_Co)
+                                    .addComponent(jcbTestNhanh_Co)
+                                    .addComponent(jcbTestPCR_Co))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jcbTungLaF0_Khong)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jcbTestNhanh_Khong)
+                                            .addComponent(jcbTestPCR_Khong))
+                                        .addGap(63, 63, 63)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jlbTestNhanh2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jcobKQTestPCR, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jlbTestNhanh1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jcobKQTestNhanh, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                        .addGap(100, 100, 100)))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jlbNgayTestPCR)
+                                .addGap(181, 181, 181)
+                                .addComponent(jdcNgayTestPCR, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jlbNgayTestNhanh)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jdcNgayTestNhanh, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jlbSoThangLaF0)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jtfSoThangF0, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jlbNoiLamViec, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(56, 56, 56)
+                                .addComponent(jtfNoiLamViec, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jlbNoiO, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(56, 56, 56)
+                                .addComponent(jtfNoiO, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlbMABN, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jlbNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(56, 56, 56)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jdcNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtfMABN, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jlbPhuong_Xa)
+                                    .addComponent(jlbSĐT))
+                                .addGap(67, 67, 67)
+                                .addComponent(jcobPhuong_Xa, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(173, 173, 173)
+                                .addComponent(jtfSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jlbNgayXHTTDT)
+                                .addGap(59, 59, 59)
+                                .addComponent(jdcNgayXHTTDT, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 40, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbHoTen)
+                    .addComponent(jtfHoTen, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbMABN)
+                    .addComponent(jtfMABN, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jlbGioiTinh)
+                        .addComponent(jcbNam)
+                        .addComponent(jcbNu)
+                        .addComponent(jlbNgaySinh))
+                    .addComponent(jdcNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbTinh_ThanhPho)
+                            .addComponent(jcobTinh_ThanhPho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbNoiO)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jtfNoiO, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jlbQuan_Huyen)
+                                .addComponent(jcobQuan_Huyen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jlbPhuong_Xa))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jcobPhuong_Xa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jtfNgheNghiep, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlbNgheNghiep)
+                        .addComponent(jlbNoiLamViec))
+                    .addComponent(jtfNoiLamViec, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlbCMND_CCCD)
+                            .addComponent(jtfCMND_CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbSĐT)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jtfSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(55, 55, 55)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbNgayTiepNhan)
+                            .addComponent(jdcNgayTnF0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbNgayXHTTDT, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jlbTungLaF0)
+                                            .addComponent(jcbTungLaF0_Co)
+                                            .addComponent(jcbTungLaF0_Khong)
+                                            .addComponent(jlbSoThangLaF0)
+                                            .addComponent(jtfSoThangF0, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(22, 22, 22)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jlbTestNhanh)
+                                            .addComponent(jcbTestNhanh_Co)
+                                            .addComponent(jcbTestNhanh_Khong)
+                                            .addComponent(jlbNgayTestNhanh)
+                                            .addComponent(jlbTestNhanh1)))
+                                    .addComponent(jdcNgayTestNhanh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(19, 19, 19))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jcobKQTestNhanh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jlbRT_PCR)
+                                .addComponent(jcbTestPCR_Co)
+                                .addComponent(jcbTestPCR_Khong)
+                                .addComponent(jlbNgayTestPCR)
+                                .addComponent(jlbTestNhanh2)
+                                .addComponent(jcobKQTestPCR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jdcNgayTestPCR, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jdcNgayXHTTDT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(108, 108, 108))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jtfHoTenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfHoTenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jtfHoTenActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jtfNgheNghiepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNgheNghiepActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jtfNgheNghiepActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jcobTinh_ThanhPhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcobTinh_ThanhPhoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jcobTinh_ThanhPhoActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jcobQuan_HuyenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcobQuan_HuyenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jcobQuan_HuyenActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jtfCMND_CCCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_jtfCMND_CCCDActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void jcbTungLaF0_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTungLaF0_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+        jtfSoThangF0.setEnabled(true);
+    }//GEN-LAST:event_jcbTungLaF0_CoActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void jcbNuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbNuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_jcbNuActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void jcbNamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbNamActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    }//GEN-LAST:event_jcbNamActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+    private void jcbTungLaF0_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTungLaF0_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+        jtfSoThangF0.setEnabled(false);
+        
+    }//GEN-LAST:event_jcbTungLaF0_KhongActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void jcbTestNhanh_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTestNhanh_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+        jcobKQTestNhanh.setEnabled(true);
+    }//GEN-LAST:event_jcbTestNhanh_CoActionPerformed
 
-    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+    private void jcbTestNhanh_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTestNhanh_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox6ActionPerformed
+        jcobKQTestNhanh.setEnabled(false);
+        jcobKQTestNhanh.setSelectedItem(null);
+        
+         jdcNgayTestNhanh.setEnabled(false);
+        
+         
+//        jdcNgayTestNhanh.setDateFormatString("00-00-0000");
+       
+    }//GEN-LAST:event_jcbTestNhanh_KhongActionPerformed
 
-    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+    private void jcbTestPCR_CoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTestPCR_CoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox7ActionPerformed
+        jcobKQTestPCR.setEnabled(true);
+    }//GEN-LAST:event_jcbTestPCR_CoActionPerformed
 
-    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+    private void jcbTestPCR_KhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbTestPCR_KhongActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox8ActionPerformed
+         jcobKQTestPCR.setEnabled(false);
+        jcobKQTestPCR.setSelectedItem(null);
+        jdcNgayTestPCR.setEnabled(false);
+    }//GEN-LAST:event_jcbTestPCR_KhongActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jtfMABNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfMABNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jtfMABNActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jtfSDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSDTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jtfSDTActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void jcobPhuong_XaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcobPhuong_XaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_jcobPhuong_XaActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jtfNoiOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNoiOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jtfNoiOActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jtfNoiLamViecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNoiLamViecActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jtfNoiLamViecActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jtfSoThangF0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSoThangF0ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jtfSoThangF0ActionPerformed
 
+    private void jcobKQTestNhanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcobKQTestNhanhActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcobKQTestNhanhActionPerformed
 
+    private void jcobKQTestPCRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcobKQTestPCRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcobKQTestPCRActionPerformed
+
+    private void jcbTestNhanh_KhongStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jcbTestNhanh_KhongStateChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jcbTestNhanh_KhongStateChanged
+
+    private void jtfCMND_CCCDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDKeyPressed
+        // TODO add your handling code here:
+        
+        String sdt = jtfCMND_CCCD.getText();
+        int length = sdt.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
+            if(length<12){
+                jtfCMND_CCCD.setEditable(true);
+            }else{
+                jtfCMND_CCCD.setEditable(false);
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                jtfCMND_CCCD.setEditable(true);
+            }else{
+                jtfCMND_CCCD.setEditable(false);
+            }
+        }
+    }//GEN-LAST:event_jtfCMND_CCCDKeyPressed
+
+    private void jtfSDTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSDTKeyPressed
+        // TODO add your handling code here:
+        String sdt = jtfSDT.getText();
+        int length = sdt.length();
+        char c=evt.getKeyChar();
+        if(evt.getKeyChar()>='0'&& evt.getKeyChar()<='9'){
+            if(length<10){
+                jtfSDT.setEditable(true);
+            }else{
+                jtfSDT.setEditable(false);
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE||evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                jtfSDT.setEditable(true);
+            }else{
+                jtfSDT.setEditable(false);
+            }
+        }
+    }//GEN-LAST:event_jtfSDTKeyPressed
+
+    public void MyinnitsetMBBN(){
+       LayMABNTuDong td= new LayMABNTuDong();
+        try {
+            this.jtfMABN.setText(td.SetMABN());
+            Color color=new Color(140,140,140);
+            this.jtfMABN.setBackground(color);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(TTCaNhan_ttcb.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(TTCaNhan_ttcb.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
-    private com.toedter.calendar.JDateChooser jDateChooser4;
-    private com.toedter.calendar.JDateChooser jDateChooser5;
+    private javax.swing.ButtonGroup btnG_GioiTinh;
+    private javax.swing.ButtonGroup btnG_RTPCR;
+    private javax.swing.ButtonGroup btnG_TestNhanh;
+    private javax.swing.ButtonGroup btnG_TunglaF0;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JCheckBox jcbNam;
+    private javax.swing.JCheckBox jcbNu;
+    private javax.swing.JCheckBox jcbTestNhanh_Co;
+    private javax.swing.JCheckBox jcbTestNhanh_Khong;
+    private javax.swing.JCheckBox jcbTestPCR_Co;
+    private javax.swing.JCheckBox jcbTestPCR_Khong;
+    private javax.swing.JCheckBox jcbTungLaF0_Co;
+    private javax.swing.JCheckBox jcbTungLaF0_Khong;
+    private javax.swing.JComboBox<String> jcobKQTestNhanh;
+    private javax.swing.JComboBox<String> jcobKQTestPCR;
+    private javax.swing.JComboBox<String> jcobPhuong_Xa;
+    private javax.swing.JComboBox<String> jcobQuan_Huyen;
+    private javax.swing.JComboBox<String> jcobTinh_ThanhPho;
+    private com.toedter.calendar.JDateChooser jdcNgaySinh;
+    private com.toedter.calendar.JDateChooser jdcNgayTestNhanh;
+    private com.toedter.calendar.JDateChooser jdcNgayTestPCR;
+    private com.toedter.calendar.JDateChooser jdcNgayTnF0;
+    private com.toedter.calendar.JDateChooser jdcNgayXHTTDT;
+    private javax.swing.JLabel jlbCMND_CCCD;
+    private javax.swing.JLabel jlbGioiTinh;
+    private javax.swing.JLabel jlbHoTen;
+    private javax.swing.JLabel jlbMABN;
+    private javax.swing.JLabel jlbNgaySinh;
+    private javax.swing.JLabel jlbNgayTestNhanh;
+    private javax.swing.JLabel jlbNgayTestPCR;
+    private javax.swing.JLabel jlbNgayTiepNhan;
+    private javax.swing.JLabel jlbNgayXHTTDT;
+    private javax.swing.JLabel jlbNgheNghiep;
+    private javax.swing.JLabel jlbNoiLamViec;
+    private javax.swing.JLabel jlbNoiO;
+    private javax.swing.JLabel jlbPhuong_Xa;
+    private javax.swing.JLabel jlbQuan_Huyen;
+    private javax.swing.JLabel jlbRT_PCR;
+    private javax.swing.JLabel jlbSoThangLaF0;
+    private javax.swing.JLabel jlbSĐT;
+    private javax.swing.JLabel jlbTestNhanh;
+    private javax.swing.JLabel jlbTestNhanh1;
+    private javax.swing.JLabel jlbTestNhanh2;
+    private javax.swing.JLabel jlbTinh_ThanhPho;
+    private javax.swing.JLabel jlbTungLaF0;
+    private javax.swing.JTextField jtfCMND_CCCD;
+    private javax.swing.JTextField jtfHoTen;
+    private javax.swing.JTextField jtfMABN;
+    private javax.swing.JTextField jtfNgheNghiep;
+    private javax.swing.JTextField jtfNoiLamViec;
+    private javax.swing.JTextField jtfNoiO;
+    private javax.swing.JTextField jtfSDT;
+    private javax.swing.JTextField jtfSoThangF0;
     // End of variables declaration//GEN-END:variables
+    
 }
+

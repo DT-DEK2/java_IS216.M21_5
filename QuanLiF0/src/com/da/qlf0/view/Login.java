@@ -7,6 +7,7 @@ package com.da.qlf0.view;
 import com.da.qlf0.controller.DangNhapController;
 import com.da.qlf0.view.BenhNhan_Frame.BenhNhan_main;
 import com.da.qlf0.view.MainFrame;
+import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,6 +27,7 @@ public class Login extends javax.swing.JFrame {
        
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Đăng nhập");
     }
 
     /**
@@ -165,6 +167,20 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD));
         jLabel4.setText("Quên mật khẩu ?");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel4MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel4MousePressed(evt);
+            }
+        });
 
         jLabel6.setFont(jLabel6.getFont().deriveFont(jLabel6.getFont().getStyle() | java.awt.Font.BOLD, 19));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/logging.png"))); // NOI18N
@@ -284,6 +300,7 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnBenhNhanActionPerformed
 
+    @SuppressWarnings("deprecation")
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
                     // TODO add your handling code here:
            
@@ -310,7 +327,7 @@ public class Login extends javax.swing.JFrame {
                              } else {
                             
                                 this.dispose();
-                                    JFrame frame = new BenhNhan_main(dn.getTen(),dn.getID());
+                                    JFrame frame = new BenhNhan_main(dn.getTen(),dn.getMABN());
                                     frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
                                     frame.setVisible(true);
                                      
@@ -329,7 +346,7 @@ public class Login extends javax.swing.JFrame {
                                 this.dispose();
                                 
                                  
-                                    JFrame frame = new MainFrame(dn.getTen(),dn.getID());
+                                    JFrame frame = new MainFrame(dn.getTen(),dn.getMANV());
                                     frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
                                     frame.setVisible(true);
                                  
@@ -354,6 +371,9 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        DangKyFrame dk = new  DangKyFrame();
+        dk.setVisible(true);
+        dk.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jtfCMND_CCCDFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfCMND_CCCDFocusGained
@@ -367,6 +387,29 @@ public class Login extends javax.swing.JFrame {
     private void jbtnCanBoYTeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCanBoYTeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtnCanBoYTeActionPerformed
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        QuenMK qmk = new QuenMK();
+        qmk.setVisible(true);
+        qmk.setLocationRelativeTo(null);
+        qmk.setDefaultCloseOperation(HIDE_ON_CLOSE);
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MousePressed
+        // TODO add your handling code here:
+        jLabel4.setForeground(new Color(0, 40, 102));
+    }//GEN-LAST:event_jLabel4MousePressed
+
+    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+        // TODO add your handling code here:
+        jLabel4.setForeground(new Color(0, 40, 102));
+    }//GEN-LAST:event_jLabel4MouseEntered
+
+    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+        // TODO add your handling code here:
+        jLabel4.setForeground(new Color(20, 20, 20));
+    }//GEN-LAST:event_jLabel4MouseExited
 
     /**
      * @param args the command line arguments
