@@ -86,7 +86,7 @@ public class GuiHoTroController {
                 
             int i=cStmt.executeUpdate();
             
-             cStmt.execute();
+             
         cStmt.close();
         conn.close();
             return i;

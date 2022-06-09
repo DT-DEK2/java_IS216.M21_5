@@ -18,6 +18,8 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import oracle.jdbc.OracleType;
+import oracle.jdbc.OracleTypes;
 /**
  *
  * @author Minh Cuong
@@ -1345,132 +1347,135 @@ public class XemTT_CapNhatDTController {
             }
     }
        public void SetDataQTDT() throws ClassNotFoundException, SQLException {
-//         Connection conn = null;
-//    
-//        conn = OracleConnection.getOracleConnection();
-//        PreparedStatement ps=null;
-//        String sql ="SELECT * FROM QUATRINHDIEUTRITAINHA WHERE MaBenhNhan LIKE ? ";
-//        ps=conn.prepareStatement(sql);
-//        
-//         ps.setString(1, this.MABN);
-// 
-//            ResultSet rs = ps.executeQuery();
-//            int rc= ps.executeUpdate();
-//            if (rc!=0){
-//                 while(rs.next()){
-//                      this.jtfMach.setText(Integer.toString(rs.getInt("Mach")));
-//                      this.jtfNhietDo_QTDT.setText(Integer.toString(rs.getInt("NhietDo")));
-//                      this.jtfNhipTho_QTDT.setText(Integer.toString(rs.getInt("NhipTho")));
-//                      this.jtfDoBHOxi.setText(Integer.toString(rs.getInt("SpO2")));
-//                      this.jtfHuyetApTD.setText(Integer.toString(rs.getInt("HuyetApToiDa")));
-//                      this.jtfHuyetApToiThieu.setText(Integer.toString(rs.getInt("HuyetApToiThieu")));
-//                      
-//                      
-//                      if(rs.getInt("KietSuc")==1){
-//                           this.jrbKietSuc_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbKietSuc_Khong.setSelected(true);
-//                            }
-//                       if(rs.getInt("Ho")==1){
-//                           this.jrbHo_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbHo_Khong.setSelected(true);
-//                            }
-//                     if(rs.getInt("HoRaDom")==1){
-//                           this.jrbHoRaDom_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbHoRaDom_Khong.setSelected(true);
-//                            }
-//                     if(rs.getInt("OnLanh")==1){
-//                           this.jrbOnLanh_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbOnLanh_Khong.setSelected(true);
-//                            }
-//                       if(rs.getInt("MatViGiac")==1){
-//                           this.jrbMatVG_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbMatVG_Khong.setSelected(true);
-//                            }
-//                        if(rs.getInt("MatKhuuGiac")==1){
-//                           this.jrbMatKG_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbMatKG_Khong.setSelected(true);
-//                            }
-//                      if(rs.getInt("TieuChay")==1){
-//                           this.jrbTieuChay_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbTieuChay_Khong.setSelected(true);
-//                            }
-//                      
-//                      if(rs.getInt("HoRaMau")==1){
-//                           this.jrbHoRaMau_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbHoRaMau_Khong.setSelected(true);
-//                            }
-//                      if(rs.getInt("ThoDocHoacKhoTho")==1){
-//                           this.jrbKhoTho_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbKhoTho_Khong.setSelected(true);
-//                            }
-//                      if(rs.getInt("DauTucNgucKeoDai")==1){
-//                           this.jrbDauNguc_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbDauNguc_Khong.setSelected(true);
-//                            }
-//                      if(rs.getInt("LoMoKhongTinhTao")==1){
-//                           this.jrbKhongTT_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbKhongTT_Khong.setSelected(true);
-//                            }
-//                      
-//                       if(rs.getInt("GoiThuocA")==1){
-//                           this.jrbGoiA_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbGoiA_Khong.setSelected(true);
-//                            }
-//                        if(rs.getInt("GoiThuocB")==1){
-//                           this.jrbGoiB_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbGoiB_Khong.setSelected(true);
-//                            }
-//                         if(rs.getInt("GoiThuocC")==1){
-//                           this.jrbGoiC_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbGoiC_Khong.setSelected(true);
-//                            }
-//                         
-//                      if(rs.getInt("XetNghiem")==1){
-//                           this.jrbXN_Co.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbXN_Khong.setSelected(true);
-//                            }
-//                      this.jdcNgayXN.setDate(rs.getDate("NgayXetNghiem"));
-//                      
-//                        if(rs.getString("KetQuaXetNghiem1").equals("Dương tính")){
-//                           this.jrbKQ_DT.setSelected(true);
-//                    
-//                     }else{
-//                            this.jrbKQ_AT.setSelected(true);
-//                            }
-//
-//                 
-//                 }
-//            }else if(rc==0){
+         Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        PreparedStatement ps=null;
+        String sql ="SELECT * FROM BENHNHAN BN, QUATRINHDIEUTRITAINHA QT , CapNhat CN WHERE BN.MaBenhNhan= ? AND BN.MaBenhNhan=CN.MaBenhNhan AND CN.ThoiDiemCapNhat=QT.ThoiDiemCapNhat AND CN.THOIDIEMCAPNHAT =(select max(THOIDIEMCAPNHAT) from capnhat cn2 where cn2.MABENHNHAN=?)";
+        ps=conn.prepareStatement(sql);
+        
+         ps.setString(1, this.MABN);
+         ps.setString(2, this.MABN);
+ 
+            
+            int rc= ps.executeUpdate();
+            if (rc!=0){
+                ResultSet rs = ps.executeQuery();
+                 while(rs.next()){
+                      this.jtfMach.setText(Integer.toString(rs.getInt("Mach")));
+                      this.jtfNhietDo_QTDT.setText(Integer.toString(rs.getInt("NhietDo")));
+                      this.jtfNhipTho_QTDT.setText(Integer.toString(rs.getInt("NhipTho")));
+                      this.jtfDoBHOxi.setText(Integer.toString(rs.getInt("SpO2")));
+                      this.jtfHuyetApTD.setText(Integer.toString(rs.getInt("HuyetApToiDa")));
+                      this.jtfHuyetApToiThieu.setText(Integer.toString(rs.getInt("HuyetApToiThieu")));
+                      
+                      
+                      if(rs.getInt("KietSuc")==1){
+                           this.jrbKietSuc_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbKietSuc_Khong.setSelected(true);
+                            }
+                       if(rs.getInt("Ho")==1){
+                           this.jrbHo_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbHo_Khong.setSelected(true);
+                            }
+                     if(rs.getInt("HoRaDom")==1){
+                           this.jrbHoRaDom_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbHoRaDom_Khong.setSelected(true);
+                            }
+                     if(rs.getInt("OnLanh")==1){
+                           this.jrbOnLanh_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbOnLanh_Khong.setSelected(true);
+                            }
+                       if(rs.getInt("MatViGiac")==1){
+                           this.jrbMatVG_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbMatVG_Khong.setSelected(true);
+                            }
+                        if(rs.getInt("MatKhuuGiac")==1){
+                           this.jrbMatKG_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbMatKG_Khong.setSelected(true);
+                            }
+                      if(rs.getInt("TieuChay")==1){
+                           this.jrbTieuChay_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbTieuChay_Khong.setSelected(true);
+                            }
+                      
+                      if(rs.getInt("HoRaMau")==1){
+                           this.jrbHoRaMau_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbHoRaMau_Khong.setSelected(true);
+                            }
+                      if(rs.getInt("ThoDocHoacKhoTho")==1){
+                           this.jrbKhoTho_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbKhoTho_Khong.setSelected(true);
+                            }
+                      if(rs.getInt("DauTucNgucKeoDai")==1){
+                           this.jrbDauNguc_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbDauNguc_Khong.setSelected(true);
+                            }
+                      if(rs.getInt("LoMoKhongTinhTao")==1){
+                           this.jrbKhongTT_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbKhongTT_Khong.setSelected(true);
+                            }
+                      
+                       if(rs.getInt("GoiThuocA")==1){
+                           this.jrbGoiA_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbGoiA_Khong.setSelected(true);
+                            }
+                        if(rs.getInt("GoiThuocB")==1){
+                           this.jrbGoiB_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbGoiB_Khong.setSelected(true);
+                            }
+                         if(rs.getInt("GoiThuocC")==1){
+                           this.jrbGoiC_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbGoiC_Khong.setSelected(true);
+                            }
+                         
+                      if(rs.getInt("XetNghiem")==1){
+                           this.jrbXN_Co.setSelected(true);
+                    
+                     }else{
+                            this.jrbXN_Khong.setSelected(true);
+                            }
+                      this.jdcNgayXN.setDate(rs.getDate("NgayXetNghiem"));
+                      
+                        if(rs.getString("KetQuaXetNghiem1").equals("Dương tính")){
+                           this.jrbKQ_DT.setSelected(true);
+                    
+                     }else{
+                            this.jrbKQ_AT.setSelected(true);
+                            }
+
+                 
+                 }
+                 rs.close();
+            }else if(rc==0){
                        this.jtfMach.setText("");
                       this.jtfNhietDo_QTDT.setText("");
                       this.jtfNhipTho_QTDT.setText("");
@@ -1493,8 +1498,10 @@ public class XemTT_CapNhatDTController {
                           this.jrbGoiC_Co.setSelected(true);
                          this.jrbXN_Khong.setSelected(true);
 
-//            }
-                 
+            }
+          
+          ps.close();
+          conn.close();
             
     }
       public void SetThongTin() throws ClassNotFoundException, SQLException, ParseException {
@@ -1711,6 +1718,97 @@ public class XemTT_CapNhatDTController {
         
         
     }
+    public void InsertFirst_TiemVX() throws ClassNotFoundException, SQLException{
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+       
+
+        cStmt = conn.prepareCall("{call INSERT_TIEMVACCINE(?,?,?,?,?,?,?,?)}");
+        cStmt.setString(1, jtfMABN.getText());
+        cStmt.setString(2,Get_TTTiem(jrbChuaTiem,jrbTiem1Mui,jrbTiem2Mui,jrbTiem3Mui,jrbTiem_KhongBiet));
+//        cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
+        java.util.Date utilStartDate =jdcTGMui1.getDate();
+        java.sql.Date sqlStartDate = new java.sql.Date(utilStartDate.getTime());
+        
+        java.util.Date utilStartDate2 =jdcTGMui2.getDate();
+        java.sql.Date sqlStartDate2 = new java.sql.Date(utilStartDate2.getTime());
+        
+        java.util.Date utilStartDate3 =jdcTGMui3.getDate();
+        java.sql.Date sqlStartDate3 = new java.sql.Date(utilStartDate3.getTime());
+        cStmt.setDate(4,sqlStartDate);
+        
+//        cStmt.setString(5,jcobLoaiVX2.getSelectedItem().toString());
+        
+        cStmt.setDate(6,sqlStartDate2);
+        
+//        cStmt.setString(7,jcobLoaiVX3.getSelectedItem().toString());
+        
+        cStmt.setDate(8,sqlStartDate3);
+        
+        if(jrbChuaTiem.isSelected()){
+            cStmt.setString(3,null);
+            cStmt.setString(5,null);
+            cStmt.setString(7,null);
+                        cStmt.setNull(4, java.sql.Types.DATE);
+            cStmt.setNull(6, java.sql.Types.DATE);
+            cStmt.setNull(8, java.sql.Types.DATE);
+        }
+//        }else{
+////            cStmt.setString(3,jcobTiemVX_1.getSelectedItem().toString());
+////            cStmt.setString(5,jcobTiemVX_2.getSelectedItem().toString());
+////            cStmt.setString(7,jcobTiemVX_3.getSelectedItem().toString());
+//        }
+        if(jrbTiem1Mui.isSelected()){
+            cStmt.setString(3,jcobTiemVX_1.getSelectedItem().toString());
+            cStmt.setString(5,null);
+            cStmt.setString(7,null);
+            cStmt.setNull(6, java.sql.Types.DATE);
+            cStmt.setNull(8, java.sql.Types.DATE);
+
+        }
+//        else{
+//             cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
+//        }
+        if(jrbTiem2Mui.isSelected()){
+             cStmt.setString(3,jcobTiemVX_1.getSelectedItem().toString());
+
+            cStmt.setString(5,jcobTiemVX_2.getSelectedItem().toString());
+            cStmt.setString(7,null);
+                        cStmt.setNull(8, java.sql.Types.DATE);
+
+        }
+//        else{
+//            cStmt.setString(3,jcobLoaiVX1.getSelectedItem().toString());
+//            cStmt.setString(5,jcobLoaiVX2.getSelectedItem().toString());
+//        }
+        if(jrbTiem3Mui.isSelected()){
+             cStmt.setString(3,jcobTiemVX_1.getSelectedItem().toString());
+             
+            cStmt.setString(5,jcobTiemVX_2.getSelectedItem().toString());
+          cStmt.setString(7,jcobTiemVX_3.getSelectedItem().toString());
+                        
+        }
+
+        if(jrbTiem_KhongBiet.isSelected()){
+            cStmt.setString(3,null);
+            cStmt.setString(5,null);
+            cStmt.setString(7,null);
+             cStmt.setNull(4, java.sql.Types.DATE);
+            cStmt.setNull(6, java.sql.Types.DATE);
+            cStmt.setNull(8, java.sql.Types.DATE);
+        }
+      
+        
+        cStmt.execute();
+        cStmt.close();
+        conn.close();
+        
+        
+        
+    }
     public void UpdateDataTo_BenhNen() throws ClassNotFoundException, SQLException{
         Connection conn = null;
     
@@ -1720,6 +1818,40 @@ public class XemTT_CapNhatDTController {
        
 
         cStmt = conn.prepareCall("{call UPDATE_BENHNEN(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+        cStmt.setString(1, jtfMABN.getText());
+        cStmt.setInt(2, GetInt(jrbTangHA_Co, jrbTangHA_Khong));
+        cStmt.setInt(3, GetInt(jrbUngThu_Co, jrbUngThu_Khong));
+        cStmt.setInt(4, GetInt(jrbDaiTD_Co, jrbDaiTD_Khong));
+        cStmt.setInt(5, GetInt(jrbHIV_Co, jrbHIV_Khong));
+        cStmt.setInt(6, GetInt(jrbMachMauNao_Co, jrbMachMauNao_Khong));
+        cStmt.setInt(7, GetInt(jrbBenhTim_Co, jrbBenhTim_Khong));
+        cStmt.setInt(8, GetInt(jrbBenhGan_Co, jrbBenhGan_Khong));
+        cStmt.setInt(9, GetInt(jrbBenhThanMT_Co, jrbBenhThanMT_Khong));
+        cStmt.setInt(10, GetInt(jrbHoiChungDown_Co, jrbHoiChungDown_Khong));
+        cStmt.setInt(11, GetInt(jrbHenKQ_Co, jrbHenKQ_Khong));
+        cStmt.setInt(12, GetInt(jrbRoiLoanSDCGN_Co, jrbRoiLoanSDCGN_Khong));
+        cStmt.setInt(13, GetInt(jrbBeoPhi_Co, jrbBeoPhi_Khong));
+        cStmt.setInt(14, GetInt(jrbGhepTang_TBM_Co, jrbGhepTang_TBM_Khong));
+        cStmt.setInt(15, GetInt(jrbThieuMD_Co, jrbThieuMD_Khong));
+        cStmt.setInt(16, GetInt(jrbCLBenhHT_Co, jrbCLBenhHT_Khong));
+        cStmt.setInt(17, GetInt(jrbBenhPhoiMT_Co, jrbBenhPhoiMT_Khong));
+        cStmt.setInt(18, GetInt(jrbBenhTKMT_Co, jrbBenhTKMT_Khong));
+       
+        
+        
+        cStmt.execute();
+        cStmt.close();
+        conn.close();
+    }
+    public void InsertFirst_BenhNen() throws ClassNotFoundException, SQLException{
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+       
+
+        cStmt = conn.prepareCall("{call INSERT_BENHNEN(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
         cStmt.setString(1, jtfMABN.getText());
         cStmt.setInt(2, GetInt(jrbTangHA_Co, jrbTangHA_Khong));
         cStmt.setInt(3, GetInt(jrbUngThu_Co, jrbUngThu_Khong));
@@ -1793,6 +1925,43 @@ public class XemTT_CapNhatDTController {
         cStmt.close();
         conn.close();
     }
+     public void InsertFirst_MangThai() throws ClassNotFoundException, SQLException{
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+       
+
+        cStmt = conn.prepareCall("{call INSERT_MANGTHAI(?,?,?,?,?,?)}");
+        cStmt.setString(1, jtfMABN.getText());
+        cStmt.setInt(2, GetInt(jrbMangThai_Co, jrbMangThai_Khong));
+//        cStmt.setString(3,jtfSoTuanMT.getText());
+        cStmt.setInt(4, GetInt(jrbHauSan_Co, jrbHauSan_Khong));
+//        cStmt.setInt(5, GetInt(jrbTreSSXNcovid_Co, jrbTreSSXNcovid_Khong));
+//        cStmt.setString(6, Get_KQXNTreSS(jrbKQXN_DT, jrbKQXN_AT,jrbKQXN_ChuaCoKQ));
+        
+        if(jrbMangThai_Khong.isSelected()){
+            cStmt.setString(3,null);
+        }else{
+            cStmt.setString(3,jtfSoTuanMT.getText());
+        }
+        
+        if(jrbHauSan_Khong.isSelected()){
+            cStmt.setInt(5,-1);
+            cStmt.setString(6,null);
+        }else{
+            cStmt.setInt(5, GetInt(jrbTreSSXNcovid_Co, jrbTreSSXNcovid_Khong));
+        cStmt.setString(6, Get_KQXNTreSS(jrbKQXN_DT, jrbKQXN_AT,jrbKQXN_ChuaCoKQ));
+        }
+        if(jrbTreSSXNcovid_Khong.isSelected()&&jrbHauSan_Co.isSelected()){
+            cStmt.setString(6,null);
+        }
+        
+        cStmt.execute();
+        cStmt.close();
+        conn.close();
+    }
     public void UpdateDataTo_ThuocDaDungTruocTT() throws ClassNotFoundException, SQLException{
         Connection conn = null;
     
@@ -1801,6 +1970,26 @@ public class XemTT_CapNhatDTController {
         CallableStatement cStmt=null;
         
          cStmt = conn.prepareCall("{call UPDATE_THUOCDUNGTRUOCKHITIEPNHAN(?,?,?,?,?,?,?)}");
+        cStmt.setString(1, jtfMABN.getText());
+        cStmt.setInt(2, GetInt(jrbSteroid_Co, jrbSteroid_Khong));
+        cStmt.setInt(3, GetInt(jrbThuocUCMD_Co, jrbThuocUCMD_Khong));
+        cStmt.setInt(4, GetInt(jrbKhangSinh_Co, jrbKhangSinh_Khong));
+        cStmt.setInt(5, GetInt(jrbKhangVirus_Co, jrbKhangVirus_Khong));
+        cStmt.setInt(6, GetInt(jrbThuocDTCovid_Co, jrbThuocDTCovid_Khong));
+        cStmt.setInt(7, GetInt(jrbThuocMD_Co, jrbThuocMD_Khong));
+     
+        cStmt.execute();
+        cStmt.close();
+        conn.close();
+    }
+    public void InsertFirst_ThuocDaDungTruocTT() throws ClassNotFoundException, SQLException{
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+        
+         cStmt = conn.prepareCall("{call INSERT_THUOCDUNGTRUOCKHITIEPNHAN(?,?,?,?,?,?,?)}");
         cStmt.setString(1, jtfMABN.getText());
         cStmt.setInt(2, GetInt(jrbSteroid_Co, jrbSteroid_Khong));
         cStmt.setInt(3, GetInt(jrbThuocUCMD_Co, jrbThuocUCMD_Khong));
@@ -1960,7 +2149,7 @@ public class XemTT_CapNhatDTController {
          cStmt2=conn.prepareCall("{call INSERT_CAPNHAT(?,?,?)}");
            long time = System.currentTimeMillis();
         Timestamp timestamp = new Timestamp(time);
-        cStmt.setTimestamp(1,timestamp );
+        cStmt.setTimestamp(1,timestamp);
         cStmt.setInt(2, Integer.parseInt(jtfMach.getText()));
         cStmt.setInt(3, Integer.parseInt(jtfNhietDo_QTDT.getText()));
         cStmt.setInt(4, Integer.parseInt(jtfNhipTho_QTDT.getText()));
@@ -2000,7 +2189,7 @@ public class XemTT_CapNhatDTController {
              
         } 
         cStmt2.setString(1, this.MABN);
-        cStmt2.setTimestamp(2,timestamp );
+        cStmt2.setTimestamp(2,timestamp);
         cStmt2.setString(3, "4564");
         
          cStmt.execute();
@@ -2008,6 +2197,7 @@ public class XemTT_CapNhatDTController {
         cStmt.close();
         cStmt2.close();
         conn.close();
+        
     }
 //     JDateChooser jdcNgayXN,
 //            JDateChooser jdcTGCapNhat, 
@@ -2067,5 +2257,26 @@ public class XemTT_CapNhatDTController {
                 UpdateDataTo_MangThai();
                 UpdateDataTo_ThuocDaDungTruocTT();
                 
+     }
+      public void UpdateTT_BN_First() throws ClassNotFoundException, SQLException {
+              UpdateDataTo_BenhNhan();
+                InsertFirst_TiemVX();
+                InsertFirst_BenhNen();
+                InsertFirst_MangThai();
+                InsertFirst_ThuocDaDungTruocTT();
+                
+     }
+     public String getTimeStamp () throws ClassNotFoundException, SQLException{
+         Connection conn= null ;
+         conn=OracleConnection.getOracleConnection();
+         
+        CallableStatement cs =conn.prepareCall("{?= call ThoiDiemCN_GanNhat(?)}");
+        
+        cs.registerOutParameter(1, OracleTypes.VARCHAR);
+        cs.setString(2, this.MABN);
+        
+        cs.execute();
+        String char_time= cs.getString(1);
+         return char_time;
      }
 }

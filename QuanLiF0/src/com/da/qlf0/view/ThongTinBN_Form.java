@@ -97,6 +97,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         add(jlbMABN, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 50, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/search.png"))); // NOI18N
         jButton1.setText("Xem chi tiết");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +144,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
         add(jlbDiaChi, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
+        jButton2.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/trash.png"))); // NOI18N
         jButton2.setText("Xóa bệnh nhân");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -150,9 +152,10 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 160, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 160, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/create.png"))); // NOI18N
         jButton3.setText("Tạo kết quả điều trị");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -406,6 +409,7 @@ public class ThongTinBN_Form extends javax.swing.JPanel {
                 cn.getNode5().getJtfNhipTho_QTDT());
         try {
             tt_cn.SetThongTin();
+            cn.getNode5().getJlbTimeStamp().setText(tt_cn.getTimeStamp());
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ThongTinBN_Form.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

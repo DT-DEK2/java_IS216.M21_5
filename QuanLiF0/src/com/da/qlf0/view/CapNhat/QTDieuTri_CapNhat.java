@@ -5,6 +5,7 @@
 package com.da.qlf0.view.CapNhat;
 
 import com.toedter.calendar.JDateChooser;
+import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
@@ -278,6 +279,8 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
         jLabel40 = new javax.swing.JLabel();
         jrbKQ_AT = new javax.swing.JRadioButton();
         jrbKQ_DT = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+        jlbTimeStamp = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -736,6 +739,7 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
 
         jdcNgayXN.setBackground(new java.awt.Color(255, 255, 255));
         jdcNgayXN.setForeground(new java.awt.Color(20, 20, 20));
+        jdcNgayXN.setDateFormatString("dd-MM-yyyy");
 
         jtfNhipTho_QTDT.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfNhipTho_QTDT.setForeground(new java.awt.Color(20, 20, 20));
@@ -800,6 +804,13 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 51, 0));
+        jLabel1.setText("Thời điểm cập nhật lần cuối :");
+
+        jlbTimeStamp.setForeground(new java.awt.Color(20, 20, 20));
+        jlbTimeStamp.setText(".....");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -812,7 +823,12 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
                     .addComponent(jSeparator4, javax.swing.GroupLayout.DEFAULT_SIZE, 1766, Short.MAX_VALUE)
                     .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 1766, Short.MAX_VALUE)
                     .addComponent(jSeparator6, javax.swing.GroupLayout.DEFAULT_SIZE, 1766, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jlbTimeStamp))
                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING)
@@ -945,7 +961,10 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel1)
+                    .addComponent(jlbTimeStamp))
                 .addGap(15, 15, 15)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
@@ -1234,6 +1253,10 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jrbKQ_DTActionPerformed
 
+    public JLabel getJlbTimeStamp() {
+        return jlbTimeStamp;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnG_DauNguc;
@@ -1252,6 +1275,7 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
     private javax.swing.ButtonGroup btnG_OnLanh;
     private javax.swing.ButtonGroup btnG_TieuChay;
     private javax.swing.ButtonGroup btnG_XN;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1290,6 +1314,7 @@ public class QTDieuTri_CapNhat extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private com.toedter.calendar.JDateChooser jdcNgayXN;
+    private javax.swing.JLabel jlbTimeStamp;
     private javax.swing.JRadioButton jrbDauNguc_Co;
     private javax.swing.JRadioButton jrbDauNguc_Khong;
     private javax.swing.JRadioButton jrbGoiA_Co;

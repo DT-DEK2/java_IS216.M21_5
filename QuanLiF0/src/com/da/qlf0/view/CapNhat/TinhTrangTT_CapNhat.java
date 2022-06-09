@@ -751,7 +751,7 @@ public class TinhTrangTT_CapNhat extends javax.swing.JPanel {
 
         jcobDGTTBL.setBackground(new java.awt.Color(255, 255, 255));
         jcobDGTTBL.setForeground(new java.awt.Color(20, 20, 20));
-        jcobDGTTBL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobDGTTBL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ổn định", "Nguy cơ cao", "Chuyển nặng", " " }));
 
         jLabel35.setBackground(new java.awt.Color(255, 255, 255));
         jLabel35.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N

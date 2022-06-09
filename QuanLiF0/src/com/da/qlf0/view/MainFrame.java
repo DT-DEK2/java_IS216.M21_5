@@ -320,7 +320,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlbTen, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlbTen, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -371,6 +371,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void jlbExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbExitMouseClicked
         // TODO add your handling code here:
         this.dispose();
+        Login login =new Login();
+        login.setVisible(true);
     }//GEN-LAST:event_jlbExitMouseClicked
 
     private void jlbTenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbTenMouseClicked

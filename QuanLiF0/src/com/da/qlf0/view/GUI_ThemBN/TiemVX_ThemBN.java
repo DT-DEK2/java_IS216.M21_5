@@ -199,6 +199,7 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jdcTGTiem1.setBackground(new java.awt.Color(255, 255, 255));
         jdcTGTiem1.setForeground(new java.awt.Color(20, 20, 20));
         jdcTGTiem1.setDateFormatString("dd-MM-yyyy\n\n");
+        jdcTGTiem1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
 
         jSeparator5.setBackground(new java.awt.Color(166, 166, 166));
 

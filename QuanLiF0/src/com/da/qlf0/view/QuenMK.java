@@ -71,6 +71,7 @@ public class QuenMK extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/confirmation.png"))); // NOI18N
         jButton1.setText("Xác nhận");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

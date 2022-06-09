@@ -103,7 +103,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
             jpnTTCoBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnTTCoBanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlbTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addComponent(jlbTTCoBan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -175,6 +175,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(204, 102, 0));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/floppy-disk.png"))); // NOI18N
         jButton1.setText("Lưu thông tin");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

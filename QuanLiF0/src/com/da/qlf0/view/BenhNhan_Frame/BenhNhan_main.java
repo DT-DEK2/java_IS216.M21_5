@@ -299,8 +299,8 @@ public class BenhNhan_main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlbTen, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jlbExit)
+                .addGap(14, 14, 14))
         );
         jpnTagLayout.setVerticalGroup(
             jpnTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -348,6 +348,8 @@ public class BenhNhan_main extends javax.swing.JFrame {
     private void jlbExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbExitMouseClicked
                 // TODO add your handling code here:
                 this.dispose();
+                Login login = new Login();
+                login.setVisible(true);
     }//GEN-LAST:event_jlbExitMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
