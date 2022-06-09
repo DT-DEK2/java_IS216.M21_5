@@ -418,6 +418,7 @@
               <Color blue="14" green="14" red="14" type="rgb"/>
             </Property>
             <Property name="dateFormatString" type="java.lang.String" value="dd-MM-yyyy&#xa;&#xa;"/>
+            <Property name="debugGraphicsOptions" type="int" value="-1"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator5">

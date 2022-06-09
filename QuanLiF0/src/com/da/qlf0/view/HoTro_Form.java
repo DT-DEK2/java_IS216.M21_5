@@ -117,13 +117,15 @@ public class HoTro_Form extends javax.swing.JPanel {
         add(jlbNoiDung, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 640, 60));
 
         jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/confirmation.png"))); // NOI18N
         jButton3.setText("Xác nhận xử lí");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 150, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 150, -1, -1));
 
         jLabel13.setBackground(new java.awt.Color(255, 255, 255));
         jLabel13.setFont(new java.awt.Font("sansserif", 3, 16)); // NOI18N
@@ -150,13 +152,15 @@ public class HoTro_Form extends javax.swing.JPanel {
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(153, 102, 0));
+        jButton1.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/sending (2).png"))); // NOI18N
         jButton1.setText("Chuyển tiếp yêu cầu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 90, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 90, -1, -1));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N

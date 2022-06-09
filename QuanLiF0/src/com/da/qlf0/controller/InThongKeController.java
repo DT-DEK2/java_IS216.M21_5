@@ -51,10 +51,10 @@ public class InThongKeController {
              JasperViewer.viewReport(p);
 //             JasperExportManager.exportReportToPdfFile(p,"C:\\Users\\Minh Cuong\\PDF-file");
              
-              JFrame frame2 = new JFrame();
-                        frame2.setBounds(0,0,100,50);
-                        JOptionPane.showMessageDialog(frame2,
-                        "In file thành công");
+//              JFrame frame2 = new JFrame();
+//                        frame2.setBounds(0,0,100,50);
+//                        JOptionPane.showMessageDialog(frame2,
+//                        "In file thành công");
            
        }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -76,11 +76,11 @@ public class InThongKeController {
              
              JasperViewer.viewReport(p);
 //             JasperExportManager.exportReportToPdfFile(p,"C:\\Users\\Minh Cuong\\PDF-file");
-             
-              JFrame frame2 = new JFrame();
-                        frame2.setBounds(0,0,100,50);
-                        JOptionPane.showMessageDialog(frame2,
-                        "In file thành công");
+//             
+//              JFrame frame2 = new JFrame();
+//                        frame2.setBounds(0,0,100,50);
+//                        JOptionPane.showMessageDialog(frame2,
+//                        "In file thành công");
            
        }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -103,10 +103,10 @@ public class InThongKeController {
              JasperViewer.viewReport(p);
 //             JasperExportManager.exportReportToPdfFile(p,"C:\\Users\\Minh Cuong\\PDF-file");
              
-              JFrame frame2 = new JFrame();
-                        frame2.setBounds(0,0,100,50);
-                        JOptionPane.showMessageDialog(frame2,
-                        "In file thành công");
+//              JFrame frame2 = new JFrame();
+//                        frame2.setBounds(0,0,100,50);
+//                        JOptionPane.showMessageDialog(frame2,
+//                        "In file thành công");
            
        }catch(Exception ex){
             System.out.println(ex.getMessage());

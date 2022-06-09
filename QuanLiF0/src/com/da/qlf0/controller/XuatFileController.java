@@ -22,7 +22,11 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import com.da.qlf0.dao.OracleConnection;
 import java.sql.ResultSet;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import oracle.jdbc.OracleTypes;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 
 public class XuatFileController {
 
@@ -145,10 +149,44 @@ public class XuatFileController {
 
 			i++;
            }
+           String fileDictName = "";
 
-            FileOutputStream out = new FileOutputStream(new File("D:/bn.xlsx"));
-            workbook.write(out);
-            out.close();
+    
+       
+
+        JFileChooser fileChooser = new JFileChooser();
+         FileNameExtensionFilter fnef = new FileNameExtensionFilter("EXCEL FILES", "xls", "xlsx", "xlsm");
+        fileChooser.addChoosableFileFilter(fnef);
+        fileChooser.setAcceptAllFileFilterUsed(true);
+        fileChooser.setDialogTitle("Lưu file"); 
+        fileChooser.setSelectedFile(new File(fileDictName));
+        int userSelection = fileChooser.showSaveDialog(fileChooser);
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            fileDictName = fileChooser.getSelectedFile().getAbsolutePath();
+        
+        } else {
+            return;
+        }
+
+        File file = new File(fileDictName);
+        if (file.exists() == false) {
+
+            try (
+                    //Write the workbook in file system
+                    FileOutputStream out = new FileOutputStream(file)) {
+                workbook.write(out);
+                 out.close();
+            }
+        } else {
+            // Sheet already exists
+            System.out.println("File đã tồn tại");
+        }
+    
+
+//            FileOutputStream out = new FileOutputStream(new File("D:/bn.xlsx"));
+////            FileOutputStream out = new FileOutputStream("bn.xlsx");
+//            workbook.write(out);
+//            out.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -279,10 +317,41 @@ public class XuatFileController {
 			i++;
            }
        }
+           String fileDictName = "";
 
-            FileOutputStream out = new FileOutputStream(new File("D:/bn_cn.xlsx"));
-            workbook.write(out);
-            out.close();
+    
+       
+
+        JFileChooser fileChooser = new JFileChooser();
+         FileNameExtensionFilter fnef = new FileNameExtensionFilter("EXCEL FILES", "xls", "xlsx", "xlsm");
+        fileChooser.addChoosableFileFilter(fnef);
+        fileChooser.setAcceptAllFileFilterUsed(true);
+        fileChooser.setDialogTitle("Lưu file"); 
+        fileChooser.setSelectedFile(new File(fileDictName));
+        int userSelection = fileChooser.showSaveDialog(fileChooser);
+        if (userSelection == JFileChooser.APPROVE_OPTION) {
+            fileDictName = fileChooser.getSelectedFile().getAbsolutePath();
+        
+        } else {
+            return;
+        }
+
+        File file = new File(fileDictName);
+        if (file.exists() == false) {
+
+            try (
+                    //Write the workbook in file system
+                    FileOutputStream out = new FileOutputStream(file)) {
+                workbook.write(out);
+                 out.close();
+            }
+        } else {
+            // Sheet already exists
+            System.out.println("File đã tồn tại");
+        }
+//            FileOutputStream out = new FileOutputStream(new File("D:/bn_cn.xlsx"));
+//            workbook.write(out);
+//            out.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
