@@ -47,6 +47,7 @@ public class ThemBN_Frame extends javax.swing.JFrame {
         
         controller.setEvent(listItem);
         setTitle("Thêm bệnh nhân");
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
     }
     
     /**

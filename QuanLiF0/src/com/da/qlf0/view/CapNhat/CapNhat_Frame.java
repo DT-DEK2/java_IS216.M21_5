@@ -521,7 +521,7 @@ public class CapNhat_Frame extends javax.swing.JFrame {
                         frame.setBounds(0,0,100,50);
                         JOptionPane.showMessageDialog(frame,
                         "Cập nhật thành công");
-                        this.dispose(); 
+                         
                     } catch (ClassNotFoundException ex) {
                         Logger.getLogger(CapNhat_Frame.class.getName()).log(Level.SEVERE, null, ex);
                             ex.printStackTrace();

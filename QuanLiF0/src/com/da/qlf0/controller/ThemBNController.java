@@ -823,6 +823,25 @@ public class ThemBNController {
         cStmt.close();
         conn.close();
      }
+     public void SetDataTo_TK() throws ClassNotFoundException, SQLException{
+        Connection conn = null;
+    
+        conn = OracleConnection.getOracleConnection();
+        
+        CallableStatement cStmt=null;
+        
+         cStmt = conn.prepareCall("{call INSERT_TAIKHOANBENHNHAN(?,?,?,?)}");
+        cStmt.setString(1, jtfMABN.getText());
+        cStmt.setString(2, jtfCMND_CCCD.getText());
+        cStmt.setString(3, jtfHoTen.getText());
+        cStmt.setString(4,"123");
+        
+       
+        
+         cStmt.execute();
+        cStmt.close();
+        conn.close();
+    }
      public void ThemBN() throws ClassNotFoundException, SQLException {
                SetDataTo_BenhNhan();
                SetDataTo_TiemVX();
@@ -832,5 +851,6 @@ public class ThemBNController {
                SetDataTo_TongTrang();
                SetDataTo_TTLucTiepNhan();
                SetDataTo_DanhGiaSoLuoc();
+               SetDataTo_TK();
      }
 }

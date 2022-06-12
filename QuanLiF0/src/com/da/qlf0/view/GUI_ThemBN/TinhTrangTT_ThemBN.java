@@ -272,6 +272,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         jLabel36 = new javax.swing.JLabel();
         jrbDauDau_Co = new javax.swing.JRadioButton();
         jrbDauDau_Khong = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -288,16 +289,15 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(680, 680, 680)
+                .addGap(634, 634, 634)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 12, Short.MAX_VALUE)
+                .addComponent(jLabel1))
         );
 
         jLabel9.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
@@ -490,6 +490,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         btnG_DauHong.add(jrbDauHong_Khong);
         jrbDauHong_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbDauHong_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauHong_Khong.setSelected(true);
         jrbDauHong_Khong.setText("Không");
 
         jrbNoiHach_Co.setBackground(new java.awt.Color(255, 255, 255));
@@ -750,7 +751,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
 
         jcobDGTTBL.setBackground(new java.awt.Color(255, 255, 255));
         jcobDGTTBL.setForeground(new java.awt.Color(20, 20, 20));
-        jcobDGTTBL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcobDGTTBL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ổn định", "Nguy cơ cao", "Chuyển nặng" }));
 
         jLabel35.setBackground(new java.awt.Color(255, 255, 255));
         jLabel35.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
@@ -784,7 +785,6 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         btnG_DauDau.add(jrbDauDau_Co);
         jrbDauDau_Co.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbDauDau_Co.setForeground(new java.awt.Color(20, 20, 20));
-        jrbDauDau_Co.setSelected(true);
         jrbDauDau_Co.setText("Có");
         jrbDauDau_Co.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -796,7 +796,12 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
         btnG_DauDau.add(jrbDauDau_Khong);
         jrbDauDau_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbDauDau_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbDauDau_Khong.setSelected(true);
         jrbDauDau_Khong.setText("Không");
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel2.setText("(Lưu ý nếu không rõ chỉ số thì nhập : 0)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -930,7 +935,9 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
                                         .addComponent(jtfTTKhac, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(53, 53, 53)
-                                .addComponent(jLabel9))
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(59, 59, 59)
                                 .addComponent(jLabel10)))
@@ -947,7 +954,11 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel9)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(2, 2, 2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1218,6 +1229,7 @@ public class TinhTrangTT_ThemBN extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;

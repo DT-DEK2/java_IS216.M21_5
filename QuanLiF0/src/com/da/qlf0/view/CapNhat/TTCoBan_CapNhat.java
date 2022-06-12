@@ -274,7 +274,7 @@ public class TTCoBan_CapNhat extends javax.swing.JPanel {
         jcobTinh_ThanhPho.setBackground(new java.awt.Color(255, 255, 255));
         jcobTinh_ThanhPho.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobTinh_ThanhPho.setForeground(new java.awt.Color(20, 20, 20));
-        jcobTinh_ThanhPho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
+        jcobTinh_ThanhPho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ", "Đồng tháp", "Hà Nội", "Thanh Hóa", "Thái Bình", "An Giang", " " }));
         jcobTinh_ThanhPho.setBorder(null);
         jcobTinh_ThanhPho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,7 +289,7 @@ public class TTCoBan_CapNhat extends javax.swing.JPanel {
         jcobQuan_Huyen.setBackground(new java.awt.Color(255, 255, 255));
         jcobQuan_Huyen.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobQuan_Huyen.setForeground(new java.awt.Color(20, 20, 20));
-        jcobQuan_Huyen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
+        jcobQuan_Huyen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quận 1", "Quận 3", "Quận 4", "Quận 5", "Quận 6", "Quận 7", "Quận 8", "Quận 9", "Quận 10", "Quận 11", "Quận 12", "Bình Thạnh", "Gò Vấp", "Tân Phú", "Cần Giờ", "Củ Chi", "Hóc Môn", "Nhà Bè" }));
         jcobQuan_Huyen.setBorder(null);
         jcobQuan_Huyen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,6 +305,7 @@ public class TTCoBan_CapNhat extends javax.swing.JPanel {
         jtfCMND_CCCD.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfCMND_CCCD.setForeground(new java.awt.Color(20, 20, 20));
         jtfCMND_CCCD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfCMND_CCCD.setEnabled(false);
         jtfCMND_CCCD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfCMND_CCCDActionPerformed(evt);
@@ -472,7 +473,7 @@ public class TTCoBan_CapNhat extends javax.swing.JPanel {
         jcobPhuong_Xa.setBackground(new java.awt.Color(255, 255, 255));
         jcobPhuong_Xa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jcobPhuong_Xa.setForeground(new java.awt.Color(20, 20, 20));
-        jcobPhuong_Xa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hồ Chí Minh", "Đà Nẵng ", "Bình Dương", "Cần Thơ" }));
+        jcobPhuong_Xa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tân Thới Nhất", "Đông Hưng Thuận", "Trung Mỹ Tây", "Tân Chánh Hiệp", "Tân Thới Hiệp", "Hiệp Thành", "Thới An", "Thạnh Lộc", "Thạnh Xuân", "Tân Hưng Thuận", "An Phú Đông", "Bến Nghé", "Bến Thành", "Cô Giang", "Cầu Kho", "Cầu Ông Lãnh", "Đa Kao", "Nguyễn Cư Trinh", "Nguyễn Thái Bình", "Phạm Ngũ Lão", "Tân Định" }));
         jcobPhuong_Xa.setBorder(null);
         jcobPhuong_Xa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

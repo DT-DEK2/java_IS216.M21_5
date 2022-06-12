@@ -305,6 +305,7 @@ public class TTCaNhan_ttcb extends javax.swing.JPanel {
         jtfCMND_CCCD.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jtfCMND_CCCD.setForeground(new java.awt.Color(20, 20, 20));
         jtfCMND_CCCD.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jtfCMND_CCCD.setEnabled(false);
         jtfCMND_CCCD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfCMND_CCCDActionPerformed(evt);

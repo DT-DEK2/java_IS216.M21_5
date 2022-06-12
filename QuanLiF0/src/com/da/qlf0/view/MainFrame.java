@@ -422,11 +422,11 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JFrame frame = new MainFrame("dasdas","122");
-            
-                frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-                
-                frame.setVisible(true);
+//                JFrame frame = new MainFrame("dasdas","122");
+//            
+//                frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+//                
+//                frame.setVisible(true);
             }
         });
     }
