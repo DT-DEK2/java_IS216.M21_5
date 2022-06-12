@@ -109,15 +109,31 @@ public class XuatFileController {
                 row.setHeight((short) 400);
                 row.createCell(0).setCellValue(rs.getString("MaBenhNhan"));
 			  row.createCell(1).setCellValue(rs.getString("HoTen"));
+			   if(rs.getDate("NgaySinh")==null){
+                              row.createCell(2).setCellValue("null");
+                          }else{
 			  row.createCell(2).setCellValue(rs.getDate("NgaySinh").toString());
+                          }
                             row.createCell(3).setCellValue(rs.getString("GioiTinh"));
 			  row.createCell(4).setCellValue(rs.getString("CMND_CCCD"));
-			  row.createCell(5).setCellValue(rs.getString("NoiOHienTai"));
+                          if(rs.getString("NoiOHienTai")==null){
+                              row.createCell(5).setCellValue("null");
+                          }else {
+                            row.createCell(5).setCellValue(rs.getString("NoiOHienTai"));
+                          }
 			  row.createCell(6).setCellValue(rs.getString("Tinh_ThanhPho"));
 			  row.createCell(7).setCellValue(rs.getString("Quan_Huyen"));
 			  row.createCell(8).setCellValue(rs.getString("Phuong_Xa"));
-			  row.createCell(9).setCellValue(rs.getString("NgheNghiep"));
-			  row.createCell(10).setCellValue(rs.getString("NoiLamViec"));
+                           if(rs.getString("NgheNghiep")==null){
+                              row.createCell(9).setCellValue("null");
+                          }else {
+                            row.createCell(9).setCellValue(rs.getString("NgheNghiep"));
+                          }
+			   if(rs.getString("NoiLamViec")==null){
+                              row.createCell(9).setCellValue("null");
+                          }else {
+                            row.createCell(10).setCellValue(rs.getString("NoiLamViec"));
+                          }
 			  row.createCell(11).setCellValue(rs.getString("SoDienThoai"));
 			  row.createCell(12).setCellValue(rs.getDate("NgayTiepNhan").toString());
 		          row.createCell(13).setCellValue(rs.getDate("NgayXuatHienTrieuChungDauTien").toString());
@@ -145,6 +161,7 @@ public class XuatFileController {
                                row.createCell(20).setCellValue("null");
                                 row.createCell(21).setCellValue("null");
                           }
+                          
 			
 
 			i++;
@@ -152,8 +169,6 @@ public class XuatFileController {
            String fileDictName = "";
 
     
-       
-
         JFileChooser fileChooser = new JFileChooser();
          FileNameExtensionFilter fnef = new FileNameExtensionFilter("EXCEL FILES", "xls", "xlsx", "xlsm");
         fileChooser.addChoosableFileFilter(fnef);
@@ -255,6 +270,8 @@ public class XuatFileController {
          Connection conn = null;
     
         conn = OracleConnection.getOracleConnection();
+        conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+
         PreparedStatement ps=null;
         String sql ="SELECT * FROM BENHNHAN ";
         ps=conn.prepareStatement(sql);
@@ -276,15 +293,32 @@ public class XuatFileController {
                 row.setHeight((short) 400);
                 row.createCell(0).setCellValue(rs.getString("MaBenhNhan"));
 			  row.createCell(1).setCellValue(rs.getString("HoTen"));
+			   if(rs.getDate("NgaySinh")==null){
+                              row.createCell(2).setCellValue("null");
+                          }else{
 			  row.createCell(2).setCellValue(rs.getDate("NgaySinh").toString());
+                          }
                             row.createCell(3).setCellValue(rs.getString("GioiTinh"));
 			  row.createCell(4).setCellValue(rs.getString("CMND_CCCD"));
-			  row.createCell(5).setCellValue(rs.getString("NoiOHienTai"));
+                          if(rs.getString("NoiOHienTai")==null){
+                              row.createCell(5).setCellValue("null");
+                          }else {
+                            row.createCell(5).setCellValue(rs.getString("NoiOHienTai"));
+                          }
 			  row.createCell(6).setCellValue(rs.getString("Tinh_ThanhPho"));
 			  row.createCell(7).setCellValue(rs.getString("Quan_Huyen"));
 			  row.createCell(8).setCellValue(rs.getString("Phuong_Xa"));
-			  row.createCell(9).setCellValue(rs.getString("NgheNghiep"));
-			  row.createCell(10).setCellValue(rs.getString("NoiLamViec"));
+                           if(rs.getString("NgheNghiep")==null){
+                              row.createCell(9).setCellValue("null");
+                          }else {
+                            row.createCell(9).setCellValue(rs.getString("NgheNghiep"));
+                          }
+			   if(rs.getString("NoiLamViec")==null){
+                              row.createCell(9).setCellValue("null");
+                          }else {
+                            row.createCell(10).setCellValue(rs.getString("NoiLamViec"));
+                          }
+			  
 			  row.createCell(11).setCellValue(rs.getString("SoDienThoai"));
 			  row.createCell(12).setCellValue(rs.getDate("NgayTiepNhan").toString());
 		          row.createCell(13).setCellValue(rs.getDate("NgayXuatHienTrieuChungDauTien").toString());

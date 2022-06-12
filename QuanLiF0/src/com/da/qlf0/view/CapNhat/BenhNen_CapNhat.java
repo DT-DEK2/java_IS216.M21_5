@@ -1084,6 +1084,7 @@ public class BenhNen_CapNhat extends javax.swing.JPanel {
         btnG_ThuocUCMD.add(jrbThuocUCMD_Khong);
         jrbThuocUCMD_Khong.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbThuocUCMD_Khong.setForeground(new java.awt.Color(20, 20, 20));
+        jrbThuocUCMD_Khong.setSelected(true);
         jrbThuocUCMD_Khong.setText("Không");
         jrbThuocUCMD_Khong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

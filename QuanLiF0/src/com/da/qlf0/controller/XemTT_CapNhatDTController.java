@@ -1911,7 +1911,7 @@ public class XemTT_CapNhatDTController {
         }
         
         if(jrbHauSan_Khong.isSelected()){
-            cStmt.setInt(5,-1);
+            cStmt.setInt(5,0);
             cStmt.setString(6,null);
         }else{
             cStmt.setInt(5, GetInt(jrbTreSSXNcovid_Co, jrbTreSSXNcovid_Khong));
@@ -2131,11 +2131,13 @@ public class XemTT_CapNhatDTController {
              
         } 
         cStmt2.setString(1, jtfMABN.getText());
-        cStmt2.setTimestamp(2,timestamp );
+        cStmt2.setTimestamp(2,timestamp);
         cStmt2.setString(3, this.ID);
         
-         cStmt.execute();
+          cStmt.execute();
+          cStmt2.execute();
         cStmt.close();
+        cStmt2.close();
         conn.close();
     }
       public void UpdateDataTo_QTDT_BN() throws ClassNotFoundException, SQLException{
@@ -2199,6 +2201,20 @@ public class XemTT_CapNhatDTController {
         conn.close();
         
     }
+     public void Update_ten() throws ClassNotFoundException,SQLException{
+          Connection conn= null;
+        
+        conn = OracleConnection.getOracleConnection();
+        
+        String sql="update TAIKHOANBENHNHAN set hoten = ? where MaBenhNhan = ? ";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, jtfHoTen.getText());
+        ps.setString(2, this.MABN);
+        ps.execute();
+        
+        ps.close();
+        conn.close();
+    }
 //     JDateChooser jdcNgayXN,
 //            JDateChooser jdcTGCapNhat, 
 //            JRadioButton jrbDauNguc_Co, 
@@ -2249,6 +2265,7 @@ public class XemTT_CapNhatDTController {
                 UpdateDataTo_TTLucTiepNhan();
                 UpdateDataTo_DanhGiaSoLuoc();
                 UpdateDataTo_QTDT();
+                 Update_ten();
      }
      public void UpdateTT_BN() throws ClassNotFoundException, SQLException {
               UpdateDataTo_BenhNhan();
@@ -2256,6 +2273,7 @@ public class XemTT_CapNhatDTController {
                 UpdateDataTo_BenhNen();
                 UpdateDataTo_MangThai();
                 UpdateDataTo_ThuocDaDungTruocTT();
+                Update_ten();
                 
      }
       public void UpdateTT_BN_First() throws ClassNotFoundException, SQLException {
@@ -2264,6 +2282,7 @@ public class XemTT_CapNhatDTController {
                 InsertFirst_BenhNen();
                 InsertFirst_MangThai();
                 InsertFirst_ThuocDaDungTruocTT();
+                Update_ten();
                 
      }
      public String getTimeStamp () throws ClassNotFoundException, SQLException{
@@ -2274,9 +2293,14 @@ public class XemTT_CapNhatDTController {
         
         cs.registerOutParameter(1, OracleTypes.VARCHAR);
         cs.setString(2, this.MABN);
-        
-        cs.execute();
+        int i = cs.executeUpdate();
+//         System.out.println(i);
+//        if(i!=0){
         String char_time= cs.getString(1);
          return char_time;
+//        }else {
+//            String chua_cn="Chưa có cập nhật";
+//            return chua_cn;
+//        }
      }
 }

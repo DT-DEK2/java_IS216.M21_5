@@ -243,7 +243,8 @@ public class TaoKQDieuTriController {
          Connection conn = null;
     
         conn = OracleConnection.getOracleConnection();
-        
+        conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+
         CallableStatement cStmt=null;
        
 

@@ -131,24 +131,44 @@ public class TiemVX_CapNhat extends javax.swing.JPanel {
         jrbChuaTiem.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbChuaTiem.setForeground(new java.awt.Color(20, 20, 20));
         jrbChuaTiem.setText("Chưa tiêm");
+        jrbChuaTiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbChuaTiemActionPerformed(evt);
+            }
+        });
 
         jrbTiem1Mui.setBackground(new java.awt.Color(255, 255, 255));
         btnG_MuiTiem.add(jrbTiem1Mui);
         jrbTiem1Mui.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbTiem1Mui.setForeground(new java.awt.Color(20, 20, 20));
         jrbTiem1Mui.setText("1 Mũi");
+        jrbTiem1Mui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiem1MuiActionPerformed(evt);
+            }
+        });
 
         jrbTiem3Mui.setBackground(new java.awt.Color(255, 255, 255));
         btnG_MuiTiem.add(jrbTiem3Mui);
         jrbTiem3Mui.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbTiem3Mui.setForeground(new java.awt.Color(20, 20, 20));
         jrbTiem3Mui.setText("3 Mũi");
+        jrbTiem3Mui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiem3MuiActionPerformed(evt);
+            }
+        });
 
         jrbTiem2Mui.setBackground(new java.awt.Color(255, 255, 255));
         btnG_MuiTiem.add(jrbTiem2Mui);
         jrbTiem2Mui.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jrbTiem2Mui.setForeground(new java.awt.Color(20, 20, 20));
         jrbTiem2Mui.setText("2 Mũi");
+        jrbTiem2Mui.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTiem2MuiActionPerformed(evt);
+            }
+        });
 
         jrbTiem_KhongBiet.setBackground(new java.awt.Color(255, 255, 255));
         btnG_MuiTiem.add(jrbTiem_KhongBiet);
@@ -420,7 +440,38 @@ public class TiemVX_CapNhat extends javax.swing.JPanel {
 
     private void jrbTiem_KhongBietActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiem_KhongBietActionPerformed
         // TODO add your handling code here:
+        jcobTiemVX_1.setEnabled(false);
+        jcobTiemVX_2.setEnabled(false);
+        jcobTiemVX_3.setEnabled(false);
     }//GEN-LAST:event_jrbTiem_KhongBietActionPerformed
+
+    private void jrbChuaTiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbChuaTiemActionPerformed
+        // TODO add your handling code here:
+        jcobTiemVX_1.setEnabled(true);
+        jcobTiemVX_2.setEnabled(false);
+        jcobTiemVX_3.setEnabled(false);
+    }//GEN-LAST:event_jrbChuaTiemActionPerformed
+
+    private void jrbTiem1MuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiem1MuiActionPerformed
+        // TODO add your handling code here:
+        jcobTiemVX_1.setEnabled(true);
+        jcobTiemVX_2.setEnabled(false);
+        jcobTiemVX_3.setEnabled(false);
+    }//GEN-LAST:event_jrbTiem1MuiActionPerformed
+
+    private void jrbTiem2MuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiem2MuiActionPerformed
+        // TODO add your handling code here:
+        jcobTiemVX_1.setEnabled(true);
+        jcobTiemVX_2.setEnabled(true);
+        jcobTiemVX_3.setEnabled(false);
+    }//GEN-LAST:event_jrbTiem2MuiActionPerformed
+
+    private void jrbTiem3MuiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTiem3MuiActionPerformed
+        // TODO add your handling code here:
+        jcobTiemVX_1.setEnabled(true);
+        jcobTiemVX_2.setEnabled(true);
+        jcobTiemVX_3.setEnabled(true);
+    }//GEN-LAST:event_jrbTiem3MuiActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

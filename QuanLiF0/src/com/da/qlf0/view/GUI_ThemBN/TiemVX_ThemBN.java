@@ -303,16 +303,15 @@ public class TiemVX_ThemBN extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(696, 696, 696)
+                .addGap(630, 630, 630)
                 .addComponent(jLabel7)
-                .addContainerGap(922, Short.MAX_VALUE))
+                .addContainerGap(988, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 21, Short.MAX_VALUE)
+                .addComponent(jLabel7))
         );
 
         jLabel8.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N

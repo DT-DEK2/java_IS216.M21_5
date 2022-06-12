@@ -257,7 +257,7 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
                 // TODO add your handling code here:
                  TimKiemController tk= new TimKiemController(jPanel1,jtfSoCMND_CCCD, jtfHoTen,jtfMABN,this.ID);
                    QuanLiBenhNhanController controller = new QuanLiBenhNhanController(
-               		 		jPanel1);
+               		 		jPanel1,this.ID);
            if(jcobLoai.getSelectedItem().equals("Tất cả")){        
            try {
                    
@@ -344,13 +344,14 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
                 XuatFileController file = new XuatFileController();
              try {
                  file.XuatFile();
-                 Frame frame2 = new JFrame();
-                        frame.setBounds(0,0,100,50);
-                        JOptionPane.showMessageDialog(frame,
-                        "Tạo file thành công !" );
+                
              } catch (ClassNotFoundException ex) {
                  Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
              } catch (SQLException ex) {
+                 Frame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Lỗi thông tin xuất ra!" );
                  Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
              }
         }
@@ -365,13 +366,14 @@ public class QuanLiBnPanel extends javax.swing.JPanel {
                 XuatFileController file = new XuatFileController();
              try {
                  file.XuatFile_chuyennang();
-                 Frame frame2 = new JFrame();
-                        frame.setBounds(0,0,100,50);
-                        JOptionPane.showMessageDialog(frame,
-                        "Tạo file thành công !" );
+                 
              } catch (ClassNotFoundException ex) {
                  Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
              } catch (SQLException ex) {
+                 Frame frame2 = new JFrame();
+                        frame.setBounds(0,0,100,50);
+                        JOptionPane.showMessageDialog(frame,
+                        "Lỗi thông tin xuất ra!" );
                  Logger.getLogger(QuanLiBnPanel.class.getName()).log(Level.SEVERE, null, ex);
              }
         }

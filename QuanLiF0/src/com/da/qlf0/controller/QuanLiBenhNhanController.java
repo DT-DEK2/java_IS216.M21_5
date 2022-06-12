@@ -95,7 +95,7 @@ public class QuanLiBenhNhanController {
            } catch (ClassNotFoundException ex) {
                Logger.getLogger(BenhNhanDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
            }
-        String sql = "SELECT * FROM BENHNHAN";
+        String sql = "SELECT * FROM BENHNHAN order by MaBenhNhan";
         
         try {
             PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);
@@ -218,9 +218,14 @@ public class QuanLiBenhNhanController {
          Connection cons = null;
            try {
                cons = OracleConnection.getOracleConnection();
+               cons.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+
            } catch (ClassNotFoundException ex) {
                Logger.getLogger(BenhNhanDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
-           }
+           } catch (SQLException ex) {
+             Logger.getLogger(QuanLiBenhNhanController.class.getName()).log(Level.SEVERE, null, ex);
+         }
+           
         String sql = "SELECT * FROM DuocHoTro where MaNV = ? ";
         
         try {
@@ -290,7 +295,7 @@ public class QuanLiBenhNhanController {
            }
            
          
-        String sql = "SELECT * FROM BENHNHAN ";
+        String sql = "SELECT * FROM BENHNHAN order by MaBenhNhan";
          PreparedStatement ps = cons.prepareStatement(sql);
          CallableStatement cs= cons.prepareCall("{?= call NguyCoChuyenBienNang (?) }");
         try {
