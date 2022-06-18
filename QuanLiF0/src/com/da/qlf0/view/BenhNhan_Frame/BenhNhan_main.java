@@ -259,7 +259,7 @@ public class BenhNhan_main extends javax.swing.JFrame {
         jpnView.setLayout(jpnViewLayout);
         jpnViewLayout.setHorizontalGroup(
             jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1302, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jpnViewLayout.setVerticalGroup(
             jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,9 +298,9 @@ public class BenhNhan_main extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlbTen, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(946, 946, 946)
                 .addComponent(jlbExit)
-                .addGap(14, 14, 14))
+                .addGap(36, 36, 36))
         );
         jpnTagLayout.setVerticalGroup(
             jpnTagLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,9 +325,7 @@ public class BenhNhan_main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jpnTag, javax.swing.GroupLayout.DEFAULT_SIZE, 1308, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, 1302, Short.MAX_VALUE)
-                        .addContainerGap())))
+                    .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, 1308, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

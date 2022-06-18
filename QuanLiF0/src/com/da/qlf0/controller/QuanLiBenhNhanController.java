@@ -40,6 +40,7 @@ import javax.swing.table.TableRowSorter;
 import oracle.jdbc.OracleTypes;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
 import java.sql.Timestamp;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -222,9 +223,10 @@ public class QuanLiBenhNhanController {
 
            } catch (ClassNotFoundException ex) {
                Logger.getLogger(BenhNhanDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
-           } catch (SQLException ex) {
-             Logger.getLogger(QuanLiBenhNhanController.class.getName()).log(Level.SEVERE, null, ex);
-         }
+           }
+            catch (SQLException ex) {
+                         Logger.getLogger(QuanLiBenhNhanController.class.getName()).log(Level.SEVERE, null, ex);
+                     }
            
         String sql = "SELECT * FROM DuocHoTro where MaNV = ? ";
         
@@ -261,6 +263,7 @@ public class QuanLiBenhNhanController {
                      panel.add(tt);
                  }
             }
+//            TimeUnit.SECONDS.sleep(5);
             ps.close();
             cons.close();
         } catch (Exception e) {

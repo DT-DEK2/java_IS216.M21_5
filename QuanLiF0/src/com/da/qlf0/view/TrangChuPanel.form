@@ -114,7 +114,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="0" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gi&#xe1;o Vi&#xea;n H&#x1b0;&#x1edb;ng D&#x1eab;n: &#x110;&#x1ed7; Th&#x1ecb; Minh Ph&#x1ee5;ng"/>
+        <Property name="text" type="java.lang.String" value="Gi&#xe1;o Vi&#xea;n H&#x1b0;&#x1edb;ng D&#x1eab;n: Nguy&#x1ec5;n Minh Nh&#x1ef1;t"/>
         <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>
     </Component>

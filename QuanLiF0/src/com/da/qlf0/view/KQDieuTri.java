@@ -908,7 +908,7 @@ public class KQDieuTri extends javax.swing.JPanel {
                                 "Thêm thành công kết quả điều trị");
                 }else{
                     int dialogResult2 = JOptionPane.showOptionDialog(framex.getContentPane(), "Bệnh nhân đã có kết quả điều trị! Bạn muốn cập nhật mới thông tin ?", "Cập nhật Kết quả điều trị", 0, JOptionPane.INFORMATION_MESSAGE, null, options, dialogButton);
-                     if(dialogResult == 0) {
+                     if(dialogResult2 == 0) {
                         kq.setDateToKQDieuTri_Update();
                         JFrame frame3 = new JFrame();
                         frame3.setBounds(0,0,100,50);

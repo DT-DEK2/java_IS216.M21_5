@@ -87,7 +87,7 @@ public class TrangChuPanel extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel3.setText("Giáo Viên Hướng Dẫn: Đỗ Thị Minh Phụng");
+        jLabel3.setText("Giáo Viên Hướng Dẫn: Nguyễn Minh Nhựt");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLabel4.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
