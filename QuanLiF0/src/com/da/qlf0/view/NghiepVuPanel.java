@@ -50,6 +50,7 @@ public class NghiepVuPanel extends javax.swing.JPanel {
 
         jLabel9.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 41, 102));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/da/qlf0/images/government.png"))); // NOI18N
         jLabel9.setText("Quy trình nghiệp vụ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

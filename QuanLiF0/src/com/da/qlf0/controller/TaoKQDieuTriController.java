@@ -19,6 +19,9 @@ import java.text.SimpleDateFormat;
 
 import java.sql.Date;
 import java.text.DateFormat;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oracle.jdbc.OracleTypes;
 
 /**
@@ -361,10 +364,18 @@ public class TaoKQDieuTriController {
         }else{
             cStmt.setString(3, null);
         }
-        
-        
+
+//                          try {
+////            TimeUnit.SECONDS.sleep(5);
+////        } catch (InterruptedException ex) {
+////            Logger.getLogger(TaoKQDieuTriController.class.getName()).log(Level.SEVERE, null, ex);
+////        }
         cStmt.execute();
+        
+
+        
         cStmt.close();
+        conn.commit();
         conn.close();
         
         

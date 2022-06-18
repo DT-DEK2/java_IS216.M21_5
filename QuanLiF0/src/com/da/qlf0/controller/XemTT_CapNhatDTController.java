@@ -18,6 +18,8 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oracle.jdbc.OracleType;
 import oracle.jdbc.OracleTypes;
 /**
@@ -1459,11 +1461,21 @@ public class XemTT_CapNhatDTController {
                          
                       if(rs.getInt("XetNghiem")==1){
                            this.jrbXN_Co.setSelected(true);
+                           this.jdcNgayXN.setDate(rs.getDate("NgayXetNghiem"));
                     
                      }else{
                             this.jrbXN_Khong.setSelected(true);
+                            String date = "01-01-0001";
+                            java.util.Date date2 = null;
+                          try {
+                              date2 = new SimpleDateFormat("dd-MM-yyyy").parse(date);
+                          } catch (ParseException ex) {
+                              Logger.getLogger(XemTT_CapNhatDTController.class.getName()).log(Level.SEVERE, null, ex);
+                          }
+                   
+                            this.jdcNgayXN.setDate(date2);
                             }
-                      this.jdcNgayXN.setDate(rs.getDate("NgayXetNghiem"));
+                      
                       
                         if(rs.getString("KetQuaXetNghiem1").equals("Dương tính")){
                            this.jrbKQ_DT.setSelected(true);
