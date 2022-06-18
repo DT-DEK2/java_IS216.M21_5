@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23f42236-7e90-4bda-ad77-025600c40c99">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="213"/>
+	<property name="ireport.callouts" value="##Wed May 25 19:20:45 ICT 2022"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="045b9efa-d2f9-47f8-8bec-8a6b7ff2b20c"/>
+	<subDataset name="dataset1" uuid="c0d28d1a-7563-4dd5-b370-bb90753e7ca1"/>
+	<parameter name="MABENHNHAN" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT BN.MABENHNHAN , BN.HOTEN, BN.NGAYSINH, BN.GIOITINH,BN.CMND_CCCD , BN.NOIOHIENTAI ,BN.TINH_THANHPHO,BN.QUAN_HUYEN,BN.PHUONG_XA ,BN.NGHENGHIEP ,BN.NOILAMVIEC ,BN.SODIENTHOAI,BN.NGAYTIEPNHAN,BN.NGAYXUATHIENTRIEUCHUNGDAUTIEN,BN.TUNGLAF0,BN.SONGAYLAF0,BN.TESTNHANH ,BN.NGAYTESTNHANH ,BN.KETQUAXETNGHIEM1,BN.TESTRT_PCR,BN.NGAYTESTRT_PCR ,BN.KETQUAXETNGHIEM2, N.TANGHUYETAP ,N.UNGTHU,N.DAITHAODUONG,N.HIV_AIDS,N.BENHLYMACHMAUNAO,N.BENHTIMMACH,N.BENHGAN,N.BENHTHANMANTINH,N.HOICHUNGDOWN,N.HENKHIQUAN,
+N.ROILOANSUDUNGCHATGAYNGHIEN,N.BEOPHI,N.GHEPTANGHOACCAYGHEPTEBAOGOCTAOMAU,N.THIEUHUTMIENDICH,N.CACLOAIBENHHETHONG,
+N.BENHPHOIMANTINH,N.BENHHETHANKINHMANTINH,
+MT.MANGTHAI,MT.SOTUANMANGTHAI,MT.HAUSAN,MT.TreSoSinhDuocXetNghiemCovid_19,MT.KetQuaXetNghiemCovid_19,
+C.THOIDIEMCAPNHAT,C.MANV,
+K.TINHTRANG ,K.TINHTRANGKHAC,K.NGAYKETTHUCCACHLYTAINHA,K.NGAYXETNGHIEMAMTINH,K.LOAIXETNGHIEM ,
+K.NHAPVIEN ,K.NGAYNHAPVIEN ,K.TRIEUCHUNGKHINHAPVIEN ,K.TENCOSONHAPVIEN,K.LUUY,
+K.TUVONG ,K.NGAYTUVONG ,K.NOITUVONG ,K.NOITUVONGKHAC,K.LYDOTUVONG ,K.LYDOTUVONGKHAC,
+Q.MACH,Q.NHIETDO ,Q.NHIPTHO ,Q.SPO2 ,Q.HUYETAPTOIDA ,Q.HUYETAPTOITHIEU ,Q.KIETSUC ,Q.HO ,Q.HORADOM ,Q.ONLANH ,Q.MATVIGIAC ,
+Q.MATKHUUGIAC ,Q.TIEUCHAY ,Q.HORAMAU ,Q.THODOCHOACKHOTHO ,Q.DAUTUCNGUCKEODAI ,Q.LOMOKHONGTINHTAO ,Q.GOITHUOCA ,Q.GOITHUOCB ,Q.GOITHUOCC ,Q.XETNGHIEM ,Q.NGAYXETNGHIEM ,Q.KETQUAXETNGHIEM1 as kqxn_qtdttn
+FROM BENHNHAN BN, BENHNEN N, MANGTHAI MT, CAPNHAT C , KETQUADIEUTRITAINHA K, QUATRINHDIEUTRITAINHA Q
+
+WHERE BN.MABENHNHAN=N.MABENHNHAN AND BN.MABENHNHAN=MT.MABENHNHAN
+AND BN.MABENHNHAN=C.MABENHNHAN AND BN.MABENHNHAN=K.MABENHNHAN
+AND C.THOIDIEMCAPNHAT=Q.THOIDIEMCAPNHAT
+AND C.THOIDIEMCAPNHAT=(select max(THOIDIEMCAPNHAT) from capnhat cn where cn.MABENHNHAN=$P{MABENHNHAN})
+AND BN.MABENHNHAN=$P{MABENHNHAN}]]>
+	</queryString>
+	<field name="MABENHNHAN" class="java.lang.String"/>
+	<field name="HOTEN" class="java.lang.String"/>
+	<field name="NGAYSINH" class="java.sql.Timestamp"/>
+	<field name="GIOITINH" class="java.lang.String"/>
+	<field name="CMND_CCCD" class="java.lang.String"/>
+	<field name="NOIOHIENTAI" class="java.lang.String"/>
+	<field name="TINH_THANHPHO" class="java.lang.String"/>
+	<field name="QUAN_HUYEN" class="java.lang.String"/>
+	<field name="PHUONG_XA" class="java.lang.String"/>
+	<field name="NGHENGHIEP" class="java.lang.String"/>
+	<field name="NOILAMVIEC" class="java.lang.String"/>
+	<field name="SODIENTHOAI" class="java.lang.String"/>
+	<field name="NGAYTIEPNHAN" class="java.sql.Timestamp"/>
+	<field name="NGAYXUATHIENTRIEUCHUNGDAUTIEN" class="java.sql.Timestamp"/>
+	<field name="TUNGLAF0" class="java.math.BigDecimal"/>
+	<field name="SONGAYLAF0" class="java.lang.String"/>
+	<field name="TESTNHANH" class="java.math.BigDecimal"/>
+	<field name="NGAYTESTNHANH" class="java.sql.Timestamp"/>
+	<field name="KETQUAXETNGHIEM1" class="java.lang.String"/>
+	<field name="TESTRT_PCR" class="java.math.BigDecimal"/>
+	<field name="NGAYTESTRT_PCR" class="java.sql.Timestamp"/>
+	<field name="KETQUAXETNGHIEM2" class="java.lang.String"/>
+	<field name="TANGHUYETAP" class="java.math.BigDecimal"/>
+	<field name="UNGTHU" class="java.math.BigDecimal"/>
+	<field name="DAITHAODUONG" class="java.math.BigDecimal"/>
+	<field name="HIV_AIDS" class="java.math.BigDecimal"/>
+	<field name="BENHLYMACHMAUNAO" class="java.math.BigDecimal"/>
+	<field name="BENHTIMMACH" class="java.math.BigDecimal"/>
+	<field name="BENHGAN" class="java.math.BigDecimal"/>
+	<field name="BENHTHANMANTINH" class="java.math.BigDecimal"/>
+	<field name="HOICHUNGDOWN" class="java.math.BigDecimal"/>
+	<field name="HENKHIQUAN" class="java.math.BigDecimal"/>
+	<field name="ROILOANSUDUNGCHATGAYNGHIEN" class="java.math.BigDecimal"/>
+	<field name="BEOPHI" class="java.math.BigDecimal"/>
+	<field name="GHEPTANGHOACCAYGHEPTEBAOGOCTAOMAU" class="java.math.BigDecimal"/>
+	<field name="THIEUHUTMIENDICH" class="java.math.BigDecimal"/>
+	<field name="CACLOAIBENHHETHONG" class="java.math.BigDecimal"/>
+	<field name="BENHPHOIMANTINH" class="java.math.BigDecimal"/>
+	<field name="BENHHETHANKINHMANTINH" class="java.math.BigDecimal"/>
+	<field name="MANGTHAI" class="java.math.BigDecimal"/>
+	<field name="SOTUANMANGTHAI" class="java.lang.String"/>
+	<field name="HAUSAN" class="java.math.BigDecimal"/>
+	<field name="TRESOSINHDUOCXETNGHIEMCOVID_19" class="java.math.BigDecimal"/>
+	<field name="KETQUAXETNGHIEMCOVID_19" class="java.lang.String"/>
+	<field name="THOIDIEMCAPNHAT" class="oracle.sql.TIMESTAMP"/>
+	<field name="MANV" class="java.lang.String"/>
+	<field name="TINHTRANG" class="java.lang.String"/>
+	<field name="TINHTRANGKHAC" class="java.lang.String"/>
+	<field name="NGAYKETTHUCCACHLYTAINHA" class="java.sql.Timestamp"/>
+	<field name="NGAYXETNGHIEMAMTINH" class="java.sql.Timestamp"/>
+	<field name="LOAIXETNGHIEM" class="java.lang.String"/>
+	<field name="NHAPVIEN" class="java.math.BigDecimal"/>
+	<field name="NGAYNHAPVIEN" class="java.sql.Timestamp"/>
+	<field name="TRIEUCHUNGKHINHAPVIEN" class="java.lang.String"/>
+	<field name="TENCOSONHAPVIEN" class="java.lang.String"/>
+	<field name="LUUY" class="java.lang.String"/>
+	<field name="TUVONG" class="java.math.BigDecimal"/>
+	<field name="NGAYTUVONG" class="java.sql.Timestamp"/>
+	<field name="NOITUVONG" class="java.lang.String"/>
+	<field name="NOITUVONGKHAC" class="java.lang.String"/>
+	<field name="LYDOTUVONG" class="java.lang.String"/>
+	<field name="LYDOTUVONGKHAC" class="java.lang.String"/>
+	<field name="MACH" class="java.math.BigDecimal"/>
+	<field name="NHIETDO" class="java.math.BigDecimal"/>
+	<field name="NHIPTHO" class="java.math.BigDecimal"/>
+	<field name="SPO2" class="java.math.BigDecimal"/>
+	<field name="HUYETAPTOIDA" class="java.math.BigDecimal"/>
+	<field name="HUYETAPTOITHIEU" class="java.math.BigDecimal"/>
+	<field name="KIETSUC" class="java.math.BigDecimal"/>
+	<field name="HO" class="java.math.BigDecimal"/>
+	<field name="HORADOM" class="java.math.BigDecimal"/>
+	<field name="ONLANH" class="java.math.BigDecimal"/>
+	<field name="MATVIGIAC" class="java.math.BigDecimal"/>
+	<field name="MATKHUUGIAC" class="java.math.BigDecimal"/>
+	<field name="TIEUCHAY" class="java.math.BigDecimal"/>
+	<field name="HORAMAU" class="java.math.BigDecimal"/>
+	<field name="THODOCHOACKHOTHO" class="java.math.BigDecimal"/>
+	<field name="DAUTUCNGUCKEODAI" class="java.lang.String"/>
+	<field name="LOMOKHONGTINHTAO" class="java.math.BigDecimal"/>
+	<field name="GOITHUOCA" class="java.math.BigDecimal"/>
+	<field name="GOITHUOCB" class="java.math.BigDecimal"/>
+	<field name="GOITHUOCC" class="java.math.BigDecimal"/>
+	<field name="XETNGHIEM" class="java.math.BigDecimal"/>
+	<field name="NGAYXETNGHIEM" class="java.sql.Timestamp"/>
+	<field name="KQXN_QTDTTN" class="java.lang.String"/>
+	<group name="REPORT5">
+		<groupExpression><![CDATA[$F{MABENHNHAN}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="75" y="18" width="344" height="23" uuid="e3793ac9-d18c-4627-a6ff-1ef249709b31"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BỆNH ÁN NGƯỜI NHIỄM COVID-19 TẠI NHÀ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="478" y="0" width="77" height="18" uuid="4e7b1769-70fc-46b0-98da-76dad97d5014"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="0" width="38" height="18" uuid="a9936dce-396c-43b6-8d9d-1e938f451744"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Ngày:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="478" y="18" width="53" height="15" uuid="b5f5925c-4789-4f65-bd47-21cda2dd991f"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Codabar" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{MABENHNHAN}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="440" y="18" width="32" height="15" uuid="6b27ab11-4f92-4ba9-a9e2-786bcf3db5d2"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Mã:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="749" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="591" width="555" height="16" uuid="48d74229-8b78-4092-9e7e-5b924281cdaf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="698" width="555" height="31" uuid="aa6fda91-1bcd-4785-b95c-c71ff4213afd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="682" width="555" height="18" uuid="f0fc7901-0b9d-427c-b3f8-97d9dd3f4963"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="652" width="555" height="30" uuid="77b488bb-13dc-4758-913c-ad058bfd0fcd"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="621" width="555" height="16" uuid="fd6e9ab9-3e6a-4ed2-a5ed-f8137aa71c7d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="556" width="555" height="16" uuid="dad3b83a-6d85-4769-8276-393bdfd9a67f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="525" width="555" height="16" uuid="53751ee8-2f3b-4a5f-92b0-cf521b48b23e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="494" width="555" height="16" uuid="3c0cce00-7379-4c0c-b527-16352d021353"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="448" width="555" height="30" uuid="1a40e10d-d113-4d8e-95f5-ee44ad3a7c1d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="402" width="555" height="30" uuid="ece093cf-712a-4cdb-9f0c-ccdc4c083fa2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="509" width="555" height="16" uuid="6e3ad9ea-bd78-4571-aced-f2db88158ad7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="478" width="555" height="16" uuid="a9ca641b-a7a3-4aaf-91cb-86d724007617"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="432" width="555" height="16" uuid="05029a6e-d7ba-4df1-8163-0a78e43f8256"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="433" width="191" height="15" uuid="da71a2e6-3a05-4daf-ba0d-8a27b382cc1a"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRIỆU CHỨNG	(CÓ: 1	KHÔNG: 0)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="386" width="555" height="16" uuid="11e37008-20f7-47f8-9957-31ecc4d104b6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="367" width="555" height="19" uuid="7e0e6ba9-266f-4d82-83df-99f133b70153"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="262" width="555" height="105" uuid="81991163-db90-45ca-920a-4a4df005ab4b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="217" width="555" height="45" uuid="946fbf53-8ead-407e-b5ff-10195422238e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="199" width="555" height="18" uuid="1b832f88-f356-4927-b912-8e1e5bccbca9"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="36" width="555" height="163" uuid="dcb23b52-d8e8-451a-bfb8-c5c48b2bc18e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="18" width="555" height="18" uuid="0c1c6192-327d-4b8f-b902-aaa2f074f50b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="18" uuid="9bc3c738-3e58-4d04-a1ef-8a992d5801c4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="359" y="37" width="100" height="15" uuid="78c4c0f5-c383-424d-a092-3e90cd11e961"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MABENHNHAN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="266" y="37" width="93" height="15" uuid="04997aa5-e4de-49fa-8976-a459c7edc034"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[MABN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="95" y="36" width="100" height="15" uuid="0adb1dbc-efbb-4a2c-92a6-b4770614bf25"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HOTEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="51" width="100" height="15" uuid="adf67794-6b33-46b6-98e3-4adccf2d787e"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYSINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="51" width="100" height="15" uuid="39bddaa3-09c4-43c3-b743-1ea8e4459bb1"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GIOITINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="66" width="100" height="15" uuid="354a08fa-0a39-499c-97d5-b17a84789409"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CMND_CCCD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="96" width="100" height="15" uuid="45815c48-1faa-4b28-b13d-6a8cbac2c4be"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOIOHIENTAI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="111" width="88" height="15" uuid="f41678c4-109c-444a-a0b3-9ebb5fe6c815"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TINH_THANHPHO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="111" width="96" height="15" uuid="85e000b5-9898-48b0-b93d-5e5667c73566"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QUAN_HUYEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="111" width="100" height="15" uuid="25c13bc4-728e-4745-a426-398407b91737"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PHUONG_XA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="81" width="100" height="15" uuid="bb140771-77e8-497f-9d24-fb23375f31c3"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGHENGHIEP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="81" width="100" height="15" uuid="a7950e93-057d-460b-90c3-22413238bf35"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOILAMVIEC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="66" width="100" height="15" uuid="fcadbd84-0aa0-41b1-b2bd-4ac53ec25802"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SODIENTHOAI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="126" width="100" height="15" uuid="98985e7b-6901-42e7-a35a-23287a97c860"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYTIEPNHAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="141" width="169" height="15" uuid="d6406e87-b94b-4bf5-9aa9-6c7215d31033"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYXUATHIENTRIEUCHUNGDAUTIEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="156" width="33" height="15" uuid="fc35a2a2-66b6-4f45-89c6-34d2bc2af032"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TUNGLAF0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="156" width="128" height="15" uuid="38a4cd04-fac8-49eb-851b-efbc0aa8d4f6"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SONGAYLAF0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="171" width="33" height="15" uuid="d09162ab-220d-4735-8943-24a6c4e50fa6"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TESTNHANH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="171" width="75" height="15" uuid="d613f27c-d5ef-47d1-b7ef-d9a8401d21e2"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYTESTNHANH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="171" width="138" height="15" uuid="b3be5101-b119-4c76-a168-2b6f6e635b44"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KETQUAXETNGHIEM1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="186" width="33" height="15" uuid="21376de6-cdf8-4f22-a2c3-554118d31a68"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TESTRT_PCR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="186" width="76" height="15" uuid="0abef217-e07e-4593-9f9c-56321f4e7012"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYTESTRT_PCR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="186" width="139" height="15" uuid="5d112739-fc56-4bb4-b893-fa64035237a7"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KETQUAXETNGHIEM2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="262" width="100" height="15" uuid="8e62c06c-d4ee-4d78-93df-39f896f338c5"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TANGHUYETAP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="262" width="72" height="15" uuid="49b273cb-665e-4502-8b88-05dc7d447754"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UNGTHU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="262" width="121" height="15" uuid="83a71783-91b3-4965-8e50-90123d8531d3"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DAITHAODUONG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="277" width="100" height="15" uuid="597a5da6-c58f-489e-b8ca-4991e9d31ceb"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HIV_AIDS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="2" width="185" height="16" uuid="f0a80be5-2513-4e1f-8cf3-ba88d4ab84c0"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THÔNG TIN NGƯỜI BỆNH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="169" height="16" uuid="4e5ca03f-5577-4f74-862d-efd7dd84043d"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HÀNH CHÍNH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="37" width="92" height="15" uuid="fc25e9c2-3779-4424-b216-852ccc064011"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[1. Họ và tên:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="51" width="93" height="15" uuid="d5fac111-3aed-4156-8f60-95588d7a7cbb"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[2. Ngày sinh:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="51" width="93" height="15" uuid="c0ba714f-08bb-4cba-8c19-5bd5147a7303"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[3. Giới tính:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="66" width="93" height="15" uuid="73c7623e-6366-4511-b93d-e709a3631061"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[4. CMND/CCCD: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="66" width="93" height="15" uuid="22f753f8-9364-40d4-9e8c-bc9e867e8ff4"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[5. SĐT:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="81" width="93" height="15" uuid="fc680ade-8f5e-4491-8d5c-050c2b998da4"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[6. Nghề Nghiệp:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="81" width="93" height="15" uuid="abd88b50-864d-408f-95aa-5c90eb3802ee"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[7. Nơi làm việc:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="96" width="93" height="15" uuid="a244914b-6483-46a2-8d13-0d838f9470c6"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[8. Nơi ở hiện tại: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="111" width="93" height="15" uuid="bccc6c68-275d-4432-b6c7-1c3829fd1942"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Xã/Phường:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="111" width="66" height="15" uuid="aef9f7b4-3f7b-4218-9455-10c02444b6ce"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Quận/Huyện:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="111" width="87" height="15" uuid="77c6ea59-b3a7-4cd7-89ab-9d93b691f00e"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tỉnh/Thành Phố:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="126" width="111" height="15" uuid="02a8e7ba-2a53-4aa0-ae34-e204f2de0649"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày tiếp nhận F0:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="141" width="280" height="15" uuid="a05a2b8f-4256-4232-96f9-a6a582787bd6"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày xuất hiện triệu chứng đầu tiên/ sớm nhất:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="156" width="147" height="15" uuid="ed8b7577-8231-4d5d-84b2-7a0c1195bf6b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Từng là F0 (có:1, không:0):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="171" width="147" height="15" uuid="61aeecb9-5131-4b94-b86c-e01f38751888"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Test nhanh (có:1, không:0):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="186" width="147" height="15" uuid="02bbdab5-8864-4341-b290-5712d8b7d747"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Test RT_PCR (có:1, không:0):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="201" width="469" height="16" uuid="7f48c888-8606-4c75-980d-b01f4916b408"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIỂU SỬ, BỆNH NỀN VÀ CÁC YẾU TỐ NGUY CƠ 	(CÓ: 1     KHÔNG: 0)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="217" width="79" height="15" uuid="2a0a3c3e-5f6a-4b8f-b5f9-94e210b1d262"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MANGTHAI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="217" width="29" height="15" uuid="99e8d387-efc1-41bb-8d98-7d5ab093757c"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SOTUANMANGTHAI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="232" width="260" height="15" uuid="ccdb9f30-da81-4f4c-b6c3-ea4bfaa245c0"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TRESOSINHDUOCXETNGHIEMCOVID_19}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="247" width="183" height="15" uuid="3a74e046-620f-431a-b779-aed04e1ced25"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KETQUAXETNGHIEMCOVID_19}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="217" width="59" height="15" uuid="10b2c67b-99db-405f-a3c2-c653087bff32"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Mang thai:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="217" width="198" height="15" uuid="b954cf23-9223-4c3a-8eef-208637862621"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Nếu CÓ: Đánh giá số tuần mang thai:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="217" width="37" height="15" uuid="3f481622-9190-4d73-b4ae-1e4fa56e85c3"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[tuần.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="232" width="293" height="15" uuid="39bbadee-e3c1-4349-9ce6-59148aefe3a1"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Trẻ sơ sinh đã được xét nghiệm COVID-19 SARS-CoV-2:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="247" width="149" height="15" uuid="f8253c22-e8ad-49c0-ac32-4c0635c38e2e"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Nếu CÓ, kết quả xét nghiệm: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="262" width="80" height="15" uuid="8b1eb7ae-2e5d-411a-9b44-a415f7d9ded5"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tăng huyết áp:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="262" width="77" height="15" uuid="12907e63-9ee0-4f3b-b03f-6689f5de6f1a"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ung thư:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="262" width="83" height="15" uuid="11e1c463-c54f-49a6-8350-e2770eeb4ac5"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Đái tháo đường:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="277" width="80" height="15" uuid="b6f0eb6e-1d45-4f52-a97e-bda06488f3d0"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[HIV_AIDS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="126" y="307" width="117" height="15" uuid="4134f05b-5472-4baa-8d3e-77eaa4d11ce4"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BENHLYMACHMAUNAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="292" width="100" height="15" uuid="04d9feb2-2e04-4835-b934-5ffd36dd7381"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BENHTIMMACH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="277" width="70" height="15" uuid="55bde29e-699e-40bb-8108-35be0c57da5f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BENHGAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="307" width="184" height="15" uuid="af81b44a-e079-417e-91fa-3e687c73c6cf"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BENHTHANMANTINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="277" width="115" height="15" uuid="1ebf53e1-b7ba-463a-8f14-c9d1a8bdd5fa"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HOICHUNGDOWN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="182" y="277" width="75" height="15" uuid="282f099a-49cc-4a15-a9f5-aec6f660f25c"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Bệnh gan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="277" width="86" height="15" uuid="381bfe85-1600-453a-a63c-a3d4d291f6eb"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Hội chứng Down:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="259" y="292" width="72" height="15" uuid="b04d5c5c-b0cd-43eb-a7ba-4061ee9fd6b4"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HENKHIQUAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="322" width="63" height="15" uuid="bb58a75f-23bd-4388-8193-6ee5c237e371"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ROILOANSUDUNGCHATGAYNGHIEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="292" width="100" height="15" uuid="473ac1ee-aba0-4df5-b235-87a955a9e3cd"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BEOPHI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="322" width="62" height="15" uuid="c5999bb2-b14b-49d5-9cb1-8052e41ac7b7"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GHEPTANGHOACCAYGHEPTEBAOGOCTAOMAU}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="307" width="124" height="15" uuid="9aef6da3-4d68-49ac-a430-831b082b6e57"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Bệnh lý mạch máu não:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="307" width="114" height="15" uuid="6d447339-9966-487e-8bf8-776269c54e47"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Bệnh thận mãn tính:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="292" width="80" height="15" uuid="bf17330e-81ae-46a1-ba6a-2bb40d020574"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Bệnh tim mạch:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="292" width="75" height="15" uuid="76bd4664-ec62-4232-8032-33f73d82d960"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Hen khí quản:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="292" width="81" height="15" uuid="0162e01c-c0a5-4598-a24d-756bdd8c11a0"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Béo phì:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="322" width="178" height="15" uuid="a4c96943-6e6d-4562-abe5-b04fe1923aa0"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Rối loạn sử dụng chất gây nghiện:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="322" width="248" height="15" uuid="06f93cce-3eb5-4ddd-9ebe-2430f1e2f36d"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ghép tạng hoặc cấy ghép tế bào gốc tạo mẫu:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="337" width="132" height="15" uuid="3c07abe7-ce5f-43ff-857c-b111194684de"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{THIEUHUTMIENDICH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="337" width="132" height="15" uuid="723724c0-eef5-497c-a5f3-2ca2065d9073"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CACLOAIBENHHETHONG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="352" width="132" height="15" uuid="a4acefd4-6364-4307-85af-5ef56d4e1a69"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BENHPHOIMANTINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="352" width="134" height="15" uuid="3ef73dbb-5155-4f24-8201-50c32f49193a"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BENHHETHANKINHMANTINH}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="337" width="111" height="15" uuid="f789472d-4f51-4222-a6a8-75a112ab8461"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Thiếu hụt miễn dịch:   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="337" width="124" height="15" uuid="38d3bf17-ab78-4c4d-9ac3-0a08fb6c5776"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Các loại bệnh hệ thống:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="352" width="110" height="15" uuid="f4efc416-8632-496e-9c4f-2612780da1c8"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Bệnh phổi mãn tính:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="352" width="151" height="15" uuid="87a8565a-71bf-41d5-8162-4fee36b3a36b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Bệnh hệ thần kinh mãn tính:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="156" width="72" height="15" uuid="5d333814-8253-4458-a84b-44e34e40e0b8"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Số ngày là F0:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="370" width="231" height="16" uuid="03ef94fe-ade9-4caa-a1e1-f8fbd6e7fb39"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUÁ TRÌNH ĐIỀU TRỊ TẠI NHÀ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="42" y="402" width="118" height="15" uuid="be5f56c2-406e-4028-ac3d-89192b91a81c"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MACH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="402" width="120" height="15" uuid="c43d53a3-b7dd-4c75-ae65-8f13b8b22d0f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NHIETDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="402" width="148" height="15" uuid="b1777118-cfd7-4199-8aae-bd12454a6ffe"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NHIPTHO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="417" width="117" height="15" uuid="5e712361-0ba8-4312-b150-70b83e24eb24"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SPO2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="417" width="88" height="15" uuid="4a9bcdf9-a1e7-4fc9-9f22-98c61f3ce97a"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HUYETAPTOIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="417" width="115" height="15" uuid="0be404c9-0cc8-4462-b55b-26c8d81c3468"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HUYETAPTOITHIEU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="448" width="75" height="15" uuid="ec349b06-6b4e-497f-92d6-5595074eb2ee"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KIETSUC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="448" width="105" height="15" uuid="b0fb34da-fbc5-47c8-ba56-6a582a69d7a2"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="448" width="76" height="15" uuid="5e204108-9f46-4fcc-b3e1-1ceeda9fa572"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HORADOM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="448" width="94" height="15" uuid="73e3043c-7d40-485f-b4f6-a3d8a0b5ba71"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ONLANH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="463" width="63" height="15" uuid="a613afcc-6711-43f9-9c8d-991c8cd3c302"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MATVIGIAC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="494" width="59" height="15" uuid="2ebb9b41-52bb-4e3c-9ddf-e1a8fe1ca17b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HORAMAU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="463" width="55" height="15" uuid="02a1cb1a-ce39-4753-a020-c6c255da519e"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MATKHUUGIAC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="463" width="100" height="15" uuid="ea392d4a-52f4-487c-95d4-65c40142423b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIEUCHAY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="494" width="27" height="15" uuid="2e083fff-23d7-45b6-aa50-318310586453"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{THODOCHOACKHOTHO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="494" width="26" height="15" uuid="31cc3a21-815f-43fb-9d8c-33377022b983"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DAUTUCNGUCKEODAI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="516" y="494" width="39" height="15" uuid="f5b9812e-9ca7-4fe5-a4ea-b93bbb67ceb8"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOMOKHONGTINHTAO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="402" width="40" height="15" uuid="96cb59ba-91e8-4713-8cb5-1bdb8dc331d6"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Mạch:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="402" width="53" height="15" uuid="768c51fd-decc-4407-ab35-0f862ff66a35"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Nhiệt độ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="402" width="49" height="15" uuid="4d8c12ae-3a90-446d-8fa3-c8d9e551fd8f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Nhịp thở:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="417" width="40" height="15" uuid="356e5b0f-33c8-4d51-8b68-643a263cb20b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[SP02:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="417" width="83" height="15" uuid="7cdeefc8-e631-48c9-ab60-80c9dba169f2"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Huyết áp tối đa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="417" width="106" height="15" uuid="da2defcc-89a2-4471-86e9-908bb529f547"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Huyết áp tối thiểu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="448" width="49" height="15" uuid="666730fc-86d7-47c6-a229-ec0792257d45"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Kiệt sức:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="448" width="28" height="15" uuid="f87fab3f-4cf6-4d6d-a05a-8f11e230598f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ho:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="448" width="58" height="15" uuid="449f4fc5-2c4d-4a14-b5aa-90733a95f8e1"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ho ra đờm:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="494" width="61" height="15" uuid="b33df818-09a9-41be-b2c8-9e3987309380"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ho ra máu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="387" width="78" height="15" uuid="cb73a4aa-5dd7-4ac6-b5b5-65bff183a3cb"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TỔNG TRẠNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="448" width="54" height="15" uuid="314a877a-d37c-4a88-a941-18967a1cef91"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ớn lạnh:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="463" width="61" height="15" uuid="26091388-4ccb-485f-a52c-359738d3212a"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Mất vị giác:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="463" width="78" height="15" uuid="5a85f176-6319-4c1e-80c0-9bb646a1be10"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Mất khứu giác:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="463" width="58" height="15" uuid="8b912dd0-c9de-48b1-863b-bc78d16fc391"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tiêu chảy:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="479" width="301" height="15" uuid="ae705a10-ef61-4b93-bc01-48a4b5a41609"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÁC TRIỆU CHỨNG CHUYỂN NẶNG	(CÓ: 1	KHÔNG: 0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="495" width="111" height="15" uuid="37aeacad-ac07-4bc3-9cde-b3c7a5fa3fa8"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Đau tức ngực kéo dài:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="494" width="112" height="15" uuid="e84cc9dd-c416-4dc9-b109-8af9f66ddbc9"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Thở dốc hoặc khó thở:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="494" width="119" height="15" uuid="6704169a-d072-40bd-a6ae-066ea18f4750"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Lờ mờ, không tỉnh táo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="510" width="233" height="15" uuid="b7d73822-78ca-4b1a-b26a-aad670a7815b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THUỐC SỬ DỤNG	(CÓ: 1	KHÔNG: 0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="525" width="126" height="15" uuid="c4b537a4-aafd-4d7c-a94c-66ab4c558ba5"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Gói A (hạ sốt, vitamin):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="525" width="171" height="15" uuid="332b5562-1ca8-48b2-a4b1-de1106880770"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Gói B (kháng đông, kháng viêm):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="525" width="117" height="15" uuid="4c98a201-5e36-45e9-a3e9-5902696a58c8"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Gói C (Molnupiravir):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="126" y="525" width="43" height="15" uuid="ef190852-0f9f-4a6f-9cc4-60a13230c3ab"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GOITHUOCA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="525" width="45" height="15" uuid="b7b6f178-787c-4c60-bd88-0811648aa2ad"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GOITHUOCB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="503" y="526" width="52" height="15" uuid="e34cc814-2692-46d7-ad3a-c7a6a9676619"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GOITHUOCC}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="540" width="555" height="16" uuid="66766e58-5829-401b-b5f3-f0b3a7f359a5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="541" width="282" height="15" uuid="74c9a272-0400-4d3f-8a6a-1c522fe64d5e"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THÔNG TIN XÉT NGHIỆM	(CÓ: 1	KHÔNG: 0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="556" width="82" height="15" uuid="e33afd65-95a6-4ee9-991e-7b825bf1f654"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Xét nghiệm:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="557" width="65" height="15" uuid="ba701625-1392-4379-8e64-7d56fc75efb5"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{XETNGHIEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="557" width="114" height="15" uuid="5e59811b-dcb2-4cb7-a3e8-a28071b4cdee"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYXETNGHIEM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="556" width="105" height="15" uuid="d9e96f3c-cfbb-4e3d-b94b-9a8b2bf36faa"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KQXN_QTDTTN}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="572" width="555" height="19" uuid="963096cd-0aad-4951-839e-9f4484c4034d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="575" width="259" height="16" uuid="d2c0e45a-7ffa-4958-a59a-eb034a8d5793"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KẾT QUẢ SAU KHI ĐIỀU TRỊ TẠI NHÀ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="591" width="61" height="15" uuid="d9f89e21-cc19-40e9-aa97-30a113bd4282"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tình trạng:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="591" width="212" height="15" uuid="05dfeab9-f654-44bb-939b-0c87be4c633d"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TINHTRANG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="590" width="185" height="15" uuid="d5ec0fea-958b-4e4c-b29a-ac0832cdea6a"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TINHTRANGKHAC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="621" width="66" height="15" uuid="0a6b31b3-399b-4c2f-a7e0-e40f045f82bd"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYKETTHUCCACHLYTAINHA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="621" width="72" height="15" uuid="6ff01382-b9c8-4489-9ee9-f2ca4c0e6f10"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYXETNGHIEMAMTINH}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="273" y="590" width="97" height="15" uuid="3d503ae6-6d51-4e8a-a7f4-18b43a1bb88b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tình trạng khác:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="499" y="622" width="56" height="15" uuid="5f3940ca-1fa8-4b8d-888b-c5928cb369f6"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOAIXETNGHIEM}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="605" width="555" height="16" uuid="bcbd6c7d-92d0-4ae2-a522-6154753fcc86"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="414" y="621" width="86" height="15" uuid="053a660b-788f-4159-8fe6-98522a8ccd1f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Loại xét nghiệm:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="606" width="233" height="15" uuid="19bec851-a418-4f20-9ed4-a7ad2d292ad4"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOÀN THÀNH CÁCH LY TẠI NHÀ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="621" width="152" height="15" uuid="1c7e0c2c-7529-4069-a2c0-8d517a6517b2"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ngày kết thúc cách ly tại nhà:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="622" width="136" height="15" uuid="2b3b19ef-f6a7-4066-99f1-3976760a57a9"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ngày xét nghiệm âm tính:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="636" width="555" height="16" uuid="3f8897de-3e1a-4bc3-9754-b86061405641"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="295" y="652" width="112" height="15" uuid="0a1eda23-42f5-4866-91aa-f3bc7d03cb1d"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tên cơ sở nhập viện:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="637" width="233" height="15" uuid="0e6d41bb-1ff2-4662-b3b2-b4bf6956e385"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHUYỂN NẶNG NHẬP VIỆN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="652" width="61" height="15" uuid="3338dbc4-3ffe-441b-8439-5679ff71c91f"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Nhập viện:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="652" width="89" height="15" uuid="da85e8c7-a986-4e78-82e4-69a988e802c6"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ngày nhập viện:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="667" width="138" height="15" uuid="df293b6c-c316-4d8b-9857-e81b2abeca06"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Triệu chứng khi nhập viện:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="667" width="36" height="15" uuid="47db89f4-15cc-48f0-b18b-1ae3854f5951"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Lưu ý:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="652" width="63" height="15" uuid="d242c4c3-255d-45f1-ac5d-ddae29d590ef"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NHAPVIEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="652" width="78" height="15" uuid="89094ab6-91bc-407a-8803-14ca35d33799"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYNHAPVIEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="667" width="157" height="15" uuid="697285a8-a925-441e-9811-c67f8ded34ca"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TRIEUCHUNGKHINHAPVIEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="652" width="148" height="15" uuid="d6d463b8-0f38-4bda-8b29-cfe047256327"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TENCOSONHAPVIEN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="667" width="224" height="15" uuid="9fe12267-cd01-45db-887d-424540660a74"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LUUY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="684" width="233" height="16" uuid="7802d33a-684b-4d91-ba94-c6ebfb16a758"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TỬ VONG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="714" width="78" height="15" uuid="059b8761-6e14-4d2c-bca6-31483dc2e81c"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ngày tử vong:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="700" width="49" height="15" uuid="7de028b3-2ea2-40ba-8316-f35c44c273b7"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Tử vong:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="700" width="72" height="15" uuid="6f2e44c4-e741-4f39-a8a1-5263fcd37814"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Nơi tử vong:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="713" width="72" height="15" uuid="169357cd-b220-44de-92dc-e7a3205087ec"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Lý do tử vong:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="714" width="31" height="15" uuid="27ba741e-eb0a-464a-a881-8c1e8a3d06a7"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Khác:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="700" width="28" height="15" uuid="44d7053b-3019-49ca-b8ce-a968d46b5016"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Khác:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="698" width="56" height="15" uuid="e9b50ba5-3c5d-457b-8230-420d2dcadf44"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TUVONG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="78" y="713" width="81" height="15" uuid="559e8efb-5401-4d4d-99b5-c3e624597aab"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYTUVONG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="698" width="201" height="15" uuid="3b59dbad-6b72-4857-ab1b-abc23b81f5a2"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOITUVONG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="698" width="141" height="15" uuid="b3dfebaf-822a-458c-b888-42001fcd2053"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOITUVONGKHAC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="713" width="150" height="15" uuid="915adbe4-c613-4d6e-9680-20e6a3292ece"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LYDOTUVONG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="714" width="141" height="15" uuid="3df09ccf-cecc-4f18-8b45-c1bfe1b55c5d"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LYDOTUVONGKHAC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="3" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report6" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0d5969e6-f3a7-4175-a9f1-bd66bc81f1ef">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select bn.mabenhnhan, hoten, ngaysinh , gioitinh, cmnd_cccd,noiohientai, sodienthoai
+ from benhnhan bn, ketquadieutritainha kq
+where bn.mabenhnhan=kq.mabenhnhan
+ and ((trunc(sysdate)-kq.ngayketthuccachlytainha)<=7
+       or (trunc(sysdate)-kq.ngaynhapvien)<=7 or (trunc(sysdate)-kq.ngaytuvong)<=7)]]>
+	</queryString>
+	<field name="MABENHNHAN" class="java.lang.String"/>
+	<field name="HOTEN" class="java.lang.String"/>
+	<field name="NGAYSINH" class="java.sql.Timestamp"/>
+	<field name="GIOITINH" class="java.lang.String"/>
+	<field name="CMND_CCCD" class="java.lang.String"/>
+	<field name="NOIOHIENTAI" class="java.lang.String"/>
+	<field name="SODIENTHOAI" class="java.lang.String"/>
+	<variable name="MABENHNHAN_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{MABENHNHAN}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="37" y="11" width="467" height="48" forecolor="#003366" uuid="2d5e9132-784d-4211-a95f-fe38b41f0e87"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DANH SÁCH BỆNH NHÂN COVID-19 VỪA KẾT THÚC ĐIỀU TRỊTRONG TUẦN]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="413" y="80" width="142" height="20" forecolor="#330099" uuid="158145e8-e91f-46b9-b3a1-35ab4eab65b1"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="361" y="80" width="52" height="20" forecolor="#330099" uuid="e706a6d9-3a8c-4541-8ffb-2942e1d36d68"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Ngày in: ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="27" backcolor="#9DA8FF" uuid="b3ad7ec5-5556-4de4-93ac-45667bb0e602"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="56" y="7" width="139" height="15" uuid="05efa34a-6b26-4737-9ed5-6782a2c735a6"/>
+				<textElement textAlignment="Justified">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Họ tên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="7" width="104" height="15" uuid="94d1a547-4b52-4136-8301-42d80db68c89"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày sinh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="7" width="52" height="15" uuid="93c6888e-3ff9-4f02-be2b-86290911c654"/>
+				<textElement textAlignment="Justified">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MABN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="7" width="90" height="15" uuid="80be969e-e114-430d-809b-4ae8b003e064"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CMND/CCCD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="7" width="70" height="15" uuid="278b28ca-cc05-461b-b0f1-7782f26aa3de"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Giới tính]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="7" width="100" height="16" uuid="fbc2fbad-eaaa-419d-9873-6f98418906c9"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SĐT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="24" backcolor="#CCFFFF" uuid="66bbdac8-5102-41e6-ae0f-b218439c6689"/>
+			</rectangle>
+			<textField>
+				<reportElement x="261" y="6" width="104" height="18" uuid="4b5b37a7-be6e-48b0-9004-50543adb1e8b"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NGAYSINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="6" width="68" height="18" uuid="4e32cd7f-6dca-43bd-afa6-7d4fce5f797e"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GIOITINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="6" width="52" height="18" uuid="5db4ef7a-9c36-478c-a668-211201a7a84c"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MABENHNHAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="6" width="100" height="18" uuid="1618b4d5-4afc-40cb-8f77-18abb57a442c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SODIENTHOAI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="6" width="90" height="18" uuid="c7fba401-be25-47ef-9aee-93502244cd78"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CMND_CCCD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="6" width="139" height="18" uuid="b15465d5-273a-4f05-b0dd-c3d9807ce339"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HOTEN}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="425" y="12" width="57" height="20" forecolor="#330066" uuid="e77c5551-5a27-40d1-9afa-bbd20f77e82b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tổng:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="482" y="12" width="73" height="20" forecolor="#330066" uuid="a8bef2f1-6de1-4274-ac6c-5e8d6004bfcd"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{MABENHNHAN_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
